@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
 
    [SerializeField] private bool canSpawn = false;
 
-   private float waveTimer = 0f;
+   private float waveTimer;
    private int waveCounter = 0;
 
    public static EnemySpawner Instance { get; private set; }
@@ -24,6 +24,7 @@ public class EnemySpawner : MonoBehaviour
    private void Start()
    {
       Instance = this;
+      waveTimer = waveDelay;
    }
 
    private void FixedUpdate()
@@ -45,7 +46,7 @@ public class EnemySpawner : MonoBehaviour
       waveCounter %= waveContent.Length;
       for( int i = 0; i < curWave.spawnPoints.Length; i++ ) {
          int j = i % curWave.enemies.Length;
-         Instantiate(curWave.enemies[j], curWave.spawnPoints[i], transform);
+         Instantiate(curWave.enemies[j], curWave.spawnPoints[i]);
       }
    }
 

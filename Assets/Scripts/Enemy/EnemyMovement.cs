@@ -7,6 +7,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
    [SerializeField] private Transform player;
+   [SerializeField] private EnemyController controller;
    [SerializeField] private LayerMask enemyMask;
 
    [SerializeField] private bool canMove = true;
@@ -18,6 +19,16 @@ public class EnemyMovement : MonoBehaviour
    private void Awake()
    {
       baseScaleX = transform.localScale.x;
+   }
+
+   private void Start()
+   {
+      controller.OnStateChanged += EnemyController_OnStateChanged;
+   }
+
+   private void EnemyController_OnStateChanged(object sender, EnemyController.OnStateChangedEventArgs e)
+   {
+      canMove = e.state == EnemyController.EnemyState.Move;
    }
 
    private void Update()

@@ -60,6 +60,7 @@ public class EnemyController : MonoBehaviour
 
    private bool IsInAttackRange()
    {
+      if(!attackRange) return false;
       return attackRange.IsInAttackRange();
    }
 }

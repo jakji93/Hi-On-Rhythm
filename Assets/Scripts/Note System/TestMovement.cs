@@ -13,9 +13,7 @@ public class TestMovement : MonoBehaviour
 
    private void FixedUpdate()
    {
-      if (transform.localPosition.x > -900) {
-         timeSofar += Time.fixedDeltaTime;
-         transform.position -= new Vector3(noteSpeed * Time.fixedDeltaTime, 0, 0);
-      }
+      timeSofar += Time.fixedDeltaTime;
+      transform.position -= new Vector3(noteSpeed * Time.fixedDeltaTime, 0, 0);
    }
 }

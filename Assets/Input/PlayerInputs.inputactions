@@ -1,0 +1,54 @@
+{
+    "name": "PlayerInputs",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "f4d3e164-f940-4a1b-a4e4-46345690d580",
+            "actions": [
+                {
+                    "name": "N1",
+                    "type": "Button",
+                    "id": "86c754df-efe2-4e59-ac03-464c4c537517",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "N2",
+                    "type": "Button",
+                    "id": "88e74886-3ea4-4a48-a965-5091f74e5377",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e08eaaf4-fc22-467c-b21e-517bdfa0f35c",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "N1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7eb91e89-fa28-46aa-b4c8-dd9076497fc7",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "N2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

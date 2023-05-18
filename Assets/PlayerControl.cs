@@ -51,7 +51,7 @@ public class PlayerControl : MonoBehaviour
     }
 
     void OnMove(InputValue playerInput) {
-    playerMoveDir = playerInput.Get<Vector2>();
+         playerMoveDir = playerInput.Get<Vector2>().normalized;
 
     }
 

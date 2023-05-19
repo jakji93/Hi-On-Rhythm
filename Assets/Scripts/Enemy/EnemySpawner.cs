@@ -21,9 +21,13 @@ public class EnemySpawner : MonoBehaviour
 
    public static EnemySpawner Instance { get; private set; }
 
-   private void Start()
+   private void Awake()
    {
       Instance = this;
+   }
+
+   private void Start()
+   {
       waveTimer = waveDelay;
    }
 

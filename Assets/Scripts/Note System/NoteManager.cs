@@ -31,19 +31,19 @@ public class NoteManager : MonoBehaviour
 
    private void GameInput_OnNormal1Pressed(object sender, System.EventArgs e)
    {
-      var note = Physics2D.OverlapBox(transform.position, hitzoneSize, noteLayer);
-      if(note != null) {
-         note.gameObject.TryGetComponent(out NoteType noteType);
-         switch(noteType.getNoteType()) {
-            case NoteType.NoteTypes.Normal1:
+      var noteObj = Physics2D.OverlapBox(transform.position, hitzoneSize, noteLayer);
+      if(noteObj != null) {
+         noteObj.gameObject.TryGetComponent(out Note note);
+         switch(note.getNoteType()) {
+            case Note.NoteTypes.Normal1:
                OnNormal1Hit?.Invoke(this, EventArgs.Empty);
                Debug.Log("Normal 1 hit");
                break;
-            case NoteType.NoteTypes.Normal2:
+            case Note.NoteTypes.Normal2:
                OnNoteMissed?.Invoke(this, EventArgs.Empty);
                Debug.Log("Hit wrong note");
                break;
-            case NoteType.NoteTypes.Special:
+            case Note.NoteTypes.Special:
                OnSpecialHit?.Invoke(this, EventArgs.Empty);
                Debug.Log("Special hit");
                break;
@@ -58,19 +58,19 @@ public class NoteManager : MonoBehaviour
 
    private void GameInput_OnNormal2Pressed(object sender, System.EventArgs e)
    {
-      var note = Physics2D.OverlapBox(transform.position, hitzoneSize, noteLayer);
-      if (note != null) {
-         note.gameObject.TryGetComponent(out NoteType noteType);
-         switch (noteType.getNoteType()) {
-            case NoteType.NoteTypes.Normal1:
+      var noteObj = Physics2D.OverlapBox(transform.position, hitzoneSize, noteLayer);
+      if (noteObj != null) {
+         noteObj.gameObject.TryGetComponent(out Note note);
+         switch (note.getNoteType()) {
+            case Note.NoteTypes.Normal1:
                OnNoteMissed?.Invoke(this, EventArgs.Empty);
                Debug.Log("Hit wrong note");
                break;
-            case NoteType.NoteTypes.Normal2:
+            case Note.NoteTypes.Normal2:
                OnNormal2Hit?.Invoke(this, EventArgs.Empty);
                Debug.Log("Normal 2 hit");
                break;
-            case NoteType.NoteTypes.Special:
+            case Note.NoteTypes.Special:
                OnSpecialHit?.Invoke(this, EventArgs.Empty);
                Debug.Log("Special hit");
                break;

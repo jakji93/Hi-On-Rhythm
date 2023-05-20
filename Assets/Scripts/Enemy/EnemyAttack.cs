@@ -39,10 +39,12 @@ public abstract class EnemyAttack : MonoBehaviour
    public void StartAttacking()
    {
       isAttacking = true;
+      controller.IsAttacking(true);
    }
 
    public void EndAttacking()
    {
       isAttacking = false;
+      controller.IsAttacking(false);
    }
 }

@@ -14,6 +14,9 @@ public class GameplayManager : MonoBehaviour
    [SerializeField] private float waitingToEnd = 1f;
    [SerializeField] private float musicDelay = 0f;
    [SerializeField] private float chartDelay = 0.1f;
+   [SerializeField] private float spawnDelay = 0f;
+   [SerializeField] private float spawnEnd = 0f;
+   [SerializeField] private float playerDeadDelay = 1f;
 
    private bool musicPlaying = false;
 
@@ -24,6 +27,7 @@ public class GameplayManager : MonoBehaviour
       WaitingToStart,
       ReadyGo,
       Playing,
+      PlayerDead,
       WaitingToEnd,
       Score,
    }
@@ -62,6 +66,8 @@ public class GameplayManager : MonoBehaviour
          case GameState.Playing:
             musicDelay -= Time.deltaTime;
             chartDelay -= Time.deltaTime;
+            spawnDelay -= Time.deltaTime;
+            spawnEnd -= Time.deltaTime;
             if(chartDelay < 0f) {
                ChartManager.Instance.StartPlaying();
             }
@@ -69,10 +75,24 @@ public class GameplayManager : MonoBehaviour
                MusicManager.Instance.StartMusic();
                musicPlaying = true;
             }
+            if(spawnDelay < 0f) {
+               EnemySpawner.Instance.StartSpawn();
+            }
+            if(spawnEnd < 0f) {
+               EnemySpawner.Instance.StopSpawn();
+            }
             if(musicPlaying && !MusicManager.Instance.IsPlaying()) { 
                state = GameState.WaitingToEnd;
                OnStateChange?.Invoke(this, EventArgs.Empty);
                Debug.Log("waiting to end");
+            }
+            break;
+         case GameState.PlayerDead:
+            playerDeadDelay -= Time.deltaTime;
+            if(playerDeadDelay < 0f) {
+               state = GameState.Score;
+               OnStateChange?.Invoke(this, EventArgs.Empty);
+               Debug.Log("Score");
             }
             break;
          case GameState.WaitingToEnd:
@@ -93,5 +113,15 @@ public class GameplayManager : MonoBehaviour
    public bool IsGamePlaying()
    {
       return state == GameState.Playing;
+   }
+
+   public void PlayerDead()
+   {
+      state = GameState.PlayerDead;
+      OnStateChange?.Invoke(this, EventArgs.Empty);
+      EnemySpawner.Instance.StopSpawn();
+      ChartManager.Instance.StopPlaying();
+      MusicManager.Instance.StopMusic();
+      Debug.Log("Player Dead");
    }
 }

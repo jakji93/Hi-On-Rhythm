@@ -116,7 +116,7 @@ public class ScoreManager : MonoBehaviour
          finalScore += enemyKilledCounter * enemyKilledMultiplier;
       }
       // finalScore += playerHp * playerHpMulti
-      // finalScore += highestCombo * comboMulti
+      finalScore += ComboManager.Instance.GetMaxCombo() * highestComboMultiplier;
       return finalScore;
    }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
+using UnityEngine.WSA;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class PlayerControl : MonoBehaviour
     Vector2 playerMouseDir;
     private playerAim playerAimDir;
 
+    private float playerStam =100f; 
+    private float playerDashSpeed = 10f;
+    private bool dashPress = false;
+
+    
 
 
 
@@ -23,31 +29,73 @@ public class PlayerControl : MonoBehaviour
     void Start(){
         playerRB = GetComponent<Rigidbody2D>();
         playerAimDir = GetComponentInChildren<playerAim>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       ////
+        if (playerStam <100)
+        {
+            playerStam++;
+        }
+
     }
-
-
 
     private void FixedUpdate(){
 
-        if (playerMoveDir != Vector2.zero) {
+
+        if (playerMoveDir != Vector2.zero) 
+        {
+
             int count = playerRB.Cast(playerMoveDir, movementFilter, castCollisions, playerMoveSpeed * Time.fixedDeltaTime + collisionOffset);
 
-            if (count == 0) { 
-            
-                playerRB.MovePosition(playerRB.position + playerMoveDir * playerMoveSpeed * Time.fixedDeltaTime);
+            if (count == 0 && !dashPress) {
+
+                MovePlayer(playerRB.position,playerMoveDir,playerMoveSpeed);
             }
+
+            else if (count == 0 && dashPress)
+            {
+                int count2 = playerRB.Cast(playerMoveDir, movementFilter, castCollisions, playerDashSpeed * Time.fixedDeltaTime + collisionOffset);
+
+                Debug.DrawLine(playerRB.position, playerRB.position + playerMoveDir * playerDashSpeed, Color.red, 4);
+
+                if (count2 == 0)
+                {
+                    MovePlayer(playerRB.position, playerMoveDir, playerDashSpeed);
+                    dashPress = false;
+                }
+                else
+                {
+
+                    RaycastHit2D hitRay = Physics2D.Raycast(playerRB.position, playerMoveDir);
+
+                    Debug.DrawLine(playerRB.position, hitRay.point - playerRB.position * hitRay.fraction, Color.green,4);
+
+                    playerRB.MovePosition(hitRay.point - playerRB.position.normalized * hitRay.fraction);
+
+
+                    print(hitRay.fraction);
+                    dashPress = false;
+                    
+                }
+            }
+            else if (count != 0 && dashPress)
+            {
+                dashPress = false;
+                playerStam = 0;
+                print("wall");
+            }
+
+
+
+
         }
+        
 
-        //playerMouseDir = getMouseDir();
-        //playerAimDir.pointerPos = playerMouseDir;
-       
 
+    
     }
 
     void OnMove(InputValue playerInput) {
@@ -55,11 +103,37 @@ public class PlayerControl : MonoBehaviour
 
     }
 
+    void OnSpace(InputValue playerInput)
+    {
+
+        if (playerStam == 100)
+        {
+            dashPress = true;
+            playerStam = 0;
+        }
+        else 
+        {
+            dashPress = false;
+        }
+
+    }
+
+    void MovePlayer(Vector2 curPos, Vector2 moveDir ,float moveSpeed)
+    {
+        playerRB.MovePosition(curPos + moveDir * moveSpeed * Time.fixedDeltaTime);
+
+    }
+
+
     private Vector2 getMouseDir() {
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;
         return Camera.main.ScreenToWorldPoint(mousePos);    
     }
+
+
+
+    
 
 
 

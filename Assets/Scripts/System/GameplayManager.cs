@@ -8,17 +8,22 @@ public class GameplayManager : MonoBehaviour
    public static GameplayManager Instance { get; private set; }
 
    public event EventHandler OnStateChange;
+   public event EventHandler OnGamePause;
+   public event EventHandler OnGameUnpause;
+
+   [SerializeField] private GameInput gameInput;
 
    [SerializeField] private float waitingToStart = 1f;
    [SerializeField] private float readyGo = 1f;
    [SerializeField] private float waitingToEnd = 1f;
    [SerializeField] private float musicDelay = 0f;
-   [SerializeField] private float chartDelay = 0.1f;
+   [SerializeField] private float chartDelay = 0.5f;
    [SerializeField] private float spawnDelay = 0f;
    [SerializeField] private float spawnEnd = 0f;
    [SerializeField] private float playerDeadDelay = 1f;
 
    private bool musicPlaying = false;
+   private bool gamePasued = false;
 
    private GameState state;
 
@@ -39,8 +44,28 @@ public class GameplayManager : MonoBehaviour
 
    private void Start()
    {
+      Cursor.visible = false;
       state = GameState.WaitingToStart;
       Debug.Log("Waiting to start");
+      gameInput.OnPausePressed += GameInput_OnPausePressed;
+      
+   }
+
+   private void GameInput_OnPausePressed(object sender, EventArgs e)
+   {
+      if(!IsGamePlaying()) return;
+      gamePasued = !gamePasued;
+      if (gamePasued) {
+         Time.timeScale = 0f;
+         musicPlaying = false;
+         MusicManager.Instance.PauseMusic();
+         OnGamePause?.Invoke(this, EventArgs.Empty);
+      } else {
+         musicPlaying = true;
+         Time.timeScale = 1f;
+         MusicManager.Instance.StartMusic();
+         OnGameUnpause?.Invoke(this, EventArgs.Empty);
+      }
    }
 
    private void Update()
@@ -71,7 +96,7 @@ public class GameplayManager : MonoBehaviour
             if(chartDelay < 0f) {
                ChartManager.Instance.StartPlaying();
             }
-            if (!musicPlaying && musicDelay < 0f) {
+            if (!musicPlaying && musicDelay < 0f && !gamePasued) {
                MusicManager.Instance.StartMusic();
                musicPlaying = true;
             }
@@ -100,7 +125,7 @@ public class GameplayManager : MonoBehaviour
             if (waitingToEnd < 0f) {
                ChartManager.Instance.StopPlaying();
                state = GameState.Score;
-               //TODO: ScoreManager.Instance.ShowFianlScore
+               ScoreManager.Instance.ShowScore();
                OnStateChange?.Invoke(this, EventArgs.Empty);
                Debug.Log("Score");
             }
@@ -123,5 +148,14 @@ public class GameplayManager : MonoBehaviour
       ChartManager.Instance.StopPlaying();
       MusicManager.Instance.StopMusic();
       Debug.Log("Player Dead");
+   }
+
+   public void ResumeGame()
+   {
+      gamePasued = false;
+      musicPlaying = true;
+      Time.timeScale = 1f;
+      MusicManager.Instance.StartMusic();
+      OnGameUnpause?.Invoke(this, EventArgs.Empty);
    }
 }

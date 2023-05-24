@@ -25,6 +25,11 @@ public class MusicManager : MonoBehaviour
       musicSource.Stop();
    }
 
+   public void PauseMusic()
+   {
+      musicSource.Pause();
+   }
+
    public bool IsPlaying()
    {
       return musicSource.isPlaying;

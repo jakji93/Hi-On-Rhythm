@@ -87,7 +87,7 @@ public class ScoreManager : MonoBehaviour
 
    public void ShowScore()
    {
-      float finalScore = GetFinalScore();
+      float finalScore = Mathf.Max(0, GetFinalScore());
       string letterGrade = GetLetterGrade(finalScore);
       //save score
       SetTextFields(finalScore, letterGrade);
@@ -144,10 +144,9 @@ public class ScoreManager : MonoBehaviour
 
    private void SetTextFields(float finalScore, string letterGrade)
    {
-      //set song title
-      //set difficulity
-      //get max combo
-      maxComboText.text = MAX_COMBO;
+      //get song title
+      //get difficulity
+      maxComboText.text = MAX_COMBO + ComboManager.Instance.GetMaxCombo();
       if(isBossStage) {
          //get boss hp
          EnemyBossText.text = BOSS_HP + "0%";

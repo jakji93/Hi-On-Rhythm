@@ -39,6 +39,7 @@ public class GameplayManager : MonoBehaviour
 
    private void Start()
    {
+      Cursor.visible = false;
       state = GameState.WaitingToStart;
       Debug.Log("Waiting to start");
    }

@@ -31,6 +31,7 @@ public class NoteManager : MonoBehaviour
 
    private void GameInput_OnNormal1Pressed(object sender, System.EventArgs e)
    {
+      if (!GameplayManager.Instance.IsGamePlaying()) return; 
       var noteObj = Physics2D.OverlapBox(transform.position, hitzoneSize, noteLayer);
       if(noteObj != null) {
          noteObj.gameObject.TryGetComponent(out Note note);
@@ -58,6 +59,7 @@ public class NoteManager : MonoBehaviour
 
    private void GameInput_OnNormal2Pressed(object sender, System.EventArgs e)
    {
+      if (!GameplayManager.Instance.IsGamePlaying()) return;
       var noteObj = Physics2D.OverlapBox(transform.position, hitzoneSize, noteLayer);
       if (noteObj != null) {
          noteObj.gameObject.TryGetComponent(out Note note);

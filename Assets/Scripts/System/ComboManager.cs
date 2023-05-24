@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ComboManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class ComboManager : MonoBehaviour
    [SerializeField] private int maxMultiplier = 4;
    [SerializeField] private TextMeshProUGUI comboCounterText;
    [SerializeField] private TextMeshProUGUI multiplierText;
+
+   public UnityEvent OnComboIncrease;
 
    private int curCombo = 0;
    private int curMultiplier = 1;
@@ -61,6 +64,7 @@ public class ComboManager : MonoBehaviour
       //TODO might chage to a progress bar based UI
       comboCounterText.text = curCombo.ToString();
       multiplierText.text = curMultiplier.ToString() + "x";
+      OnComboIncrease?.Invoke();
    }
 
    public int GetMultiplier()

@@ -20855,6 +20855,7 @@ GameObject:
   - component: {fileID: 1372711953}
   - component: {fileID: 1372711955}
   - component: {fileID: 1372711954}
+  - component: {fileID: 1372711956}
   m_Layer: 5
   m_Name: Combo Text
   m_TagString: Untagged
@@ -20872,7 +20873,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0.14219703, w: 0.9898384}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2080894690}
   m_RootOrder: -1
@@ -20979,6 +20980,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372711952}
   m_CullTransparentMesh: 1
+--- !u!114 &1372711956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372711952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c04b2874faf2b9e4091d6ecc346b51a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minScale: 1
+  maxScale: 1.2
+  pulseDuration: 0.2
+  constantPulse: 0
+  delayBetweenPulse: 1
 --- !u!1 &1390084247
 GameObject:
   m_ObjectHideFlags: 0
@@ -22227,6 +22245,21 @@ MonoBehaviour:
   maxMultiplier: 4
   comboCounterText: {fileID: 1372711954}
   multiplierText: {fileID: 1608942173}
+  OnComboIncrease:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1372711956}
+        m_TargetAssemblyTypeName: PulseEffect, Assembly-CSharp
+        m_MethodName: Pulse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1497812837
 GameObject:
   m_ObjectHideFlags: 0
@@ -23854,6 +23887,7 @@ GameObject:
   - component: {fileID: 1608942172}
   - component: {fileID: 1608942174}
   - component: {fileID: 1608942173}
+  - component: {fileID: 1608942175}
   m_Layer: 5
   m_Name: Multiplier Text
   m_TagString: Untagged
@@ -23978,6 +24012,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608942171}
   m_CullTransparentMesh: 1
+--- !u!114 &1608942175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608942171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c04b2874faf2b9e4091d6ecc346b51a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minScale: 1
+  maxScale: 1.2
+  pulseDuration: 0.1
+  constantPulse: 1
+  delayBetweenPulse: 0.36875
 --- !u!1 &1620148562
 GameObject:
   m_ObjectHideFlags: 0

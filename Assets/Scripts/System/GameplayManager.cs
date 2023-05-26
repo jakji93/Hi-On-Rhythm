@@ -53,7 +53,7 @@ public class GameplayManager : MonoBehaviour
 
    private void GameInput_OnPausePressed(object sender, EventArgs e)
    {
-      if(!IsGamePlaying()) return;
+      if(state != GameState.Playing) return;
       gamePasued = !gamePasued;
       if (gamePasued) {
          Time.timeScale = 0f;
@@ -137,7 +137,7 @@ public class GameplayManager : MonoBehaviour
 
    public bool IsGamePlaying()
    {
-      return state == GameState.Playing;
+      return state == GameState.Playing && !gamePasued;
    }
 
    public void PlayerDead()

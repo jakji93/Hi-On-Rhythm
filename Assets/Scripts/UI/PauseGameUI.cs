@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PauseGameUI : MonoBehaviour
 {
    [SerializeField] private Button defaultSelectButton;
+   [SerializeField] private GameObject pauseGameScreen;
 
    private void Start()
    {
@@ -26,12 +27,12 @@ public class PauseGameUI : MonoBehaviour
 
    private void Hide()
    {
-      gameObject.SetActive(false);
+      pauseGameScreen.SetActive(false);
    }
 
    private void Active()
    {
-      gameObject.SetActive(true);
+      pauseGameScreen.SetActive(true);
       defaultSelectButton.Select();
    }
 }

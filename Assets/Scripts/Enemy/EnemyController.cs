@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -19,12 +20,26 @@ public class EnemyController : MonoBehaviour
    }
 
    [SerializeField] private EnemyAttackRange attackRange;
+   [SerializeField] private Health health;
+   [SerializeField] private Collider2D collider;
    private bool isAttacking = false;
    private EnemyState state;
 
    private void Start()
    {
+      health.OnDeath += Health_OnDeath;
       state = EnemyState.Move;
+   }
+
+   private void Health_OnDeath(object sender, EventArgs e)
+   {
+      collider.enabled = false;
+      state = EnemyState.Dead;
+      OnStateChanged?.Invoke(this, new OnStateChangedEventArgs
+      {
+         state = state,
+      });
+      ScoreManager.Instance.EnemyKilled();
    }
 
    private void Update()

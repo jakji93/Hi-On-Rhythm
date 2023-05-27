@@ -15854,7 +15854,7 @@ Camera:
   m_GameObject: {fileID: 1053631591}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.13333334, g: 0.08627451, b: 0.10980393, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -22424,7 +22424,7 @@ GameObject:
   - component: {fileID: 1525525790}
   - component: {fileID: 1525525792}
   - component: {fileID: 1525525791}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22471,7 +22471,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: cdbb2bcc222c18842ab6dce1f6ecc6df, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -29479,7 +29479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2027046966}
   - component: {fileID: 2027046969}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Note Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31957,7 +31957,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2128266612}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Missed Zone
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}

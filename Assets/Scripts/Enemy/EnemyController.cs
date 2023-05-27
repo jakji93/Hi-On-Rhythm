@@ -40,6 +40,8 @@ public class EnemyController : MonoBehaviour
          state = state,
       });
       ScoreManager.Instance.EnemyKilled();
+      //TODO death animation, set GO off for now
+      gameObject.SetActive(false);
    }
 
    private void Update()

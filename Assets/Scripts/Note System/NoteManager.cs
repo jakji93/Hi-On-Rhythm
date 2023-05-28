@@ -17,6 +17,9 @@ public class NoteManager : MonoBehaviour
    [SerializeField] private LayerMask noteLayer;
    [SerializeField] private Vector2 missZoneSize;
    [SerializeField] private Transform missZoneTransform;
+   [Header("Particle Systems")]
+   [SerializeField] private GameObject NoteHitParticle;
+   [SerializeField] private Transform particleParent;
 
    private void Awake()
    {
@@ -38,6 +41,7 @@ public class NoteManager : MonoBehaviour
          switch(note.getNoteType()) {
             case Note.NoteTypes.Normal1:
                OnNormal1Hit?.Invoke(this, EventArgs.Empty);
+               EmitNoteHitParticle();
                Debug.Log("Normal 1 hit");
                break;
             case Note.NoteTypes.Normal2:
@@ -46,6 +50,7 @@ public class NoteManager : MonoBehaviour
                break;
             case Note.NoteTypes.Special:
                OnSpecialHit?.Invoke(this, EventArgs.Empty);
+               EmitNoteHitParticle();
                Debug.Log("Special hit");
                break;
          }
@@ -70,15 +75,18 @@ public class NoteManager : MonoBehaviour
                break;
             case Note.NoteTypes.Normal2:
                OnNormal2Hit?.Invoke(this, EventArgs.Empty);
+               EmitNoteHitParticle();
                Debug.Log("Normal 2 hit");
                break;
             case Note.NoteTypes.Special:
                OnSpecialHit?.Invoke(this, EventArgs.Empty);
+               EmitNoteHitParticle();
                Debug.Log("Special hit");
                break;
          }
          //play note hit animation
          note.gameObject.SetActive(false);
+         EmitNoteHitParticle();
       }
       else {
          Debug.Log("No hit");
@@ -104,5 +112,11 @@ public class NoteManager : MonoBehaviour
 
       Gizmos.color = Color.cyan;
       Gizmos.DrawWireCube(missZoneTransform.position, missZoneSize);
+   }
+
+   private void EmitNoteHitParticle()
+   {
+      var newParticle = Instantiate(NoteHitParticle, particleParent);
+      Destroy(newParticle, 2);
    }
 }

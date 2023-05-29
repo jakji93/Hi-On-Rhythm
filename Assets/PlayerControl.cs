@@ -73,7 +73,8 @@ public class PlayerControl : MonoBehaviour
 
                     Debug.DrawLine(playerRB.position, hitRay.point - playerRB.position * hitRay.fraction, Color.green,4);
 
-                    playerRB.MovePosition(hitRay.point - playerRB.position.normalized * hitRay.fraction);
+                    //playerRB.MovePosition(hitRay.point - playerRB.position.normalized * hitRay.fraction);
+                    playerRB.MovePosition(playerRB.position + playerMoveDir * hitRay.fraction *.3f);
 
 
                     print(hitRay.fraction);

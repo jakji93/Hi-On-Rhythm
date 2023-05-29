@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Febucci.UI;
 using UnityEngine;
 
 public class GameplayManager : MonoBehaviour
@@ -21,6 +22,7 @@ public class GameplayManager : MonoBehaviour
    [SerializeField] private float spawnDelay = 0f;
    [SerializeField] private float spawnEnd = 0f;
    [SerializeField] private float playerDeadDelay = 1f;
+   [SerializeField] TextAnimatorPlayer textAnimator;
 
    private bool musicPlaying = false;
    private bool gamePasued = false;
@@ -85,6 +87,7 @@ public class GameplayManager : MonoBehaviour
             if (readyGo < 0f) {
                state = GameState.Playing;
                OnStateChange?.Invoke(this, EventArgs.Empty);
+               textAnimator.StartDisappearingText();
                Debug.Log("Playing");
             }
             break;

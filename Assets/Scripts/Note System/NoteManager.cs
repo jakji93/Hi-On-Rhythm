@@ -20,6 +20,8 @@ public class NoteManager : MonoBehaviour
    [Header("Particle Systems")]
    [SerializeField] private GameObject NoteHitParticle;
    [SerializeField] private Transform particleParent;
+   [Header("SFX")]
+   [SerializeField] private AudioClip noteHitSound;
 
    private void Awake()
    {
@@ -42,6 +44,7 @@ public class NoteManager : MonoBehaviour
             case Note.NoteTypes.Normal1:
                OnNormal1Hit?.Invoke(this, EventArgs.Empty);
                EmitNoteHitParticle();
+               AudioSource.PlayClipAtPoint(noteHitSound, Camera.main.transform.position, 1);
                Debug.Log("Normal 1 hit");
                break;
             case Note.NoteTypes.Normal2:
@@ -51,6 +54,7 @@ public class NoteManager : MonoBehaviour
             case Note.NoteTypes.Special:
                OnSpecialHit?.Invoke(this, EventArgs.Empty);
                EmitNoteHitParticle();
+               AudioSource.PlayClipAtPoint(noteHitSound, Camera.main.transform.position, 1);
                Debug.Log("Special hit");
                break;
          }
@@ -76,17 +80,18 @@ public class NoteManager : MonoBehaviour
             case Note.NoteTypes.Normal2:
                OnNormal2Hit?.Invoke(this, EventArgs.Empty);
                EmitNoteHitParticle();
+               AudioSource.PlayClipAtPoint(noteHitSound, Camera.main.transform.position, 1);
                Debug.Log("Normal 2 hit");
                break;
             case Note.NoteTypes.Special:
                OnSpecialHit?.Invoke(this, EventArgs.Empty);
                EmitNoteHitParticle();
+               AudioSource.PlayClipAtPoint(noteHitSound, Camera.main.transform.position, 1);
                Debug.Log("Special hit");
                break;
          }
          //play note hit animation
          note.gameObject.SetActive(false);
-         EmitNoteHitParticle();
       }
       else {
          Debug.Log("No hit");

@@ -44,7 +44,7 @@ public class NoteManager : MonoBehaviour
             case Note.NoteTypes.Normal1:
                OnNormal1Hit?.Invoke(this, EventArgs.Empty);
                EmitNoteHitParticle();
-               AudioSource.PlayClipAtPoint(noteHitSound, Camera.main.transform.position, 1);
+               AudioSource.PlayClipAtPoint(noteHitSound, Camera.main.transform.position, 0.5f);
                Debug.Log("Normal 1 hit");
                break;
             case Note.NoteTypes.Normal2:
@@ -54,7 +54,7 @@ public class NoteManager : MonoBehaviour
             case Note.NoteTypes.Special:
                OnSpecialHit?.Invoke(this, EventArgs.Empty);
                EmitNoteHitParticle();
-               AudioSource.PlayClipAtPoint(noteHitSound, Camera.main.transform.position, 1);
+               AudioSource.PlayClipAtPoint(noteHitSound, Camera.main.transform.position, 0.5f);
                Debug.Log("Special hit");
                break;
          }
@@ -80,13 +80,13 @@ public class NoteManager : MonoBehaviour
             case Note.NoteTypes.Normal2:
                OnNormal2Hit?.Invoke(this, EventArgs.Empty);
                EmitNoteHitParticle();
-               AudioSource.PlayClipAtPoint(noteHitSound, Camera.main.transform.position, 1);
+               AudioSource.PlayClipAtPoint(noteHitSound, Camera.main.transform.position, 0.5f);
                Debug.Log("Normal 2 hit");
                break;
             case Note.NoteTypes.Special:
                OnSpecialHit?.Invoke(this, EventArgs.Empty);
                EmitNoteHitParticle();
-               AudioSource.PlayClipAtPoint(noteHitSound, Camera.main.transform.position, 1);
+               AudioSource.PlayClipAtPoint(noteHitSound, Camera.main.transform.position, 0.5f);
                Debug.Log("Special hit");
                break;
          }

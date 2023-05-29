@@ -29784,7 +29784,7 @@ MonoBehaviour:
   missZoneTransform: {fileID: 2128266612}
   NoteHitParticle: {fileID: 2685374757482945601, guid: 8e0edaee0e3cbbf48944c4439c361e64, type: 3}
   particleParent: {fileID: 441160733}
-  noteHitSound: {fileID: 8300000, guid: 8d745b333dbb6440e9da37b96b264e3a, type: 3}
+  noteHitSound: {fileID: 8300000, guid: d7da440ad4f6c4e7489efd85844988d8, type: 3}
 --- !u!1 &2033831715
 GameObject:
   m_ObjectHideFlags: 0

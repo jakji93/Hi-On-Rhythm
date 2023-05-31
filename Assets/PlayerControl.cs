@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,20 +16,29 @@ public class PlayerControl : MonoBehaviour
     Rigidbody2D playerRB;
     List<RaycastHit2D> castCollisions= new List<RaycastHit2D>();
     Vector2 playerMouseDir;
-    private playerAim playerAimDir;
+    //private playerAim playerAimDir;
 
     private float playerStam =100f; 
     private float playerDashSpeed = 10f;
     private bool dashPress = false;
 
-    
+    public GameObject playerAttack1;
+    public GameObject playerAttack2;
+    public Transform aimTransform;
+
+    public float rotValue;
+
+
+
+
 
 
 
     // Start is called before the first frame update
     void Start(){
         playerRB = GetComponent<Rigidbody2D>();
-        playerAimDir = GetComponentInChildren<playerAim>();
+        //playerAimDir = GetComponentInChildren<playerAim>();
+        rotValue = 100;
 
     }
 
@@ -130,6 +140,22 @@ public class PlayerControl : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;
         return Camera.main.ScreenToWorldPoint(mousePos);    
+    }
+
+    void OnN1(InputValue playerInput)
+    {
+        //Vector3 mousePos = Input.mousePosition;
+        //Vector3 rot = mousePos - transform.position;
+        //float rotZPoint = Mathf.Atan2(rot.y, rot.x) * Mathf.Rad2Deg;
+        //Quaternion rotato = Quaternion.Euler(0, 0, rotZPoint);
+
+        Quaternion rotato = aimTransform.rotation;
+        Vector3 rot = rotato.eulerAngles;
+        rot.z = rot.z + rotValue;
+        rotato = Quaternion.Euler(rot);
+
+        Instantiate(playerAttack1,aimTransform.position,rotato);
+
     }
 
 

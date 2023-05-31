@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +26,10 @@ public class PlayerControl : MonoBehaviour
     public GameObject playerAttack2;
     public Transform aimTransform;
 
+    public float rotValue;
+
+
+
 
 
 
@@ -33,6 +38,7 @@ public class PlayerControl : MonoBehaviour
     void Start(){
         playerRB = GetComponent<Rigidbody2D>();
         //playerAimDir = GetComponentInChildren<playerAim>();
+        rotValue = 100;
 
     }
 
@@ -138,7 +144,17 @@ public class PlayerControl : MonoBehaviour
 
     void OnN1(InputValue playerInput)
     {
-        Instantiate(playerAttack1, aimTransform.position, aimTransform.rotation);
+        //Vector3 mousePos = Input.mousePosition;
+        //Vector3 rot = mousePos - transform.position;
+        //float rotZPoint = Mathf.Atan2(rot.y, rot.x) * Mathf.Rad2Deg;
+        //Quaternion rotato = Quaternion.Euler(0, 0, rotZPoint);
+
+        Quaternion rotato = aimTransform.rotation;
+        Vector3 rot = rotato.eulerAngles;
+        rot.z = rot.z + rotValue;
+        rotato = Quaternion.Euler(rot);
+
+        Instantiate(playerAttack1,aimTransform.position,rotato);
 
     }
 

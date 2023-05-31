@@ -15,20 +15,24 @@ public class PlayerControl : MonoBehaviour
     Rigidbody2D playerRB;
     List<RaycastHit2D> castCollisions= new List<RaycastHit2D>();
     Vector2 playerMouseDir;
-    private playerAim playerAimDir;
+    //private playerAim playerAimDir;
 
     private float playerStam =100f; 
     private float playerDashSpeed = 10f;
     private bool dashPress = false;
 
-    
+    public GameObject playerAttack1;
+    public GameObject playerAttack2;
+    public Transform aimTransform;
+
+
 
 
 
     // Start is called before the first frame update
     void Start(){
         playerRB = GetComponent<Rigidbody2D>();
-        playerAimDir = GetComponentInChildren<playerAim>();
+        //playerAimDir = GetComponentInChildren<playerAim>();
 
     }
 
@@ -130,6 +134,12 @@ public class PlayerControl : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;
         return Camera.main.ScreenToWorldPoint(mousePos);    
+    }
+
+    void OnN1(InputValue playerInput)
+    {
+        Instantiate(playerAttack1, aimTransform.position, aimTransform.rotation);
+
     }
 
 

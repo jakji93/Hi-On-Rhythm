@@ -26,7 +26,8 @@ public class PlayerControl : MonoBehaviour
     public GameObject playerAttack2;
     public Transform aimTransform;
 
-    public float rotValue;
+    [SerializeField] private float rotValue1;
+    [SerializeField] private float rotValue2;
 
 
 
@@ -38,7 +39,7 @@ public class PlayerControl : MonoBehaviour
     void Start(){
         playerRB = GetComponent<Rigidbody2D>();
         //playerAimDir = GetComponentInChildren<playerAim>();
-        rotValue = 100;
+        rotValue1 = 100;
 
     }
 
@@ -151,16 +152,32 @@ public class PlayerControl : MonoBehaviour
 
         Quaternion rotato = aimTransform.rotation;
         Vector3 rot = rotato.eulerAngles;
-        rot.z = rot.z + rotValue;
+        rot.z = rot.z + rotValue1;
         rotato = Quaternion.Euler(rot);
 
         Instantiate(playerAttack1,aimTransform.position,rotato);
 
     }
 
+    void OnN2(InputValue playerInput)
+    {
+        //Vector3 mousePos = Input.mousePosition;
+        //Vector3 rot = mousePos - transform.position;
+        //float rotZPoint = Mathf.Atan2(rot.y, rot.x) * Mathf.Rad2Deg;
+        //Quaternion rotato = Quaternion.Euler(0, 0, rotZPoint);
+
+        Quaternion rotato = aimTransform.rotation;
+        Vector3 rot = rotato.eulerAngles;
+        rot.z = rot.z + rotValue2;
+        rotato = Quaternion.Euler(rot);
+
+        Instantiate(playerAttack2, aimTransform.position, rotato);
+
+    }
 
 
-    
+
+
 
 
 

@@ -24,6 +24,7 @@ public class EnemyMovement : MonoBehaviour
    private void Start()
    {
       controller.OnStateChanged += EnemyController_OnStateChanged;
+      //player = GameObject.FindGameObjectWithTag("Player").transform;
    }
 
    private void EnemyController_OnStateChanged(object sender, EnemyController.OnStateChangedEventArgs e)

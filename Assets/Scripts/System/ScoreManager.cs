@@ -56,8 +56,13 @@ public class ScoreManager : MonoBehaviour
       NoteManager.Instance.OnNormal1Hit += NoteManager_OnNormal1Hit;
       NoteManager.Instance.OnNormal2Hit += NoteManager_OnNormal2Hit;
       NoteManager.Instance.OnSpecialHit += NoteManger_OnSpecialHit;
+      NoteManager.Instance.OnWrongNote += NoteManager_OnWrongNote;
       Hide();
-      //set if is boss stage
+   }
+
+   private void NoteManager_OnWrongNote(object sender, System.EventArgs e)
+   {
+      noteMissedCounter++;
    }
 
    private void NoteManger_OnSpecialHit(object sender, System.EventArgs e)

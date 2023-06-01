@@ -30,14 +30,23 @@ public class ComboManager : MonoBehaviour
       NoteManager.Instance.OnNormal2Hit += NoteManager_OnNormal2Hit;
       NoteManager.Instance.OnSpecialHit += NoteManager_OnSpecialHit;
       NoteManager.Instance.OnNoteMissed += NoteManager_OnNoteMissed;
+      NoteManager.Instance.OnNoNoteHits += NoteManager_OnNoNoteHits;
+      NoteManager.Instance.OnWrongNote += NoteManager_OnWrongNote;
+   }
+
+   private void NoteManager_OnWrongNote(object sender, System.EventArgs e)
+   {
+      ResetCombo();
+   }
+
+   private void NoteManager_OnNoNoteHits(object sender, System.EventArgs e)
+   {
+      ResetCombo();
    }
 
    private void NoteManager_OnNoteMissed(object sender, System.EventArgs e)
    {
-      curMultiplier = 1;
-      curCombo = 0;
-      comboCounterText.text = curCombo.ToString();
-      multiplierText.text = curMultiplier.ToString() + "x";
+      ResetCombo();
    }
 
    private void NoteManager_OnSpecialHit(object sender, System.EventArgs e)
@@ -65,6 +74,14 @@ public class ComboManager : MonoBehaviour
       comboCounterText.text = curCombo.ToString();
       multiplierText.text = curMultiplier.ToString() + "x";
       OnComboIncrease?.Invoke();
+   }
+
+   private void ResetCombo()
+   {
+      curMultiplier = 1;
+      curCombo = 0;
+      comboCounterText.text = curCombo.ToString();
+      multiplierText.text = curMultiplier.ToString() + "x";
    }
 
    public int GetMultiplier()

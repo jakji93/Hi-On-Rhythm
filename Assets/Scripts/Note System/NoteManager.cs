@@ -11,6 +11,8 @@ public class NoteManager : MonoBehaviour
    public event EventHandler OnNormal2Hit;
    public event EventHandler OnSpecialHit;
    public event EventHandler OnNoteMissed;
+   public event EventHandler OnWrongNote;
+   public event EventHandler OnNoNoteHits;
 
    [SerializeField] private Vector2 hitzoneSize;
    [SerializeField] private GameInput gameInput;
@@ -50,7 +52,7 @@ public class NoteManager : MonoBehaviour
                Debug.Log("Normal 1 hit");
                break;
             case Note.NoteTypes.Normal2:
-               OnNoteMissed?.Invoke(this, EventArgs.Empty);
+               OnWrongNote?.Invoke(this, EventArgs.Empty);
                Debug.Log("Hit wrong note");
                break;
             case Note.NoteTypes.Special:
@@ -64,7 +66,7 @@ public class NoteManager : MonoBehaviour
          note.gameObject.SetActive(false);
       } else {
          Debug.Log("No hit");
-         OnNoteMissed?.Invoke(this, EventArgs.Empty);
+         OnNoNoteHits?.Invoke(this, EventArgs.Empty);
       }
    }
 
@@ -76,7 +78,7 @@ public class NoteManager : MonoBehaviour
          noteObj.gameObject.TryGetComponent(out Note note);
          switch (note.getNoteType()) {
             case Note.NoteTypes.Normal1:
-               OnNoteMissed?.Invoke(this, EventArgs.Empty);
+               OnWrongNote?.Invoke(this, EventArgs.Empty);
                Debug.Log("Hit wrong note");
                break;
             case Note.NoteTypes.Normal2:
@@ -97,7 +99,7 @@ public class NoteManager : MonoBehaviour
       }
       else {
          Debug.Log("No hit");
-         OnNoteMissed?.Invoke(this, EventArgs.Empty);
+         OnNoNoteHits?.Invoke(this, EventArgs.Empty);
       }
    }
 

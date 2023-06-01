@@ -26,7 +26,8 @@ public class PlayerControl : MonoBehaviour
     public GameObject playerAttack2;
     public Transform aimTransform;
 
-    public float rotValue;
+    [SerializeField] private float rotValue1;
+    [SerializeField] private float rotValue2;
 
 
 
@@ -38,7 +39,7 @@ public class PlayerControl : MonoBehaviour
     void Start(){
         playerRB = GetComponent<Rigidbody2D>();
         //playerAimDir = GetComponentInChildren<playerAim>();
-        rotValue = 100;
+        rotValue1 = 100;
 
     }
 
@@ -69,7 +70,7 @@ public class PlayerControl : MonoBehaviour
             {
                 int count2 = playerRB.Cast(playerMoveDir, movementFilter, castCollisions, playerDashSpeed * Time.fixedDeltaTime + collisionOffset);
 
-                Debug.DrawLine(playerRB.position, playerRB.position + playerMoveDir * playerDashSpeed, Color.red, 4);
+                //Debug.DrawLine(playerRB.position, playerRB.position + playerMoveDir * playerDashSpeed, Color.red, 4);
 
                 if (count2 == 0)
                 {
@@ -81,9 +82,8 @@ public class PlayerControl : MonoBehaviour
 
                     RaycastHit2D hitRay = Physics2D.Raycast(playerRB.position, playerMoveDir);
 
-                    Debug.DrawLine(playerRB.position, hitRay.point - playerRB.position * hitRay.fraction, Color.green,4);
+                    //Debug.DrawLine(playerRB.position, hitRay.point - playerRB.position * hitRay.fraction, Color.green,4);
 
-                    //playerRB.MovePosition(hitRay.point - playerRB.position.normalized * hitRay.fraction);
                     playerRB.MovePosition(playerRB.position + playerMoveDir * hitRay.fraction *.3f);
 
 
@@ -151,16 +151,32 @@ public class PlayerControl : MonoBehaviour
 
         Quaternion rotato = aimTransform.rotation;
         Vector3 rot = rotato.eulerAngles;
-        rot.z = rot.z + rotValue;
+        rot.z = rot.z + rotValue1;
         rotato = Quaternion.Euler(rot);
 
         Instantiate(playerAttack1,aimTransform.position,rotato);
 
     }
 
+    void OnN2(InputValue playerInput)
+    {
+        //Vector3 mousePos = Input.mousePosition;
+        //Vector3 rot = mousePos - transform.position;
+        //float rotZPoint = Mathf.Atan2(rot.y, rot.x) * Mathf.Rad2Deg;
+        //Quaternion rotato = Quaternion.Euler(0, 0, rotZPoint);
+
+        Quaternion rotato = aimTransform.rotation;
+        Vector3 rot = rotato.eulerAngles;
+        rot.z = rot.z + rotValue2;
+        rotato = Quaternion.Euler(rot);
+
+        Instantiate(playerAttack2, aimTransform.position, rotato);
+
+    }
 
 
-    
+
+
 
 
 

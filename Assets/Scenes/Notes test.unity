@@ -5458,6 +5458,9 @@ MonoBehaviour:
   barImage: {fileID: 2035836115}
   isDepleting: 1
   hideAtStart: 0
+  onChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &322026097
 GameObject:
   m_ObjectHideFlags: 0
@@ -26316,6 +26319,21 @@ MonoBehaviour:
   barImage: {fileID: 1921658769}
   isDepleting: 1
   hideAtStart: 0
+  onChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1921658773}
+        m_TargetAssemblyTypeName: PulseEffect, Assembly-CSharp
+        m_MethodName: Pulse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1875487348
 GameObject:
   m_ObjectHideFlags: 0
@@ -27614,6 +27632,7 @@ GameObject:
   - component: {fileID: 1921658769}
   - component: {fileID: 1921658772}
   - component: {fileID: 1921658771}
+  - component: {fileID: 1921658773}
   m_Layer: 5
   m_Name: Health Bar
   m_TagString: Untagged
@@ -27709,6 +27728,23 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 10, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!114 &1921658773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921658767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c04b2874faf2b9e4091d6ecc346b51a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minScale: 1
+  maxScale: 0.8
+  pulseDuration: 0.1
+  constantPulse: 0
+  delayBetweenPulse: 0
 --- !u!1 &1928809363
 GameObject:
   m_ObjectHideFlags: 0

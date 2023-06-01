@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ProgressBarUI : MonoBehaviour
@@ -9,6 +10,7 @@ public class ProgressBarUI : MonoBehaviour
    [SerializeField] private Image barImage;
    [SerializeField] private bool isDepleting = false;
    [SerializeField] private bool hideAtStart = false;
+   [SerializeField] private UnityEvent onChange;
 
    private IHasProgress hasProgress;
 
@@ -34,6 +36,7 @@ public class ProgressBarUI : MonoBehaviour
       } else {
          Active();
       }
+      onChange?.Invoke();
    }
 
    private void Hide()

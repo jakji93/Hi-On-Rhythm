@@ -70,7 +70,7 @@ public class PlayerControl : MonoBehaviour
             {
                 int count2 = playerRB.Cast(playerMoveDir, movementFilter, castCollisions, playerDashSpeed * Time.fixedDeltaTime + collisionOffset);
 
-                Debug.DrawLine(playerRB.position, playerRB.position + playerMoveDir * playerDashSpeed, Color.red, 4);
+                //Debug.DrawLine(playerRB.position, playerRB.position + playerMoveDir * playerDashSpeed, Color.red, 4);
 
                 if (count2 == 0)
                 {
@@ -82,9 +82,8 @@ public class PlayerControl : MonoBehaviour
 
                     RaycastHit2D hitRay = Physics2D.Raycast(playerRB.position, playerMoveDir);
 
-                    Debug.DrawLine(playerRB.position, hitRay.point - playerRB.position * hitRay.fraction, Color.green,4);
+                    //Debug.DrawLine(playerRB.position, hitRay.point - playerRB.position * hitRay.fraction, Color.green,4);
 
-                    //playerRB.MovePosition(hitRay.point - playerRB.position.normalized * hitRay.fraction);
                     playerRB.MovePosition(playerRB.position + playerMoveDir * hitRay.fraction *.3f);
 
 

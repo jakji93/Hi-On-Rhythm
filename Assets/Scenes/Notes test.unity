@@ -5831,10 +5831,10 @@ RectTransform:
   - {fileID: 2027046966}
   - {fileID: 1481574299}
   - {fileID: 1168878010}
-  - {fileID: 2060207784}
-  - {fileID: 1730370141}
   - {fileID: 1855533152}
   - {fileID: 304517627}
+  - {fileID: 2060207784}
+  - {fileID: 1730370141}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23060,6 +23060,7 @@ MonoBehaviour:
   waveContent: []
   specificWaveContent: []
   waveDelay: 1
+  totalWave: 0
   canSpawn: 0
 --- !u!4 &1562337881
 Transform:
@@ -24624,7 +24625,6 @@ MonoBehaviour:
   musicDelay: 0
   chartDelay: 0.07
   spawnDelay: 0
-  spawnEnd: 0
   playerDeadDelay: 1
   textAnimator: {fileID: 1168878011}
 --- !u!4 &1656054344

@@ -23058,6 +23058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveContent: []
+  specificWaveContent: []
   waveDelay: 1
   canSpawn: 0
 --- !u!4 &1562337881

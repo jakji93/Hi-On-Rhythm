@@ -11,8 +11,17 @@ public class EnemySpawner : MonoBehaviour
       public GameObject[] enemies;
    }
 
+   [System.Serializable]
+   public class SpecificWaveContent
+   {
+      public int waveNumber;
+      public WaveContent wave;
+   }
+
    [SerializeField] private WaveContent[] waveContent;
+   [SerializeField] private SpecificWaveContent[] specificWaveContent;
    [SerializeField] private float waveDelay = 1f;
+   [SerializeField] private int totalWave = 0;
 
    [SerializeField] private bool canSpawn = false;
 
@@ -45,12 +54,26 @@ public class EnemySpawner : MonoBehaviour
    private void SpawnWave()
    {
       if (waveContent.Length == 0) return;
-      var curWave = waveContent[waveCounter];
-      waveCounter++;
-      waveCounter %= waveContent.Length;
+      if (totalWave == 0) {
+         StopSpawn();
+         return;
+      }
+      var curWaveNum = waveCounter % waveContent.Length;
+      var curWave = waveContent[curWaveNum];
+      
+      foreach( var wave in specificWaveContent ) {
+         if(waveCounter+1 == wave.waveNumber ) {
+            curWave = wave.wave;
+         }
+      }
+
       for( int i = 0; i < curWave.spawnPoints.Length; i++ ) {
          int j = i % curWave.enemies.Length;
          Instantiate(curWave.enemies[j], curWave.spawnPoints[i]);
+      }
+      waveCounter++;
+      if (waveCounter >= totalWave) {
+         StopSpawn();
       }
    }
 

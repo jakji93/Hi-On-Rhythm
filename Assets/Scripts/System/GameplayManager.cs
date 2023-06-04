@@ -20,7 +20,6 @@ public class GameplayManager : MonoBehaviour
    [SerializeField] private float musicDelay = 0f;
    [SerializeField] private float chartDelay = 0.5f;
    [SerializeField] private float spawnDelay = 0f;
-   [SerializeField] private float spawnEnd = 0f;
    [SerializeField] private float playerDeadDelay = 1f;
    [SerializeField] TextAnimatorPlayer textAnimator;
 
@@ -95,7 +94,6 @@ public class GameplayManager : MonoBehaviour
             musicDelay -= Time.deltaTime;
             chartDelay -= Time.deltaTime;
             spawnDelay -= Time.deltaTime;
-            spawnEnd -= Time.deltaTime;
             if(chartDelay < 0f) {
                ChartManager.Instance.StartPlaying();
             }
@@ -105,9 +103,6 @@ public class GameplayManager : MonoBehaviour
             }
             if(spawnDelay < 0f) {
                EnemySpawner.Instance.StartSpawn();
-            }
-            if(spawnEnd < 0f) {
-               EnemySpawner.Instance.StopSpawn();
             }
             if(musicPlaying && !MusicManager.Instance.IsPlaying()) { 
                state = GameState.WaitingToEnd;

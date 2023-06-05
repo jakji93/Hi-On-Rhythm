@@ -28,6 +28,7 @@ public class PlayerControl : MonoBehaviour
 
     [SerializeField] private float rotValue1;
     [SerializeField] private float rotValue2;
+    [SerializeField] private Health health;
 
 
 
@@ -40,11 +41,19 @@ public class PlayerControl : MonoBehaviour
         playerRB = GetComponent<Rigidbody2D>();
         //playerAimDir = GetComponentInChildren<playerAim>();
         rotValue1 = 100;
+      health.OnDeath += Health_OnDeath;
 
     }
 
-    // Update is called once per frame
-    void Update()
+   private void Health_OnDeath(object sender, System.EventArgs e)
+   {
+      //trigger player dead animation
+      //disable movement and collider
+      GameplayManager.Instance.PlayerDead();
+   }
+
+   // Update is called once per frame
+   void Update()
     {
         if (playerStam <100)
         {

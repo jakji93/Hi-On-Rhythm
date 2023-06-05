@@ -314,6 +314,7 @@ MonoBehaviour:
   aimTransform: {fileID: 8547757161516634920}
   rotValue1: 0
   rotValue2: 0
+  health: {fileID: 6550715035904993133}
 --- !u!50 &6152283285978068576
 Rigidbody2D:
   serializedVersion: 4

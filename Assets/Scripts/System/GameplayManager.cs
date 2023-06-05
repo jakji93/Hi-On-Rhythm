@@ -25,6 +25,7 @@ public class GameplayManager : MonoBehaviour
 
    private bool musicPlaying = false;
    private bool gamePasued = false;
+   private bool enemySpawned = false;
 
    private GameState state;
 
@@ -101,7 +102,8 @@ public class GameplayManager : MonoBehaviour
                MusicManager.Instance.StartMusic();
                musicPlaying = true;
             }
-            if(spawnDelay < 0f) {
+            if(spawnDelay < 0f && !enemySpawned) {
+               enemySpawned = true;
                EnemySpawner.Instance.StartSpawn();
             }
             if(musicPlaying && !MusicManager.Instance.IsPlaying()) { 

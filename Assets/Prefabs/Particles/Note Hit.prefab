@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2295931225975398892}
   - component: {fileID: 8348379301308812505}
   - component: {fileID: 2363045315456011014}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Note Hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4898,7 +4898,7 @@ GameObject:
   - component: {fileID: 3482712107225114347}
   - component: {fileID: 4435406203209038938}
   - component: {fileID: 3475355909961966747}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hit Exp
   m_TagString: Untagged
   m_Icon: {fileID: 0}

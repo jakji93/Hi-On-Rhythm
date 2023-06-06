@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
 
    private float playerStam = 100f;
    [SerializeField] private float playerDashSpeed = 10f;
+   [SerializeField] private float dashCost = 30;
+   [SerializeField] private float stamRecovery = 50;
    private bool dashPress = false;
 
    public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
@@ -27,7 +29,7 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
    private void Update()
    {
       if (playerStam < 100) {
-         playerStam++;
+         playerStam = Mathf.Min(playerStam + stamRecovery * Time.deltaTime, 100);
          OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
          {
             currentValue = playerStam,
@@ -87,9 +89,9 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
 
    void OnSpace(InputValue playerInput)
    {
-      if (playerStam == 100) {
+      if (playerStam >= dashCost) {
          dashPress = true;
-         playerStam = 0;
+         playerStam -= dashCost;
          OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
          {
             currentValue = playerStam,

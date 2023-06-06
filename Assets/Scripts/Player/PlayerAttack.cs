@@ -9,8 +9,7 @@ public class PlayerAttack : MonoBehaviour
    [SerializeField] private GameObject[] specialAttacks;
 
    [SerializeField] private Transform aimTransform;
-   [SerializeField] private float rotValue1 = 100;
-   [SerializeField] private float rotValue2 = 100;
+   [SerializeField] private float rotValue = 100;
 
    private int curSpecial = 0;
 
@@ -43,7 +42,7 @@ public class PlayerAttack : MonoBehaviour
    {
       Quaternion rotato = aimTransform.rotation;
       Vector3 rot = rotato.eulerAngles;
-      rot.z = rot.z + rotValue1;
+      rot.z = rot.z + rotValue;
       rotato = Quaternion.Euler(rot);
 
       Instantiate(attack, aimTransform.position, rotato, gameObject.transform);

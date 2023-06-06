@@ -4641,6 +4641,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2533568714881986898, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
+      propertyPath: rotValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533568714881986898, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
+      propertyPath: rotValue1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263012231049935833, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
+      propertyPath: stamRecovery
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681050285372861210, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6331365363807835683, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -24847,7 +24863,7 @@ MonoBehaviour:
   waitingToEnd: 1
   musicDelay: 0
   chartDelay: 0.07
-  spawnDelay: 0
+  spawnDelay: 5
   playerDeadDelay: 1
   textAnimator: {fileID: 1168878011}
 --- !u!4 &1656054344

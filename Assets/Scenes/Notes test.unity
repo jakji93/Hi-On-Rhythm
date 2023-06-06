@@ -4711,7 +4711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8543837634778452020, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
       propertyPath: playerMoveSpeed
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8550135885474717333, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
       propertyPath: m_Name
@@ -13840,7 +13840,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915698699}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.12, y: 5.39, z: 0}
+  m_LocalPosition: {x: -0.4, y: -5.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23274,6 +23274,9 @@ MonoBehaviour:
   waveContent:
   - spawnPoints:
     - {fileID: 231629169}
+    - {fileID: 915698700}
+    - {fileID: 1369762045}
+    - {fileID: 839049227}
     enemies:
     - {fileID: 8756611384550387591, guid: e4814d4f0f2c7f24dbd4097f21b68fec, type: 3}
   - spawnPoints:
@@ -23298,8 +23301,8 @@ MonoBehaviour:
       - {fileID: 839049227}
       enemies:
       - {fileID: 8756611384550387591, guid: e4814d4f0f2c7f24dbd4097f21b68fec, type: 3}
-  waveDelay: 5
-  totalWave: 10
+  waveDelay: 2
+  totalWave: 200
   canSpawn: 0
 --- !u!4 &1562337881
 Transform:
@@ -27985,7 +27988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minScale: 1
-  maxScale: 0.8
+  maxScale: 0.9
   pulseDuration: 0.1
   constantPulse: 0
   delayBetweenPulse: 0
@@ -30624,7 +30627,7 @@ MonoBehaviour:
   cGrade: 0.69
   bGrade: 0.79
   aGrade: 0.89
-  maxScore: 10
+  maxScore: 3000
 --- !u!1 &2070625989
 GameObject:
   m_ObjectHideFlags: 0

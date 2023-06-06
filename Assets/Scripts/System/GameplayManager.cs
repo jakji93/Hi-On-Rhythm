@@ -115,9 +115,9 @@ public class GameplayManager : MonoBehaviour
          case GameState.PlayerDead:
             playerDeadDelay -= Time.deltaTime;
             if(playerDeadDelay < 0f) {
-               state = GameState.Score;
+               state = GameState.WaitingToEnd;
                OnStateChange?.Invoke(this, EventArgs.Empty);
-               Debug.Log("Score");
+               Debug.Log("waiting to end");
             }
             break;
          case GameState.WaitingToEnd:

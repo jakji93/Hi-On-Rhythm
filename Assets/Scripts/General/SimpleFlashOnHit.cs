@@ -15,8 +15,10 @@ public class SimpleFlashOnHit : MonoBehaviour
    void Start()
    {
       spriteRenderer = GetComponent<SpriteRenderer>();
+      if(spriteRenderer == null) spriteRenderer = GetComponentInChildren<SpriteRenderer>();
       originalMaterial = spriteRenderer.material;
       health = GetComponent<Health>();
+      if (health == null) health = GetComponentInChildren<Health>();
       if (health == null ) {
          Debug.LogError("Missing Health component");
       }

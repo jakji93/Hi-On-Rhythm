@@ -120,7 +120,7 @@ public class ScoreManager : MonoBehaviour
       else {
          finalScore += enemyKilledCounter * enemyKilledMultiplier;
       }
-      // finalScore += playerHp * playerHpMulti
+      finalScore += PlayerControl.Instance.GetPlayerHealth() * playerHealthMultiplier;
       finalScore += ComboManager.Instance.GetMaxCombo() * highestComboMultiplier;
       return finalScore;
    }
@@ -142,8 +142,8 @@ public class ScoreManager : MonoBehaviour
             }
          }
       }
-      //if player dead, grade is 0 no matter the score
-      //if (playerHP <= 0) letterGrade = "D";
+      //if player dead, grade is D no matter the score
+      if (PlayerControl.Instance.GetPlayerHealth() <= 0) letterGrade = "D";
       return letterGrade;
    }
 
@@ -161,7 +161,7 @@ public class ScoreManager : MonoBehaviour
       noteHitText.text = NOTE_HITS + noteHitCounter;
       noteMissText.text = NOTE_MISS + noteMissedCounter;
       //get player hp, % or not?
-      playerHealthText.text = PLAYER_HP + "0%";
+      playerHealthText.text = PLAYER_HP + Mathf.FloorToInt(PlayerControl.Instance.GetPlayerHealth() / PlayerControl.Instance.GetPlayerMaxHealth() * 100) + "%";
       finalScoreText.text = finalScore.ToString();
       letterGradeText.text = letterGrade;
    }

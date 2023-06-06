@@ -1511,7 +1511,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b8e6733a20975244eae1def7beee7238, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.055
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4646,18 +4646,6 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6331365363807835683, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6331365363807835683, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6331365363807835683, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6331365363807835683, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.0982329
       objectReference: {fileID: 0}
@@ -4696,22 +4684,6 @@ PrefabInstance:
     - target: {fileID: 6331365363807835683, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6331365363807835683, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8543837634778452020, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
-      propertyPath: rotValue1
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8543837634778452020, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
-      propertyPath: rotValue2
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8543837634778452020, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
-      propertyPath: playerMoveSpeed
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8550135885474717333, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
       propertyPath: m_Name
@@ -5574,7 +5546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d91bb0200b5c7469bc63f55a321440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasProgressObject: {fileID: 0}
+  hasProgressObject: {fileID: 1981419500}
   barImage: {fileID: 2035836115}
   isDepleting: 1
   hideAtStart: 0
@@ -9571,6 +9543,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611989373}
   m_CullTransparentMesh: 1
+--- !u!1 &625352619 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4681050285372861210, guid: 03678e0e827d12f428f35785cb664e50, type: 3}
+  m_PrefabInstance: {fileID: 250395853}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &631397353
 GameObject:
   m_ObjectHideFlags: 0
@@ -26562,7 +26539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d91bb0200b5c7469bc63f55a321440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasProgressObject: {fileID: 1981419500}
+  hasProgressObject: {fileID: 625352619}
   barImage: {fileID: 1921658769}
   isDepleting: 1
   hideAtStart: 0
@@ -30627,7 +30604,7 @@ MonoBehaviour:
   cGrade: 0.69
   bGrade: 0.79
   aGrade: 0.89
-  maxScore: 3000
+  maxScore: 9340
 --- !u!1 &2070625989
 GameObject:
   m_ObjectHideFlags: 0

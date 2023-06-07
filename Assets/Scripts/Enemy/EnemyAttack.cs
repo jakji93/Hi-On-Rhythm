@@ -7,29 +7,34 @@ public abstract class EnemyAttack : MonoBehaviour
    [SerializeField] protected float attackDelay = 0.1f;
    [SerializeField] protected EnemyController controller;
    [SerializeField] protected Transform attackPoint;
+   [SerializeField] protected Animator animator;
 
    protected bool isAttacking = false;
    private bool canAttack = false;
-   private float attackTimer = 0f;
+   private float attackTimer;
 
    private void Start()
    {
       controller.OnStateChanged += EnemyController_OnStateChanged;
+      attackTimer = attackDelay;
    }
 
    private void EnemyController_OnStateChanged(object sender, EnemyController.OnStateChangedEventArgs e)
    {
       canAttack = e.state == EnemyController.EnemyState.Attack;
+      if(e.state == EnemyController.EnemyState.Move) {
+         attackTimer = attackDelay;
+      }
    }
 
    private void Update()
    {
+      if (!GameplayManager.Instance.IsGamePlaying()) return;
       if (canAttack && !isAttacking) {
          attackTimer += Time.deltaTime;
          if (attackTimer > attackDelay) {
             attackTimer = 0f;
-            //trigger attack animation
-            Debug.Log("Attacking");
+            animator.SetTrigger("IsAttacking");
          }
       }
    }
@@ -46,5 +51,6 @@ public abstract class EnemyAttack : MonoBehaviour
    {
       isAttacking = false;
       controller.IsAttacking(false);
+      animator.ResetTrigger("IsAttacking");
    }
 }

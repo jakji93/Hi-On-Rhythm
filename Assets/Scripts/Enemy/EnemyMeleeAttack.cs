@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMeleeAttack : EnemyAttack
 {
-   [SerializeField] private float damage;
+   [SerializeField] private int damage;
    [SerializeField] private Vector2 attackSize;
    [SerializeField] private LayerMask playerMask;
 
@@ -13,7 +13,9 @@ public class EnemyMeleeAttack : EnemyAttack
       var collider = Physics2D.OverlapBox(attackPoint.position, attackSize, 0, playerMask);
       if (collider != null) {
          //Player take damage
-         Debug.Log(collider.gameObject.name);
+         if(collider.gameObject.TryGetComponent(out Health health)) {
+            health.TakeDamage(damage);
+         }
       }
    }
 

@@ -161,7 +161,7 @@ public class ScoreManager : MonoBehaviour
       noteHitText.text = NOTE_HITS + noteHitCounter;
       noteMissText.text = NOTE_MISS + noteMissedCounter;
       //get player hp, % or not?
-      playerHealthText.text = PLAYER_HP + Mathf.FloorToInt(PlayerControl.Instance.GetPlayerHealth() / PlayerControl.Instance.GetPlayerMaxHealth() * 100) + "%";
+      playerHealthText.text = PLAYER_HP + Mathf.FloorToInt((float)PlayerControl.Instance.GetPlayerHealth() / PlayerControl.Instance.GetPlayerMaxHealth() * 100) + "%";
       finalScoreText.text = finalScore.ToString();
       letterGradeText.text = letterGrade;
    }

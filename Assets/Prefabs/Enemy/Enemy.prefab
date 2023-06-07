@@ -259,7 +259,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   canMove: 1
-  moveSpeed: 3
+  moveSpeed: 1
   spaceBetween: 0.61
 --- !u!114 &3670458034943983573
 MonoBehaviour:

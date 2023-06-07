@@ -5,11 +5,10 @@ using UnityEngine;
 public class EnemyRangeAttackRange : EnemyAttackRange
 {
    [SerializeField] private float range;
-   [SerializeField] private Transform target;
 
    public override bool IsInAttackRange()
    {
-      return Vector2.Distance(transform.position, target.position) < range;
+      return Vector2.Distance(transform.position, PlayerControl.Instance.gameObject.transform.position) < range;
    }
 
    private void OnDrawGizmos()

@@ -15,6 +15,7 @@ public class EnemyMovement : MonoBehaviour
    [SerializeField] private float spaceBetween = 0f;
 
    private float baseScaleX;
+   private Vector2 preDirection;
 
    private void Awake()
    {
@@ -25,6 +26,7 @@ public class EnemyMovement : MonoBehaviour
    {
       controller.OnStateChanged += EnemyController_OnStateChanged;
       player = GameObject.FindGameObjectWithTag("Player").transform;
+      preDirection = (player.position - transform.position).normalized;
    }
 
    private void EnemyController_OnStateChanged(object sender, EnemyController.OnStateChangedEventArgs e)
@@ -69,5 +71,12 @@ public class EnemyMovement : MonoBehaviour
    private void Move()
    {
       transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+      /*
+      var newDirection = (player.position - transform.position).normalized;
+      var slowDirction = Vector3.RotateTowards(preDirection, newDirection, Time.deltaTime * 2, 0);
+      preDirection = slowDirction;
+      var distance = Vector2.Distance(player.position, transform.position);
+      transform.Translate(slowDirction * moveSpeed * Time.deltaTime);
+      */
    }
 }

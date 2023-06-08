@@ -25,7 +25,7 @@ public class Attack2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bulletRB.MovePosition(bulletRB.transform.position + bulletDir * bulletSpeed * Time.fixedDeltaTime);
+        bulletRB.MovePosition(bulletRB.transform.position + bulletDir * bulletSpeed * Time.deltaTime);
 
         if (curDur <= atk1Dur)
         {

@@ -278,7 +278,6 @@ GameObject:
   m_Component:
   - component: {fileID: 513648280}
   - component: {fileID: 513648279}
-  - component: {fileID: 513648278}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -286,21 +285,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &513648278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513648277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29efcb88107af944aac01d574701bfbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 436138287}
-  moveSpeed: 3
-  rotateSpeed: 2
 --- !u!212 &513648279
 SpriteRenderer:
   m_ObjectHideFlags: 0

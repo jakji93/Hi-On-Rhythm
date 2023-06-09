@@ -77,7 +77,7 @@ public class GameplayManager : MonoBehaviour
             waitingToStart -= Time.deltaTime;
             if(waitingToStart < 0f) {
                state = GameState.ReadyGo;
-               //Invoke Ready/Go! animation
+               textAnimator.gameObject.SetActive(true);
                OnStateChange?.Invoke(this, EventArgs.Empty);
                Debug.Log("Ready to Go");
             }
@@ -126,6 +126,7 @@ public class GameplayManager : MonoBehaviour
                ChartManager.Instance.StopPlaying();
                state = GameState.Score;
                ScoreManager.Instance.ShowScore();
+               //play score board song?
                OnStateChange?.Invoke(this, EventArgs.Empty);
                Debug.Log("Score");
             }

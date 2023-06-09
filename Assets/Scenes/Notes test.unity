@@ -17213,7 +17213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1168878010
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24781,8 +24781,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameInput: {fileID: 1265020014}
-  waitingToStart: 1
-  readyGo: 1
+  waitingToStart: 2
+  readyGo: 2
   waitingToEnd: 1
   musicDelay: 0
   chartDelay: 0.07

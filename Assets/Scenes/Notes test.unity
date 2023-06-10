@@ -4572,7 +4572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231629168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.68, y: 0, z: 0}
+  m_LocalPosition: {x: -14.43, y: 0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13374,7 +13374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839049226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.61, y: -0.1, z: 0}
+  m_LocalPosition: {x: 14.1, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14629,7 +14629,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915698699}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4, y: -5.92, z: 0}
+  m_LocalPosition: {x: -0.07, y: -8.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21387,7 +21387,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369762044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.64, y: 5.37, z: 0}
+  m_LocalPosition: {x: -0.16, y: 8.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24209,7 +24209,7 @@ MonoBehaviour:
       enemies:
       - {fileID: 8756611384550387591, guid: e4814d4f0f2c7f24dbd4097f21b68fec, type: 3}
   waveDelay: 2
-  totalWave: 200
+  totalWave: 60
   canSpawn: 0
 --- !u!4 &1562337881
 Transform:
@@ -33046,6 +33046,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7582741518931721296, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
   m_PrefabInstance: {fileID: 7773148428902832755}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &2128475276 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7582741518931721297, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
+  m_PrefabInstance: {fileID: 7773148428902832755}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2131212865
 GameObject:
   m_ObjectHideFlags: 0
@@ -33462,6 +33467,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 997941931360478725, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2128475276}
     - target: {fileID: 7582741518931721296, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
       propertyPath: m_Name
       value: Wizard

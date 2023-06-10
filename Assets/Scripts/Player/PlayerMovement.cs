@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
    [SerializeField] private float playerMoveSpeed = 1f;
    [SerializeField] private float collisionOffset = 0.05f;
    [SerializeField] private ContactFilter2D movementFilter;
+   [SerializeField] private Transform visualObject;
+   [SerializeField] private Animator animator;
+   private Vector3 originalScale;
    private Vector2 playerMoveDir;
    private Rigidbody2D playerRB;
    private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
@@ -24,6 +27,7 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
    private void Start()
    {
       playerRB = GetComponent<Rigidbody2D>();
+      originalScale = visualObject.localScale;
    }
 
    private void Update()
@@ -84,7 +88,13 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
    void OnMove(InputValue playerInput)
    {
       playerMoveDir = playerInput.Get<Vector2>().normalized;
-
+      //will change if using blender tree with 4 way animation
+      var playerHasHorizontalSpeed = Mathf.Abs(playerMoveDir.x) > Mathf.Epsilon;
+      if (playerHasHorizontalSpeed && playerMoveDir.x > 0) visualObject.localScale = new Vector2(originalScale.x * 1, originalScale.y * 1);
+      else if(playerHasHorizontalSpeed && playerMoveDir.x < 0) visualObject.localScale = new Vector2(originalScale.x * -1, originalScale.y * 1);
+      var playerHasSpeed = playerMoveDir.magnitude > Mathf.Epsilon;
+      if (playerHasSpeed) animator.SetBool("isRun", true);
+      else animator.SetBool("isRun", false);
    }
 
    void OnSpace(InputValue playerInput)

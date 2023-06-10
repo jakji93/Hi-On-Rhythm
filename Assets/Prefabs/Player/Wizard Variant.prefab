@@ -547,6 +547,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2604104200266773573}
   parentGameObject: {fileID: 7582741518931721298}
+--- !u!4 &3894211188875395983 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7478621442821964538, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
+  m_PrefabInstance: {fileID: 5891380000594116981}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4076287692698394441 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7589551542677888572, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
@@ -813,6 +818,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  visualObject: {fileID: 3894211188875395983}
   playerDashSpeed: 80
   dashCost: 30
   stamRecovery: 20

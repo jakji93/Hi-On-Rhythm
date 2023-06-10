@@ -6,7 +6,10 @@ public class MusicManager : MonoBehaviour
 {
    public static MusicManager Instance { get; private set; }
 
-   [SerializeField] private AudioSource musicSource;
+   [SerializeField] private AudioSource gameMusic;
+   [SerializeField] private AudioSource failedMusic;
+   [SerializeField] private AudioSource victoryMusic;
+   [SerializeField] private AudioSource introMusic;
 
    private void Awake()
    {
@@ -15,23 +18,44 @@ public class MusicManager : MonoBehaviour
 
    public void StartMusic()
    {
-      if (!musicSource.isPlaying) {
-         musicSource.Play(0);
+      if (!gameMusic.isPlaying) {
+         gameMusic.Play(0);
       }
    }
 
    public void StopMusic()
    {
-      musicSource.Stop();
+      gameMusic.Stop();
    }
 
    public void PauseMusic()
    {
-      musicSource.Pause();
+      gameMusic.Pause();
    }
 
    public bool IsPlaying()
    {
-      return musicSource.isPlaying;
+      return gameMusic.isPlaying;
+   }
+
+   public void StartFailedTheme()
+   {
+      if (!failedMusic.isPlaying) {
+         failedMusic.Play(0);
+      }
+   }
+
+   public void StartVictoryTheme()
+   {
+      if (!victoryMusic.isPlaying) {
+         victoryMusic.Play(0);
+      }
+   }
+
+   public void StartIntroTheme()
+   {
+      if (!introMusic.isPlaying) {
+         introMusic.Play(0);
+      }
    }
 }

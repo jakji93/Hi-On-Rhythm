@@ -50,7 +50,7 @@ public class GameplayManager : MonoBehaviour
       state = GameState.WaitingToStart;
       Debug.Log("Waiting to start");
       gameInput.OnPausePressed += GameInput_OnPausePressed;
-      
+      MusicManager.Instance.StartIntroTheme();
    }
 
    private void GameInput_OnPausePressed(object sender, EventArgs e)
@@ -115,9 +115,12 @@ public class GameplayManager : MonoBehaviour
          case GameState.PlayerDead:
             playerDeadDelay -= Time.deltaTime;
             if(playerDeadDelay < 0f) {
-               state = GameState.WaitingToEnd;
+               state = GameState.Score;
+               MusicManager.Instance.StopMusic();
+               ScoreManager.Instance.ShowFailed();
+               MusicManager.Instance.StartFailedTheme();
                OnStateChange?.Invoke(this, EventArgs.Empty);
-               Debug.Log("waiting to end");
+               Debug.Log("Score");
             }
             break;
          case GameState.WaitingToEnd:
@@ -126,7 +129,7 @@ public class GameplayManager : MonoBehaviour
                ChartManager.Instance.StopPlaying();
                state = GameState.Score;
                ScoreManager.Instance.ShowScore();
-               //play score board song?
+               MusicManager.Instance.StartVictoryTheme();
                OnStateChange?.Invoke(this, EventArgs.Empty);
                Debug.Log("Score");
             }
@@ -146,8 +149,7 @@ public class GameplayManager : MonoBehaviour
       state = GameState.PlayerDead;
       OnStateChange?.Invoke(this, EventArgs.Empty);
       EnemySpawner.Instance.StopSpawn();
-      ChartManager.Instance.StopPlaying();
-      MusicManager.Instance.StopMusic();
+      ChartManager.Instance.StopPlaying(); 
       Debug.Log("Player Dead");
    }
 

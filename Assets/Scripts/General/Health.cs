@@ -2,10 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static EnemyController;
 
 public class Health : MonoBehaviour, IHasProgress
 {
-   public event EventHandler OnTakeDamage;
+   public event EventHandler<OnTakeDamageEventArgs> OnTakeDamage;
+   public class OnTakeDamageEventArgs : EventArgs
+   {
+      public int damage;
+   }
    public event EventHandler OnDeath;
    public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
 
@@ -39,7 +44,10 @@ public class Health : MonoBehaviour, IHasProgress
             maxValue = maxHealth
          });
       } else {
-         OnTakeDamage?.Invoke(this, EventArgs.Empty);
+         OnTakeDamage?.Invoke(this, new OnTakeDamageEventArgs
+         {
+            damage = damage,
+         });
          OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
          {
             currentValue = curHealth,

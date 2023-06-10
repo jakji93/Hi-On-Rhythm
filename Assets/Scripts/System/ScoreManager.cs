@@ -21,6 +21,7 @@ public class ScoreManager : MonoBehaviour
    [SerializeField] private float highestComboMultiplier = 10f;
    [SerializeField] private bool isBossStage = false;
    [SerializeField] private GameObject scoreBoard;
+   [SerializeField] private GameObject failedBoard;
 
    [Header("Text Fields")]
    [SerializeField] private TextMeshProUGUI songNameText;
@@ -57,7 +58,8 @@ public class ScoreManager : MonoBehaviour
       NoteManager.Instance.OnNormal2Hit += NoteManager_OnNormal2Hit;
       NoteManager.Instance.OnSpecialHit += NoteManger_OnSpecialHit;
       NoteManager.Instance.OnWrongNote += NoteManager_OnWrongNote;
-      Hide();
+      HideScore();
+      HideFailed();
    }
 
    private void NoteManager_OnWrongNote(object sender, System.EventArgs e)
@@ -96,17 +98,32 @@ public class ScoreManager : MonoBehaviour
       string letterGrade = GetLetterGrade(finalScore);
       //save score
       SetTextFields(finalScore, letterGrade);
-      Active();
+      ActivateScore();
    }
 
-   private void Hide()
+   public void ShowFailed()
+   {
+      ActivateFailed();
+   }
+
+   private void HideScore()
    {
       scoreBoard.SetActive(false);
    }
 
-   private void Active()
+   private void HideFailed()
+   {
+      failedBoard.SetActive(false);
+   }
+
+   private void ActivateScore()
    {
       scoreBoard.SetActive(true);
+   }
+
+   private void ActivateFailed()
+   {
+      failedBoard.SetActive(true);
    }
 
    private float GetFinalScore()

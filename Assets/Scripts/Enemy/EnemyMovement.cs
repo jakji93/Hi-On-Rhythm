@@ -13,6 +13,7 @@ public class EnemyMovement : MonoBehaviour
    [SerializeField] private bool canMove = true;
    [SerializeField] private float moveSpeed = 1f;
    [SerializeField] private float spaceBetween = 0f;
+   [SerializeField] private float turnSpeed = 2f;
 
    private float baseScaleX;
    private Vector2 preDirection;
@@ -72,7 +73,7 @@ public class EnemyMovement : MonoBehaviour
    {
       //transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
       var newDirection = (player.position - transform.position).normalized;
-      var slowDirction = Vector3.RotateTowards(preDirection, newDirection, Time.deltaTime * 2, 0);
+      var slowDirction = Vector3.RotateTowards(preDirection, newDirection, Time.deltaTime * turnSpeed, 0);
       preDirection = slowDirction;
       transform.Translate(moveSpeed * Time.deltaTime * slowDirction);
    }

@@ -819,9 +819,11 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   visualObject: {fileID: 3894211188875395983}
-  playerDashSpeed: 80
+  animator: {fileID: 7582741518931721297}
+  playerDashSpeed: 20
   dashCost: 30
-  stamRecovery: 20
+  stamRecovery: 30
+  dashTime: 0.2
 --- !u!114 &1727722569267025065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,6 +854,11 @@ MonoBehaviour:
   specialAttacks: []
   aimTransform: {fileID: 301403484445325794}
   rotValue: 0
+--- !u!95 &7582741518931721297 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4105362945620786468, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
+  m_PrefabInstance: {fileID: 5891380000594116981}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7582741518931721298 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}

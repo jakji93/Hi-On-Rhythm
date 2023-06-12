@@ -24209,7 +24209,7 @@ MonoBehaviour:
       enemies:
       - {fileID: 8756611384550387591, guid: e4814d4f0f2c7f24dbd4097f21b68fec, type: 3}
   waveDelay: 2
-  totalWave: 60
+  totalWave: 0
   canSpawn: 0
 --- !u!4 &1562337881
 Transform:
@@ -30290,7 +30290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2001607544
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33046,11 +33046,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7582741518931721296, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
   m_PrefabInstance: {fileID: 7773148428902832755}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &2128475276 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7582741518931721297, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
-  m_PrefabInstance: {fileID: 7773148428902832755}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2131212865
 GameObject:
   m_ObjectHideFlags: 0
@@ -33467,10 +33462,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 997941931360478725, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 2128475276}
     - target: {fileID: 7582741518931721296, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
       propertyPath: m_Name
       value: Wizard

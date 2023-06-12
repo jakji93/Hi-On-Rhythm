@@ -28,10 +28,10 @@ public class ChartManager : MonoBehaviour
       isPlaying = false; 
    }
 
-   private void FixedUpdate()
+   private void Update()
    {
       if (isPlaying) {
-         transform.position -= new Vector3(chartSpeed * Time.fixedDeltaTime, 0, 0);
+         transform.position -= new Vector3(chartSpeed * Time.deltaTime, 0, 0);
       }
    }
 }

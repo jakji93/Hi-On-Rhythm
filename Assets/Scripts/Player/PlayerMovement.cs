@@ -88,8 +88,6 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
                 else if (count != 0 && dashPress)
                 {
                     dashPress = false;
-                    playerStam = 0;
-                    print("wall");
                 }
             }
         }
@@ -134,13 +132,12 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
         float curTime = 0;
         while (curTime < dashTime)
         {
-            MovePlayer(playerRB.position, dashDir, playerDashSpeed /2);
-            curTime = curTime + 0.5f;
-            yield return new WaitForSeconds(0.0001f);
+            MovePlayer(playerRB.position, dashDir, playerDashSpeed);
+            curTime = curTime + Time.deltaTime;
+            yield return null;
         }
         canMove = true;
         StopCoroutine("dashRoutine");
-
         yield return null;
     }
 }

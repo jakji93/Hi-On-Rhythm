@@ -14,6 +14,8 @@ public class MusicManager : MonoBehaviour
    private void Awake()
    {
       Instance = this;
+      StartMusic();
+      StopMusic();
    }
 
    public void StartMusic()

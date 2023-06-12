@@ -25776,7 +25776,7 @@ MonoBehaviour:
   readyGo: 2
   waitingToEnd: 1
   musicDelay: 0
-  chartDelay: 0.07
+  chartDelay: 0
   spawnDelay: 5
   playerDeadDelay: 1
   textAnimator: {fileID: 1168878011}

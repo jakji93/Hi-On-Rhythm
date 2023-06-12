@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,7 +21,9 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
    [SerializeField] private float playerDashSpeed = 10f;
    [SerializeField] private float dashCost = 30;
    [SerializeField] private float stamRecovery = 50;
+    [SerializeField] private float dashTime = 2f;
    private bool dashPress = false;
+    private bool canMove = true;
 
    public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
 
@@ -44,40 +47,52 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
 
    private void FixedUpdate()
    {
-      if (playerMoveDir != Vector2.zero) {
+        if (canMove)
+        {
+            if (playerMoveDir != Vector2.zero)
+            {
 
-         int count = playerRB.Cast(playerMoveDir, movementFilter, castCollisions, playerMoveSpeed * Time.fixedDeltaTime + collisionOffset);
+                int count = playerRB.Cast(playerMoveDir, movementFilter, castCollisions, playerMoveSpeed * Time.fixedDeltaTime + collisionOffset);
 
-         if (count == 0 && !dashPress) {
+                if (count == 0 && !dashPress)
+                {
 
-            MovePlayer(playerRB.position, playerMoveDir, playerMoveSpeed);
-         }
+                    MovePlayer(playerRB.position, playerMoveDir, playerMoveSpeed);
+                }
 
-         else if (count == 0 && dashPress) {
-            int count2 = playerRB.Cast(playerMoveDir, movementFilter, castCollisions, playerDashSpeed * Time.fixedDeltaTime + collisionOffset);
+                else if (count == 0 && dashPress)
+                {
+                    int count2 = playerRB.Cast(playerMoveDir, movementFilter, castCollisions, playerDashSpeed * Time.fixedDeltaTime + collisionOffset);
 
-            if (count2 == 0) {
-               MovePlayer(playerRB.position, playerMoveDir, playerDashSpeed);
-               dashPress = false;
+                    if (count2 == 0)
+                    {
+                        //MovePlayer(playerRB.position, playerMoveDir, playerDashSpeed); dash
+                        canMove = false;
+                        StartCoroutine(dashRoutine(playerMoveDir));
+                        
+                        dashPress = false;
+                    }
+                    else
+                    {
+
+                        RaycastHit2D hitRay = Physics2D.Raycast(playerRB.position, playerMoveDir);
+
+                        playerRB.MovePosition(playerRB.position + playerMoveDir * hitRay.fraction * .3f);
+
+
+                        print(hitRay.fraction);
+                        dashPress = false;
+
+                    }
+                }
+                else if (count != 0 && dashPress)
+                {
+                    dashPress = false;
+                    playerStam = 0;
+                    print("wall");
+                }
             }
-            else {
-
-               RaycastHit2D hitRay = Physics2D.Raycast(playerRB.position, playerMoveDir);
-
-               playerRB.MovePosition(playerRB.position + playerMoveDir * hitRay.fraction * .3f);
-
-
-               print(hitRay.fraction);
-               dashPress = false;
-
-            }
-         }
-         else if (count != 0 && dashPress) {
-            dashPress = false;
-            playerStam = 0;
-            print("wall");
-         }
-      }
+        }
    }
 
    void MovePlayer(Vector2 curPos, Vector2 moveDir, float moveSpeed)
@@ -113,4 +128,19 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
       }
 
    }
+
+    private IEnumerator dashRoutine( Vector2 dashDir)
+    {
+        float curTime = 0;
+        while (curTime < dashTime)
+        {
+            MovePlayer(playerRB.position, dashDir, playerDashSpeed /2);
+            curTime = curTime + 0.5f;
+            yield return new WaitForSeconds(0.0001f);
+        }
+        canMove = true;
+        StopCoroutine("dashRoutine");
+
+        yield return null;
+    }
 }

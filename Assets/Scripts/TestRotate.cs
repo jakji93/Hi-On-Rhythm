@@ -39,6 +39,11 @@ public class TestRotate : MonoBehaviour
       //targetRotation = Quaternion.Euler(0f, 0f, targetAngle);
       targetRotation = transform.rotation;
       isRotating = false;
+      //PlayCurrentSong();
+   }
+
+   private void OnEnable()
+   {
       PlayCurrentSong();
    }
 

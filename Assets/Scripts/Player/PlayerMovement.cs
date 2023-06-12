@@ -21,15 +21,17 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
    [SerializeField] private float playerDashSpeed = 10f;
    [SerializeField] private float dashCost = 30;
    [SerializeField] private float stamRecovery = 50;
-    [SerializeField] private float dashTime = 2f;
+   [SerializeField] private float dashTime = 2f;
    private bool dashPress = false;
-    private bool canMove = true;
+   private bool canMove = true;
+   private TrailRenderer playerTrail;
 
    public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
 
    private void Start()
    {
       playerRB = GetComponent<Rigidbody2D>();
+       playerTrail = GetComponent<TrailRenderer>();
       originalScale = visualObject.localScale;
    }
 
@@ -68,6 +70,7 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
                     {
                         //MovePlayer(playerRB.position, playerMoveDir, playerDashSpeed); dash
                         canMove = false;
+                        playerTrail.emitting = true;
                         StartCoroutine(dashRoutine(playerMoveDir));
                         
                         dashPress = false;
@@ -137,6 +140,7 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
             yield return null;
         }
         canMove = true;
+        playerTrail.emitting = false;
         StopCoroutine("dashRoutine");
         yield return null;
     }

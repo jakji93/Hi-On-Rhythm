@@ -14,8 +14,7 @@ public class MusicManager : MonoBehaviour
    private void Awake()
    {
       Instance = this;
-      StartMusic();
-      StopMusic();
+      gameMusic.clip.LoadAudioData();
    }
 
    public void StartMusic()

@@ -6,11 +6,10 @@ public class TestRotate : MonoBehaviour
 {
    public float radius = 200f;
 
-   public float targetAngle = 0f; // The target angle in degrees
+   //public float targetAngle = 0f; // The target angle in degrees
    public float rotationSpeed = 10f; // The rotation speed in degrees per second
    public AnimationCurve rotationCurve;
    public SongSelector[] songSelectors;
-   public AudioSource audioSource;
 
    private Quaternion targetRotation; // The target rotation quaternion
    private Quaternion initialRotation;
@@ -30,8 +29,12 @@ public class TestRotate : MonoBehaviour
 
       // Place each object in a circle
       for (int i = 0; i < songSelectors.Length; i++) {
-         float xPos = Mathf.Sin(Mathf.Deg2Rad * (i * angle)) * radius;
-         float yPos = Mathf.Cos(Mathf.Deg2Rad * (i * angle)) * radius;
+         //0 at left
+         float yPos = Mathf.Sin(Mathf.Deg2Rad * (i * angle)) * radius;
+         float xPos = -Mathf.Cos(Mathf.Deg2Rad * (i * angle)) * radius;
+         //0 at top
+         //float xPos = Mathf.Sin(Mathf.Deg2Rad * (i * angle)) * radius;
+         //float yPos = Mathf.Cos(Mathf.Deg2Rad * (i * angle)) * radius;
          songSelectors[i].transform.position = transform.position + new Vector3(xPos, yPos, 0f);
          songSelectors[i].transform.Rotate(new Vector3(0f, 0f, -i * angle));
       }
@@ -40,11 +43,10 @@ public class TestRotate : MonoBehaviour
       targetRotation = transform.rotation;
       isRotating = false;
       //PlayCurrentSong();
-   }
-
-   private void OnEnable()
-   {
-      PlayCurrentSong();
+      //warm up
+      for (int i = 0; i < songSelectors.Length; i++) {
+         songSelectors[i].GetAudioClip().LoadAudioData();
+      }
    }
 
    private void Update()
@@ -52,24 +54,26 @@ public class TestRotate : MonoBehaviour
       // Rotate towards the target rotation
       //transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
       // Update the elapsed time
-      elapsedTime += Time.deltaTime;
+      if (isRotating == true) {
+         elapsedTime += Time.deltaTime;
 
-      // Calculate the normalized time based on the rotation speed
-      float normalizedTime = elapsedTime / rotationSpeed;
+         // Calculate the normalized time based on the rotation speed
+         float normalizedTime = elapsedTime / rotationSpeed;
 
-      // Evaluate the animation curve to get the rotation interpolation factor
-      float curveValue = rotationCurve.Evaluate(normalizedTime);
+         // Evaluate the animation curve to get the rotation interpolation factor
+         float curveValue = rotationCurve.Evaluate(normalizedTime);
 
-      // Perform the rotation interpolation
-      transform.rotation = Quaternion.Slerp(initialRotation, targetRotation, curveValue);
+         // Perform the rotation interpolation
+         transform.rotation = Quaternion.Slerp(initialRotation, targetRotation, curveValue);
 
-      // Check if the rotation is complete
-      if (normalizedTime >= 1f) {
-         // Reset the elapsed time and finish the rotation
-         elapsedTime = 0f;
-         transform.rotation = targetRotation;
-         initialRotation = transform.rotation;
-         isRotating = false;
+         // Check if the rotation is complete
+         if (normalizedTime >= 1f) {
+            // Reset the elapsed time and finish the rotation
+            elapsedTime = 0f;
+            transform.rotation = targetRotation;
+            initialRotation = transform.rotation;
+            isRotating = false;
+         }
       }
    }
 
@@ -88,7 +92,7 @@ public class TestRotate : MonoBehaviour
       elapsedTime = 0f;
       targetRotation = Quaternion.Euler(0f, 0f, curItem * angle);
       isRotating = true;
-      PlayCurrentSong();
+      SetAsCurrentTrack();
    }
 
    public void PrevItem()
@@ -99,13 +103,12 @@ public class TestRotate : MonoBehaviour
       elapsedTime = 0f;
       targetRotation = Quaternion.Euler(0f, 0f, curItem * angle);
       isRotating = true;
-      PlayCurrentSong();
+      SetAsCurrentTrack();
    }
 
-   public void PlayCurrentSong()
+   public void SetAsCurrentTrack()
    {
-      audioSource.Stop();
-      audioSource.clip = songSelectors[curItem].GetAudioClip();
-      audioSource.Play();
+      LevelSelectManager.Instance.SetSongName(songSelectors[curItem].GetSongNames());
+      LevelSelectManager.Instance.PlayThisSong(songSelectors[curItem].GetAudioClip());
    }
 }

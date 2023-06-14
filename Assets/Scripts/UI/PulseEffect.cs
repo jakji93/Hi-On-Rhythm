@@ -14,9 +14,13 @@ public class PulseEffect : MonoBehaviour
 
    private RectTransform rectTransform;
 
-   private void Start()
+   private void Awake()
    {
       rectTransform = GetComponent<RectTransform>();
+   }
+
+   private void Start()
+   {
       if(constantPulse ) {
          StartCoroutine(ConstantPulsingEffect());
       }
@@ -25,6 +29,16 @@ public class PulseEffect : MonoBehaviour
    public void Pulse()
    {
       StartCoroutine(PulsingEffect());
+   }
+
+   public void StartConstantPulse()
+   {
+      StartCoroutine(ConstantPulsingEffect());
+   }
+
+   public void StopConstantPulse()
+   {
+      StopCoroutine(ConstantPulsingEffect());
    }
 
    private IEnumerator PulsingEffect()

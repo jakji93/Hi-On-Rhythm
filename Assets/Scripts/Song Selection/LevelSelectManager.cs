@@ -13,6 +13,13 @@ public class LevelSelectManager : MonoBehaviour
    [SerializeField] private SongSelector[] tracks;
    [SerializeField] private TextMeshProUGUI songName;
    [SerializeField] private DifficultySelector difficultySelector;
+   [SerializeField] private TrackSelector trackSelector;
+   [SerializeField] private AnimationCurve moveCurve;
+   [SerializeField] private float moveSpeed = 10f;
+   [SerializeField] private Vector3 backPosition;
+   [SerializeField] private Vector3 inPosition;
+   private float elapsedTime;
+   private bool isMoving = false;
 
    private SongNames curSongName;
    private Difficulties curDifficuly;
@@ -22,6 +29,34 @@ public class LevelSelectManager : MonoBehaviour
    private void Awake()
    {
       Instance = this;
+   }
+
+   private void Start()
+   {
+      for(int i = 0; i < tracks.Length; i++) {
+         if(i == curSelectTrack) {
+            tracks[i].gameObject.transform.localPosition = inPosition;
+         } else {
+            tracks[i].gameObject.transform.localPosition = backPosition;
+         }
+      }
+   }
+
+   private void Update()
+   {
+      if(isMoving) {
+         elapsedTime += Time.deltaTime;
+         float normalizedTime = elapsedTime / moveSpeed;
+         float curveValue = moveCurve.Evaluate(normalizedTime);
+
+         tracks[curSelectTrack].gameObject.transform.localPosition = Vector3.Lerp(backPosition, inPosition, curveValue);
+
+         if (normalizedTime >= 1f) {
+            elapsedTime = 0f;
+            tracks[curSelectTrack].gameObject.transform.localPosition = inPosition;
+            isMoving = false;
+         }
+      }
    }
 
    private void OnEnable()
@@ -56,16 +91,31 @@ public class LevelSelectManager : MonoBehaviour
 
    public void NextTrack()
    {
+      if (isMoving) return;
+      tracks[curSelectTrack].gameObject.transform.localPosition = backPosition;
       curSelectTrack++;
       curSelectTrack %= tracks.Length;
       tracks[curSelectTrack].SetAsCurrentTrack();
+      trackSelector.SetCurrentTrack(curSelectTrack);
+      elapsedTime = 0;
+      isMoving = true;
    }
 
    public void PrevTrack() 
    {
+      if (isMoving) return;
+      tracks[curSelectTrack].gameObject.transform.localPosition = backPosition;
       curSelectTrack--;
       if( curSelectTrack < 0 ) curSelectTrack = tracks.Length - 1;
       tracks[curSelectTrack].SetAsCurrentTrack();
+      trackSelector.SetCurrentTrack(curSelectTrack);
+      elapsedTime = 0;
+      isMoving = true;
+   }
+
+   public int GetCurrentTrack()
+   {
+      return curSelectTrack;
    }
 
    public void NextSong()

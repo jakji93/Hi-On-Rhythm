@@ -10,7 +10,7 @@ public class LevelSelectManager : MonoBehaviour
    public static LevelSelectManager Instance;
 
    [SerializeField] private AudioSource audioSource;
-   [SerializeField] private TestRotate[] tracks;
+   [SerializeField] private SongSelector[] tracks;
    [SerializeField] private TextMeshProUGUI songName;
    [SerializeField] private DifficultySelector difficultySelector;
 

@@ -117,7 +117,8 @@ public class GameplayManager : MonoBehaviour
             if(playerDeadDelay < 0f) {
                state = GameState.Score;
                MusicManager.Instance.StopMusic();
-               ScoreManager.Instance.ShowFailed();
+               //ScoreManager.Instance.ShowFailed();
+               ScoreManager.Instance.ShowScore();
                MusicManager.Instance.StartFailedTheme();
                OnStateChange?.Invoke(this, EventArgs.Empty);
                Debug.Log("Score");

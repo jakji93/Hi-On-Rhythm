@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
@@ -96,8 +99,61 @@ public class ScoreManager : MonoBehaviour
    {
       float finalScore = Mathf.Max(0, GetFinalScore());
       string letterGrade = GetLetterGrade(finalScore);
-      //save score
-      SetTextFields(finalScore, letterGrade);
+        //test scores
+        finalScore = UnityEngine.Random.Range(0, 10);
+        //load scores
+        float[] arrHighScore = new float[5]; //saving only 5 top scores atm change to MAXSCORESIZE 
+
+        if (ES3.KeyExists("savedHighScoreArr"))
+        {
+            arrHighScore = ES3.Load<float[]>("savedHighScoreArr");
+            print("Load HighScores");
+            print(arrHighScore.Length);
+
+            for (int i = 0; i < arrHighScore.Length; i++) 
+            {
+                print(arrHighScore[i]);
+            }
+        }
+        else
+        {
+            print("scores dont exist");
+        }
+        //compare+update scores
+
+        float checkScore = finalScore;
+        float nextScore;
+
+        for (int i = 0; i < arrHighScore.Length; i++)
+        { 
+
+            if (checkScore > arrHighScore[i])
+            {
+                nextScore = arrHighScore[i];
+                arrHighScore[i] = checkScore;
+                checkScore = nextScore;
+            }
+        }
+
+        print("Updated HighScores");
+
+        for (int i = 0; i < arrHighScore.Length; i++)
+        {
+            print(arrHighScore[i]);
+        }
+
+        
+        // send the new array to the scorboard gameobject **create a scoreboard**
+
+        ES3.Save("savedHighScoreArr",arrHighScore);
+        print("saved high scores");
+
+
+        
+        //saving score ES3
+        SetTextFields(finalScore, letterGrade);
+
+        
       ActivateScore();
    }
 

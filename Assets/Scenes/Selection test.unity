@@ -2071,7 +2071,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -528, y: 107.7}
-  m_SizeDelta: {x: 399.7, y: 151.3}
+  m_SizeDelta: {x: 795.49, y: 151.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &279864857
 MonoBehaviour:
@@ -2093,7 +2093,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: iyaiya
+  m_text: Iyaiya
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bf6b448bd457fc84ca13ae12e3c20a48, type: 2}
   m_sharedMaterial: {fileID: -3726418971078190305, guid: bf6b448bd457fc84ca13ae12e3c20a48, type: 2}
@@ -2120,12 +2120,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 87.27
+  m_fontSize: 80
   m_fontSizeBase: 87.27
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 80
   m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512

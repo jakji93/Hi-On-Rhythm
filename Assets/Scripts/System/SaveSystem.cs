@@ -11,16 +11,19 @@ public class SaveSystem : MonoBehaviour
       Instance = this;
    }
 
-   public void SaveHighScore(ScoreStruct score, SongNames songName, Difficulties difficulty)
+   public bool TrySaveHighScore(ScoreStruct score, SongNames songName, Difficulties difficulty)
    {
       var fileName = songName.ToString() + '_' + difficulty.ToString();
       if(ES3.KeyExists(fileName)) {
          var currHighScore = ES3.Load<ScoreStruct>(fileName);
          if(score.score > currHighScore.score) {
             ES3.Save(fileName, score);
+            return true;
          }
+         return false;
       } else {
          ES3.Save(fileName, score);
+         return true;
       }
    }
 

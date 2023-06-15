@@ -38,6 +38,7 @@ public class ScoreManager : MonoBehaviour
    [SerializeField] private TextMeshProUGUI playerHealthText;
    [SerializeField] private TextMeshProUGUI finalScoreText;
    [SerializeField] private TextMeshProUGUI letterGradeText;
+   [SerializeField] private TextMeshProUGUI newBestText;
 
    [Header("Letter Grade Threshold")]
    [SerializeField] private float dGrade = 0.59f;
@@ -200,6 +201,10 @@ public class ScoreManager : MonoBehaviour
          score.bossHP = "n/a";
          score.enemyKilled = enemyKilledCounter.ToString();
       }
-      SaveSystem.Instance.SaveHighScore(score, songName, difficulty);
+      if(SaveSystem.Instance.TrySaveHighScore(score, songName, difficulty)) {
+         newBestText.gameObject.SetActive(true);
+      } else {
+         newBestText.gameObject.SetActive(false);
+      }
    }
 }

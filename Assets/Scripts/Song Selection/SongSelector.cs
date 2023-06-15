@@ -94,4 +94,16 @@ public class SongSelector : MonoBehaviour
       LevelSelectManager.Instance.SetSongName(songSelectors[curItem].GetSongNames());
       LevelSelectManager.Instance.PlayThisSong(songSelectors[curItem].GetAudioClip());
    }
+
+   public void SetAsCurrentTrack(int songIndex)
+   {
+      curItem = songIndex;
+      transform.rotation = Quaternion.Euler(0f, 0f, curItem * angle);
+      SetAsCurrentTrack();
+   }
+
+   public int GetCurrentSongIndex()
+   {
+      return curItem;
+   }
 }

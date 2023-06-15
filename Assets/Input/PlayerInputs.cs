@@ -344,6 +344,60 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PrevTrack"",
+                    ""type"": ""Button"",
+                    ""id"": ""eabfd323-6ffe-4445-9628-7b422b0258cb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""NextTrack"",
+                    ""type"": ""Button"",
+                    ""id"": ""8d2e9df8-98d3-4f73-b86e-1cba04b1b329"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PrevDiff"",
+                    ""type"": ""Button"",
+                    ""id"": ""d54cb720-3453-45b8-93cb-a71d05e23d6d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""NextDiff"",
+                    ""type"": ""Button"",
+                    ""id"": ""87869696-fd38-4f55-8db9-7045a50190f3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PrevSong"",
+                    ""type"": ""Button"",
+                    ""id"": ""8ed190ec-f49f-4aa0-846c-b4ec4221a935"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""NextSong"",
+                    ""type"": ""Button"",
+                    ""id"": ""3789cb08-22c7-4bb8-9883-03e7f6e828f7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -632,6 +686,72 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""Back"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""04498950-02d6-4ac6-91dd-26a9d55b8347"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PrevTrack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""06c19a9f-9af7-4c5d-bbb8-fde5d072dbf9"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextTrack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a8a5985f-7a6d-4926-9d1c-3994dc15593e"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PrevDiff"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""160679a8-beb5-40f7-a8af-9ac3312da461"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextDiff"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""39e1fc0f-f3b4-4d42-932b-84bdf00e7c19"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PrevSong"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c422e254-b528-4636-a289-0024cbe010dc"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextSong"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -652,6 +772,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
         m_UI_Confirm = m_UI.FindAction("Confirm", throwIfNotFound: true);
         m_UI_Back = m_UI.FindAction("Back", throwIfNotFound: true);
+        m_UI_PrevTrack = m_UI.FindAction("PrevTrack", throwIfNotFound: true);
+        m_UI_NextTrack = m_UI.FindAction("NextTrack", throwIfNotFound: true);
+        m_UI_PrevDiff = m_UI.FindAction("PrevDiff", throwIfNotFound: true);
+        m_UI_NextDiff = m_UI.FindAction("NextDiff", throwIfNotFound: true);
+        m_UI_PrevSong = m_UI.FindAction("PrevSong", throwIfNotFound: true);
+        m_UI_NextSong = m_UI.FindAction("NextSong", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -810,6 +936,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_Navigate;
     private readonly InputAction m_UI_Confirm;
     private readonly InputAction m_UI_Back;
+    private readonly InputAction m_UI_PrevTrack;
+    private readonly InputAction m_UI_NextTrack;
+    private readonly InputAction m_UI_PrevDiff;
+    private readonly InputAction m_UI_NextDiff;
+    private readonly InputAction m_UI_PrevSong;
+    private readonly InputAction m_UI_NextSong;
     public struct UIActions
     {
         private @PlayerInputs m_Wrapper;
@@ -817,6 +949,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @Navigate => m_Wrapper.m_UI_Navigate;
         public InputAction @Confirm => m_Wrapper.m_UI_Confirm;
         public InputAction @Back => m_Wrapper.m_UI_Back;
+        public InputAction @PrevTrack => m_Wrapper.m_UI_PrevTrack;
+        public InputAction @NextTrack => m_Wrapper.m_UI_NextTrack;
+        public InputAction @PrevDiff => m_Wrapper.m_UI_PrevDiff;
+        public InputAction @NextDiff => m_Wrapper.m_UI_NextDiff;
+        public InputAction @PrevSong => m_Wrapper.m_UI_PrevSong;
+        public InputAction @NextSong => m_Wrapper.m_UI_NextSong;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -835,6 +973,24 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Back.started += instance.OnBack;
             @Back.performed += instance.OnBack;
             @Back.canceled += instance.OnBack;
+            @PrevTrack.started += instance.OnPrevTrack;
+            @PrevTrack.performed += instance.OnPrevTrack;
+            @PrevTrack.canceled += instance.OnPrevTrack;
+            @NextTrack.started += instance.OnNextTrack;
+            @NextTrack.performed += instance.OnNextTrack;
+            @NextTrack.canceled += instance.OnNextTrack;
+            @PrevDiff.started += instance.OnPrevDiff;
+            @PrevDiff.performed += instance.OnPrevDiff;
+            @PrevDiff.canceled += instance.OnPrevDiff;
+            @NextDiff.started += instance.OnNextDiff;
+            @NextDiff.performed += instance.OnNextDiff;
+            @NextDiff.canceled += instance.OnNextDiff;
+            @PrevSong.started += instance.OnPrevSong;
+            @PrevSong.performed += instance.OnPrevSong;
+            @PrevSong.canceled += instance.OnPrevSong;
+            @NextSong.started += instance.OnNextSong;
+            @NextSong.performed += instance.OnNextSong;
+            @NextSong.canceled += instance.OnNextSong;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -848,6 +1004,24 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Back.started -= instance.OnBack;
             @Back.performed -= instance.OnBack;
             @Back.canceled -= instance.OnBack;
+            @PrevTrack.started -= instance.OnPrevTrack;
+            @PrevTrack.performed -= instance.OnPrevTrack;
+            @PrevTrack.canceled -= instance.OnPrevTrack;
+            @NextTrack.started -= instance.OnNextTrack;
+            @NextTrack.performed -= instance.OnNextTrack;
+            @NextTrack.canceled -= instance.OnNextTrack;
+            @PrevDiff.started -= instance.OnPrevDiff;
+            @PrevDiff.performed -= instance.OnPrevDiff;
+            @PrevDiff.canceled -= instance.OnPrevDiff;
+            @NextDiff.started -= instance.OnNextDiff;
+            @NextDiff.performed -= instance.OnNextDiff;
+            @NextDiff.canceled -= instance.OnNextDiff;
+            @PrevSong.started -= instance.OnPrevSong;
+            @PrevSong.performed -= instance.OnPrevSong;
+            @PrevSong.canceled -= instance.OnPrevSong;
+            @NextSong.started -= instance.OnNextSong;
+            @NextSong.performed -= instance.OnNextSong;
+            @NextSong.canceled -= instance.OnNextSong;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -880,5 +1054,11 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnNavigate(InputAction.CallbackContext context);
         void OnConfirm(InputAction.CallbackContext context);
         void OnBack(InputAction.CallbackContext context);
+        void OnPrevTrack(InputAction.CallbackContext context);
+        void OnNextTrack(InputAction.CallbackContext context);
+        void OnPrevDiff(InputAction.CallbackContext context);
+        void OnNextDiff(InputAction.CallbackContext context);
+        void OnPrevSong(InputAction.CallbackContext context);
+        void OnNextSong(InputAction.CallbackContext context);
     }
 }

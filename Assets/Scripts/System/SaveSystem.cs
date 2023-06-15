@@ -19,6 +19,8 @@ public class SaveSystem : MonoBehaviour
          if(score.score > currHighScore.score) {
             ES3.Save(fileName, score);
          }
+      } else {
+         ES3.Save(fileName, score);
       }
    }
 

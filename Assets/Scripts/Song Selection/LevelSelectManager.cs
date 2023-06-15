@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class LevelSelectManager : MonoBehaviour
@@ -18,6 +19,7 @@ public class LevelSelectManager : MonoBehaviour
    [SerializeField] private float moveSpeed = 10f;
    [SerializeField] private Vector3 backPosition;
    [SerializeField] private Vector3 inPosition;
+   [SerializeField] private GameInput gameInput;
 
    [Header("Text")]
    [SerializeField] private TextMeshProUGUI score;
@@ -49,6 +51,42 @@ public class LevelSelectManager : MonoBehaviour
             tracks[i].gameObject.transform.localPosition = backPosition;
          }
       }
+      gameInput.OnPrevTrackPressed += GameInput_OnPrevTrackPressed;
+      gameInput.OnNextTrackPressed += GameInput_OnNextTrackPressed;
+      gameInput.OnPrevSongPressed += GameInput_OnPrevSongPressed;
+      gameInput.OnNextSongPressed += GameInput_OnNextSongPressed;
+      gameInput.OnPrevDifficultyPressed += GameInput_OnPrevDifficultyPressed;
+      gameInput.OnNextDifficultyPressed += GameInput_OnNextDifficultyPressed;
+   }
+
+   private void GameInput_OnNextDifficultyPressed(object sender, System.EventArgs e)
+   {
+      IncreaseDifficulty();
+   }
+
+   private void GameInput_OnPrevDifficultyPressed(object sender, System.EventArgs e)
+   {
+      DecreaseDifficulty();
+   }
+
+   private void GameInput_OnNextSongPressed(object sender, System.EventArgs e)
+   {
+      NextSong();
+   }
+
+   private void GameInput_OnPrevSongPressed(object sender, System.EventArgs e)
+   {
+      PrevSong();
+   }
+
+   private void GameInput_OnNextTrackPressed(object sender, System.EventArgs e)
+   {
+      NextTrack();
+   }
+
+   private void GameInput_OnPrevTrackPressed(object sender, System.EventArgs e)
+   {
+      PrevTrack();
    }
 
    private void Update()

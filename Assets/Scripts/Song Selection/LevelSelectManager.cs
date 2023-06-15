@@ -18,6 +18,15 @@ public class LevelSelectManager : MonoBehaviour
    [SerializeField] private float moveSpeed = 10f;
    [SerializeField] private Vector3 backPosition;
    [SerializeField] private Vector3 inPosition;
+
+   [Header("Text")]
+   [SerializeField] private TextMeshProUGUI score;
+   [SerializeField] private TextMeshProUGUI grade;
+   [SerializeField] private TextMeshProUGUI combo;
+   [SerializeField] private TextMeshProUGUI enemyKilled;
+   [SerializeField] private TextMeshProUGUI bossHP;
+   [SerializeField] private TextMeshProUGUI playerHP;
+
    private float elapsedTime;
    private bool isMoving = false;
 
@@ -68,11 +77,13 @@ public class LevelSelectManager : MonoBehaviour
    {
       curSongName = name;
       songName.text = curSongName.ToString();
+      UpdateScore();
    }
 
    public void SetDifficulty(Difficulties difficulty)
    {
       curDifficuly = difficulty;
+      UpdateScore();
    }
 
    public void GoToSong()
@@ -136,5 +147,24 @@ public class LevelSelectManager : MonoBehaviour
    public void DecreaseDifficulty()
    {
       difficultySelector.Decrease();
+   }
+
+   private void UpdateScore()
+   {
+      if(SaveSystem.Instance.TryLoadHighScore(curSongName, curDifficuly, out ScoreStruct score)) {
+         this.score.text = score.score.ToString();
+         grade.text = score.letterGrade;
+         combo.text = score.maxCombo;
+         enemyKilled.text = score.enemyKilled;
+         bossHP.text = score.bossHP;
+         playerHP.text = score.playerHP;
+      } else {
+         this.score.text = "-";
+         grade.text = "-";
+         combo.text = "-";
+         enemyKilled.text = "-";
+         bossHP.text = "-";
+         playerHP.text = "-";
+      }
    }
 }

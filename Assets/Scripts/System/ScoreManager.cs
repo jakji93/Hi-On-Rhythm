@@ -16,6 +16,8 @@ public class ScoreManager : MonoBehaviour
    private const string PLAYER_HP = "PLAYER HP: ";
    public static ScoreManager Instance { get; private set; }
 
+   [SerializeField] private SongNames songName;
+   [SerializeField] private Difficulties difficulty;
    [SerializeField] private float noteHitMultiplier = 10f;
    [SerializeField] private float noteMissedMultiplier = 15f;
    [SerializeField] private float enemyKilledMultiplier = 20f;
@@ -99,62 +101,9 @@ public class ScoreManager : MonoBehaviour
    {
       float finalScore = Mathf.Max(0, GetFinalScore());
       string letterGrade = GetLetterGrade(finalScore);
-        //test scores
-        finalScore = UnityEngine.Random.Range(0, 10);
-        //load scores
-        float[] arrHighScore = new float[5]; //saving only 5 top scores atm change to MAXSCORESIZE 
-
-        if (ES3.KeyExists("savedHighScoreArr"))
-        {
-            arrHighScore = ES3.Load<float[]>("savedHighScoreArr");
-            print("Load HighScores");
-            print(arrHighScore.Length);
-
-            for (int i = 0; i < arrHighScore.Length; i++) 
-            {
-                print(arrHighScore[i]);
-            }
-        }
-        else
-        {
-            print("scores dont exist");
-        }
-        //compare+update scores
-
-        float checkScore = finalScore;
-        float nextScore;
-
-        for (int i = 0; i < arrHighScore.Length; i++)
-        { 
-
-            if (checkScore > arrHighScore[i])
-            {
-                nextScore = arrHighScore[i];
-                arrHighScore[i] = checkScore;
-                checkScore = nextScore;
-            }
-        }
-
-        print("Updated HighScores");
-
-        for (int i = 0; i < arrHighScore.Length; i++)
-        {
-            print(arrHighScore[i]);
-        }
-
-        
-        // send the new array to the scorboard gameobject **create a scoreboard**
-
-        ES3.Save("savedHighScoreArr",arrHighScore);
-        print("saved high scores");
-
-
-        
-        //saving score ES3
-        SetTextFields(finalScore, letterGrade);
-
-        
+      SetTextFields(finalScore, letterGrade);
       ActivateScore();
+      SaveScore(finalScore, letterGrade);
    }
 
    public void ShowFailed()
@@ -222,8 +171,6 @@ public class ScoreManager : MonoBehaviour
 
    private void SetTextFields(float finalScore, string letterGrade)
    {
-      //get song title
-      //get difficulity
       maxComboText.text = MAX_COMBO + ComboManager.Instance.GetMaxCombo();
       if(isBossStage) {
          //get boss hp
@@ -237,5 +184,22 @@ public class ScoreManager : MonoBehaviour
       playerHealthText.text = PLAYER_HP + Mathf.FloorToInt((float)PlayerControl.Instance.GetPlayerHealth() / PlayerControl.Instance.GetPlayerMaxHealth() * 100) + "%";
       finalScoreText.text = finalScore.ToString();
       letterGradeText.text = letterGrade;
+   }
+
+   private void SaveScore(float finalScore, string letterGrade)
+   {
+      var score = new ScoreStruct();
+      score.score = (int)finalScore;
+      score.letterGrade = letterGrade;
+      score.maxCombo = ComboManager.Instance.GetMaxCombo().ToString();
+      score.playerHP = Mathf.FloorToInt((float)PlayerControl.Instance.GetPlayerHealth() / PlayerControl.Instance.GetPlayerMaxHealth() * 100) + "%";
+      if(isBossStage) {
+         score.enemyKilled = "n/a";
+         //get boss hp
+      } else {
+         score.bossHP = "n/a";
+         score.enemyKilled = enemyKilledCounter.ToString();
+      }
+      SaveSystem.Instance.SaveHighScore(score, songName, difficulty);
    }
 }

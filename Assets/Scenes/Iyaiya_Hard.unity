@@ -25952,7 +25952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameInput: {fileID: 1265020014}
-  waitingToStart: 2
+  waitingToStart: 4
   readyGo: 2
   waitingToEnd: 1
   musicDelay: 0

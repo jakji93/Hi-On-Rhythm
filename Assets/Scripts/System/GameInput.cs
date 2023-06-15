@@ -78,4 +78,9 @@ public class GameInput : MonoBehaviour
    {
       OnNormal1Pressed?.Invoke(this, EventArgs.Empty); 
    }
+
+   private void OnDestroy()
+   {
+      playerInputs.Dispose();
+   }
 }

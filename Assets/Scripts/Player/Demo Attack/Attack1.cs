@@ -36,7 +36,6 @@ public class Attack1 : MonoBehaviour
     {
       if (collision.gameObject.tag == "Player") return;
         if(collision.gameObject.TryGetComponent<Health>(out Health health)) {
-         Debug.Log("taking damage");
          health.TakeDamage(10 * ComboManager.Instance.GetMultiplier());
       }
     }

@@ -398,6 +398,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Restart"",
+                    ""type"": ""Button"",
+                    ""id"": ""562c9bf7-2e43-4d6a-baad-0f27602d3400"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -752,6 +761,17 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""NextSong"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5f31d3ea-4c9d-435a-806f-ee9357e44fca"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Restart"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -778,6 +798,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_UI_NextDiff = m_UI.FindAction("NextDiff", throwIfNotFound: true);
         m_UI_PrevSong = m_UI.FindAction("PrevSong", throwIfNotFound: true);
         m_UI_NextSong = m_UI.FindAction("NextSong", throwIfNotFound: true);
+        m_UI_Restart = m_UI.FindAction("Restart", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -942,6 +963,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_NextDiff;
     private readonly InputAction m_UI_PrevSong;
     private readonly InputAction m_UI_NextSong;
+    private readonly InputAction m_UI_Restart;
     public struct UIActions
     {
         private @PlayerInputs m_Wrapper;
@@ -955,6 +977,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @NextDiff => m_Wrapper.m_UI_NextDiff;
         public InputAction @PrevSong => m_Wrapper.m_UI_PrevSong;
         public InputAction @NextSong => m_Wrapper.m_UI_NextSong;
+        public InputAction @Restart => m_Wrapper.m_UI_Restart;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -991,6 +1014,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @NextSong.started += instance.OnNextSong;
             @NextSong.performed += instance.OnNextSong;
             @NextSong.canceled += instance.OnNextSong;
+            @Restart.started += instance.OnRestart;
+            @Restart.performed += instance.OnRestart;
+            @Restart.canceled += instance.OnRestart;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -1022,6 +1048,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @NextSong.started -= instance.OnNextSong;
             @NextSong.performed -= instance.OnNextSong;
             @NextSong.canceled -= instance.OnNextSong;
+            @Restart.started -= instance.OnRestart;
+            @Restart.performed -= instance.OnRestart;
+            @Restart.canceled -= instance.OnRestart;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -1060,5 +1089,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnNextDiff(InputAction.CallbackContext context);
         void OnPrevSong(InputAction.CallbackContext context);
         void OnNextSong(InputAction.CallbackContext context);
+        void OnRestart(InputAction.CallbackContext context);
     }
 }

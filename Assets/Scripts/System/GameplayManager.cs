@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Febucci.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameplayManager : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class GameplayManager : MonoBehaviour
    public event EventHandler OnStateChange;
    public event EventHandler OnGamePause;
    public event EventHandler OnGameUnpause;
+
+   [SerializeField] private SongNames songName;
+   [SerializeField] private Difficulties difficulty;
 
    [SerializeField] private GameInput gameInput;
 
@@ -77,7 +81,7 @@ public class GameplayManager : MonoBehaviour
             waitingToStart -= Time.deltaTime;
             if(waitingToStart < 0f) {
                state = GameState.ReadyGo;
-               textAnimator.gameObject.SetActive(true);
+               textAnimator.ShowText("ready");
                OnStateChange?.Invoke(this, EventArgs.Empty);
                Debug.Log("Ready to Go");
             }
@@ -160,5 +164,28 @@ public class GameplayManager : MonoBehaviour
       Time.timeScale = 1f;
       MusicManager.Instance.StartMusic();
       OnGameUnpause?.Invoke(this, EventArgs.Empty);
+   }
+
+   public void ExitGame()
+   {
+      Time.timeScale = 1f;
+      Loader.Load("Song Selection");
+   }
+
+   public void Restart()
+   {
+      Time.timeScale = 1f;
+      var sceneName = songName.ToString() + '_' + difficulty.ToString();
+      Loader.Load(sceneName);
+   }
+
+   public SongNames GetSongNames()
+   {
+      return songName;
+   }
+
+   public Difficulties GetDifficulties()
+   {
+      return difficulty;
    }
 }

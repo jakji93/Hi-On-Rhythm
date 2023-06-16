@@ -16,8 +16,6 @@ public class ScoreManager : MonoBehaviour
    private const string PLAYER_HP = "PLAYER HP: ";
    public static ScoreManager Instance { get; private set; }
 
-   [SerializeField] private SongNames songName;
-   [SerializeField] private Difficulties difficulty;
    [SerializeField] private float noteHitMultiplier = 10f;
    [SerializeField] private float noteMissedMultiplier = 15f;
    [SerializeField] private float enemyKilledMultiplier = 20f;
@@ -201,6 +199,8 @@ public class ScoreManager : MonoBehaviour
          score.bossHP = "n/a";
          score.enemyKilled = enemyKilledCounter.ToString();
       }
+      var songName = GameplayManager.Instance.GetSongNames();
+      var difficulty = GameplayManager.Instance.GetDifficulties();
       if(SaveSystem.Instance.TrySaveHighScore(score, songName, difficulty)) {
          newBestText.gameObject.SetActive(true);
       } else {

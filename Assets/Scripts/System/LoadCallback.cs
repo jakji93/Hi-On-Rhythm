@@ -18,6 +18,10 @@ public class LoadCallback : MonoBehaviour
    {
       yield return new WaitForSeconds(2f);
       Loader.LoadCallback();
-      yield return null;
+   }
+
+   private void OnDestroy()
+   {
+      StopAllCoroutines();
    }
 }

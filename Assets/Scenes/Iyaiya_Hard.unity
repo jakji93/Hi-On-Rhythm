@@ -5378,7 +5378,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 276186003}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1656054343}
+        m_TargetAssemblyTypeName: GameplayManager, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &276186003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18471,7 +18483,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ready
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bf6b448bd457fc84ca13ae12e3c20a48, type: 2}
   m_sharedMaterial: {fileID: -3726418971078190305, guid: bf6b448bd457fc84ca13ae12e3c20a48, type: 2}
@@ -18498,7 +18510,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -22134,7 +22146,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1418034347}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1656054343}
+        m_TargetAssemblyTypeName: GameplayManager, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1418034347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25951,8 +25975,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 405f03a9db6f29c4a865a4c4dae7c49e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  songName: 0
+  difficulty: 1
   gameInput: {fileID: 1265020014}
-  waitingToStart: 4
+  waitingToStart: 2
   readyGo: 2
   waitingToEnd: 1
   musicDelay: 0
@@ -31765,8 +31791,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72fc34d79481c594ca943b8e26e2f0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songName: 0
-  difficulty: 1
   noteHitMultiplier: 10
   noteMissedMultiplier: 15
   enemyKilledMultiplier: 20

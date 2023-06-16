@@ -19,11 +19,14 @@ public class SongSelector : MonoBehaviour
    private int numOfChild;
    private bool isRotating;
 
-   private void Start()
+   private void Awake()
    {
       numOfChild = songSelectors.Length;
       angle = 360f / numOfChild;
+   }
 
+   private void Start()
+   {
       for (int i = 0; i < songSelectors.Length; i++) {
          //0 at left
          float yPos = Mathf.Sin(Mathf.Deg2Rad * (i * angle)) * radius;
@@ -34,8 +37,8 @@ public class SongSelector : MonoBehaviour
          songSelectors[i].transform.position = transform.position + new Vector3(xPos, yPos, 0f);
          songSelectors[i].transform.Rotate(new Vector3(0f, 0f, -i * angle));
       }
-      initialRotation = transform.rotation;
-      targetRotation = transform.rotation;
+      transform.localRotation = Quaternion.Euler(0f, 0f, curItem * angle);
+      initialRotation = transform.localRotation;
       isRotating = false;
       //warm up
       for (int i = 0; i < songSelectors.Length; i++) {
@@ -49,12 +52,12 @@ public class SongSelector : MonoBehaviour
          elapsedTime += Time.deltaTime;
          float normalizedTime = elapsedTime / rotationSpeed;
          float curveValue = rotationCurve.Evaluate(normalizedTime);
-         transform.rotation = Quaternion.Slerp(initialRotation, targetRotation, curveValue);
+         transform.localRotation = Quaternion.Slerp(initialRotation, targetRotation, curveValue);
 
          if (normalizedTime >= 1f) {
             elapsedTime = 0f;
-            transform.rotation = targetRotation;
-            initialRotation = transform.rotation;
+            transform.localRotation = targetRotation;
+            initialRotation = transform.localRotation;
             isRotating = false;
          }
       }
@@ -98,7 +101,6 @@ public class SongSelector : MonoBehaviour
    public void SetAsCurrentTrack(int songIndex)
    {
       curItem = songIndex;
-      transform.rotation = Quaternion.Euler(0f, 0f, curItem * angle);
       SetAsCurrentTrack();
    }
 

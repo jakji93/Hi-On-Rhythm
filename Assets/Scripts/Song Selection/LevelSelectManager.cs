@@ -20,6 +20,7 @@ public class LevelSelectManager : MonoBehaviour
    [SerializeField] private Vector3 backPosition;
    [SerializeField] private Vector3 inPosition;
    [SerializeField] private GameInput gameInput;
+   [SerializeField] private AudioClip clickClip;
 
    [Header("Text")]
    [SerializeField] private TextMeshProUGUI score;
@@ -31,6 +32,7 @@ public class LevelSelectManager : MonoBehaviour
 
    private float elapsedTime;
    private bool isMoving = false;
+   private bool firstUpdate = true;
 
    private SongNames curSongName;
    private Difficulties curDifficuly;
@@ -108,7 +110,15 @@ public class LevelSelectManager : MonoBehaviour
 
    private void OnEnable()
    {
-      tracks[curSelectTrack].SetAsCurrentTrack();
+      if (SaveSystem.Instance.TryLoadPrevSong(out PrevSongStruct prevSong)) {
+         curSelectTrack = prevSong.trackIndex;
+         trackSelector.SetPrevTrack(prevSong.trackIndex);
+         tracks[prevSong.trackIndex].SetAsCurrentTrack(prevSong.songIndex);
+      }
+      else {
+         tracks[curSelectTrack].SetAsCurrentTrack();
+         trackSelector.SetCurrentTrack(curSelectTrack);
+      }
    }
 
    public void SetSongName(SongNames name)
@@ -126,6 +136,11 @@ public class LevelSelectManager : MonoBehaviour
 
    public void GoToSong()
    {
+      PrevSongStruct prevSong = new();
+      prevSong.trackIndex = curSelectTrack;
+      prevSong.songIndex = tracks[curSelectTrack].GetCurrentSongIndex();
+      SaveSystem.Instance.SavePrevSong(prevSong);
+      ClipPlayer.Instance.PlayClip(clickClip);
       var name = curSongName.ToString();
       var diff = curDifficuly.ToString();
       Loader.Load(name + "_" + diff);
@@ -160,11 +175,6 @@ public class LevelSelectManager : MonoBehaviour
       trackSelector.SetCurrentTrack(curSelectTrack);
       elapsedTime = 0;
       isMoving = true;
-   }
-
-   public int GetCurrentTrack()
-   {
-      return curSelectTrack;
    }
 
    public void NextSong()

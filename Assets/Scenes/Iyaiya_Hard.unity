@@ -25986,6 +25986,7 @@ MonoBehaviour:
   spawnDelay: 5
   playerDeadDelay: 1
   textAnimator: {fileID: 1168878011}
+  clickClip: {fileID: 8300000, guid: 632b1c41f6a368540970d173af4f782f, type: 3}
 --- !u!4 &1656054344
 Transform:
   m_ObjectHideFlags: 0

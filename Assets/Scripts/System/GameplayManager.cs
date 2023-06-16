@@ -26,6 +26,7 @@ public class GameplayManager : MonoBehaviour
    [SerializeField] private float spawnDelay = 0f;
    [SerializeField] private float playerDeadDelay = 1f;
    [SerializeField] TextAnimatorPlayer textAnimator;
+   [SerializeField] private AudioClip clickClip;
 
    private bool musicPlaying = false;
    private bool gamePasued = false;
@@ -59,9 +60,10 @@ public class GameplayManager : MonoBehaviour
 
    private void GameInput_OnPausePressed(object sender, EventArgs e)
    {
-      if(state != GameState.Playing) return;
+      if (state != GameState.Playing) return;
       gamePasued = !gamePasued;
       if (gamePasued) {
+         AudioSource.PlayClipAtPoint(clickClip, Camera.main.transform.position);
          Time.timeScale = 0f;
          musicPlaying = false;
          MusicManager.Instance.PauseMusic();
@@ -71,6 +73,7 @@ public class GameplayManager : MonoBehaviour
          Time.timeScale = 1f;
          MusicManager.Instance.StartMusic();
          OnGameUnpause?.Invoke(this, EventArgs.Empty);
+         AudioSource.PlayClipAtPoint(clickClip, Camera.main.transform.position);
       }
    }
 
@@ -164,6 +167,7 @@ public class GameplayManager : MonoBehaviour
       Time.timeScale = 1f;
       MusicManager.Instance.StartMusic();
       OnGameUnpause?.Invoke(this, EventArgs.Empty);
+      AudioSource.PlayClipAtPoint(clickClip, Camera.main.transform.position);
    }
 
    public void ExitGame()

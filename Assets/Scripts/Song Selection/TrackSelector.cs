@@ -21,10 +21,8 @@ public class TrackSelector : MonoBehaviour
       for (int i = 0; i < trackItems.Length; i++) {
          trackItems[i].localPosition = new Vector3(i * spacing, 0, 0);
       }
+      transform.localPosition = new Vector3(-curSelected * spacing, 0, 0); ;
       initPosition = transform.localPosition;
-      targetPosition = transform.localPosition;
-      curSelected = LevelSelectManager.Instance.GetCurrentTrack();
-      SetCurrentTrack(curSelected);
    }
 
    private void Update()
@@ -52,5 +50,10 @@ public class TrackSelector : MonoBehaviour
       elapsedTime = 0;
       targetPosition = new Vector3(-curSelected * spacing, 0, 0);
       isMoving = true;
+   }
+
+   public void SetPrevTrack(int index)
+   {
+      curSelected = index;
    }
 }

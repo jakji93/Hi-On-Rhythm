@@ -1,5 +1,15 @@
 public enum SongNames
 {
    Iyaiya,
-   UndeadEnemy
+   UndeadEnemy,
+   LiveStreamer,
+   Bully,
+   DeadBeats,
+   Reflect,
+   Gravity,
+   SparksOfJoy,
+   PlayDice,
+   Psycho,
+   Astrogirl,
+   FeverNight
 }

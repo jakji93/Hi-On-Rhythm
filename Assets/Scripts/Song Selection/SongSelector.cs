@@ -40,10 +40,6 @@ public class SongSelector : MonoBehaviour
       transform.localRotation = Quaternion.Euler(0f, 0f, curItem * angle);
       initialRotation = transform.localRotation;
       isRotating = false;
-      //warm up
-      for (int i = 0; i < songSelectors.Length; i++) {
-         songSelectors[i].GetAudioClip().LoadAudioData();
-      }
    }
 
    private void Update()

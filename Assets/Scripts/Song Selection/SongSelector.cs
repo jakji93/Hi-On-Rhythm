@@ -107,4 +107,9 @@ public class SongSelector : MonoBehaviour
    {
       return curItem;
    }
+
+   public void DeselectAsTrack()
+   {
+      songSelectors[curItem].StopPulse();
+   }
 }

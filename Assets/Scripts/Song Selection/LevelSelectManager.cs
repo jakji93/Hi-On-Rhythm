@@ -157,6 +157,7 @@ public class LevelSelectManager : MonoBehaviour
    {
       if (isMoving) return;
       tracks[curSelectTrack].gameObject.transform.localPosition = backPosition;
+      tracks[curSelectTrack].DeselectAsTrack();
       curSelectTrack++;
       curSelectTrack %= tracks.Length;
       tracks[curSelectTrack].SetAsCurrentTrack();
@@ -169,6 +170,7 @@ public class LevelSelectManager : MonoBehaviour
    {
       if (isMoving) return;
       tracks[curSelectTrack].gameObject.transform.localPosition = backPosition;
+      tracks[curSelectTrack].DeselectAsTrack();
       curSelectTrack--;
       if( curSelectTrack < 0 ) curSelectTrack = tracks.Length - 1;
       tracks[curSelectTrack].SetAsCurrentTrack();

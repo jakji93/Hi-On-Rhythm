@@ -1591,6 +1591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 11
   audioClip: {fileID: 8300000, guid: 17824b1f72f6ea3419d52201ab67eba9, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &192608873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1641,6 +1642,7 @@ GameObject:
   - component: {fileID: 207691267}
   - component: {fileID: 207691266}
   - component: {fileID: 207691268}
+  - component: {fileID: 207691269}
   m_Layer: 5
   m_Name: 2
   m_TagString: Untagged
@@ -1720,6 +1722,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 1
   audioClip: {fileID: 8300000, guid: 83a7ef56e31c6e845bfc58ded578fd3c, type: 3}
+  pulse: {fileID: 207691269}
+--- !u!114 &207691269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207691264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c04b2874faf2b9e4091d6ecc346b51a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minScale: 4
+  maxScale: 4.2
+  pulseDuration: 0.1
+  constantPulse: 0
+  keepConstantPulse: 0
+  delayBetweenPulse: 0.23708
+  rectTransform: {fileID: 0}
 --- !u!1 &223391703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,6 +1795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 0
   audioClip: {fileID: 8300000, guid: b8e6733a20975244eae1def7beee7238, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &223391707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2457,6 +2480,7 @@ GameObject:
   - component: {fileID: 458475433}
   - component: {fileID: 458475432}
   - component: {fileID: 458475431}
+  - component: {fileID: 458475434}
   m_Layer: 5
   m_Name: 1 (1)
   m_TagString: Untagged
@@ -2498,6 +2522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 2
   audioClip: {fileID: 8300000, guid: fb418e6995b6ab848937fa428208f74f, type: 3}
+  pulse: {fileID: 458475434}
 --- !u!114 &458475432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2536,6 +2561,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458475428}
   m_CullTransparentMesh: 1
+--- !u!114 &458475434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458475428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c04b2874faf2b9e4091d6ecc346b51a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minScale: 4
+  maxScale: 4.2
+  pulseDuration: 0.1
+  constantPulse: 0
+  keepConstantPulse: 0
+  delayBetweenPulse: 0.38387
+  rectTransform: {fileID: 0}
 --- !u!1 &488953192
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,6 +2633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 1
   audioClip: {fileID: 8300000, guid: 83a7ef56e31c6e845bfc58ded578fd3c, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &488953196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2814,6 +2859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 1
   audioClip: {fileID: 8300000, guid: 83a7ef56e31c6e845bfc58ded578fd3c, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &587728751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2905,6 +2951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 0
   audioClip: {fileID: 8300000, guid: b8e6733a20975244eae1def7beee7238, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &588373668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3349,6 +3396,7 @@ GameObject:
   - component: {fileID: 766309927}
   - component: {fileID: 766309926}
   - component: {fileID: 766309925}
+  - component: {fileID: 766309928}
   m_Layer: 5
   m_Name: 2 (2)
   m_TagString: Untagged
@@ -3390,6 +3438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 5
   audioClip: {fileID: 8300000, guid: b08aea76271157a4f89a417930f2059d, type: 3}
+  pulse: {fileID: 766309928}
 --- !u!114 &766309926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3428,6 +3477,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766309922}
   m_CullTransparentMesh: 1
+--- !u!114 &766309928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766309922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c04b2874faf2b9e4091d6ecc346b51a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minScale: 4
+  maxScale: 4.2
+  pulseDuration: 0.1
+  constantPulse: 0
+  keepConstantPulse: 0
+  delayBetweenPulse: 0.38
+  rectTransform: {fileID: 0}
 --- !u!1 &773897224
 GameObject:
   m_ObjectHideFlags: 0
@@ -3440,6 +3508,7 @@ GameObject:
   - component: {fileID: 773897229}
   - component: {fileID: 773897228}
   - component: {fileID: 773897227}
+  - component: {fileID: 773897230}
   m_Layer: 5
   m_Name: 1 (2)
   m_TagString: Untagged
@@ -3481,6 +3550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 4
   audioClip: {fileID: 8300000, guid: 2b58c8a1b3bf3814a9c90b54aa7f461f, type: 3}
+  pulse: {fileID: 773897230}
 --- !u!114 &773897228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3519,6 +3589,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773897224}
   m_CullTransparentMesh: 1
+--- !u!114 &773897230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773897224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c04b2874faf2b9e4091d6ecc346b51a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minScale: 4
+  maxScale: 4.2
+  pulseDuration: 0.1
+  constantPulse: 0
+  keepConstantPulse: 0
+  delayBetweenPulse: 0.7
+  rectTransform: {fileID: 0}
 --- !u!1 &817846726
 GameObject:
   m_ObjectHideFlags: 0
@@ -3713,6 +3802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 0
   audioClip: {fileID: 8300000, guid: b8e6733a20975244eae1def7beee7238, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &823839322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4076,6 +4166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 7
   audioClip: {fileID: 8300000, guid: 8199731f19af46d4e80c46fd1a88d2c1, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &909659813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4304,6 +4395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 1
   audioClip: {fileID: 8300000, guid: 83a7ef56e31c6e845bfc58ded578fd3c, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &968684709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4752,6 +4844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 1
   audioClip: {fileID: 8300000, guid: 83a7ef56e31c6e845bfc58ded578fd3c, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &1078044410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5687,6 +5780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 0
   audioClip: {fileID: 8300000, guid: b8e6733a20975244eae1def7beee7238, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &1387523560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5822,6 +5916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 0
   audioClip: {fileID: 8300000, guid: b8e6733a20975244eae1def7beee7238, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &1438451091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5913,6 +6008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 9
   audioClip: {fileID: 8300000, guid: 70339e2aebea1074796b24525c1d8463, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &1474420309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6004,6 +6100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 1
   audioClip: {fileID: 8300000, guid: 83a7ef56e31c6e845bfc58ded578fd3c, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &1506716554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6136,6 +6233,7 @@ GameObject:
   - component: {fileID: 1511633456}
   - component: {fileID: 1511633455}
   - component: {fileID: 1511633454}
+  - component: {fileID: 1511633457}
   m_Layer: 5
   m_Name: 2 (1)
   m_TagString: Untagged
@@ -6177,6 +6275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 3
   audioClip: {fileID: 8300000, guid: 42ba602c121a0884d961e4132b29f134, type: 3}
+  pulse: {fileID: 1511633457}
 --- !u!114 &1511633455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6215,6 +6314,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511633451}
   m_CullTransparentMesh: 1
+--- !u!114 &1511633457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511633451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c04b2874faf2b9e4091d6ecc346b51a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minScale: 4
+  maxScale: 4.2
+  pulseDuration: 0.1
+  constantPulse: 0
+  keepConstantPulse: 0
+  delayBetweenPulse: 0.60588
+  rectTransform: {fileID: 0}
 --- !u!1 &1554244010
 GameObject:
   m_ObjectHideFlags: 0
@@ -7166,6 +7284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 8
   audioClip: {fileID: 8300000, guid: a2c0623acc5fea64c83e51b24e43ab39, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &1783445603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7257,6 +7376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 1
   audioClip: {fileID: 8300000, guid: 83a7ef56e31c6e845bfc58ded578fd3c, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &1798827960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7348,6 +7468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 10
   audioClip: {fileID: 8300000, guid: 0350b6f21d74336458364c6c7e71dcaa, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &1817561386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7576,6 +7697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 0
   audioClip: {fileID: 8300000, guid: b8e6733a20975244eae1def7beee7238, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &1946651333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7890,6 +8012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 6
   audioClip: {fileID: 8300000, guid: f72cc2d20e076d54980c4d0078c544cc, type: 3}
+  pulse: {fileID: 0}
 --- !u!114 &1961278909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7940,6 +8063,7 @@ GameObject:
   - component: {fileID: 2040325320}
   - component: {fileID: 2040325319}
   - component: {fileID: 2040325321}
+  - component: {fileID: 2040325322}
   m_Layer: 5
   m_Name: 1
   m_TagString: Untagged
@@ -8019,6 +8143,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 0
   audioClip: {fileID: 8300000, guid: b8e6733a20975244eae1def7beee7238, type: 3}
+  pulse: {fileID: 2040325322}
+--- !u!114 &2040325322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040325317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c04b2874faf2b9e4091d6ecc346b51a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minScale: 4
+  maxScale: 4.2
+  pulseDuration: 0.1
+  constantPulse: 0
+  keepConstantPulse: 0
+  delayBetweenPulse: 0.36875
+  rectTransform: {fileID: 2040325318}
 --- !u!1 &2052702472
 GameObject:
   m_ObjectHideFlags: 0

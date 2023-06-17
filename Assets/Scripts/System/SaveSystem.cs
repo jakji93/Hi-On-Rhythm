@@ -5,7 +5,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class SaveSystem : MonoBehaviour
 {
-   public static SaveSystem Instance;
+   public static SaveSystem Instance { get; private set; }
 
    private void Awake()
    {

@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelSelectManager : MonoBehaviour
 {
-   public static LevelSelectManager Instance;
+   public static LevelSelectManager Instance { get; private set; }
 
    [SerializeField] private AudioSource audioSource;
    [SerializeField] private SongSelector[] tracks;

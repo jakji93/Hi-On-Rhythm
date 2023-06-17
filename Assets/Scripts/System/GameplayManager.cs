@@ -63,7 +63,7 @@ public class GameplayManager : MonoBehaviour
       if (state != GameState.Playing) return;
       gamePasued = !gamePasued;
       if (gamePasued) {
-         AudioSource.PlayClipAtPoint(clickClip, Camera.main.transform.position);
+         ClipPlayer.Instance.PlayClip(clickClip);
          Time.timeScale = 0f;
          musicPlaying = false;
          MusicManager.Instance.PauseMusic();
@@ -73,7 +73,7 @@ public class GameplayManager : MonoBehaviour
          Time.timeScale = 1f;
          MusicManager.Instance.StartMusic();
          OnGameUnpause?.Invoke(this, EventArgs.Empty);
-         AudioSource.PlayClipAtPoint(clickClip, Camera.main.transform.position);
+         ClipPlayer.Instance.PlayClip(clickClip);
       }
    }
 
@@ -167,7 +167,7 @@ public class GameplayManager : MonoBehaviour
       Time.timeScale = 1f;
       MusicManager.Instance.StartMusic();
       OnGameUnpause?.Invoke(this, EventArgs.Empty);
-      AudioSource.PlayClipAtPoint(clickClip, Camera.main.transform.position);
+      ClipPlayer.Instance.PlayClip(clickClip);
    }
 
    public void ExitGame()

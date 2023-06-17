@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ClipPlayer : MonoBehaviour
 {
-   public static ClipPlayer Instance;
+   public static ClipPlayer Instance { get; private set; }
 
    [SerializeField] private AudioSource audioSource;
 
@@ -20,8 +20,6 @@ public class ClipPlayer : MonoBehaviour
 
    public void PlayClip(AudioClip clip)
    {
-      audioSource.Stop();
-      audioSource.clip = clip;
-      audioSource.Play();
+      audioSource.PlayOneShot(clip);
    }
 }

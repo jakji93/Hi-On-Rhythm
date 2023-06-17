@@ -10,6 +10,7 @@ public class PulseEffect : MonoBehaviour
    public float maxScale = 1.2f;
    public float pulseDuration = 1f;
    public bool constantPulse;
+   public bool keepConstantPulse;
    public float delayBetweenPulse = 0f;
 
    private RectTransform rectTransform;
@@ -36,11 +37,6 @@ public class PulseEffect : MonoBehaviour
       StartCoroutine(ConstantPulsingEffect());
    }
 
-   public void StopConstantPulse()
-   {
-      StopCoroutine(ConstantPulsingEffect());
-   }
-
    private IEnumerator PulsingEffect()
    {
       // Scale up
@@ -52,7 +48,8 @@ public class PulseEffect : MonoBehaviour
 
    private IEnumerator ConstantPulsingEffect()
    {
-      while (true) {
+      if(rectTransform == null) { rectTransform = GetComponent<RectTransform>(); }
+      while (keepConstantPulse) {
          // Scale up
          yield return ScaleTo(rectTransform, maxScale, pulseDuration / 2);
 
@@ -61,6 +58,7 @@ public class PulseEffect : MonoBehaviour
 
          yield return new WaitForSeconds(delayBetweenPulse);
       }
+      yield return null;
    }
 
    private IEnumerator ScaleTo(RectTransform target, float targetScale, float duration)

@@ -69,6 +69,7 @@ public class SongSelector : MonoBehaviour
    public void NextItem()
    {
       if (isRotating) return;
+      songSelectors[curItem].StopPulse();
       curItem++;
       curItem %= numOfChild;
       elapsedTime = 0f;
@@ -80,6 +81,7 @@ public class SongSelector : MonoBehaviour
    public void PrevItem()
    {
       if (isRotating) return;
+      songSelectors[curItem].StopPulse();
       curItem--;
       if (curItem < 0) curItem = numOfChild - 1;
       elapsedTime = 0f;
@@ -92,6 +94,7 @@ public class SongSelector : MonoBehaviour
    {
       LevelSelectManager.Instance.SetSongName(songSelectors[curItem].GetSongNames());
       LevelSelectManager.Instance.PlayThisSong(songSelectors[curItem].GetAudioClip());
+      songSelectors[curItem].StartPulse();
    }
 
    public void SetAsCurrentTrack(int songIndex)

@@ -35,6 +35,11 @@ MonoBehaviour:
     - Cinemachine
     - Febucci.TextAnimator.Demo.Runtime
     - Febucci.TextAnimator.Runtime
+    - Kamgam.SettingsGenerator
+    - Kamgam.SettingsGeneratorExamples
+    - Kamgam.UGUIComponentsForSettings
+    - Kamgam.UIToolkitComponentsForSettings
+    - LocalizationsForSettings
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

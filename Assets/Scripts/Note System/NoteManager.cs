@@ -24,8 +24,6 @@ public class NoteManager : MonoBehaviour
    [SerializeField] private Transform particleParent;
    [Header("SFX")]
    [SerializeField] private AudioClip noteHitSound;
-   [Range(0.0f, 1.0f)]
-   [SerializeField] private float clipVolume;
 
    private void Awake()
    {
@@ -48,7 +46,7 @@ public class NoteManager : MonoBehaviour
             case Note.NoteTypes.Normal1:
                OnNormal1Hit?.Invoke(this, EventArgs.Empty);
                EmitNoteHitParticle();
-               AudioSource.PlayClipAtPoint(noteHitSound, Camera.main.transform.position, clipVolume);
+               ClipPlayer.Instance.PlayClip(noteHitSound);
                Debug.Log("Normal 1 hit");
                break;
             case Note.NoteTypes.Normal2:
@@ -58,7 +56,7 @@ public class NoteManager : MonoBehaviour
             case Note.NoteTypes.Special:
                OnSpecialHit?.Invoke(this, EventArgs.Empty);
                EmitNoteHitParticle();
-               AudioSource.PlayClipAtPoint(noteHitSound, Camera.main.transform.position, clipVolume);
+               ClipPlayer.Instance.PlayClip(noteHitSound);
                Debug.Log("Special hit");
                break;
          }
@@ -84,13 +82,13 @@ public class NoteManager : MonoBehaviour
             case Note.NoteTypes.Normal2:
                OnNormal2Hit?.Invoke(this, EventArgs.Empty);
                EmitNoteHitParticle();
-               AudioSource.PlayClipAtPoint(noteHitSound, Camera.main.transform.position, clipVolume);
+               ClipPlayer.Instance.PlayClip(noteHitSound);
                Debug.Log("Normal 2 hit");
                break;
             case Note.NoteTypes.Special:
                OnSpecialHit?.Invoke(this, EventArgs.Empty);
                EmitNoteHitParticle();
-               AudioSource.PlayClipAtPoint(noteHitSound, Camera.main.transform.position, clipVolume);
+               ClipPlayer.Instance.PlayClip(noteHitSound);
                Debug.Log("Special hit");
                break;
          }

@@ -199,6 +199,11 @@ public class LevelSelectManager : MonoBehaviour
       difficultySelector.Decrease();
    }
 
+   public void GoToSettings()
+   {
+      SceneManager.LoadScene("Settings");
+   }
+
    private void UpdateScore()
    {
       if(SaveSystem.Instance.TryLoadHighScore(curSongName, curDifficuly, out ScoreStruct score)) {

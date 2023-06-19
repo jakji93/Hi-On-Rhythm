@@ -27,7 +27,7 @@ public abstract class EnemyAttack : MonoBehaviour
       }
    }
 
-   private void Update()
+   protected virtual void Update()
    {
       if (!GameplayManager.Instance.IsGamePlaying()) return;
       if (canAttack && !isAttacking) {
@@ -47,7 +47,7 @@ public abstract class EnemyAttack : MonoBehaviour
       controller.IsAttacking(true);
    }
 
-   public void EndAttacking()
+   public virtual void EndAttacking()
    {
       isAttacking = false;
       controller.IsAttacking(false);

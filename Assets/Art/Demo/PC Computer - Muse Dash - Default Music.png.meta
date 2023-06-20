@@ -1,0 +1,1224 @@
+fileFormatVersion: 2
+guid: dd92f6ec863158b40a31d02648ca5f0d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1776
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de632d4660d1e747891a82dd5885682
+      internalID: 999917710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_1
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1776
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a6a750ec44cc14eaf0dc13cd8d604d
+      internalID: -1083757601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_2
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 1776
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7380f04fd133b4bbf08c2e9059b867
+      internalID: 784877696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_3
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 1776
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326edf90af31f1642848db9a11ba274e
+      internalID: 8503118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_4
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 1776
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa94340e97d231429ffe25f5777bc95
+      internalID: 411605028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_5
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 1776
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e0207914120d94f90b81cc913dbe16
+      internalID: 1148110166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_6
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 1776
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315e320922858ee469f2090788afa051
+      internalID: -2076733805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_7
+      rect:
+        serializedVersion: 2
+        x: 3108
+        y: 1776
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a1328680f63b5469fe4ccbec34f079
+      internalID: -1794390239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_8
+      rect:
+        serializedVersion: 2
+        x: 3552
+        y: 1776
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023593175e05f4c4b94627dd88405619
+      internalID: -544608934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_9
+      rect:
+        serializedVersion: 2
+        x: 3996
+        y: 1776
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67e069b65abd9b47bb86ef15b12f51a
+      internalID: 1808027812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1332
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 645525abc73b60649970fe2f5463b513
+      internalID: -1605247118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_11
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1332
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358957efb313f0b4da84fca6044b8d64
+      internalID: -1190964163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_12
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1332
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d69b85e9729bf54a9d4c21064bc07d8
+      internalID: 60543768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_13
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 1332
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3885c457e4eea4b9bc205008b962de
+      internalID: 1959969333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_14
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 1332
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a4ba99ed066dd4187b1ef35c6d5d27
+      internalID: -1304101174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_15
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 1332
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abcba17dc7f6f8d48a8ad4401c342ce6
+      internalID: -1525894841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_16
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 1332
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495845afe5bd97b4598d98ce7971e52f
+      internalID: 569589708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_17
+      rect:
+        serializedVersion: 2
+        x: 3108
+        y: 1332
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86360d685985c5c4283a7b64da4357ec
+      internalID: -1457059630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_18
+      rect:
+        serializedVersion: 2
+        x: 3552
+        y: 1332
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b74e79d29edf5a42bae660355544246
+      internalID: 1073564131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_19
+      rect:
+        serializedVersion: 2
+        x: 3996
+        y: 1332
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 840788ed6c9b015468350fecc00e1c07
+      internalID: 1289062364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 888
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8edff55c0df47c46807be41c862a7d1
+      internalID: -1385431091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_21
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 888
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3ff0b74e8bbe341bc0a60512c194c9
+      internalID: -745187180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_22
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 888
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bafc44ae69a9adb4891731ca2a30ceac
+      internalID: 1372629371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_23
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 888
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d06672de12a6894ca069e86ae389186
+      internalID: 1262346480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_24
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 888
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79674eee49de084fa813d3c3bf749d2
+      internalID: -2054583155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_25
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 888
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea2fda5685b1594395010423494597a
+      internalID: 1844883174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_26
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 888
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4884b01788b17da46bfc95b0bdb80f06
+      internalID: 1400121513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_27
+      rect:
+        serializedVersion: 2
+        x: 3108
+        y: 888
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf39dee63d5b1554f837176a249e9224
+      internalID: -723605995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_28
+      rect:
+        serializedVersion: 2
+        x: 3552
+        y: 888
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19297780ebd0f504cb209b69e8149979
+      internalID: -1101145871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_29
+      rect:
+        serializedVersion: 2
+        x: 3996
+        y: 888
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a1f381b7be69a409609b6bb2fb4371
+      internalID: -1430303983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 444
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b1fec00f067d04d812cde6559fa197
+      internalID: 2140387161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_31
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 444
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f99794b3eb5f942a9458f053d2b350
+      internalID: -722905428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_32
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 444
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ebab498f2490bc42b4abd7fcc533bb0
+      internalID: 1896200178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_33
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 444
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7242f377340dfbb47b79fc6173773a40
+      internalID: 1188482580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_34
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 444
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd64dd4d76ed3f44aa77c6341bbe578b
+      internalID: -1050017657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_35
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 444
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4671e8d04e00146a0bda887c40e75b
+      internalID: 1200442998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_36
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 444
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbfb0d06e0cb13346acd0e25954d369b
+      internalID: 2025439878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_37
+      rect:
+        serializedVersion: 2
+        x: 3108
+        y: 444
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ba5663164d5bc4bb6978af2e367876
+      internalID: 829946812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_38
+      rect:
+        serializedVersion: 2
+        x: 3552
+        y: 444
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a3ea8006b55804f8ecd8066c8050f8
+      internalID: -231738899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_39
+      rect:
+        serializedVersion: 2
+        x: 3996
+        y: 444
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a3447113b39ed4d89a137c4070f9b8
+      internalID: -1301919703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ad919b26116f34bbcf955f17d41165
+      internalID: 376042690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_41
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 0
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa75beb6f4bb23f4ca1ac429e9d222da
+      internalID: 578872014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_42
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 0
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e79025cb67743e4c83fc0d420f395f4
+      internalID: 1398001521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_43
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 0
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18d44a67599abf428d9697fcf9dc8d5
+      internalID: -720601829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_44
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 0
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39695065d5f0f34409db0f79327c0f37
+      internalID: -1631843671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_45
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 0
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb9a957b9690e14494f8b793cc419df
+      internalID: -1977678246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_46
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 0
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae374bd2493e81347ac5c411fa1caa34
+      internalID: 981600170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_47
+      rect:
+        serializedVersion: 2
+        x: 3108
+        y: 0
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e181961d4899cc745a9fabe7d18dd295
+      internalID: 697840430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_48
+      rect:
+        serializedVersion: 2
+        x: 3552
+        y: 0
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32630e5a0ebb1549995ee848c4851f4
+      internalID: -2035001762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Muse Dash - Default Music_49
+      rect:
+        serializedVersion: 2
+        x: 3996
+        y: 0
+        width: 444
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b44603357e8c7469f69904f7feb6b9
+      internalID: 752527737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PC Computer - Muse Dash - Default Music_0: 999917710
+      PC Computer - Muse Dash - Default Music_1: -1083757601
+      PC Computer - Muse Dash - Default Music_10: -1605247118
+      PC Computer - Muse Dash - Default Music_11: -1190964163
+      PC Computer - Muse Dash - Default Music_12: 60543768
+      PC Computer - Muse Dash - Default Music_13: 1959969333
+      PC Computer - Muse Dash - Default Music_14: -1304101174
+      PC Computer - Muse Dash - Default Music_15: -1525894841
+      PC Computer - Muse Dash - Default Music_16: 569589708
+      PC Computer - Muse Dash - Default Music_17: -1457059630
+      PC Computer - Muse Dash - Default Music_18: 1073564131
+      PC Computer - Muse Dash - Default Music_19: 1289062364
+      PC Computer - Muse Dash - Default Music_2: 784877696
+      PC Computer - Muse Dash - Default Music_20: -1385431091
+      PC Computer - Muse Dash - Default Music_21: -745187180
+      PC Computer - Muse Dash - Default Music_22: 1372629371
+      PC Computer - Muse Dash - Default Music_23: 1262346480
+      PC Computer - Muse Dash - Default Music_24: -2054583155
+      PC Computer - Muse Dash - Default Music_25: 1844883174
+      PC Computer - Muse Dash - Default Music_26: 1400121513
+      PC Computer - Muse Dash - Default Music_27: -723605995
+      PC Computer - Muse Dash - Default Music_28: -1101145871
+      PC Computer - Muse Dash - Default Music_29: -1430303983
+      PC Computer - Muse Dash - Default Music_3: 8503118
+      PC Computer - Muse Dash - Default Music_30: 2140387161
+      PC Computer - Muse Dash - Default Music_31: -722905428
+      PC Computer - Muse Dash - Default Music_32: 1896200178
+      PC Computer - Muse Dash - Default Music_33: 1188482580
+      PC Computer - Muse Dash - Default Music_34: -1050017657
+      PC Computer - Muse Dash - Default Music_35: 1200442998
+      PC Computer - Muse Dash - Default Music_36: 2025439878
+      PC Computer - Muse Dash - Default Music_37: 829946812
+      PC Computer - Muse Dash - Default Music_38: -231738899
+      PC Computer - Muse Dash - Default Music_39: -1301919703
+      PC Computer - Muse Dash - Default Music_4: 411605028
+      PC Computer - Muse Dash - Default Music_40: 376042690
+      PC Computer - Muse Dash - Default Music_41: 578872014
+      PC Computer - Muse Dash - Default Music_42: 1398001521
+      PC Computer - Muse Dash - Default Music_43: -720601829
+      PC Computer - Muse Dash - Default Music_44: -1631843671
+      PC Computer - Muse Dash - Default Music_45: -1977678246
+      PC Computer - Muse Dash - Default Music_46: 981600170
+      PC Computer - Muse Dash - Default Music_47: 697840430
+      PC Computer - Muse Dash - Default Music_48: -2035001762
+      PC Computer - Muse Dash - Default Music_49: 752527737
+      PC Computer - Muse Dash - Default Music_5: 1148110166
+      PC Computer - Muse Dash - Default Music_6: -2076733805
+      PC Computer - Muse Dash - Default Music_7: -1794390239
+      PC Computer - Muse Dash - Default Music_8: -544608934
+      PC Computer - Muse Dash - Default Music_9: 1808027812
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

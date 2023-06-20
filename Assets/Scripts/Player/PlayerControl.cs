@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -11,6 +12,7 @@ public class PlayerControl : MonoBehaviour
 {
    public static PlayerControl Instance { get; private set; }  
    [SerializeField] private Health health;
+   [SerializeField] private TextMeshProUGUI healthText;
 
    private void Awake()
    {
@@ -20,8 +22,15 @@ public class PlayerControl : MonoBehaviour
    void Start()
    {
       health.OnDeath += Health_OnDeath;
+      health.OnTakeDamage += Health_OnTakeDamage;
       NoteManager.Instance.OnNoteMissed += NoteManager_OnNoteMissed;
       NoteManager.Instance.OnNoNoteHits += NoteManager_OnNoNoteHits;
+      healthText.text = health.GetMaxHealth().ToString();
+   }
+
+   private void Health_OnTakeDamage(object sender, Health.OnTakeDamageEventArgs e)
+   {
+      healthText.text = health.GetCurHealth().ToString();
    }
 
    private void NoteManager_OnNoNoteHits(object sender, System.EventArgs e)
@@ -37,7 +46,7 @@ public class PlayerControl : MonoBehaviour
    private void Health_OnDeath(object sender, System.EventArgs e)
    {
       //trigger player dead animation
-      //disable movement and collider
+      healthText.text = "0";
       GameplayManager.Instance.PlayerDead();
    }
 

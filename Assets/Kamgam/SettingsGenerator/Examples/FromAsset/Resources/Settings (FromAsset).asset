@@ -171,6 +171,11 @@ MonoBehaviour:
     _groups: []
     _defaultValue: 3
     ConnectionObject: {fileID: 0}
+  - ID: CustomMusicVol
+    ApplyImmediately: 1
+    _groups: []
+    _defaultValue: 10
+    ConnectionObject: {fileID: 0}
   _floats:
   - ID: handicap
     ApplyImmediately: 1

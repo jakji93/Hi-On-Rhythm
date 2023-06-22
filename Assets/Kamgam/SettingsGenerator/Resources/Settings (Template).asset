@@ -139,6 +139,11 @@ MonoBehaviour:
     _groups: []
     _defaultValue: 0
     ConnectionObject: {fileID: 11400000, guid: 69a9e465280a7c94b8506cc7701cfc43, type: 2}
+  - ID: customMusicVol
+    ApplyImmediately: 1
+    _groups: []
+    _defaultValue: 20
+    ConnectionObject: {fileID: 0}
   _strings: []
   _colors: []
   _colorOptions: []

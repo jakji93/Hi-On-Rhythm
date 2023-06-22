@@ -4,33 +4,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class MusicSettings : MonoBehaviour
 {
-    protected int customMusicVol; // Instead of healthRegeneration this could be super-sampling scale factor X.
+    private float customMusicVol;
+
+    [SerializeField] private SettingsProvider SettingsProvider;
+    [SerializeField] private string ID;
 
     private void Start()
     {
-        customMusicVol = (int)this.GetComponent<AudioSource>().volume;
+        var connection = new GetSetConnection<float>(getter: getCustomMusicVol, setter: setCustomMusicVol);
+        var setting = SettingsProvider.Settings.GetFloat(ID);
+        customMusicVol = setting.GetValue();
+        customMusicVol = customMusicVol / 100;
+        this.GetComponent<AudioSource>().volume = customMusicVol ;
+        
+        print(customMusicVol);
     }
 
     protected void changeCustomMusicVol(Settings settings)
     {
-        var connection = new GetSetConnection<int>
-        (
-            getter: getCustomMusicVol, // executed if connection.Get() is called.
-            setter: setCustomMusicVol  // executed if connection.Set(value) is called.
-        );
+        //var connection = new GetSetConnection<float>(getter: getCustomMusicVol,setter: setCustomMusicVol);
 
-        var healthSetting = settings.GetOrCreateInt(id: "CustomMusicVol",connection: connection
-        );
+       // var customMusicVolSetting = settings.GetOrCreateFloat(id: "customMusicVol",connection: connection);
 
     }
 
-    protected int getCustomMusicVol()
-    {
+    protected float getCustomMusicVol()
+    {   
         return customMusicVol;
     }
-    protected void setCustomMusicVol(int value)
+    protected void setCustomMusicVol(float value)
     {
         customMusicVol = value;
         //Debug.Log("Health regeneration has been set to: " + value);

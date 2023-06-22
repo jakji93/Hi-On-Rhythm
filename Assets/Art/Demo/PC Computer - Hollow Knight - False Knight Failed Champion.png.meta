@@ -107,7 +107,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PC Computer - Hollow Knight - False Knight Failed Champion_0
+      name: Idle 1
       rect:
         serializedVersion: 2
         x: 3
@@ -115,7 +115,7 @@ TextureImporter:
         width: 619
         height: 395
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -128,15 +128,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Hollow Knight - False Knight Failed Champion_1
+      name: Idle 2
       rect:
         serializedVersion: 2
-        x: 629
+        x: 627
         y: 13287
         width: 618
         height: 395
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,7 +149,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Hollow Knight - False Knight Failed Champion_2
+      name: Idle 3
       rect:
         serializedVersion: 2
         x: 1254
@@ -157,7 +157,7 @@ TextureImporter:
         width: 618
         height: 395
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,15 +170,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Hollow Knight - False Knight Failed Champion_3
+      name: Idle 4
       rect:
         serializedVersion: 2
-        x: 1876
-        y: 13287
+        x: 1874
+        y: 13289
         width: 616
         height: 393
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Hollow Knight - False Knight Failed Champion_4
+      name: Idle 5
       rect:
         serializedVersion: 2
         x: 2499
@@ -199,7 +199,7 @@ TextureImporter:
         width: 619
         height: 395
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,6 +207,531 @@ TextureImporter:
       bones: []
       spriteID: 8c4645f0b9997c640a95f963058898a2
       internalID: -1840943589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run 1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 11958
+        width: 619
+        height: 488
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6ccdc086c11bb43af068c294afc03f
+      internalID: -206914061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run 2
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 11957
+        width: 619
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff57758c9d7e944299066785d492d73
+      internalID: 165551113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run 3
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 11958
+        width: 619
+        height: 488
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43fa58356fcd80e498b854fbd34f1362
+      internalID: 1788634618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run 4
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 11958
+        width: 619
+        height: 488
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b975083a3003e429b7c8504bcd4817
+      internalID: 1962231827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run 5
+      rect:
+        serializedVersion: 2
+        x: 2509
+        y: 11958
+        width: 618
+        height: 489
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65da96840e9da034ebb10e76a26b9786
+      internalID: 585748754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack 1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 9958
+        width: 578
+        height: 398
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4933425cbed594899578608d5c53b2
+      internalID: 702348212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack 2
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 9341
+        width: 699
+        height: 591
+      alignment: 9
+      pivot: {x: 0.49194673, y: 0.3222012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a33be24449908974babf20cdda6bde91
+      internalID: 932909292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack 3
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 9340
+        width: 701
+        height: 592
+      alignment: 9
+      pivot: {x: 0.4892928, y: 0.31933263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8dc9430e8bfc3488aef38a581e1db8
+      internalID: -205430580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack 4
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 9339
+        width: 697
+        height: 589
+      alignment: 9
+      pivot: {x: 0.49192357, y: 0.29292566}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f7ed5740bc34147b2af54f6ac00261
+      internalID: -2075509199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack 5
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 8741
+        width: 651
+        height: 573
+      alignment: 9
+      pivot: {x: 0.49235013, y: 0.34355912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee9650c546e41d41890db3c34978834
+      internalID: -1578701059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack 6
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 8740
+        width: 654
+        height: 574
+      alignment: 9
+      pivot: {x: 0.48857784, y: 0.34817004}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de0ce9398d3dec4dbfc4dbca21c5937
+      internalID: 1189183477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack 7
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 8741
+        width: 651
+        height: 572
+      alignment: 9
+      pivot: {x: 0.4885252, y: 0.317166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5700e8e32390f2e42b4f8932d570bde5
+      internalID: 325081484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack 8
+      rect:
+        serializedVersion: 2
+        x: 1990
+        y: 8738
+        width: 650
+        height: 576
+      alignment: 9
+      pivot: {x: 0.51915413, y: 0.24494594}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a02ed706b27c5440bcfe18a11ab5012
+      internalID: -1434569324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack 9
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 8739
+        width: 650
+        height: 575
+      alignment: 9
+      pivot: {x: 0.5536313, y: 0.31378907}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b8803528cf2d446a391a18036493bf
+      internalID: -1162648813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead 1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 4636
+        width: 413
+        height: 463
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c29b502de72c9b49886ed8128706c65
+      internalID: 1838075486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead 2
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 4636
+        width: 414
+        height: 463
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3b8afcd05c47c44a70c7439a6512bd
+      internalID: -1267376861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead 3
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 4635
+        width: 413
+        height: 465
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7aab2ab8da3dac4693b335231cf6a3f
+      internalID: 1274291162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead 4
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 4636
+        width: 414
+        height: 465
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3cfd4fcc783d33458fdcf76c6712142
+      internalID: -2059056170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump 1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 11552
+        width: 605
+        height: 380
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f141f556aeeff438dc341716926c2b
+      internalID: -1499312735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump 2
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 11552
+        width: 607
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4e247b98133a74f803c81676176436
+      internalID: -1853831509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump 3
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 11553
+        width: 605
+        height: 379
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ae9d32b0af08847a0ab5830d0fbc3b
+      internalID: 814870911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump 4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 11190
+        width: 601
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1ed38145dee7544b5deb01fb4daaba
+      internalID: -2037935412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump 5
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 11191
+        width: 600
+        height: 336
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0306a42bc5cd548a0db0f91b08d5f2
+      internalID: -2133404206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump 6
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 11189
+        width: 601
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443c9358f56557a4a85b784fd0aeb01b
+      internalID: -1590759316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump 7
+      rect:
+        serializedVersion: 2
+        x: 1831
+        y: 11188
+        width: 601
+        height: 337
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e669f64d38c86a0418f37ca5b58df172
+      internalID: 1422663563
       vertices: []
       indices: 
       edges: []
@@ -222,11 +747,36 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PC Computer - Hollow Knight - False Knight Failed Champion_0: 865112674
-      PC Computer - Hollow Knight - False Knight Failed Champion_1: 1420676342
-      PC Computer - Hollow Knight - False Knight Failed Champion_2: 1693951538
-      PC Computer - Hollow Knight - False Knight Failed Champion_3: -1738631243
-      PC Computer - Hollow Knight - False Knight Failed Champion_4: -1840943589
+      Attack 1: 702348212
+      Attack 2: 932909292
+      Attack 3: -205430580
+      Attack 4: -2075509199
+      Attack 5: -1578701059
+      Attack 6: 1189183477
+      Attack 7: 325081484
+      Attack 8: -1434569324
+      Attack 9: -1162648813
+      Dead 1: 1838075486
+      Dead 2: -1267376861
+      Dead 3: 1274291162
+      Dead 4: -2059056170
+      Idle 1: 865112674
+      Idle 2: 1420676342
+      Idle 3: 1693951538
+      Idle 4: -1738631243
+      Idle 5: -1840943589
+      Jump 1: -1499312735
+      Jump 2: -1853831509
+      Jump 3: 814870911
+      Jump 4: -2037935412
+      Jump 5: -2133404206
+      Jump 6: -1590759316
+      Jump 7: 1422663563
+      Run 1: -206914061
+      Run 2: 165551113
+      Run 3: 1788634618
+      Run 4: 1962231827
+      Run 5: 585748754
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

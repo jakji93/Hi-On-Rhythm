@@ -13,6 +13,7 @@ public class EnemyMeleeAttackRange : EnemyAttackRange
 
    private void OnDrawGizmos()
    {
+      if(attackPoint == null) return;
       Gizmos.color = Color.red;
       Gizmos.DrawWireCube(attackPoint.position, attackSize);
    }

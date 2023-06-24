@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2822832997
+    locked: 0
   - name: Indicator
     uniqueID: 3544118181
     locked: 0

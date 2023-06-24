@@ -1885,8 +1885,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 080089cb1c241a545b112c3b522da110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SettingsProvider: {fileID: 0}
-  ID: 
+  SettingsProvider: {fileID: 11400000, guid: 8d45c32c6655e4a46966fb3f27eef389, type: 2}
+  ID: customMusicVol
 --- !u!1 &106757775
 GameObject:
   m_ObjectHideFlags: 0

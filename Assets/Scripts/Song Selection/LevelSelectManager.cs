@@ -201,6 +201,10 @@ public class LevelSelectManager : MonoBehaviour
 
    public void GoToSettings()
    {
+      PrevSongStruct prevSong = new();
+      prevSong.trackIndex = curSelectTrack;
+      prevSong.songIndex = tracks[curSelectTrack].GetCurrentSongIndex();
+      SaveSystem.Instance.SavePrevSong(prevSong);
       SceneManager.LoadScene("Settings");
    }
 

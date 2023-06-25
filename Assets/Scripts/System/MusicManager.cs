@@ -59,4 +59,9 @@ public class MusicManager : MonoBehaviour
          introMusic.Play(0);
       }
    }
+
+   public float GetGameMusicPlaytime()
+   {
+      return gameMusic.time;
+   }
 }

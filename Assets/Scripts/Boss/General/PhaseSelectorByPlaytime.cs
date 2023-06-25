@@ -1,16 +1,17 @@
 using System.Collections.Generic;
 using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
+using static Unity.VisualScripting.Metadata;
 
-[TaskDescription("Select a random child to execute")]
-public class WeightedRandomSelector : Composite
+[TaskDescription("Select a child based on MusicManager play time")]
+public class PhaseSelectorByPlaytime : Composite
 {
    [BehaviorDesigner.Runtime.Tasks.Tooltip("Seed the random number generator to make things easier to debug")]
    public int seed = 0;
    [BehaviorDesigner.Runtime.Tasks.Tooltip("Do we want to use the seed?")]
    public bool useSeed = false;
 
-   [SerializeField] private int[] weights;
+   [SerializeField] private float[] playtimes;
 
    // The random child index execution order.
    private Stack<int> childrenExecutionOrder = new Stack<int>();
@@ -76,23 +77,21 @@ public class WeightedRandomSelector : Composite
 
    private void SelectRandomChild()
    {
-      int totalWeight = 0;
-      foreach (var weight in weights) {
-         totalWeight += weight;
+      if(MusicManager.Instance == null) {
+         childrenExecutionOrder.Push(0);
+         return;
       }
-      int j = Random.Range(0, totalWeight) + 1;
+
       int i;
-      for(i = 0; i < weights.Length; ++i) {
-         if (weights[i] >= j) {
+      for (i = 0; i < playtimes.Length; ++i) {
+         if (playtimes[i] >= MusicManager.Instance.GetGameMusicPlaytime()) {
             break;
-         } else {
-            j -= weights[i];
          }
       }
       if(i < children.Count) {
          childrenExecutionOrder.Push(i);
       } else {
-         childrenExecutionOrder.Push(0);
+         childrenExecutionOrder.Push(children.Count - 1);
       }
    }
 }

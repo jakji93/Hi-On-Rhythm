@@ -144,6 +144,11 @@ MonoBehaviour:
     _groups: []
     _defaultValue: 20
     ConnectionObject: {fileID: 0}
+  - ID: customEffectsVol
+    ApplyImmediately: 1
+    _groups: []
+    _defaultValue: 50
+    ConnectionObject: {fileID: 0}
   _strings: []
   _colors: []
   _colorOptions: []

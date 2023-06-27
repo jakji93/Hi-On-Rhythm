@@ -38,6 +38,6 @@ public class MusicSettings : MonoBehaviour
     protected void setCustomMusicVol(float value)
     {
         customMusicVol = value;
-        //Debug.Log("Health regeneration has been set to: " + value);
+        this.GetComponent<AudioSource>().volume = customMusicVol;
     }
 }

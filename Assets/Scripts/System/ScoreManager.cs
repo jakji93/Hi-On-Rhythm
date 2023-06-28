@@ -195,6 +195,7 @@ public class ScoreManager : MonoBehaviour
       if(isBossStage) {
          score.enemyKilled = "n/a";
          //get boss hp
+         score.bossHP = "0%";
       } else {
          score.bossHP = "n/a";
          score.enemyKilled = enemyKilledCounter.ToString();

@@ -10,6 +10,7 @@ public class TestMovement : MonoBehaviour
    [SerializeField] private GameInput playerInputs;
    [SerializeField] private AudioSource audio;
    [SerializeField] private float playtime;
+   [SerializeField] private float basePostionX;
 
    private float chartSpeed;
    private Vector3 baseLocation;
@@ -19,7 +20,7 @@ public class TestMovement : MonoBehaviour
       baseLocation = transform.localPosition;
       audio.time = playtime;
       var postionAtPlaytime = playtime * BPM / 60 * 480;
-      baseLocation.x = baseLocation.x - postionAtPlaytime;
+      baseLocation.x = basePostionX - postionAtPlaytime;
       transform.localPosition = baseLocation;
    }
 

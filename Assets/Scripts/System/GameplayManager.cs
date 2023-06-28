@@ -111,7 +111,7 @@ public class GameplayManager : MonoBehaviour
             }
             if(spawnDelay < 0f && !enemySpawned) {
                enemySpawned = true;
-               EnemySpawner.Instance.StartSpawn();
+               EnemySpawner.Instance?.StartSpawn();
             }
             if(musicPlaying && !MusicManager.Instance.IsPlaying()) { 
                state = GameState.WaitingToEnd;
@@ -155,7 +155,7 @@ public class GameplayManager : MonoBehaviour
    {
       state = GameState.PlayerDead;
       OnStateChange?.Invoke(this, EventArgs.Empty);
-      EnemySpawner.Instance.StopSpawn();
+      EnemySpawner.Instance?.StopSpawn();
       ChartManager.Instance.StopPlaying(); 
       Debug.Log("Player Dead");
    }

@@ -8,7 +8,21 @@ public class TestMovement : MonoBehaviour
    private float timeSofar = 0f;
    [SerializeField] private float BPM = 120;
    [SerializeField] private GameInput playerInputs;
+   [SerializeField] private AudioSource audio;
+   [SerializeField] private float playtime;
+
    private float chartSpeed;
+   private Vector3 baseLocation;
+
+   private void Awake()
+   {
+      baseLocation = transform.localPosition;
+      audio.time = playtime;
+      var postionAtPlaytime = playtime * BPM / 60 * 480;
+      baseLocation.x = baseLocation.x - postionAtPlaytime;
+      transform.localPosition = baseLocation;
+   }
+
    private void Start()
    {
       chartSpeed = BPM / 60 * BPM_MULTIPLIER;

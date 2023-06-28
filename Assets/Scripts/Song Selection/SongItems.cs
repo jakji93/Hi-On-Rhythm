@@ -7,9 +7,11 @@ public class SongItems : MonoBehaviour
    [SerializeField] private SongNames songName;
    [SerializeField] private AudioClip audioClip;
    [SerializeField] private PulseEffect pulse;
+   [SerializeField] private string displayTitle;
 
    public AudioClip GetAudioClip() { return audioClip; }
    public SongNames GetSongNames() { return songName; }
+   public string GetDisplayTitle() { return displayTitle; }
 
    public void StartPulse()
    {

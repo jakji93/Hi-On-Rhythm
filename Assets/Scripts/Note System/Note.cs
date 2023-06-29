@@ -14,4 +14,11 @@ public class Note : MonoBehaviour
    [SerializeField] private NoteTypes type;
 
    public NoteTypes getNoteType() { return type; }
+
+   private void Awake()
+   {
+      var postion = transform.localPosition;
+      postion.z = postion.x / 1000;
+      transform.localPosition = postion;
+   }
 }

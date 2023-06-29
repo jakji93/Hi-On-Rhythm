@@ -11,6 +11,7 @@ public class TestMovement : MonoBehaviour
    [SerializeField] private AudioSource audio;
    [SerializeField] private float playtime;
    [SerializeField] private float basePostionX;
+   [SerializeField] private bool isCharting;
 
    private float chartSpeed;
    private Vector3 baseLocation;
@@ -33,7 +34,7 @@ public class TestMovement : MonoBehaviour
 
    private void PlayerInputs_OnNormal1Pressed(object sender, System.EventArgs e)
    {
-      Debug.Log(transform.localPosition.x);
+      if(isCharting) Debug.Log(transform.localPosition.x);
    }
 
    private void FixedUpdate()

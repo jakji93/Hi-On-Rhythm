@@ -15,6 +15,11 @@ public class BossMovement : Action
       baseScaleX = transform.localScale.x;
    }
 
+   public override void OnStart()
+   {
+      if (target == null) target = PlayerControl.Instance.transform;
+   }
+
    public override TaskStatus OnUpdate()
    {
       Move();

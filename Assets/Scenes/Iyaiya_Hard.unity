@@ -7325,6 +7325,10 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 759295735}
+    - target: {fileID: 1727722569267025065, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
+      propertyPath: damageOnNote
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7582741518931721296, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
       propertyPath: m_Name
       value: Wizard

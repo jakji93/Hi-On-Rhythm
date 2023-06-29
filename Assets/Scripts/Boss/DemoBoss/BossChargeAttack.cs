@@ -17,6 +17,7 @@ public class BossChargeAttack : Action
 
    public override void OnStart()
    {
+      if(target == null) target = PlayerControl.Instance.transform;
       direction = (target.position - transform.position).normalized;
       isHit = false;
    }

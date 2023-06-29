@@ -13,6 +13,7 @@ public class PlayerControl : MonoBehaviour
    public static PlayerControl Instance { get; private set; }  
    [SerializeField] private Health health;
    [SerializeField] private TextMeshProUGUI healthText;
+   [SerializeField] private int damageOnNote;
 
    private void Awake()
    {
@@ -35,12 +36,12 @@ public class PlayerControl : MonoBehaviour
 
    private void NoteManager_OnNoNoteHits(object sender, System.EventArgs e)
    {
-      health.TakeDamage(10);
+      health.TakeDamage(damageOnNote);
    }
 
    private void NoteManager_OnNoteMissed(object sender, System.EventArgs e)
    {
-      health.TakeDamage(10);
+      health.TakeDamage(damageOnNote);
    }
 
    private void Health_OnDeath(object sender, System.EventArgs e)

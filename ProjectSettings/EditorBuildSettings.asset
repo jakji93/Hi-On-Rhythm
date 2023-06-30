@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: dbd4c87a1c1ccf64f848ce016989bc1a
+  - enabled: 1
+    path: Assets/Scenes/Bully_Hard.unity
+    guid: 5eef5d660c1b6c2488f93a9d5ed54aa3
   m_configObjects: {}

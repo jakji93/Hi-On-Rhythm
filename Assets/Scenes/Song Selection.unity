@@ -1593,6 +1593,7 @@ MonoBehaviour:
   songName: 11
   audioClip: {fileID: 8300000, guid: 17824b1f72f6ea3419d52201ab67eba9, type: 3}
   pulse: {fileID: 0}
+  displayTitle: Faver Night
 --- !u!114 &192608873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1724,6 +1725,7 @@ MonoBehaviour:
   songName: 1
   audioClip: {fileID: 8300000, guid: 83a7ef56e31c6e845bfc58ded578fd3c, type: 3}
   pulse: {fileID: 207691269}
+  displayTitle: Undead Enemy
 --- !u!114 &207691269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1796,6 +1798,7 @@ MonoBehaviour:
   songName: 0
   audioClip: {fileID: 8300000, guid: b8e6733a20975244eae1def7beee7238, type: 3}
   pulse: {fileID: 0}
+  displayTitle: Iyaiya
 --- !u!114 &223391707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2523,6 +2526,7 @@ MonoBehaviour:
   songName: 2
   audioClip: {fileID: 8300000, guid: fb418e6995b6ab848937fa428208f74f, type: 3}
   pulse: {fileID: 458475434}
+  displayTitle: Live Streamer
 --- !u!114 &458475432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2633,6 +2637,7 @@ MonoBehaviour:
   songName: 1
   audioClip: {fileID: 8300000, guid: 83a7ef56e31c6e845bfc58ded578fd3c, type: 3}
   pulse: {fileID: 0}
+  displayTitle: Undead Enemy
 --- !u!114 &488953196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2859,6 +2864,7 @@ MonoBehaviour:
   songName: 1
   audioClip: {fileID: 8300000, guid: 83a7ef56e31c6e845bfc58ded578fd3c, type: 3}
   pulse: {fileID: 0}
+  displayTitle: Undead Enemy
 --- !u!114 &587728751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2951,6 +2957,7 @@ MonoBehaviour:
   songName: 0
   audioClip: {fileID: 8300000, guid: b8e6733a20975244eae1def7beee7238, type: 3}
   pulse: {fileID: 0}
+  displayTitle: Iyaiya
 --- !u!114 &588373668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3571,6 +3578,7 @@ MonoBehaviour:
   songName: 5
   audioClip: {fileID: 8300000, guid: b08aea76271157a4f89a417930f2059d, type: 3}
   pulse: {fileID: 766309928}
+  displayTitle: Reflect
 --- !u!114 &766309926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3682,6 +3690,7 @@ MonoBehaviour:
   songName: 4
   audioClip: {fileID: 8300000, guid: 2b58c8a1b3bf3814a9c90b54aa7f461f, type: 3}
   pulse: {fileID: 773897230}
+  displayTitle: Dead Beats
 --- !u!114 &773897228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3933,6 +3942,7 @@ MonoBehaviour:
   songName: 0
   audioClip: {fileID: 8300000, guid: b8e6733a20975244eae1def7beee7238, type: 3}
   pulse: {fileID: 0}
+  displayTitle: Iyaiya
 --- !u!114 &823839322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4297,6 +4307,7 @@ MonoBehaviour:
   songName: 7
   audioClip: {fileID: 8300000, guid: 8199731f19af46d4e80c46fd1a88d2c1, type: 3}
   pulse: {fileID: 0}
+  displayTitle: Sparks of Joy
 --- !u!114 &909659813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4526,6 +4537,7 @@ MonoBehaviour:
   songName: 1
   audioClip: {fileID: 8300000, guid: 83a7ef56e31c6e845bfc58ded578fd3c, type: 3}
   pulse: {fileID: 0}
+  displayTitle: Undead Enemy
 --- !u!114 &968684709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4990,6 +5002,7 @@ MonoBehaviour:
   songName: 1
   audioClip: {fileID: 8300000, guid: 83a7ef56e31c6e845bfc58ded578fd3c, type: 3}
   pulse: {fileID: 0}
+  displayTitle: Undead Enemy
 --- !u!114 &1078044410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5926,6 +5939,7 @@ MonoBehaviour:
   songName: 0
   audioClip: {fileID: 8300000, guid: b8e6733a20975244eae1def7beee7238, type: 3}
   pulse: {fileID: 0}
+  displayTitle: Iyaiya
 --- !u!114 &1387523560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6062,6 +6076,7 @@ MonoBehaviour:
   songName: 0
   audioClip: {fileID: 8300000, guid: b8e6733a20975244eae1def7beee7238, type: 3}
   pulse: {fileID: 0}
+  displayTitle: Iyaiya
 --- !u!114 &1438451091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6154,6 +6169,7 @@ MonoBehaviour:
   songName: 9
   audioClip: {fileID: 8300000, guid: 70339e2aebea1074796b24525c1d8463, type: 3}
   pulse: {fileID: 0}
+  displayTitle: PsyCho
 --- !u!114 &1474420309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6246,6 +6262,7 @@ MonoBehaviour:
   songName: 1
   audioClip: {fileID: 8300000, guid: 83a7ef56e31c6e845bfc58ded578fd3c, type: 3}
   pulse: {fileID: 0}
+  displayTitle: Undead Enemy
 --- !u!114 &1506716554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6421,6 +6438,7 @@ MonoBehaviour:
   songName: 3
   audioClip: {fileID: 8300000, guid: 42ba602c121a0884d961e4132b29f134, type: 3}
   pulse: {fileID: 1511633457}
+  displayTitle: Bully (Boss)
 --- !u!114 &1511633455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7429,6 +7447,7 @@ MonoBehaviour:
   songName: 8
   audioClip: {fileID: 8300000, guid: a2c0623acc5fea64c83e51b24e43ab39, type: 3}
   pulse: {fileID: 0}
+  displayTitle: Play Dice
 --- !u!114 &1783445603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7521,6 +7540,7 @@ MonoBehaviour:
   songName: 1
   audioClip: {fileID: 8300000, guid: 83a7ef56e31c6e845bfc58ded578fd3c, type: 3}
   pulse: {fileID: 0}
+  displayTitle: Undead Enemy
 --- !u!114 &1798827960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7613,6 +7633,7 @@ MonoBehaviour:
   songName: 10
   audioClip: {fileID: 8300000, guid: 0350b6f21d74336458364c6c7e71dcaa, type: 3}
   pulse: {fileID: 0}
+  displayTitle: Astrogirl
 --- !u!114 &1817561386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7842,6 +7863,7 @@ MonoBehaviour:
   songName: 0
   audioClip: {fileID: 8300000, guid: b8e6733a20975244eae1def7beee7238, type: 3}
   pulse: {fileID: 0}
+  displayTitle: Iyaiya
 --- !u!114 &1946651333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8157,6 +8179,7 @@ MonoBehaviour:
   songName: 6
   audioClip: {fileID: 8300000, guid: f72cc2d20e076d54980c4d0078c544cc, type: 3}
   pulse: {fileID: 0}
+  displayTitle: Gravity
 --- !u!114 &1961278909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8288,6 +8311,7 @@ MonoBehaviour:
   songName: 0
   audioClip: {fileID: 8300000, guid: b8e6733a20975244eae1def7beee7238, type: 3}
   pulse: {fileID: 2040325322}
+  displayTitle: Iyaiya
 --- !u!114 &2040325322
 MonoBehaviour:
   m_ObjectHideFlags: 0

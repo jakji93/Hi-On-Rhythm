@@ -121,10 +121,14 @@ public class LevelSelectManager : MonoBehaviour
       }
    }
 
-   public void SetSongName(SongNames name)
+   public void SetSongName(SongNames name, string displayName)
    {
       curSongName = name;
-      songName.text = curSongName.ToString();
+      if(displayName != null) {
+         songName.text = displayName;
+      } else {
+         songName.text = curSongName.ToString();
+      }
       UpdateScore();
    }
 
@@ -206,6 +210,7 @@ public class LevelSelectManager : MonoBehaviour
       prevSong.songIndex = tracks[curSelectTrack].GetCurrentSongIndex();
       SaveSystem.Instance.SavePrevSong(prevSong);
       SceneManager.LoadScene("Settings");
+      ClipPlayer.Instance.PlayClip(clickClip);
    }
 
    private void UpdateScore()

@@ -21,7 +21,9 @@ public class EnemyController : MonoBehaviour
 
    [SerializeField] private EnemyAttackRange attackRange;
    [SerializeField] private Health health;
-   [SerializeField] private Collider2D collider;
+   [SerializeField] private Collider2D footCollider;
+   [SerializeField] private Collider2D bodyCollider;
+   [SerializeField] private GameObject deathParticle;
    private bool isAttacking = false;
    private EnemyState state;
 
@@ -33,7 +35,8 @@ public class EnemyController : MonoBehaviour
 
    private void Health_OnDeath(object sender, EventArgs e)
    {
-      collider.enabled = false;
+      bodyCollider.enabled = false;
+      footCollider.enabled = false;
       state = EnemyState.Dead;
       OnStateChanged?.Invoke(this, new OnStateChangedEventArgs
       {
@@ -41,6 +44,8 @@ public class EnemyController : MonoBehaviour
       });
       ScoreManager.Instance.EnemyKilled();
       //TODO death animation, set GO off for now
+      var newDeathParticle = Instantiate(deathParticle, transform.position, Quaternion.identity);
+      Destroy(newDeathParticle, 1.5f);
       gameObject.SetActive(false);
    }
 

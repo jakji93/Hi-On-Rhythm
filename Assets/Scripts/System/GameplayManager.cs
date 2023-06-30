@@ -192,4 +192,9 @@ public class GameplayManager : MonoBehaviour
    {
       return difficulty;
    }
+
+   public bool IsGameOver()
+   {
+      return state == GameState.Score;
+   }
 }

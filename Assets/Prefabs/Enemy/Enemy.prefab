@@ -31,6 +31,87 @@ Transform:
   m_Father: {fileID: 3046892157462909657}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1069254187768854253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 909817320889536145}
+  - component: {fileID: 4967750771192836441}
+  - component: {fileID: 7234051978216143564}
+  m_Layer: 11
+  m_Name: Body
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &909817320889536145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069254187768854253}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.072, y: 0.522, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3046892157462909657}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &4967750771192836441
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069254187768854253}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 0
+--- !u!114 &7234051978216143564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069254187768854253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43bee8ec936a07469f4caa45b3a1929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 80
 --- !u!1 &5531372522003649431
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +261,6 @@ GameObject:
   - component: {fileID: 3670458034943983573}
   - component: {fileID: 4343160224710134431}
   - component: {fileID: 6127058897201036969}
-  - component: {fileID: 3120525135649741190}
   - component: {fileID: 798202448870189600}
   m_Layer: 7
   m_Name: Enemy
@@ -203,6 +283,7 @@ Transform:
   m_Children:
   - {fileID: 1090888383068712435}
   - {fileID: 5204286123324602812}
+  - {fileID: 909817320889536145}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -261,6 +342,7 @@ MonoBehaviour:
   canMove: 1
   moveSpeed: 1
   spaceBetween: 0.61
+  turnSpeed: 2
 --- !u!114 &3670458034943983573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,8 +356,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: {fileID: 4343160224710134431}
-  health: {fileID: 3120525135649741190}
-  collider: {fileID: 4595087057983702054}
+  health: {fileID: 7234051978216143564}
+  footCollider: {fileID: 4595087057983702054}
+  bodyCollider: {fileID: 4967750771192836441}
+  deathParticle: {fileID: 3226548553906744312, guid: 564db4b9da0d14540a35340b3418efa0, type: 3}
 --- !u!114 &4343160224710134431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,19 +398,6 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 1024
---- !u!114 &3120525135649741190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8756611384550387591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f43bee8ec936a07469f4caa45b3a1929, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 80
 --- !u!114 &798202448870189600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,3 +412,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: f6fa87469129ebd489346b5558f2cf70, type: 2}
   duration: 0.2
+  spriteRenderer: {fileID: 6325879543724548402}
+  health: {fileID: 7234051978216143564}

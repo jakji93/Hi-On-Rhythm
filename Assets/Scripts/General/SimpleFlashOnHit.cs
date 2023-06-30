@@ -6,19 +6,16 @@ public class SimpleFlashOnHit : MonoBehaviour
 {
    [SerializeField] private Material flashMaterial;
    [SerializeField] private float duration;
+   [SerializeField] private SpriteRenderer spriteRenderer;
+   [SerializeField] private Health health;
 
-   private SpriteRenderer spriteRenderer;
    private Material originalMaterial;
    private Coroutine flashRoutine;
-   private Health health;
+   
 
    void Start()
    {
-      spriteRenderer = GetComponent<SpriteRenderer>();
-      if(spriteRenderer == null) spriteRenderer = GetComponentInChildren<SpriteRenderer>();
       originalMaterial = spriteRenderer.material;
-      health = GetComponent<Health>();
-      if (health == null) health = GetComponentInChildren<Health>();
       if (health == null ) {
          Debug.LogError("Missing Health component");
       }

@@ -19375,7 +19375,7 @@ MonoBehaviour:
   BPM: 85
   playerInputs: {fileID: 1265020014}
   audio: {fileID: 106248829}
-  playtime: 90
+  playtime: 0
   basePostionX: -762
   isCharting: 0
 --- !u!1 &1393255760

@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 1590161351123478284}
   - component: {fileID: 8580362756455603825}
   - component: {fileID: 593529443838054962}
+  - component: {fileID: 5506698634502158754}
   m_Layer: 0
   m_Name: Demo Boss
   m_TagString: Untagged
@@ -246,7 +247,7 @@ MonoBehaviour:
         Bool Parameter","Instant":true,"SharedGameObjecttargetGameObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null,"GameObjectmValue":10},"SharedStringparamaterName":{"Type":"BehaviorDesigner.Runtime.SharedString","Name":null,"StringmValue":"isRun"},"SharedBoolboolValue":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"BooleansetOnce":false},{"Type":"BossMovement","NodeData":{"Offset":"(80,140)"},"ID":40,"Name":"Boss
         Movement","Instant":true,"SinglemoveSpeed":3}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(66.96994,187.576172)","Comment":"Chase
         Duration"},"ID":41,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":2},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(-3.88889027,183.888885)"},"ID":42,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}},{"Type":"FaceTarget","NodeData":{"Offset":"(129.999939,180)"},"ID":43,"Name":"Face
-        Target","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(260.870148,175.652451)","Collapsed":true},"ID":44,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-121.359131,134.4386)"},"ID":45,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"IsChargedIntoWall","NodeData":{"Offset":"(-115.880859,105.4386)"},"ID":46,"Name":"Is
+        Target","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(260.870148,175.652451)"},"ID":44,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-121.359131,134.4386)"},"ID":45,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"IsChargedIntoWall","NodeData":{"Offset":"(-115.880859,105.4386)"},"ID":46,"Name":"Is
         Charged Into Wall","Instant":true,"SingleattackSize":3.23,"LayerMaskwallMask":4096,"TransformattackPoint":11},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.UnityAnimator.SetBoolParameter","NodeData":{"Offset":"(16.6824951,109.344727)"},"ID":47,"Name":"Set
         Bool Parameter","Instant":true,"SharedGameObjecttargetGameObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null,"GameObjectmValue":12},"SharedStringparamaterName":{"Type":"BehaviorDesigner.Runtime.SharedString","Name":null,"StringmValue":"isRun"},"SharedBoolboolValue":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"BooleansetOnce":false},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(136.246887,110.432373)"},"ID":48,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":3},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.ParallelSelector","NodeData":{"Offset":"(145.2174,238.695679)"},"ID":49,"Name":"Parallel
         Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BossChargeAttack","NodeData":{"Offset":"(-80.00006,150)"},"ID":50,"Name":"Boss
@@ -411,6 +412,19 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 1024
+--- !u!114 &5506698634502158754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4411784686561622404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a85a25eb6e801e4da53d004f3227d63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 2577386164092346810}
 --- !u!1 &7042193202906027839
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +467,6 @@ GameObject:
   - component: {fileID: 6079894437268303877}
   - component: {fileID: 8154110141923300044}
   - component: {fileID: 2577386164092346810}
-  - component: {fileID: 4079623192985995718}
   m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
@@ -524,19 +537,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5000
---- !u!114 &4079623192985995718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8735474447849607903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d0b00cc48a68a9498d9eda196bdd6a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flashMaterial: {fileID: 2100000, guid: f6fa87469129ebd489346b5558f2cf70, type: 2}
-  duration: 0.1
-  spriteRenderer: {fileID: 1744784011469875523}
-  health: {fileID: 2577386164092346810}

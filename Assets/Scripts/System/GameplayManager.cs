@@ -183,12 +183,12 @@ public class GameplayManager : MonoBehaviour
       Loader.Load(sceneName);
    }
 
-   public SongNames GetSongNames()
+   public SongNames GetSongName()
    {
       return songName;
    }
 
-   public Difficulties GetDifficulties()
+   public Difficulties GetDifficulty()
    {
       return difficulty;
    }

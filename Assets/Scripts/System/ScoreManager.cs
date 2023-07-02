@@ -136,7 +136,9 @@ public class ScoreManager : MonoBehaviour
       finalScore += noteHitCounter * noteHitMultiplier;
       finalScore -= noteMissedCounter * noteMissedMultiplier;
       if (isBossStage) {
-         //finalScore += BossHp * BossHPMulti
+         var maxHealth = BossController.Instance.GetBossMaxHealth();
+         var curHealth = BossController.Instance.GetBossHealth();
+         finalScore += (maxHealth - curHealth) * bossHealthMultiplier;
       }
       else {
          finalScore += enemyKilledCounter * enemyKilledMultiplier;
@@ -149,8 +151,8 @@ public class ScoreManager : MonoBehaviour
    private string GetLetterGrade(float finalScore)
    {
       string letterGrade = "D";
-      //Get Boss HP as a % from somewhere
-      float scoreToUse = isBossStage ? 0 : finalScore;
+      //Let's use final score for both boss and normal stage for now
+      float scoreToUse = isBossStage ? finalScore : finalScore;
       if(scoreToUse / maxScore > dGrade) {
          letterGrade = "C";
          if(scoreToUse / maxScore > cGrade) {
@@ -173,7 +175,9 @@ public class ScoreManager : MonoBehaviour
       maxComboText.text = MAX_COMBO + ComboManager.Instance.GetMaxCombo();
       if(isBossStage) {
          //get boss hp
-         EnemyBossText.text = BOSS_HP + "0%";
+         var maxHealth = BossController.Instance.GetBossMaxHealth();
+         var curHealth = BossController.Instance.GetBossHealth();
+         EnemyBossText.text = BOSS_HP + Mathf.FloorToInt((float)curHealth / maxHealth * 100) + "%";
       } else {
          EnemyBossText.text = ENEMY_KILLED + enemyKilledCounter;
       }
@@ -195,13 +199,15 @@ public class ScoreManager : MonoBehaviour
       if(isBossStage) {
          score.enemyKilled = "n/a";
          //get boss hp
-         score.bossHP = "0%";
+         var maxHealth = BossController.Instance.GetBossMaxHealth();
+         var curHealth = BossController.Instance.GetBossHealth();
+         score.bossHP = Mathf.FloorToInt((float)curHealth / maxHealth * 100) + "%";
       } else {
          score.bossHP = "n/a";
          score.enemyKilled = enemyKilledCounter.ToString();
       }
-      var songName = GameplayManager.Instance.GetSongNames();
-      var difficulty = GameplayManager.Instance.GetDifficulties();
+      var songName = GameplayManager.Instance.GetSongName();
+      var difficulty = GameplayManager.Instance.GetDifficulty();
       if(SaveSystem.Instance.TrySaveHighScore(score, songName, difficulty)) {
          newBestText.gameObject.SetActive(true);
       } else {

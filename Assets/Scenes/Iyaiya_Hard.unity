@@ -6834,7 +6834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9097e89d4f8620448420287bbd8fca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitzoneSize: {x: 80, y: 80}
+  hitzoneSize: {x: 43, y: 80}
   gameInput: {fileID: 1265020014}
   noteLayer:
     serializedVersion: 2

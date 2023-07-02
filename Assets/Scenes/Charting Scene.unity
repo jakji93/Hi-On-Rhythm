@@ -19375,7 +19375,7 @@ MonoBehaviour:
   BPM: 85
   playerInputs: {fileID: 1265020014}
   audio: {fileID: 106248829}
-  playtime: 0
+  playtime: 40
   basePostionX: -762
   isCharting: 0
 --- !u!1 &1393255760
@@ -27856,9 +27856,69 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1390084248}
     m_Modifications:
+    - target: {fileID: 1106133660790540409, guid: f442943698d778046a654abe46785e1a, type: 3}
+      propertyPath: m_Size.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123575559985726473, guid: f442943698d778046a654abe46785e1a, type: 3}
+      propertyPath: m_Size.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1141240216124432793, guid: f442943698d778046a654abe46785e1a, type: 3}
+      propertyPath: m_Size.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256053970979894975, guid: f442943698d778046a654abe46785e1a, type: 3}
+      propertyPath: m_Size.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257052787385513208, guid: f442943698d778046a654abe46785e1a, type: 3}
+      propertyPath: m_Size.x
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 1303706561467606936, guid: f442943698d778046a654abe46785e1a, type: 3}
       propertyPath: m_Name
       value: Bully
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450129639296888015, guid: f442943698d778046a654abe46785e1a, type: 3}
+      propertyPath: m_Size.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122522863117561088, guid: f442943698d778046a654abe46785e1a, type: 3}
+      propertyPath: m_Size.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2382003896382803301, guid: f442943698d778046a654abe46785e1a, type: 3}
+      propertyPath: m_Size.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2868414794281560842, guid: f442943698d778046a654abe46785e1a, type: 3}
+      propertyPath: m_Size.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260219002098785773, guid: f442943698d778046a654abe46785e1a, type: 3}
+      propertyPath: m_Size.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851603602460474017, guid: f442943698d778046a654abe46785e1a, type: 3}
+      propertyPath: m_Size.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550046982172192001, guid: f442943698d778046a654abe46785e1a, type: 3}
+      propertyPath: m_Size.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6795370845948083032, guid: f442943698d778046a654abe46785e1a, type: 3}
+      propertyPath: m_Size.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293593560942229484, guid: f442943698d778046a654abe46785e1a, type: 3}
+      propertyPath: m_Size.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8509836526966566055, guid: f442943698d778046a654abe46785e1a, type: 3}
+      propertyPath: m_Size.x
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8825076966563054758, guid: f442943698d778046a654abe46785e1a, type: 3}
       propertyPath: m_Pivot.x

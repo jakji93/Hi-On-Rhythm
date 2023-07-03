@@ -9,7 +9,6 @@ public class PlayerAttack : MonoBehaviour
    [SerializeField] private GameObject[] specialAttacks;
 
    [SerializeField] private Transform aimTransform;
-   [SerializeField] private float rotValue = 100;
 
    private int curSpecial = 0;
 
@@ -40,11 +39,11 @@ public class PlayerAttack : MonoBehaviour
 
    private void Attack(GameObject attack)
    {
-      Quaternion rotato = aimTransform.rotation;
-      Vector3 rot = rotato.eulerAngles;
-      rot.z = rot.z + rotValue;
-      rotato = Quaternion.Euler(rot);
+      //Quaternion rotato = aimTransform.rotation;
+      //Vector3 rot = rotato.eulerAngles;
+      //rotato = Quaternion.Euler(rot);
 
-      Instantiate(attack, aimTransform.position, rotato, gameObject.transform);
+      //Instantiate(attack, aimTransform.position, rotato, gameObject.transform);
+      Instantiate(attack, aimTransform.position, aimTransform.rotation, aimTransform.transform);
    }
 }

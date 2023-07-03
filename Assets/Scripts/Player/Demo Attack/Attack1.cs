@@ -23,7 +23,7 @@ public class Attack1 : MonoBehaviour
 
         if (curDur <= atk1Dur )
         {
-            curDur++;
+         curDur += Time.deltaTime;
         }
         else
         {

@@ -1359,9 +1359,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1744784011469875523, guid: 003453ee5b953be4289ada34bd33064d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 865112674, guid: 041088b091e7295419dfc696bb906abd, type: 3}
     - target: {fileID: 4411784686561622404, guid: 003453ee5b953be4289ada34bd33064d, type: 3}
       propertyPath: m_Name
       value: Demo Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 8154110141923300044, guid: 003453ee5b953be4289ada34bd33064d, type: 3}
+      propertyPath: m_Size.x
+      value: 2.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 8154110141923300044, guid: 003453ee5b953be4289ada34bd33064d, type: 3}
+      propertyPath: m_Size.y
+      value: 2.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 8154110141923300044, guid: 003453ee5b953be4289ada34bd33064d, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8154110141923300044, guid: 003453ee5b953be4289ada34bd33064d, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7645,7 +7665,7 @@ MonoBehaviour:
   cGrade: 0.69
   bGrade: 0.79
   aGrade: 0.89
-  maxScore: 9340
+  maxScore: 512600
 --- !u!1 &2068622357
 GameObject:
   m_ObjectHideFlags: 0
@@ -7940,10 +7960,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 301403484445325794, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 997941931360478725, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
+      propertyPath: playerDashSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637173036481764521, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
+      propertyPath: normalAttack1
+      value: 
+      objectReference: {fileID: 8331143105052709381, guid: 00c380287575d26499f5015cf88cfb5b, type: 3}
     - target: {fileID: 1637173036481764521, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
       propertyPath: normalAttack2
       value: 
-      objectReference: {fileID: 8331143105052709381, guid: 00c380287575d26499f5015cf88cfb5b, type: 3}
+      objectReference: {fileID: 460532732272499257, guid: 7a1826ebb8e47914387e9d67939bc7f8, type: 3}
     - target: {fileID: 1637173036481764521, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
       propertyPath: specialAttacks.Array.size
       value: 1

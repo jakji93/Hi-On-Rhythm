@@ -11,21 +11,24 @@ public class Attack2 : MonoBehaviour
     [SerializeField] float bulletSpeed = 30f;
     [SerializeField] private float atk1Dur = 200f;
 
+   [SerializeField] private GameObject bullet;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        bulletRB = GetComponent<Rigidbody2D>();
-        bulletDir = getMouseDir();
-        curDur = 0;
+        //bulletRB = GetComponent<Rigidbody2D>();
+        var newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+        newBullet.transform.up = getMouseDir();
+        Destroy(this.gameObject);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        bulletRB.MovePosition(bulletRB.transform.position + bulletDir * bulletSpeed * Time.deltaTime);
+        //bulletRB.MovePosition(bulletRB.transform.position + bulletDir * bulletSpeed * Time.deltaTime);
 
         if (curDur <= atk1Dur)
         {
@@ -33,7 +36,7 @@ public class Attack2 : MonoBehaviour
         }
         else
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
 
     }
@@ -44,12 +47,12 @@ public class Attack2 : MonoBehaviour
         //mousePos.z = Camera.main.nearClipPlane;
         //return Camera.main.ScreenToWorldPoint(mousePos);
 
-        Vector3 playerPos;
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 playerPos;
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+        playerPos = PlayerControl.Instance.transform.position;
 
-        Vector3 aimDir =  mousePos - playerPos;
+        Vector3 aimDir =  mousePos - (Vector2)transform.position;
 
         return (aimDir.normalized);
 

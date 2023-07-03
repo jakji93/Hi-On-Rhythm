@@ -7645,7 +7645,7 @@ MonoBehaviour:
   noteHitMultiplier: 10
   noteMissedMultiplier: 15
   enemyKilledMultiplier: 20
-  bossHealthMultiplier: 20
+  bossHealthMultiplier: 5
   playerHealthMultiplier: 10
   highestComboMultiplier: 10
   isBossStage: 1
@@ -7665,7 +7665,7 @@ MonoBehaviour:
   cGrade: 0.69
   bGrade: 0.79
   aGrade: 0.89
-  maxScore: 512600
+  maxScore: 140600
 --- !u!1 &2068622357
 GameObject:
   m_ObjectHideFlags: 0

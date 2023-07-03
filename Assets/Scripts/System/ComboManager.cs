@@ -69,7 +69,11 @@ public class ComboManager : MonoBehaviour
       curCombo++;
       if (curCombo > maxCombo) maxCombo = curCombo;
       int tempMulti = Mathf.FloorToInt(curCombo / maxComberPerBar) + 1;
-      curMultiplier = tempMulti > maxMultiplier ? maxMultiplier : tempMulti;
+      if (tempMulti > maxMultiplier) {
+         curMultiplier = maxMultiplier;
+      } else if (tempMulti > curMultiplier) {
+         curMultiplier = tempMulti;
+      }
       //TODO might chage to a progress bar based UI
       comboCounterText.text = curCombo.ToString();
       multiplierText.text = curMultiplier.ToString() + "x";
@@ -78,7 +82,7 @@ public class ComboManager : MonoBehaviour
 
    private void ResetCombo()
    {
-      curMultiplier = 1;
+      if (curMultiplier > 1) curMultiplier--;
       curCombo = 0;
       comboCounterText.text = curCombo.ToString();
       multiplierText.text = curMultiplier.ToString() + "x";

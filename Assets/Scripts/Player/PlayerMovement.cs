@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
 
    void OnSpace(InputValue playerInput)
    {
-      if (playerStam >= dashCost) {
+      if (playerStam >= dashCost && playerMoveDir != Vector2.zero) {
          dashPress = true;
          playerStam -= dashCost;
          OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs

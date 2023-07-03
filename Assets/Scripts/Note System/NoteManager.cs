@@ -21,6 +21,7 @@ public class NoteManager : MonoBehaviour
    [SerializeField] private Transform missZoneTransform;
    [Header("Particle Systems")]
    [SerializeField] private GameObject NoteHitParticle;
+   [SerializeField] private GameObject NoteMissedParticle;
    [SerializeField] private Transform particleParent;
    [Header("SFX")]
    [SerializeField] private AudioClip noteHitSound;
@@ -51,6 +52,7 @@ public class NoteManager : MonoBehaviour
                break;
             case Note.NoteTypes.Normal2:
                OnWrongNote?.Invoke(this, EventArgs.Empty);
+               EmitNoteMissedParticle();
                Debug.Log("Hit wrong note");
                break;
             case Note.NoteTypes.Special:
@@ -77,6 +79,7 @@ public class NoteManager : MonoBehaviour
          switch (note.getNoteType()) {
             case Note.NoteTypes.Normal1:
                OnWrongNote?.Invoke(this, EventArgs.Empty);
+               EmitNoteMissedParticle();
                Debug.Log("Hit wrong note");
                break;
             case Note.NoteTypes.Normal2:
@@ -124,6 +127,12 @@ public class NoteManager : MonoBehaviour
    private void EmitNoteHitParticle()
    {
       var newParticle = Instantiate(NoteHitParticle, particleParent);
+      Destroy(newParticle, 2);
+   }
+
+   private void EmitNoteMissedParticle()
+   {
+      var newParticle = Instantiate(NoteMissedParticle, particleParent);
       Destroy(newParticle, 2);
    }
 }

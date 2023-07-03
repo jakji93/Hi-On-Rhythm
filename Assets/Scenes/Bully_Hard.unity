@@ -7460,6 +7460,7 @@ MonoBehaviour:
   missZoneSize: {x: 5, y: 5}
   missZoneTransform: {fileID: 2128266612}
   NoteHitParticle: {fileID: 2685374757482945601, guid: 8e0edaee0e3cbbf48944c4439c361e64, type: 3}
+  NoteMissedParticle: {fileID: 3226548553906744312, guid: 6f056369848612b428085663a2dbf8a0, type: 3}
   particleParent: {fileID: 441160733}
   noteHitSound: {fileID: 0}
 --- !u!1 &2035836111

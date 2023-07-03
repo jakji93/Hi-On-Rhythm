@@ -26,7 +26,14 @@ public class PlayerControl : MonoBehaviour
       health.OnTakeDamage += Health_OnTakeDamage;
       NoteManager.Instance.OnNoteMissed += NoteManager_OnNoteMissed;
       NoteManager.Instance.OnNoNoteHits += NoteManager_OnNoNoteHits;
+      NoteManager.Instance.OnWrongNote += NoteManager_OnWrongNote;
       healthText.text = health.GetMaxHealth().ToString();
+   }
+
+   private void NoteManager_OnWrongNote(object sender, System.EventArgs e)
+   {
+      //Might take this away too if is too hard
+      health.TakeDamage(damageOnNote);
    }
 
    private void Health_OnTakeDamage(object sender, Health.OnTakeDamageEventArgs e)
@@ -36,12 +43,14 @@ public class PlayerControl : MonoBehaviour
 
    private void NoteManager_OnNoNoteHits(object sender, System.EventArgs e)
    {
-      health.TakeDamage(damageOnNote);
+      //Might be too hard to take damage on hiting no notes
+      //health.TakeDamage(damageOnNote);
    }
 
    private void NoteManager_OnNoteMissed(object sender, System.EventArgs e)
    {
-      health.TakeDamage(damageOnNote);
+      //Might be too hard to take damage on missing notes
+      //health.TakeDamage(damageOnNote);
    }
 
    private void Health_OnDeath(object sender, System.EventArgs e)

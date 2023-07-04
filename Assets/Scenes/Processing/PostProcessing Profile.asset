@@ -180,8 +180,8 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   contrast:
-    overrideState: 0
-    value: 20
+    overrideState: 1
+    value: 8
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
@@ -211,13 +211,13 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: 0}
+    value: {x: 0.9769246, y: 0.98978317, z: 1, w: 0}
   gamma:
     overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: 0}
+    value: {x: 1, y: 1, z: 1, w: 3.4364048e-10}
   gain:
     overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: 0}
+    value: {x: 1, y: 1, z: 1, w: -0.000000014955916}
   masterCurve:
     overrideState: 0
     value:

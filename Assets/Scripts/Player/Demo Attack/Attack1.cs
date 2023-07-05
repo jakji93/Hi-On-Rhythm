@@ -37,6 +37,7 @@ public class Attack1 : MonoBehaviour
       if (collision.gameObject.tag == "Player") return;
         if(collision.gameObject.TryGetComponent<Health>(out Health health)) {
          health.TakeDamage(10 * ComboManager.Instance.GetMultiplier());
+         CameraManager.Instance.ShakeCamera(0.1f, 0.1f);
       }
     }
 }

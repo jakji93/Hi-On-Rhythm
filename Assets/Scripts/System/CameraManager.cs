@@ -7,6 +7,7 @@ public class CameraManager : MonoBehaviour
 {
    public static CameraManager Instance { get; private set; }
    [SerializeField] private CinemachineVirtualCamera virtualCamera;
+   [SerializeField] private float globalShakeForce = 1f;
 
    private CinemachineBasicMultiChannelPerlin perlin;
    float timer = 0f;
@@ -17,7 +18,7 @@ public class CameraManager : MonoBehaviour
    private void Awake()
    {
       Instance = this;
-      perlin = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+      //perlin = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
       basedLocation = transform.position;
    }
 
@@ -35,7 +36,7 @@ public class CameraManager : MonoBehaviour
 
    private void StopShake()
    {
-      perlin.m_AmplitudeGain = 0;
+      //perlin.m_AmplitudeGain = 0;
       timer = 0;
       transform.position = basedLocation;
    }
@@ -44,7 +45,7 @@ public class CameraManager : MonoBehaviour
    {
       if (timer > 0f) {
          timer -= Time.deltaTime;
-         perlin.m_AmplitudeGain = Mathf.Lerp(startIntensity, 0f, 1 - (timer / timeTotal));
+         //perlin.m_AmplitudeGain = Mathf.Lerp(startIntensity, 0f, 1 - (timer / timeTotal));
          if (timer <= 0f) {
             StopShake() ;
          }

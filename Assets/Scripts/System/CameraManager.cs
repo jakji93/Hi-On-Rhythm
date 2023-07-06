@@ -8,8 +8,10 @@ public class CameraManager : MonoBehaviour
    public static CameraManager Instance { get; private set; }
    [SerializeField] private CinemachineVirtualCamera virtualCamera;
    [SerializeField] private float globalShakeForce = 1f;
+   [SerializeField] private float shakeTime;
 
    private CinemachineBasicMultiChannelPerlin perlin;
+   private IEnumerator shakeTimer;
    float timer = 0f;
    private Vector3 basedLocation;
    float timeTotal = 0f;
@@ -50,5 +52,18 @@ public class CameraManager : MonoBehaviour
             StopShake() ;
          }
       }
+   }
+
+   public void ShakeCamera(CinemachineImpulseSource source)
+   {
+      source.GenerateImpulseWithForce(globalShakeForce);
+      if (shakeTimer == null) StartCoroutine(ShakeTime());
+   }
+
+   private IEnumerator ShakeTime()
+   {
+      yield return new WaitForSeconds(shakeTime);
+      transform.position = basedLocation;
+      shakeTimer = null;
    }
 }

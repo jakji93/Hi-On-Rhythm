@@ -23,7 +23,6 @@ public class SongSelector : MonoBehaviour
    {
       numOfChild = songSelectors.Length;
       angle = 360f / numOfChild;
-      Debug.Log(Screen.currentResolution.width);
    }
 
    private void Start()

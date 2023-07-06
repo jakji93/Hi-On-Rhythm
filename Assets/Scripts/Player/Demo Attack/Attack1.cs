@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class Attack1 : MonoBehaviour
 
     [SerializeField] private float atk1Dur = 2f;
     private float curDur;
-    // Start is called before the first frame update
+   // Start is called before the first frame update
     void Start()
     {
         curDur = 0;
@@ -37,7 +38,6 @@ public class Attack1 : MonoBehaviour
       if (collision.gameObject.tag == "Player") return;
         if(collision.gameObject.TryGetComponent<Health>(out Health health)) {
          health.TakeDamage(10 * ComboManager.Instance.GetMultiplier());
-         CameraManager.Instance.ShakeCamera(0.1f, 0.1f);
       }
     }
 }

@@ -59,6 +59,12 @@ public class LevelSelectManager : MonoBehaviour
       gameInput.OnNextSongPressed += GameInput_OnNextSongPressed;
       gameInput.OnPrevDifficultyPressed += GameInput_OnPrevDifficultyPressed;
       gameInput.OnNextDifficultyPressed += GameInput_OnNextDifficultyPressed;
+      gameInput.OnStartPressed += GameInput_OnStartPressed;
+   }
+
+   private void GameInput_OnStartPressed(object sender, System.EventArgs e)
+   {
+      GoToSong();
    }
 
    private void GameInput_OnNextDifficultyPressed(object sender, System.EventArgs e)

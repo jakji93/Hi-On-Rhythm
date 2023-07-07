@@ -14,6 +14,7 @@ public class GameInput : MonoBehaviour
    public event EventHandler OnNextSongPressed;
    public event EventHandler OnPrevDifficultyPressed;
    public event EventHandler OnNextDifficultyPressed;
+   public event EventHandler OnStartPressed;
    private PlayerInputs playerInputs;
 
    private void Awake()
@@ -32,6 +33,12 @@ public class GameInput : MonoBehaviour
       playerInputs.UI.NextSong.performed += NextSong_performed;
       playerInputs.UI.PrevDiff.performed += PrevDiff_performed;
       playerInputs.UI.NextDiff.performed += NextDiff_performed;
+      playerInputs.UI.Confirm.performed += Confirm_performed;
+   }
+
+   private void Confirm_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+   {
+      OnStartPressed?.Invoke(this, EventArgs.Empty);
    }
 
    private void NextDiff_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)

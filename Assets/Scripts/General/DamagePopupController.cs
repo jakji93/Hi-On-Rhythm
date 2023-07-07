@@ -17,6 +17,7 @@ public class DamagePopupController : MonoBehaviour
    private void Start()
    {
       preLocalScale = transform.localScale;
+      preLocalScale.x = Mathf.Abs(preLocalScale.x);
       origin = transform.localPosition;
    }
 

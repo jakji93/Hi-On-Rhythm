@@ -7,6 +7,7 @@ public class DamagePopupSpawner : MonoBehaviour
    [SerializeField] private Health health;
    [SerializeField] private GameObject damagePopup;
    [SerializeField] private float popupLifeTime;
+   [SerializeField] private bool isAttachedToObject = true;
 
    private void Start()
    {
@@ -15,7 +16,12 @@ public class DamagePopupSpawner : MonoBehaviour
 
    private void Health_OnTakeDamage(object sender, Health.OnTakeDamageEventArgs e)
    {
-      var damagePop = Instantiate(damagePopup, transform.position, Quaternion.identity, transform);
+      GameObject damagePop;
+      if(isAttachedToObject) {
+         damagePop = Instantiate(damagePopup, transform.position, Quaternion.identity, transform);
+      } else {
+         damagePop = Instantiate(damagePopup, transform.position, Quaternion.identity);
+      }
       damagePop.GetComponent<DamagePopupController>().SetDamageTaken(e.damage);
       Destroy(damagePop, popupLifeTime);
    }

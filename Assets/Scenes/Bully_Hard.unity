@@ -2612,10 +2612,6 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 2022276562265108703, guid: 35d5df30a0c22a0438df8aa51292ac66, type: 3}
-      propertyPath: m_Lens.OrthographicSize
-      value: 8.72
-      objectReference: {fileID: 0}
     - target: {fileID: 3394462482003220920, guid: 35d5df30a0c22a0438df8aa51292ac66, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -2627,10 +2623,6 @@ PrefabInstance:
     - target: {fileID: 4299469870024113783, guid: 35d5df30a0c22a0438df8aa51292ac66, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4299469870024113783, guid: 35d5df30a0c22a0438df8aa51292ac66, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 4299469870024113783, guid: 35d5df30a0c22a0438df8aa51292ac66, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2663,10 +2655,6 @@ PrefabInstance:
     - target: {fileID: 4299469870024113783, guid: 35d5df30a0c22a0438df8aa51292ac66, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7451878024050125712, guid: 35d5df30a0c22a0438df8aa51292ac66, type: 3}
-      propertyPath: orthographic size
-      value: 8.72
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

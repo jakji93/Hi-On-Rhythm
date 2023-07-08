@@ -109,6 +109,7 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
 
    void OnSpace(InputValue playerInput)
    {
+      if (!GameplayManager.Instance.IsGamePlaying()) return;
       if (playerStam >= dashCost && playerMoveDir != Vector2.zero) {
          dashPress = true;
          playerStam -= dashCost;

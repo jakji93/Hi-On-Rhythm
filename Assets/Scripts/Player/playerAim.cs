@@ -9,8 +9,9 @@ public class playerAim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-      transform.right = (mousePos - (Vector2)transform.position).normalized;
-
+      if(GameplayManager.Instance.IsGamePlaying()) {
+         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+         transform.right = (mousePos - (Vector2)transform.position).normalized;
+      }
    }
 }

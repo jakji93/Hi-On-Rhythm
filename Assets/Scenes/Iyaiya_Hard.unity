@@ -5291,6 +5291,11 @@ MonoBehaviour:
     - {fileID: 839049227}
     enemies:
     - {fileID: 8756611384550387591, guid: e4814d4f0f2c7f24dbd4097f21b68fec, type: 3}
+  - spawnPoints:
+    - {fileID: 915698700}
+    - {fileID: 1369762045}
+    enemies:
+    - {fileID: 2234887303421942617, guid: f11130268089dc24da60ee0bce31ce6e, type: 3}
   specificWaveContent:
   - waveNumber: 10
     wave:
@@ -6353,7 +6358,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0

@@ -20,7 +20,7 @@ public class HomingProjectile : Projectile
          targetPlayer = PlayerControl.Instance.transform;
       }
       var newDirection = (targetPlayer.position - transform.position).normalized;
-      var slowDirction = Vector3.RotateTowards(transform.up, newDirection, Time.deltaTime * angularSpeed, 0);
-      transform.up = slowDirction;
+      var slowDirction = Vector3.RotateTowards(transform.right, newDirection, Time.deltaTime * angularSpeed, 0);
+      transform.right = slowDirction;
    }
 }

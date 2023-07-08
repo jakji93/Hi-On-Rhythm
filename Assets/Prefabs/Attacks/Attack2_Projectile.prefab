@@ -52,7 +52,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   attackPoint: {fileID: 316471976973475132}
-  attackRadius: 0.42
+  attackRadius: 0.67
   destroyObject: {fileID: 0}
 --- !u!1 &6822952505396656411
 GameObject:

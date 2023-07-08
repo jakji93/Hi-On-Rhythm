@@ -16,14 +16,14 @@ public abstract class EnemyAttack : MonoBehaviour
    private void Start()
    {
       controller.OnStateChanged += EnemyController_OnStateChanged;
-      attackTimer = attackDelay;
+      attackTimer = 0;
    }
 
    private void EnemyController_OnStateChanged(object sender, EnemyController.OnStateChangedEventArgs e)
    {
       canAttack = e.state == EnemyController.EnemyState.Attack;
       if(e.state == EnemyController.EnemyState.Move) {
-         attackTimer = attackDelay;
+         attackTimer = 0;
       }
    }
 

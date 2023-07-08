@@ -32,6 +32,8 @@ MonoBehaviour:
     assemblyNames:
     - Assembly-CSharp
     - Assembly-CSharp-firstpass
+    - CFXRDemo
+    - CFXRRuntime
     - Cinemachine
     - Febucci.TextAnimator.Demo.Runtime
     - Febucci.TextAnimator.Runtime
@@ -39,6 +41,7 @@ MonoBehaviour:
     - Kamgam.SettingsGeneratorExamples
     - Kamgam.UGUIComponentsForSettings
     - Kamgam.UIToolkitComponentsForSettings
+    - KinoBloom.Runtime
     - LocalizationsForSettings
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0

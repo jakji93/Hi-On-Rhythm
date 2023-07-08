@@ -32,7 +32,6 @@ public class LevelSelectManager : MonoBehaviour
 
    private float elapsedTime;
    private bool isMoving = false;
-   private bool firstUpdate = true;
 
    private SongNames curSongName;
    private Difficulties curDifficuly;

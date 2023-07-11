@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,12 +10,16 @@ public class SongSelector : MonoBehaviour
    [SerializeField] private float rotationSpeed = 10f;
    [SerializeField] private AnimationCurve rotationCurve;
    [SerializeField] private SongItems[] songSelectors;
+   [SerializeField] private SongItemSO[] songItems;
 
    private Quaternion targetRotation;
    private Quaternion initialRotation;
    private float elapsedTime;
 
    private int curItem = 0;
+   private int curSong = 0;
+   private int midIndex = 0;
+   private int distance = 0;
    private float angle;
    private int numOfChild;
    private bool isRotating;
@@ -23,23 +28,14 @@ public class SongSelector : MonoBehaviour
    {
       numOfChild = songSelectors.Length;
       angle = 360f / numOfChild;
+      midIndex = (int)Mathf.Ceil(numOfChild / 2f);
+      distance = midIndex;
+      LoadSongWheel();
    }
 
    private void Start()
    {
-      for (int i = 0; i < songSelectors.Length; i++) {
-         //0 at left
-         float yPos = Mathf.Sin(Mathf.Deg2Rad * (i * angle)) * radius;
-         float xPos = -Mathf.Cos(Mathf.Deg2Rad * (i * angle)) * radius;
-         //0 at top
-         //float xPos = Mathf.Sin(Mathf.Deg2Rad * (i * angle)) * radius;
-         //float yPos = Mathf.Cos(Mathf.Deg2Rad * (i * angle)) * radius;
-         songSelectors[i].transform.position = transform.position + new Vector3(xPos, yPos, 0f);
-         songSelectors[i].transform.Rotate(new Vector3(0f, 0f, -i * angle));
-      }
-      transform.localRotation = Quaternion.Euler(0f, 0f, curItem * angle);
-      initialRotation = transform.localRotation;
-      isRotating = false;
+      DisplaySongWheel();
    }
 
    private void Update()
@@ -72,6 +68,13 @@ public class SongSelector : MonoBehaviour
       songSelectors[curItem].StopPulse();
       curItem++;
       curItem %= numOfChild;
+      var newSongIndex = curSong + distance;
+      newSongIndex %= songItems.Length;
+      songSelectors[midIndex].LoadSO(songItems[newSongIndex]);
+      midIndex++;
+      midIndex %= numOfChild;
+      curSong++;
+      curSong %= songItems.Length;
       elapsedTime = 0f;
       targetRotation = Quaternion.Euler(0f, 0f, curItem * angle);
       isRotating = true;
@@ -84,6 +87,15 @@ public class SongSelector : MonoBehaviour
       songSelectors[curItem].StopPulse();
       curItem--;
       if (curItem < 0) curItem = numOfChild - 1;
+      var newSongIndex = curSong - (numOfChild - distance);
+      while (newSongIndex < 0) {
+         newSongIndex += songItems.Length;
+      }
+      songSelectors[midIndex].LoadSO(songItems[newSongIndex]);
+      midIndex--;
+      if (midIndex < 0) midIndex = numOfChild - 1;
+      curSong--;
+      if (curSong < 0) curSong = songItems.Length - 1;
       elapsedTime = 0f;
       targetRotation = Quaternion.Euler(0f, 0f, curItem * angle);
       isRotating = true;
@@ -99,17 +111,53 @@ public class SongSelector : MonoBehaviour
 
    public void SetAsCurrentTrack(int songIndex)
    {
-      curItem = songIndex;
+      curSong = songIndex;
+      numOfChild = songSelectors.Length;
+      midIndex = (int)Mathf.Ceil(numOfChild / 2f);
+      LoadSongWheel();
       SetAsCurrentTrack();
    }
 
    public int GetCurrentSongIndex()
    {
-      return curItem;
+      return curSong;
    }
 
    public void DeselectAsTrack()
    {
       songSelectors[curItem].StopPulse();
+   }
+
+   private void LoadSongWheel()
+   {
+      if(songItems.Length == 0) return;
+      for (int i = 0; i < midIndex; i++) {
+         var songItemIndex = curSong + i;
+         songItemIndex %= songItems.Length;
+         songSelectors[i].LoadSO(songItems[songItemIndex]);
+      }
+      for(int i = 0;i < songSelectors.Length - midIndex; i++) {
+         var songItemIndex = curSong - 1 - i;
+         while(songItemIndex < 0) {
+            songItemIndex += songItems.Length;
+         }
+         songSelectors[songSelectors.Length - 1 - i].LoadSO(songItems[songItemIndex]);
+      }
+   }
+
+   private void DisplaySongWheel()
+   {
+      for (int i = 0; i < songSelectors.Length; i++) {
+         //0 at left
+         float yPos = Mathf.Sin(Mathf.Deg2Rad * (i * angle)) * radius;
+         float xPos = -Mathf.Cos(Mathf.Deg2Rad * (i * angle)) * radius;
+         //0 at top
+         //float xPos = Mathf.Sin(Mathf.Deg2Rad * (i * angle)) * radius;
+         //float yPos = Mathf.Cos(Mathf.Deg2Rad * (i * angle)) * radius;
+         songSelectors[i].transform.position = transform.position + new Vector3(xPos, yPos, 0f);
+         songSelectors[i].transform.Rotate(new Vector3(0f, 0f, -i * angle));
+      }
+      initialRotation = transform.localRotation;
+      isRotating = false;
    }
 }

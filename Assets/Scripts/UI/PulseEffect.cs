@@ -75,4 +75,9 @@ public class PulseEffect : MonoBehaviour
 
       target.localScale = targetScaleVector;
    }
+
+   public void SetDelayBetweenPulse(float delay)
+   {
+      delayBetweenPulse = delay - pulseDuration;
+   }
 }

@@ -49,7 +49,7 @@ public class DifficultySelector : MonoBehaviour
    public void Increase()
    {
       if (isMoving) return;
-      if (curSelected == difficulties.Length - 1) return;
+      if (curSelected == difficultyItemes.Length - 1) return;
       curSelected++;
       LevelSelectManager.Instance.SetDifficulty(difficulties[curSelected]);
       elapsedTime = 0;

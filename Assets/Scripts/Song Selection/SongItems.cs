@@ -25,4 +25,13 @@ public class SongItems : MonoBehaviour
       if (pulse == null) return;
       pulse.keepConstantPulse = false;
    }
+
+   public void LoadSO(SongItemSO songItemSO)
+   {
+      songName = songItemSO.songName;
+      audioClip = songItemSO.audioClip;
+      displayTitle = songItemSO.displayTitle;
+      var secondsPerBeat = 60f / songItemSO.BPM;
+      pulse.SetDelayBetweenPulse(secondsPerBeat);
+   }
 }

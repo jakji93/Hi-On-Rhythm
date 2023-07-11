@@ -147,10 +147,14 @@ public class SongSelector : MonoBehaviour
 
    private void DisplaySongWheel()
    {
+      var resolutionScaler = 1f;
+      if(Screen.fullScreen) {
+         resolutionScaler = Screen.currentResolution.width / 1920;
+      }
       for (int i = 0; i < songSelectors.Length; i++) {
          //0 at left
-         float yPos = Mathf.Sin(Mathf.Deg2Rad * (i * angle)) * radius;
-         float xPos = -Mathf.Cos(Mathf.Deg2Rad * (i * angle)) * radius;
+         float yPos = Mathf.Sin(Mathf.Deg2Rad * (i * angle)) * radius * resolutionScaler;
+         float xPos = -Mathf.Cos(Mathf.Deg2Rad * (i * angle)) * radius * resolutionScaler;
          //0 at top
          //float xPos = Mathf.Sin(Mathf.Deg2Rad * (i * angle)) * radius;
          //float yPos = Mathf.Cos(Mathf.Deg2Rad * (i * angle)) * radius;

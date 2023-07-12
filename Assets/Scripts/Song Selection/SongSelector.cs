@@ -28,7 +28,7 @@ public class SongSelector : MonoBehaviour
    {
       numOfChild = songSelectors.Length;
       angle = 360f / numOfChild;
-      midIndex = (int)Mathf.Ceil(numOfChild / 2f);
+      midIndex = Mathf.FloorToInt(numOfChild / 2f);
       distance = midIndex;
       LoadSongWheel();
    }
@@ -113,7 +113,7 @@ public class SongSelector : MonoBehaviour
    {
       curSong = songIndex;
       numOfChild = songSelectors.Length;
-      midIndex = (int)Mathf.Ceil(numOfChild / 2f);
+      midIndex = Mathf.FloorToInt(numOfChild / 2f);
       LoadSongWheel();
       SetAsCurrentTrack();
    }

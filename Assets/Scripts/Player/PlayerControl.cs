@@ -71,4 +71,9 @@ public class PlayerControl : MonoBehaviour
       var maxHealth = health.GetMaxHealth();
       return maxHealth;
    }
+
+   public Transform GetPlayerBodyTransform()
+   {
+      return health.gameObject.transform;
+   }
 }

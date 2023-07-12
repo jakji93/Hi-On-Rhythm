@@ -92,6 +92,7 @@ MonoBehaviour:
   health: {fileID: 2014166699794640810}
   damagePopup: {fileID: 4996539489906426715, guid: 918ad47416f528340b2d349ef945f39a, type: 3}
   popupLifeTime: 2
+  isAttachedToObject: 1
 --- !u!1 &5023587528418703488
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8892852211826202078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -254,8 +255,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0152641535, y: 0.9741586}
-  m_Size: {x: 0.516289, y: 1.1119133}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.516289, y: 1.97}
   m_Direction: 0
 --- !u!1001 &5891380000594116981
 PrefabInstance:
@@ -863,7 +864,6 @@ MonoBehaviour:
   normalAttack2: {fileID: 460532732272499257, guid: 7a1826ebb8e47914387e9d67939bc7f8, type: 3}
   specialAttacks: []
   aimTransform: {fileID: 301403484445325794}
-  rotValue: 0
 --- !u!198 &4406058164684895413
 ParticleSystem:
   m_ObjectHideFlags: 0

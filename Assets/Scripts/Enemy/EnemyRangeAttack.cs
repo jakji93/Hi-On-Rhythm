@@ -9,7 +9,7 @@ public class EnemyRangeAttack : EnemyAttack
    public override void Attack()
    {
       Transform project = Instantiate(projectile, attackPoint.position, Quaternion.identity);
-      Vector2 direction = PlayerControl.Instance.transform.position - attackPoint.position;
+      Vector2 direction = PlayerControl.Instance.GetPlayerBodyTransform().position - attackPoint.position;
       direction.Normalize();
       project.right = direction;
    }

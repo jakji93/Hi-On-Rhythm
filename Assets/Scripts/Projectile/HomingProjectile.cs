@@ -17,10 +17,10 @@ public class HomingProjectile : Projectile
    private void AngularTurn()
    {
       if (targetPlayer == null) {
-         targetPlayer = PlayerControl.Instance.transform;
+         targetPlayer = PlayerControl.Instance.GetPlayerBodyTransform();
       }
       var newDirection = (targetPlayer.position - transform.position).normalized;
-      var slowDirction = Vector3.RotateTowards(transform.right, newDirection, Time.deltaTime * angularSpeed, 0);
+      Vector2 slowDirction = Vector3.RotateTowards(transform.right, newDirection, Time.deltaTime * angularSpeed, 0);
       transform.right = slowDirction;
    }
 }

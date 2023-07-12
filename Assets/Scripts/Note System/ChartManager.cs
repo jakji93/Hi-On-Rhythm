@@ -12,10 +12,15 @@ public class ChartManager : MonoBehaviour
    [SerializeField] private bool isPlaying = false;
    private float chartSpeed;
 
+   private float resolutionScaler = 1f;
+
    private void Awake()
    {
       Instance = this;
       chartSpeed = BPM / 60 * BPM_MULTIPLIER;
+      if (Screen.fullScreen) {
+         resolutionScaler = Screen.currentResolution.width / 1920;
+      }
    }
 
    public void StartPlaying()
@@ -31,7 +36,7 @@ public class ChartManager : MonoBehaviour
    private void Update()
    {
       if (isPlaying) {
-         transform.position -= new Vector3(chartSpeed * Time.deltaTime, 0, 0);
+         transform.position -= new Vector3(chartSpeed * Time.deltaTime * resolutionScaler, 0, 0);
       }
    }
 }

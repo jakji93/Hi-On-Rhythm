@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour, IHasProgress
 {
    [SerializeField] private float playerMoveSpeed = 1f;
+   [SerializeField] private float playerAcceleration = 1f;
    [SerializeField] private float collisionOffset = 0.05f;
    [SerializeField] private ContactFilter2D movementFilter;
    [SerializeField] private Transform visualObject;
@@ -27,6 +28,7 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
    [SerializeField] private Collider2D bodyCollider;
    private bool dashPress = false;
    private bool canMove = true;
+   private Vector2 curVelopcity;
 
    public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
 
@@ -86,13 +88,17 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
             else if (count != 0 && dashPress) {
                dashPress = false;
             }
+         } else {
+            curVelopcity = Vector2.zero;
          }
       }
    }
 
    void MovePlayer(Vector2 curPos, Vector2 moveDir, float moveSpeed)
    {
-      playerRB.MovePosition(curPos + moveDir * moveSpeed * Time.fixedDeltaTime);
+      Vector2 targetVelocity = moveDir * moveSpeed;
+      curVelopcity = Vector2.MoveTowards(curVelopcity, targetVelocity, playerAcceleration * Time.fixedDeltaTime);
+      playerRB.MovePosition(curPos + curVelopcity * Time.fixedDeltaTime);
    }
 
    void OnMove(InputValue playerInput)
@@ -141,6 +147,7 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
       animator.SetBool("isDash", false);
       bodyCollider.enabled = true;
       StopCoroutine("dashRoutine");
+      curVelopcity = Vector2.zero;
       yield return null;
    }
 }

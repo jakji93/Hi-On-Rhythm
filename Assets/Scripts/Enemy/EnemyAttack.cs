@@ -16,7 +16,7 @@ public abstract class EnemyAttack : MonoBehaviour
    private void Start()
    {
       controller.OnStateChanged += EnemyController_OnStateChanged;
-      attackTimer = attackDelay / 2;
+      attackTimer = attackDelay;
    }
 
    private void EnemyController_OnStateChanged(object sender, EnemyController.OnStateChangedEventArgs e)

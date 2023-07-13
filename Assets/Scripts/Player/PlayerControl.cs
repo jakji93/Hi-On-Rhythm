@@ -13,7 +13,8 @@ public class PlayerControl : MonoBehaviour
    public static PlayerControl Instance { get; private set; }  
    [SerializeField] private Health health;
    [SerializeField] private TextMeshProUGUI healthText;
-   [SerializeField] private int damageOnNote;
+   [SerializeField] private int damageOnWrongNote;
+   [SerializeField] private int damageOnNoNoteHit;
 
    private void Awake()
    {
@@ -33,7 +34,7 @@ public class PlayerControl : MonoBehaviour
    private void NoteManager_OnWrongNote(object sender, System.EventArgs e)
    {
       //Might take this away too if is too hard
-      health.TakeDamage(damageOnNote);
+      health.TakeDamage(damageOnWrongNote);
    }
 
    private void Health_OnTakeDamage(object sender, Health.OnTakeDamageEventArgs e)
@@ -44,7 +45,7 @@ public class PlayerControl : MonoBehaviour
    private void NoteManager_OnNoNoteHits(object sender, System.EventArgs e)
    {
       //Might be too hard to take damage on hiting no notes
-      //health.TakeDamage(damageOnNote);
+      health.TakeDamage(damageOnNoNoteHit);
    }
 
    private void NoteManager_OnNoteMissed(object sender, System.EventArgs e)

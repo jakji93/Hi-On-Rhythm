@@ -276,7 +276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
       propertyPath: m_LocalScale.x
@@ -810,6 +810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMoveSpeed: 8
+  playerAcceleration: 56
   collisionOffset: 0.05
   movementFilter:
     useTriggers: 0
@@ -827,10 +828,10 @@ MonoBehaviour:
     maxNormalAngle: 0
   visualObject: {fileID: 3894211188875395983}
   animator: {fileID: 7582741518931721297}
-  playerDashSpeed: 20
+  playerDashSpeed: 16
   dashCost: 30
   stamRecovery: 30
-  dashTime: 0.3
+  dashTime: 0.2
   particleSystem: {fileID: 4406058164684895413}
   bodyCollider: {fileID: 9026703496373407482}
 --- !u!114 &1727722569267025065
@@ -847,7 +848,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: {fileID: 2014166699794640810}
   healthText: {fileID: 0}
-  damageOnNote: 0
+  damageOnWrongNote: 0
+  damageOnNoNoteHit: 0
 --- !u!114 &1637173036481764521
 MonoBehaviour:
   m_ObjectHideFlags: 0

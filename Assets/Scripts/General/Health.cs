@@ -35,6 +35,7 @@ public class Health : MonoBehaviour, IHasProgress
 
    public void TakeDamage(int damage)
    {
+      if (damage <= 0) return;
       curHealth = Mathf.Max(curHealth - damage, 0);
       if(curHealth <= 0 ) {
          OnDeath?.Invoke(this, EventArgs.Empty);

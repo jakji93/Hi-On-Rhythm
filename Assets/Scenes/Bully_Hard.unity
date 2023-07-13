@@ -2774,10 +2774,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 997941931360478725, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
-      propertyPath: playerDashSpeed
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 1637173036481764521, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
       propertyPath: normalAttack1
       value: 

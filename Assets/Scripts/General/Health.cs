@@ -11,7 +11,7 @@ public class Health : MonoBehaviour, IHasProgress
    {
       public int damage;
    }
-   public event EventHandler OnDeath;
+   public event EventHandler<OnTakeDamageEventArgs> OnDeath;
    public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
 
    [SerializeField] private int maxHealth;
@@ -38,7 +38,10 @@ public class Health : MonoBehaviour, IHasProgress
       if (damage <= 0) return;
       curHealth = Mathf.Max(curHealth - damage, 0);
       if(curHealth <= 0 ) {
-         OnDeath?.Invoke(this, EventArgs.Empty);
+         OnDeath?.Invoke(this, new OnTakeDamageEventArgs
+         {
+            damage = damage,
+         });
          OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
          {
             currentValue = 0,

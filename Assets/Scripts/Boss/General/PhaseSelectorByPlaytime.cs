@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
-using static Unity.VisualScripting.Metadata;
 
 [TaskDescription("Select a child based on MusicManager play time")]
 public class PhaseSelectorByPlaytime : Composite

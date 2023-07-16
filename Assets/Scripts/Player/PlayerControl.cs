@@ -6,7 +6,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
-using UnityEngine.WSA;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -54,7 +53,7 @@ public class PlayerControl : MonoBehaviour
       //health.TakeDamage(damageOnNote);
    }
 
-   private void Health_OnDeath(object sender, System.EventArgs e)
+   private void Health_OnDeath(object sender, Health.OnTakeDamageEventArgs e)
    {
       //trigger player dead animation
       healthText.text = "0";

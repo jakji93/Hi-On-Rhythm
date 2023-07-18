@@ -13,11 +13,11 @@ public class ComboManager : MonoBehaviour
    [SerializeField] private TextMeshProUGUI comboCounterText;
    [SerializeField] private TextMeshProUGUI multiplierText;
 
-   public UnityEvent OnComboIncrease;
-
    private int curCombo = 0;
    private int curMultiplier = 1;
    private int maxCombo = 0;
+
+   private int killCombo = 0;
 
    private void Awake()
    {
@@ -68,16 +68,15 @@ public class ComboManager : MonoBehaviour
    {
       curCombo++;
       if (curCombo > maxCombo) maxCombo = curCombo;
-      int tempMulti = Mathf.FloorToInt(curCombo / maxComberPerBar) + 1;
-      if (tempMulti > maxMultiplier) {
-         curMultiplier = maxMultiplier;
-      } else if (tempMulti > curMultiplier) {
-         curMultiplier = tempMulti;
-      }
+      //int tempMulti = Mathf.FloorToInt(curCombo / maxComberPerBar) + 1;
+      //if (tempMulti > maxMultiplier) {
+      //   curMultiplier = maxMultiplier;
+      //} else if (tempMulti > curMultiplier) {
+      //   curMultiplier = tempMulti;
+      //}
       //TODO might chage to a progress bar based UI
       comboCounterText.text = curCombo.ToString();
-      multiplierText.text = curMultiplier.ToString() + "x";
-      OnComboIncrease?.Invoke();
+      //multiplierText.text = curMultiplier.ToString() + "x";
    }
 
    private void ResetCombo()
@@ -96,5 +95,22 @@ public class ComboManager : MonoBehaviour
    public int GetMaxCombo()
    {
       return maxCombo;
+   }
+
+   public void EnemyKilled()
+   {
+      killCombo++;
+      if(killCombo >= maxComberPerBar) {
+         killCombo = 0;
+         curMultiplier++;
+         curMultiplier = Mathf.Min(curMultiplier, maxMultiplier);
+         multiplierText.text = curMultiplier.ToString() + "x";
+      }
+   }
+
+   public void GotHit()
+   {
+      curMultiplier = 1;
+      multiplierText.text = curMultiplier.ToString() + "x";
    }
 }

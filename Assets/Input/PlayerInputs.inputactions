@@ -15,7 +15,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Space",
+                    "name": "Dodge",
                     "type": "Button",
                     "id": "8b1f3efa-a51d-4bba-9253-cbda3c6b2ab4",
                     "expectedControlType": "Button",
@@ -73,7 +73,7 @@
                 {
                     "name": "",
                     "id": "7eb91e89-fa28-46aa-b4c8-dd9076497fc7",
-                    "path": "<Mouse>/rightButton",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -282,11 +282,11 @@
                 {
                     "name": "",
                     "id": "599f553d-62a4-4329-94c7-d629eec31a31",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Space",
+                    "action": "Dodge",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

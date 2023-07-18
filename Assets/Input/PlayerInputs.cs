@@ -37,7 +37,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Space"",
+                    ""name"": ""Dodge"",
                     ""type"": ""Button"",
                     ""id"": ""8b1f3efa-a51d-4bba-9253-cbda3c6b2ab4"",
                     ""expectedControlType"": ""Button"",
@@ -95,7 +95,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7eb91e89-fa28-46aa-b4c8-dd9076497fc7"",
-                    ""path"": ""<Mouse>/rightButton"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -304,11 +304,11 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""599f553d-62a4-4329-94c7-d629eec31a31"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Space"",
+                    ""action"": ""Dodge"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -781,7 +781,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
-        m_Player_Space = m_Player.FindAction("Space", throwIfNotFound: true);
+        m_Player_Dodge = m_Player.FindAction("Dodge", throwIfNotFound: true);
         m_Player_PointerLoc = m_Player.FindAction("PointerLoc", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_N1 = m_Player.FindAction("N1", throwIfNotFound: true);
@@ -861,7 +861,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
-    private readonly InputAction m_Player_Space;
+    private readonly InputAction m_Player_Dodge;
     private readonly InputAction m_Player_PointerLoc;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_N1;
@@ -872,7 +872,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         private @PlayerInputs m_Wrapper;
         public PlayerActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
-        public InputAction @Space => m_Wrapper.m_Player_Space;
+        public InputAction @Dodge => m_Wrapper.m_Player_Dodge;
         public InputAction @PointerLoc => m_Wrapper.m_Player_PointerLoc;
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @N1 => m_Wrapper.m_Player_N1;
@@ -890,9 +890,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
-            @Space.started += instance.OnSpace;
-            @Space.performed += instance.OnSpace;
-            @Space.canceled += instance.OnSpace;
+            @Dodge.started += instance.OnDodge;
+            @Dodge.performed += instance.OnDodge;
+            @Dodge.canceled += instance.OnDodge;
             @PointerLoc.started += instance.OnPointerLoc;
             @PointerLoc.performed += instance.OnPointerLoc;
             @PointerLoc.canceled += instance.OnPointerLoc;
@@ -915,9 +915,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
-            @Space.started -= instance.OnSpace;
-            @Space.performed -= instance.OnSpace;
-            @Space.canceled -= instance.OnSpace;
+            @Dodge.started -= instance.OnDodge;
+            @Dodge.performed -= instance.OnDodge;
+            @Dodge.canceled -= instance.OnDodge;
             @PointerLoc.started -= instance.OnPointerLoc;
             @PointerLoc.performed -= instance.OnPointerLoc;
             @PointerLoc.canceled -= instance.OnPointerLoc;
@@ -1071,7 +1071,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
-        void OnSpace(InputAction.CallbackContext context);
+        void OnDodge(InputAction.CallbackContext context);
         void OnPointerLoc(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnN1(InputAction.CallbackContext context);

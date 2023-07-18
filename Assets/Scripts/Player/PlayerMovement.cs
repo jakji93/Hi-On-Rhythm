@@ -112,7 +112,7 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
       else animator.SetBool("isRun", false);
    }
 
-   void OnSpace(InputValue playerInput)
+   void OnDodge(InputValue playerInput)
    {
       if (!GameplayManager.Instance.IsGamePlaying()) return;
       if (playerStam >= dashCost && playerMoveDir != Vector2.zero) {

@@ -2088,7 +2088,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -778.8, y: -480}
+  m_AnchoredPosition: {x: -8.41, y: -473.81}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &477588395
@@ -2108,7 +2108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &477588396
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4702,7 +4702,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -762, y: -472.1}
+  m_AnchoredPosition: {x: 0, y: -472.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1390084252
@@ -5629,7 +5629,25 @@ MonoBehaviour:
       - {fileID: 1369762045}
       - {fileID: 839049227}
       enemies:
-      - {fileID: 8756611384550387591, guid: e4814d4f0f2c7f24dbd4097f21b68fec, type: 3}
+      - {fileID: 5458728073695096934, guid: d72cd0e4cc489304e9dc4480af6a1146, type: 3}
+  - waveNumber: 30
+    wave:
+      spawnPoints:
+      - {fileID: 231629169}
+      - {fileID: 915698700}
+      - {fileID: 1369762045}
+      - {fileID: 839049227}
+      enemies:
+      - {fileID: 5458728073695096934, guid: d72cd0e4cc489304e9dc4480af6a1146, type: 3}
+  - waveNumber: 40
+    wave:
+      spawnPoints:
+      - {fileID: 231629169}
+      - {fileID: 915698700}
+      - {fileID: 1369762045}
+      - {fileID: 839049227}
+      enemies:
+      - {fileID: 5458728073695096934, guid: d72cd0e4cc489304e9dc4480af6a1146, type: 3}
   waveDelay: 2
   totalWave: 59
   canSpawn: 0
@@ -7990,7 +8008,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1775668618
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8865,7 +8883,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -762, y: -472.1}
+  m_AnchoredPosition: {x: 0, y: -472.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2027046969

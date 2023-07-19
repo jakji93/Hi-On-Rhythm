@@ -149,15 +149,50 @@ MonoBehaviour:
     _groups: []
     _defaultValue: 50
     ConnectionObject: {fileID: 0}
-  _strings: []
+  _strings:
+  - ID: keyboard.left
+    ApplyImmediately: 1
+    _groups: []
+    _defaultValue: 
+    ConnectionObject: {fileID: 11400000, guid: 65e7923a62eddce429f6468877542784, type: 2}
+  - ID: keyboard.right
+    ApplyImmediately: 1
+    _groups: []
+    _defaultValue: 
+    ConnectionObject: {fileID: 11400000, guid: 394e48463f39218469f9035232724869, type: 2}
+  - ID: keyboard.up
+    ApplyImmediately: 1
+    _groups: []
+    _defaultValue: 
+    ConnectionObject: {fileID: 11400000, guid: 3951cda03c86bea4ab4419982250031f, type: 2}
+  - ID: keyboard.down
+    ApplyImmediately: 1
+    _groups: []
+    _defaultValue: 
+    ConnectionObject: {fileID: 11400000, guid: a060e73176e743347926cc9ae9d84f82, type: 2}
+  - ID: N1
+    ApplyImmediately: 1
+    _groups: []
+    _defaultValue: 
+    ConnectionObject: {fileID: 11400000, guid: 6caaa9808f6a98f42a17dfe00ca474f9, type: 2}
+  - ID: N2
+    ApplyImmediately: 1
+    _groups: []
+    _defaultValue: 
+    ConnectionObject: {fileID: 11400000, guid: 9227dea48a56f2941be4d74be3d2e0bc, type: 2}
+  - ID: Dash
+    ApplyImmediately: 1
+    _groups: []
+    _defaultValue: 
+    ConnectionObject: {fileID: 11400000, guid: ec2b57ef6e8d99a4fabba0252068f71d, type: 2}
   _colors: []
   _colorOptions: []
   _keyCombinations:
-  - ID: keyboard.jump
+  - ID: keyboard.a
     ApplyImmediately: 1
     _groups:
-    - controls
+    - 
     _defaultValue:
-      Key: 106
+      Key: 145
       ModifierKey: 0
-    ConnectionObject: {fileID: 0}
+    ConnectionObject: {fileID: 11400000, guid: ec4d539f690beed4886d303e3163161e, type: 2}

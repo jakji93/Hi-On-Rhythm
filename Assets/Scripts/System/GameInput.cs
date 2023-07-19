@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameInput : MonoBehaviour
 {
@@ -83,7 +84,7 @@ public class GameInput : MonoBehaviour
 
    private void Noramal1_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
    {
-      OnNormal1Pressed?.Invoke(this, EventArgs.Empty); 
+      OnNormal1Pressed?.Invoke(this, EventArgs.Empty);
    }
 
    private void OnDestroy()

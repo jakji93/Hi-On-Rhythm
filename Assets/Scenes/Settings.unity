@@ -3537,7 +3537,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1736571479519132038, guid: ea23ec9d83995b548be4c6b16ab94f8b, type: 3}
       propertyPath: Term
-      value: Attack
+      value: Attack 2
       objectReference: {fileID: 0}
     - target: {fileID: 1873940643465643306, guid: ea23ec9d83995b548be4c6b16ab94f8b, type: 3}
       propertyPath: m_Pivot.x
@@ -3645,7 +3645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4370448956766808615, guid: ea23ec9d83995b548be4c6b16ab94f8b, type: 3}
       propertyPath: m_text
-      value: Attack
+      value: Attack 2
       objectReference: {fileID: 0}
     - target: {fileID: 6526122525862553890, guid: ea23ec9d83995b548be4c6b16ab94f8b, type: 3}
       propertyPath: ID

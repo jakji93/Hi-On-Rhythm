@@ -17,6 +17,7 @@ public class GameInput : MonoBehaviour
    public event EventHandler OnNextDifficultyPressed;
    public event EventHandler OnStartPressed;
    private PlayerInputs playerInputs;
+    [SerializeField] InputActionAsset playerAction;
 
    private void Awake()
    {
@@ -24,8 +25,10 @@ public class GameInput : MonoBehaviour
       playerInputs.Player.Enable();
       playerInputs.UI.Enable();
 
-      playerInputs.Player.N1.performed += Noramal1_performed;
-      playerInputs.Player.N2.performed += N2_performed;
+      //playerInputs.Player.N1.performed += Noramal1_performed;
+      //playerInputs.Player.N2.performed += N2_performed;
+      playerAction.FindAction("N1").performed += Noramal1_performed;
+      playerAction.FindAction("N2").performed += N2_performed;
       playerInputs.Player.Pause.performed += Pause_performed;
 
       playerInputs.UI.PrevTrack.performed += PrevTrack_performed;
@@ -82,10 +85,11 @@ public class GameInput : MonoBehaviour
       OnNormal2Pressed?.Invoke(this, EventArgs.Empty);
    }
 
-   private void Noramal1_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+   public void Noramal1_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
    {
       OnNormal1Pressed?.Invoke(this, EventArgs.Empty);
    }
+
 
    private void OnDestroy()
    {

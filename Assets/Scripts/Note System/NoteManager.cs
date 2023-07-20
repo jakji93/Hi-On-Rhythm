@@ -146,4 +146,9 @@ public class NoteManager : MonoBehaviour
       var newParticle = Instantiate(NoteMissedParticle, particleParent);
       Destroy(newParticle, 2);
    }
+
+    void OnN1()
+    {
+
+    }
 }

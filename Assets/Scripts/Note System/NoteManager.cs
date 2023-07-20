@@ -63,6 +63,10 @@ public class NoteManager : MonoBehaviour
                break;
          }
          //play note hit animation
+         if (noteObj.gameObject.TryGetComponent(out OsuMarker marker)) {
+            Debug.Log("GotObject");
+            marker.DestroyCircle();
+         }
          note.gameObject.SetActive(false);
       } else {
          Debug.Log("No hit");
@@ -96,6 +100,10 @@ public class NoteManager : MonoBehaviour
                break;
          }
          //play note hit animation
+         if (noteObj.gameObject.TryGetComponent(out OsuMarker marker)) {
+            Debug.Log("GotObject");
+            marker.DestroyCircle();
+         }
          note.gameObject.SetActive(false);
       }
       else {
@@ -111,6 +119,9 @@ public class NoteManager : MonoBehaviour
          OnNoteMissed?.Invoke(this, EventArgs.Empty);
          Debug.Log("Note missed");
          //play note hit animation
+         if(note.gameObject.TryGetComponent(out OsuMarker marker)) {
+            marker.DestroyCircle();
+         }
          note.gameObject.SetActive(false);
       }
    }

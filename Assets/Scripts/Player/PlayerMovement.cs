@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Kamgam.SettingsGenerator;
 
 public class PlayerMovement : MonoBehaviour, IHasProgress
 {
@@ -25,6 +26,10 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
    [SerializeField] private float dashTime = 2f;
    [SerializeField] private ParticleSystem particleSystem;
    [SerializeField] private Collider2D bodyCollider;
+
+   [SerializeField] private InputActionAsset playerAction;
+   // private Settings buttonSettings;
+
    private bool dashPress = false;
    private bool canMove = true;
    private Vector2 curVelopcity;
@@ -100,16 +105,21 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
       playerRB.MovePosition(curPos + curVelopcity * Time.fixedDeltaTime);
    }
 
-   void OnMove(InputValue playerInput)
+   void OnMove()
    {
-      playerMoveDir = playerInput.Get<Vector2>().normalized;
-      //will change if using blender tree with 4 way animation
-      var playerHasHorizontalSpeed = Mathf.Abs(playerMoveDir.x) > Mathf.Epsilon;
+       // playerAction.FindAction("Move").ReadValue<Vector2>();
+        playerMoveDir = playerAction.FindAction("Move").ReadValue<Vector2>();
+
+        //will change if using blender tree with 4 way animation
+        var playerHasHorizontalSpeed = Mathf.Abs(playerMoveDir.x) > Mathf.Epsilon;
       if (playerHasHorizontalSpeed && playerMoveDir.x > 0) visualObject.localScale = new Vector2(originalScale.x * 1, originalScale.y * 1);
       else if (playerHasHorizontalSpeed && playerMoveDir.x < 0) visualObject.localScale = new Vector2(originalScale.x * -1, originalScale.y * 1);
       var playerHasSpeed = playerMoveDir.magnitude > Mathf.Epsilon;
       if (playerHasSpeed) animator.SetBool("isRun", true);
       else animator.SetBool("isRun", false);
+
+
+
    }
 
    void OnDodge(InputValue playerInput)

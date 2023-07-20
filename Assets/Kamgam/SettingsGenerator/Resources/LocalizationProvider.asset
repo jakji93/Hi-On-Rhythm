@@ -35,6 +35,18 @@ MonoBehaviour:
       _texts:
       - APPLY
       - Anwenden
+    - _term: Attack
+      _texts:
+      - Attack
+      - 
+    - _term: Attack 1
+      _texts:
+      - Attack 1
+      - 
+    - _term: Attack 2
+      _texts:
+      - Attack 2
+      - 
     - _term: Audio
       _texts:
       - Audio
@@ -439,6 +451,10 @@ MonoBehaviour:
       _texts:
       - Name
       - Name
+    - _term: NewTerm
+      _texts:
+      - 
+      - 
     - _term: Normal
       _texts:
       - Normal
@@ -631,6 +647,10 @@ MonoBehaviour:
       _texts:
       - Window
       - Fenster
+    - _term: Dodge
+      _texts:
+      - Dodge
+      - 
     OnLanguageChangedEvent:
       m_PersistentCalls:
         m_Calls: []

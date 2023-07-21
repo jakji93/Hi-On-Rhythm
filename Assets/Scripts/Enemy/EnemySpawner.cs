@@ -28,6 +28,8 @@ public class EnemySpawner : MonoBehaviour
    private float waveTimer;
    private int waveCounter = 0;
 
+   private int totalSpawned = 0;
+
    public static EnemySpawner Instance { get; private set; }
 
    private void Awake()
@@ -40,10 +42,10 @@ public class EnemySpawner : MonoBehaviour
       waveTimer = waveDelay;
    }
 
-   private void FixedUpdate()
+   private void Update()
    {
       if(canSpawn) {
-         waveTimer += Time.fixedDeltaTime;
+         waveTimer += Time.deltaTime;
          if(waveTimer > waveDelay ) {
             waveTimer = 0f;
             SpawnWave();
@@ -70,10 +72,12 @@ public class EnemySpawner : MonoBehaviour
       for( int i = 0; i < curWave.spawnPoints.Length; i++ ) {
          int j = i % curWave.enemies.Length;
          Instantiate(curWave.enemies[j], curWave.spawnPoints[i]);
+         totalSpawned++;
       }
       waveCounter++;
       if (waveCounter >= totalWave) {
          StopSpawn();
+         Debug.Log("Total Enemy Spawned: " +  totalSpawned);
       }
    }
 

@@ -276,7 +276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
       propertyPath: m_LocalScale.x
@@ -834,6 +834,7 @@ MonoBehaviour:
   dashTime: 0.2
   particleSystem: {fileID: 4406058164684895413}
   bodyCollider: {fileID: 9026703496373407482}
+  playerAction: {fileID: 0}
 --- !u!114 &1727722569267025065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,7 +863,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8450c95566763214c8433345c7411fef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalAttack1: {fileID: 8331143105052709381, guid: 00c380287575d26499f5015cf88cfb5b, type: 3}
+  normalAttack1:
+  - {fileID: 8331143105052709381, guid: 00c380287575d26499f5015cf88cfb5b, type: 3}
+  - {fileID: 8331143105052709381, guid: 00c380287575d26499f5015cf88cfb5b, type: 3}
+  - {fileID: 571566790825666656, guid: fdaf6a5e6b3983b4d94a829bd53e2568, type: 3}
+  - {fileID: 571566790825666656, guid: fdaf6a5e6b3983b4d94a829bd53e2568, type: 3}
   normalAttack2: {fileID: 460532732272499257, guid: 7a1826ebb8e47914387e9d67939bc7f8, type: 3}
   specialAttacks: []
   aimTransform: {fileID: 301403484445325794}

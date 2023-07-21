@@ -64,7 +64,6 @@ public class NoteManager : MonoBehaviour
          }
          //play note hit animation
          if (noteObj.gameObject.TryGetComponent(out OsuMarker marker)) {
-            Debug.Log("GotObject");
             marker.DestroyCircle();
          }
          note.gameObject.SetActive(false);

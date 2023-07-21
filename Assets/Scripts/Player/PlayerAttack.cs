@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-   [SerializeField] private GameObject normalAttack1;
+   [SerializeField] private GameObject[] normalAttack1;
    [SerializeField] private GameObject normalAttack2;
    [SerializeField] private GameObject[] specialAttacks;
 
@@ -34,7 +34,10 @@ public class PlayerAttack : MonoBehaviour
 
    private void NoteManager_OnNormal1Hit(object sender, System.EventArgs e)
    {
-      Attack(normalAttack1);
+      var attackIndex = ComboManager.Instance.GetMultiplier() - 1;
+      attackIndex = Mathf.Clamp(attackIndex, 0, normalAttack1.Length - 1);
+      var thisAttack = normalAttack1[attackIndex];
+      Attack(thisAttack);
    }
 
    private void Attack(GameObject attack)

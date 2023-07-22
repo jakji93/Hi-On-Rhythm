@@ -12,6 +12,7 @@ public class OsuMarker : MonoBehaviour
    private Transform noteHitZone;
    private Transform player;
    private Transform thisCircle;
+   private SpriteRenderer circleSprite;
 
    private void Start()
    {
@@ -25,10 +26,18 @@ public class OsuMarker : MonoBehaviour
 
       if (distance < (480 * warningInBeats) && thisCircle == null) {
          thisCircle = Instantiate(circlePrefab, player);
+         circleSprite = thisCircle.GetComponent<SpriteRenderer>();
       }
       if (thisCircle != null) {
          var scale = Mathf.Max(baseScale + distance / 480, minScale);
          thisCircle.localScale = new Vector3(scale, scale, 0);
+      }
+      if(circleSprite != null) {
+      var alphaScale = (1 - distance / (480 * warningInBeats));
+         alphaScale = Mathf.Clamp(alphaScale, 0f, 1f);
+         var color = circleSprite.color;
+         color.a = alphaScale;
+         circleSprite.color = color;
       }
    }
 

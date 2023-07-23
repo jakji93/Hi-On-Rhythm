@@ -7,7 +7,9 @@ public class OsuMarker : MonoBehaviour
    [SerializeField] private Transform circlePrefab;
    [SerializeField] private float warningInBeats = 3f;
    [SerializeField] private float minScale = 1f;
+   [SerializeField] private float maxScale = 3f;
    [SerializeField] private float baseScale = 1f;
+   [SerializeField] private AnimationCurve alphaCurve;
 
    private Transform noteHitZone;
    private Transform player;
@@ -29,11 +31,13 @@ public class OsuMarker : MonoBehaviour
          circleSprite = thisCircle.GetComponent<SpriteRenderer>();
       }
       if (thisCircle != null) {
-         var scale = Mathf.Max(baseScale + distance / 480, minScale);
+         var curScale = baseScale + (maxScale - baseScale) * (distance / (480 * warningInBeats));
+         var scale = Mathf.Max(curScale, minScale);
          thisCircle.localScale = new Vector3(scale, scale, 0);
       }
       if(circleSprite != null) {
-      var alphaScale = (1 - distance / (480 * warningInBeats));
+         var normalizeDistance = (1 - distance / (480 * warningInBeats));
+         var alphaScale = alphaCurve.Evaluate(normalizeDistance);
          alphaScale = Mathf.Clamp(alphaScale, 0f, 1f);
          var color = circleSprite.color;
          color.a = alphaScale;
@@ -44,6 +48,7 @@ public class OsuMarker : MonoBehaviour
    public void DestroyCircle()
    {
       if (thisCircle != null) {
+         circleSprite = null;
          Destroy(thisCircle.gameObject);
       }
    }

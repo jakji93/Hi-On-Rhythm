@@ -39,6 +39,7 @@ public class PlayerControl : MonoBehaviour
    private void Health_OnTakeDamage(object sender, Health.OnTakeDamageEventArgs e)
    {
       healthText.text = health.GetCurHealth().ToString();
+      HitFlashManager.Instance?.Flash();
       //Note: maybe lowering multiplier on hit is too much?
       //ComboManager.Instance?.GotHit();
    }

@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 7234051978216143564}
-  damagePopup: {fileID: 4996539489906426715, guid: 918ad47416f528340b2d349ef945f39a, type: 3}
+  damagePopup: {fileID: 4996539489906426715, guid: cd5377f361ef8244496b01f6e88d8ab5, type: 3}
   popupLifeTime: 2
   isAttachedToObject: 0
 --- !u!1 &5531372522003649431

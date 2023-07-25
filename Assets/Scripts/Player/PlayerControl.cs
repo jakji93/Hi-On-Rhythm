@@ -39,7 +39,8 @@ public class PlayerControl : MonoBehaviour
    private void Health_OnTakeDamage(object sender, Health.OnTakeDamageEventArgs e)
    {
       healthText.text = health.GetCurHealth().ToString();
-      ComboManager.Instance?.GotHit();
+      //Note: maybe lowering multiplier on hit is too much?
+      //ComboManager.Instance?.GotHit();
    }
 
    private void NoteManager_OnNoNoteHits(object sender, System.EventArgs e)

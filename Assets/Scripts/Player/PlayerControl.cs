@@ -1,11 +1,5 @@
-using JetBrains.Annotations;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -14,6 +8,7 @@ public class PlayerControl : MonoBehaviour
    [SerializeField] private TextMeshProUGUI healthText;
    [SerializeField] private int damageOnWrongNote;
    [SerializeField] private int damageOnNoNoteHit;
+   [SerializeField] private AudioClip hitSFX;
 
    private void Awake()
    {
@@ -39,7 +34,8 @@ public class PlayerControl : MonoBehaviour
    private void Health_OnTakeDamage(object sender, Health.OnTakeDamageEventArgs e)
    {
       healthText.text = health.GetCurHealth().ToString();
-      HitFlashManager.Instance?.Flash();
+      HitFlashManager.Instance.Flash();
+      if(hitSFX != null) ClipPlayer.Instance.PlayClip(hitSFX);
       //Note: maybe lowering multiplier on hit is too much?
       //ComboManager.Instance?.GotHit();
    }

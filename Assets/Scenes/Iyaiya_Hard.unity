@@ -7851,6 +7851,7 @@ MonoBehaviour:
   defaultSelectButton: {fileID: 1875487350}
   pauseGameScreen: {fileID: 2003170297}
   pauseTab: {fileID: 1902656498}
+  pauseBG: {fileID: 1664497504}
 --- !u!1 &1752573702
 GameObject:
   m_ObjectHideFlags: 0

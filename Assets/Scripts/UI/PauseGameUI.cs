@@ -9,6 +9,7 @@ public class PauseGameUI : MonoBehaviour
 {
    [SerializeField] private Button defaultSelectButton;
    [SerializeField] private GameObject pauseGameScreen;
+   [SerializeField] private GameObject pauseTab;
 
    private void Start()
    {
@@ -36,5 +37,7 @@ public class PauseGameUI : MonoBehaviour
    {
       pauseGameScreen.SetActive(true);
       defaultSelectButton.Select();
+      pauseTab.transform.localScale = Vector3.zero;
+      pauseTab.transform.DOScale(1, 0.3f).SetUpdate(true);
    }
 }

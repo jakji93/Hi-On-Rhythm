@@ -68,11 +68,7 @@ public class GameplayManager : MonoBehaviour
          MusicManager.Instance.PauseMusic();
          OnGamePause?.Invoke(this, EventArgs.Empty);
       } else {
-         musicPlaying = true;
-         Time.timeScale = 1f;
-         MusicManager.Instance.StartMusic();
-         OnGameUnpause?.Invoke(this, EventArgs.Empty);
-         ClipPlayer.Instance.PlayClip(clickClip);
+         ResumeGame();
       }
    }
 

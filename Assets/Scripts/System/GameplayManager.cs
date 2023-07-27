@@ -60,8 +60,8 @@ public class GameplayManager : MonoBehaviour
    private void GameInput_OnPausePressed(object sender, EventArgs e)
    {
       if (state != GameState.Playing) return;
-      gamePasued = !gamePasued;
-      if (gamePasued) {
+      if (!gamePasued) {
+         gamePasued = true;
          ClipPlayer.Instance.PlayClip(clickClip);
          Time.timeScale = 0f;
          musicPlaying = false;
@@ -155,12 +155,25 @@ public class GameplayManager : MonoBehaviour
       Debug.Log("Player Dead");
    }
 
-   public void ResumeGame()
+   private IEnumerator ResumeCountdown()
    {
+      textAnimator.ShowText("3");
+      yield return new WaitForSecondsRealtime(1f);
+      textAnimator.ShowText("2");
+      yield return new WaitForSecondsRealtime(1f);
+      textAnimator.ShowText("1");
+      yield return new WaitForSecondsRealtime(1f);
+      textAnimator.StartDisappearingText();
+      yield return new WaitForSecondsRealtime(0.3f);
       gamePasued = false;
       musicPlaying = true;
       Time.timeScale = 1f;
       MusicManager.Instance.StartMusic();
+   }
+
+   public void ResumeGame()
+   {
+      StartCoroutine(ResumeCountdown());
       OnGameUnpause?.Invoke(this, EventArgs.Empty);
       ClipPlayer.Instance.PlayClip(clickClip);
    }

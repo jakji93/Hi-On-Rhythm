@@ -31,6 +31,7 @@ public class GameplayManager : MonoBehaviour
    private bool musicPlaying = false;
    private bool gamePasued = false;
    private bool enemySpawned = false;
+   private bool canPause = true;
 
    private GameState state;
 
@@ -60,13 +61,9 @@ public class GameplayManager : MonoBehaviour
    private void GameInput_OnPausePressed(object sender, EventArgs e)
    {
       if (state != GameState.Playing) return;
+      if (!canPause) return;
       if (!gamePasued) {
-         gamePasued = true;
-         ClipPlayer.Instance.PlayClip(clickClip);
-         Time.timeScale = 0f;
-         musicPlaying = false;
-         MusicManager.Instance.PauseMusic();
-         OnGamePause?.Invoke(this, EventArgs.Empty);
+         PauseGame();
       } else {
          ResumeGame();
       }
@@ -157,6 +154,7 @@ public class GameplayManager : MonoBehaviour
 
    private IEnumerator ResumeCountdown()
    {
+      canPause = false;
       textAnimator.ShowText("3");
       yield return new WaitForSecondsRealtime(1f);
       textAnimator.ShowText("2");
@@ -169,6 +167,14 @@ public class GameplayManager : MonoBehaviour
       musicPlaying = true;
       Time.timeScale = 1f;
       MusicManager.Instance.StartMusic();
+      yield return new WaitForSecondsRealtime(0.3f);
+      canPause = true;
+   }
+
+   private IEnumerator PauseDelay()
+   {
+      yield return new WaitForSecondsRealtime(0.3f);
+      canPause = true;
    }
 
    public void ResumeGame()
@@ -176,6 +182,18 @@ public class GameplayManager : MonoBehaviour
       StartCoroutine(ResumeCountdown());
       OnGameUnpause?.Invoke(this, EventArgs.Empty);
       ClipPlayer.Instance.PlayClip(clickClip);
+   }
+
+   private void PauseGame()
+   {
+      gamePasued = true;
+      canPause = false;
+      ClipPlayer.Instance.PlayClip(clickClip);
+      Time.timeScale = 0f;
+      musicPlaying = false;
+      MusicManager.Instance.PauseMusic();
+      OnGamePause?.Invoke(this, EventArgs.Empty);
+      StartCoroutine(PauseDelay());
    }
 
    public void ExitGame()

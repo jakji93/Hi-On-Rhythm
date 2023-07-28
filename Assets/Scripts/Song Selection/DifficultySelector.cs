@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class DifficultySelector : MonoBehaviour
@@ -14,7 +15,6 @@ public class DifficultySelector : MonoBehaviour
    private int curSelected = 0;
    private Vector3 initPosition;
    private Vector3 targetPosition;
-   private float elapsedTime;
    private bool isMoving;
 
    private void Start()
@@ -23,27 +23,7 @@ public class DifficultySelector : MonoBehaviour
          difficultyItemes[i].localPosition = new Vector3 (i* spacing, 0, 0);
       }
       LevelSelectManager.Instance.SetDifficulty(difficulties[curSelected]);
-      initPosition = transform.localPosition;
-      targetPosition = transform.localPosition;
       isMoving = false;
-   }
-
-   private void Update()
-   {
-      if(isMoving) {
-         elapsedTime += Time.deltaTime;
-         float normalizedTime = elapsedTime / moveSpeed;
-         float curveValue = moveCurve.Evaluate(normalizedTime);
-
-         transform.localPosition = Vector3.Lerp(initPosition, targetPosition, curveValue);
-
-         if (normalizedTime >= 1f) {
-            elapsedTime = 0f;
-            transform.localPosition = targetPosition;
-            initPosition = transform.localPosition;
-            isMoving = false;
-         }
-      }
    }
 
    public void Increase()
@@ -52,9 +32,12 @@ public class DifficultySelector : MonoBehaviour
       if (curSelected == difficultyItemes.Length - 1) return;
       curSelected++;
       LevelSelectManager.Instance.SetDifficulty(difficulties[curSelected]);
-      elapsedTime = 0;
       targetPosition = new Vector3(-curSelected * spacing, 0, 0);
       isMoving = true;
+      transform.DOLocalMove(targetPosition, moveSpeed).SetEase(moveCurve).OnComplete(()=>
+      {
+         isMoving = false;
+      });
    }
 
    public void Decrease()
@@ -63,8 +46,29 @@ public class DifficultySelector : MonoBehaviour
       if (curSelected == 0) return;
       curSelected--;
       LevelSelectManager.Instance.SetDifficulty(difficulties[curSelected]);
-      elapsedTime = 0;
       targetPosition = new Vector3(-curSelected * spacing, 0, 0);
       isMoving = true;
+      transform.DOLocalMove(targetPosition, moveSpeed).SetEase(moveCurve).OnComplete(()=>
+      {
+         isMoving = false;
+      });
+   }
+
+   private void LegacyMove()
+   {
+      //if (isMoving) {
+      //   elapsedTime += Time.deltaTime;
+      //   float normalizedTime = elapsedTime / moveSpeed;
+      //   float curveValue = moveCurve.Evaluate(normalizedTime);
+
+      //   transform.localPosition = Vector3.Lerp(initPosition, targetPosition, curveValue);
+
+      //   if (normalizedTime >= 1f) {
+      //      elapsedTime = 0f;
+      //      transform.localPosition = targetPosition;
+      //      initPosition = transform.localPosition;
+      //      isMoving = false;
+      //   }
+      //}
    }
 }

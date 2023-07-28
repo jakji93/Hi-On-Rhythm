@@ -21,7 +21,6 @@ public class TrackSelector : MonoBehaviour
          trackItems[i].localPosition = new Vector3(i * spacing, 0, 0);
       }
       transform.localPosition = new Vector3(-curSelected * spacing, 0, 0); ;
-      initPosition = transform.localPosition;
    }
 
    public void SetCurrentTrack(int index)

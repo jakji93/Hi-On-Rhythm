@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class TrackSelector : MonoBehaviour
@@ -13,8 +14,6 @@ public class TrackSelector : MonoBehaviour
    private int curSelected = 0;
    private Vector3 initPosition;
    private Vector3 targetPosition;
-   private float elapsedTime;
-   private bool isMoving = false;
 
    private void Start()
    {
@@ -25,8 +24,22 @@ public class TrackSelector : MonoBehaviour
       initPosition = transform.localPosition;
    }
 
-   private void Update()
+   public void SetCurrentTrack(int index)
    {
+      if (curSelected == index) return;
+      curSelected = index;
+      targetPosition = new Vector3(-curSelected * spacing, 0, 0);
+      transform.DOLocalMove(targetPosition, moveSpeed).SetEase(moveCurve);
+   }
+
+   public void SetPrevTrack(int index)
+   {
+      curSelected = index;
+   }
+
+   private void LegacyMove()
+   {
+      /*
       if (isMoving) {
          elapsedTime += Time.deltaTime;
          float normalizedTime = elapsedTime / moveSpeed;
@@ -41,19 +54,6 @@ public class TrackSelector : MonoBehaviour
             isMoving = false;
          }
       }
-   }
-
-   public void SetCurrentTrack(int index)
-   {
-      if (curSelected == index) return;
-      curSelected = index;
-      elapsedTime = 0;
-      targetPosition = new Vector3(-curSelected * spacing, 0, 0);
-      isMoving = true;
-   }
-
-   public void SetPrevTrack(int index)
-   {
-      curSelected = index;
+      */
    }
 }

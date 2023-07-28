@@ -4564,6 +4564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9dbc9d8bebb6c6409759735ea5050dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAction: {fileID: 0}
 --- !u!1 &1438451087
 GameObject:
   m_ObjectHideFlags: 0
@@ -6383,6 +6384,10 @@ PrefabInstance:
     - target: {fileID: 4550193142890382311, guid: 21e4edbf23b842a4386f951530800b7d, type: 3}
       propertyPath: m_Name
       value: Track Selector
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949714587889909153, guid: 21e4edbf23b842a4386f951530800b7d, type: 3}
+      propertyPath: m_Padding.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

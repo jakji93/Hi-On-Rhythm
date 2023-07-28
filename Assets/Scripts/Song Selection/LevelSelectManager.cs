@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -30,7 +31,6 @@ public class LevelSelectManager : MonoBehaviour
    [SerializeField] private TextMeshProUGUI bossHP;
    [SerializeField] private TextMeshProUGUI playerHP;
 
-   private float elapsedTime;
    private bool isMoving = false;
 
    private SongNames curSongName;
@@ -96,23 +96,6 @@ public class LevelSelectManager : MonoBehaviour
       PrevTrack();
    }
 
-   private void Update()
-   {
-      if(isMoving) {
-         elapsedTime += Time.deltaTime;
-         float normalizedTime = elapsedTime / moveSpeed;
-         float curveValue = moveCurve.Evaluate(normalizedTime);
-
-         tracks[curSelectTrack].gameObject.transform.localPosition = Vector3.Lerp(backPosition, inPosition, curveValue);
-
-         if (normalizedTime >= 1f) {
-            elapsedTime = 0f;
-            tracks[curSelectTrack].gameObject.transform.localPosition = inPosition;
-            isMoving = false;
-         }
-      }
-   }
-
    private void OnEnable()
    {
       if (SaveSystem.Instance.TryLoadPrevSong(out PrevSongStruct prevSong)) {
@@ -171,8 +154,11 @@ public class LevelSelectManager : MonoBehaviour
       curSelectTrack %= tracks.Length;
       tracks[curSelectTrack].SetAsCurrentTrack();
       trackSelector.SetCurrentTrack(curSelectTrack);
-      elapsedTime = 0;
       isMoving = true;
+      tracks[curSelectTrack].gameObject.transform.DOLocalMove(inPosition, moveSpeed).SetEase(moveCurve).OnComplete(() =>
+      {
+         isMoving = false;
+      });
    }
 
    public void PrevTrack() 
@@ -184,8 +170,11 @@ public class LevelSelectManager : MonoBehaviour
       if( curSelectTrack < 0 ) curSelectTrack = tracks.Length - 1;
       tracks[curSelectTrack].SetAsCurrentTrack();
       trackSelector.SetCurrentTrack(curSelectTrack);
-      elapsedTime = 0;
       isMoving = true;
+      tracks[curSelectTrack].gameObject.transform.DOLocalMove(inPosition, moveSpeed).SetEase(moveCurve).OnComplete(() =>
+      {
+         isMoving = false;
+      });
    }
 
    public void NextSong()
@@ -235,5 +224,22 @@ public class LevelSelectManager : MonoBehaviour
          bossHP.text = "-";
          playerHP.text = "-";
       }
+   }
+
+   private void LegacyMove()
+   {
+      //if(isMoving) {
+      //   elapsedTime += Time.deltaTime;
+      //   float normalizedTime = elapsedTime / moveSpeed;
+      //   float curveValue = moveCurve.Evaluate(normalizedTime);
+
+      //   tracks[curSelectTrack].gameObject.transform.localPosition = Vector3.Lerp(backPosition, inPosition, curveValue);
+
+      //   if (normalizedTime >= 1f) {
+      //      elapsedTime = 0f;
+      //      tracks[curSelectTrack].gameObject.transform.localPosition = inPosition;
+      //      isMoving = false;
+      //   }
+      //}
    }
 }

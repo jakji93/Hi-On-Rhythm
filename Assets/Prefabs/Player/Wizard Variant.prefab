@@ -939,6 +939,7 @@ MonoBehaviour:
   healthText: {fileID: 0}
   damageOnWrongNote: 0
   damageOnNoNoteHit: 0
+  hitSFX: {fileID: 8300000, guid: a8ec14b9166a5004cb769dfc266883ff, type: 3}
 --- !u!114 &1637173036481764521
 MonoBehaviour:
   m_ObjectHideFlags: 0

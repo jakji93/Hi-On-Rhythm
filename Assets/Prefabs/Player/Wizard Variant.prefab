@@ -954,9 +954,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalAttack1:
   - {fileID: 8331143105052709381, guid: 00c380287575d26499f5015cf88cfb5b, type: 3}
+  - {fileID: 8331143105052709381, guid: 00c380287575d26499f5015cf88cfb5b, type: 3}
   - {fileID: 571566790825666656, guid: fdaf6a5e6b3983b4d94a829bd53e2568, type: 3}
-  - {fileID: 460532732272499257, guid: 7a1826ebb8e47914387e9d67939bc7f8, type: 3}
-  - {fileID: 460532732272499257, guid: 7a1826ebb8e47914387e9d67939bc7f8, type: 3}
+  - {fileID: 571566790825666656, guid: fdaf6a5e6b3983b4d94a829bd53e2568, type: 3}
   normalAttack2: {fileID: 460532732272499257, guid: 7a1826ebb8e47914387e9d67939bc7f8, type: 3}
   specialAttacks: []
   aimTransform: {fileID: 301403484445325794}

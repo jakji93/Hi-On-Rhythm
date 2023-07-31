@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0356545d769831c428395cd075fdb96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSize: {x: 9.26, y: 6.28}
+  attackSize: {x: 13.2, y: 8.73}
   attackPoint: {fileID: 4975798416380434599}
   attackLayerMask:
     serializedVersion: 2

@@ -378,7 +378,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &45090974
 PrefabInstance:
@@ -894,7 +894,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1101435738602724252, guid: daa6dff8f7c359d41bf508cd5b4354d9, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1101435738602724252, guid: daa6dff8f7c359d41bf508cd5b4354d9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8068,13 +8068,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1637173036481764521, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
+      propertyPath: normalAttack1.Array.data[0]
+      value: 
+      objectReference: {fileID: 460532732272499257, guid: 7a1826ebb8e47914387e9d67939bc7f8, type: 3}
+    - target: {fileID: 1637173036481764521, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
+      propertyPath: normalAttack1.Array.data[1]
+      value: 
+      objectReference: {fileID: 460532732272499257, guid: 7a1826ebb8e47914387e9d67939bc7f8, type: 3}
+    - target: {fileID: 1637173036481764521, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
       propertyPath: normalAttack1.Array.data[2]
       value: 
-      objectReference: {fileID: 571566790825666656, guid: fdaf6a5e6b3983b4d94a829bd53e2568, type: 3}
+      objectReference: {fileID: 460532732272499257, guid: 7a1826ebb8e47914387e9d67939bc7f8, type: 3}
     - target: {fileID: 1637173036481764521, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
       propertyPath: normalAttack1.Array.data[3]
       value: 
-      objectReference: {fileID: 571566790825666656, guid: fdaf6a5e6b3983b4d94a829bd53e2568, type: 3}
+      objectReference: {fileID: 460532732272499257, guid: 7a1826ebb8e47914387e9d67939bc7f8, type: 3}
     - target: {fileID: 1727722569267025065, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
       propertyPath: healthText
       value: 

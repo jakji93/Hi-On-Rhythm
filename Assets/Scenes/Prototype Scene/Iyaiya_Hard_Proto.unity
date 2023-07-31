@@ -8068,21 +8068,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1637173036481764521, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
-      propertyPath: normalAttack1.Array.data[0]
-      value: 
-      objectReference: {fileID: 460532732272499257, guid: 7a1826ebb8e47914387e9d67939bc7f8, type: 3}
-    - target: {fileID: 1637173036481764521, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
-      propertyPath: normalAttack1.Array.data[1]
-      value: 
-      objectReference: {fileID: 460532732272499257, guid: 7a1826ebb8e47914387e9d67939bc7f8, type: 3}
-    - target: {fileID: 1637173036481764521, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
-      propertyPath: normalAttack1.Array.data[2]
-      value: 
-      objectReference: {fileID: 460532732272499257, guid: 7a1826ebb8e47914387e9d67939bc7f8, type: 3}
-    - target: {fileID: 1637173036481764521, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
       propertyPath: normalAttack1.Array.data[3]
       value: 
-      objectReference: {fileID: 460532732272499257, guid: 7a1826ebb8e47914387e9d67939bc7f8, type: 3}
+      objectReference: {fileID: 1852868680434696365, guid: f28aae3cfa1fbbb4b804e99174608479, type: 3}
     - target: {fileID: 1727722569267025065, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
       propertyPath: healthText
       value: 

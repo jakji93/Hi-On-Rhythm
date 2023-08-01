@@ -388,6 +388,58 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1390084248}
     m_Modifications:
+    - target: {fileID: 633998117115186339, guid: 5302156ea0445b64f81c903acd2eef2b, type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149811881626016112, guid: 5302156ea0445b64f81c903acd2eef2b, type: 3}
+      propertyPath: circlePrefab
+      value: 
+      objectReference: {fileID: 6430697538973347061, guid: 0a55ed648f37b56449ce2007980d13fe, type: 3}
+    - target: {fileID: 2352628647895797724, guid: 5302156ea0445b64f81c903acd2eef2b, type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726721292890276302, guid: 5302156ea0445b64f81c903acd2eef2b, type: 3}
+      propertyPath: circlePrefab
+      value: 
+      objectReference: {fileID: 6430697538973347061, guid: 0a55ed648f37b56449ce2007980d13fe, type: 3}
+    - target: {fileID: 3078478387335610800, guid: 5302156ea0445b64f81c903acd2eef2b, type: 3}
+      propertyPath: circlePrefab
+      value: 
+      objectReference: {fileID: 6430697538973347061, guid: 0a55ed648f37b56449ce2007980d13fe, type: 3}
+    - target: {fileID: 3268999778884543193, guid: 5302156ea0445b64f81c903acd2eef2b, type: 3}
+      propertyPath: circlePrefab
+      value: 
+      objectReference: {fileID: 6430697538973347061, guid: 0a55ed648f37b56449ce2007980d13fe, type: 3}
+    - target: {fileID: 3306009906616986892, guid: 5302156ea0445b64f81c903acd2eef2b, type: 3}
+      propertyPath: circlePrefab
+      value: 
+      objectReference: {fileID: 6430697538973347061, guid: 0a55ed648f37b56449ce2007980d13fe, type: 3}
+    - target: {fileID: 3793247604525135756, guid: 5302156ea0445b64f81c903acd2eef2b, type: 3}
+      propertyPath: circlePrefab
+      value: 
+      objectReference: {fileID: 6430697538973347061, guid: 0a55ed648f37b56449ce2007980d13fe, type: 3}
+    - target: {fileID: 4509048503431089340, guid: 5302156ea0445b64f81c903acd2eef2b, type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727508649621040688, guid: 5302156ea0445b64f81c903acd2eef2b, type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4748724673484240653, guid: 5302156ea0445b64f81c903acd2eef2b, type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6787528746016971337, guid: 5302156ea0445b64f81c903acd2eef2b, type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895626493716517166, guid: 5302156ea0445b64f81c903acd2eef2b, type: 3}
+      propertyPath: circlePrefab
+      value: 
+      objectReference: {fileID: 6430697538973347061, guid: 0a55ed648f37b56449ce2007980d13fe, type: 3}
     - target: {fileID: 7013032002520801563, guid: 5302156ea0445b64f81c903acd2eef2b, type: 3}
       propertyPath: m_Name
       value: Iyaiya
@@ -475,6 +527,10 @@ PrefabInstance:
     - target: {fileID: 8274500594367894112, guid: 5302156ea0445b64f81c903acd2eef2b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279549676806805251, guid: 5302156ea0445b64f81c903acd2eef2b, type: 3}
+      propertyPath: type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8067,6 +8123,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1637173036481764521, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
+      propertyPath: specialAttacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637173036481764521, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
+      propertyPath: specialAttacks.Array.data[0]
+      value: 
+      objectReference: {fileID: 2821221403690219251, guid: 009d98d3f1e14b441851fc66a2e5dbdc, type: 3}
     - target: {fileID: 1727722569267025065, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
       propertyPath: healthText
       value: 

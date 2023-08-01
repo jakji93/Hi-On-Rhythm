@@ -6314,7 +6314,7 @@ MonoBehaviour:
     enemies:
     - {fileID: 2234887303421942617, guid: f11130268089dc24da60ee0bce31ce6e, type: 3}
   specificWaveContent:
-  - waveNumber: 10
+  - waveNumber: 20
     wave:
       spawnPoints:
       - {fileID: 231629169}
@@ -6323,7 +6323,7 @@ MonoBehaviour:
       - {fileID: 839049227}
       enemies:
       - {fileID: 5458728073695096934, guid: d72cd0e4cc489304e9dc4480af6a1146, type: 3}
-  - waveNumber: 30
+  - waveNumber: 60
     wave:
       spawnPoints:
       - {fileID: 231629169}
@@ -6332,7 +6332,7 @@ MonoBehaviour:
       - {fileID: 839049227}
       enemies:
       - {fileID: 5458728073695096934, guid: d72cd0e4cc489304e9dc4480af6a1146, type: 3}
-  - waveNumber: 40
+  - waveNumber: 80
     wave:
       spawnPoints:
       - {fileID: 231629169}
@@ -6341,8 +6341,8 @@ MonoBehaviour:
       - {fileID: 839049227}
       enemies:
       - {fileID: 5458728073695096934, guid: d72cd0e4cc489304e9dc4480af6a1146, type: 3}
-  waveDelay: 2
-  totalWave: 59
+  waveDelay: 1
+  totalWave: 120
   canSpawn: 0
 --- !u!4 &1562337881
 Transform:
@@ -8067,10 +8067,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1637173036481764521, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
-      propertyPath: normalAttack1.Array.data[3]
-      value: 
-      objectReference: {fileID: 1852868680434696365, guid: f28aae3cfa1fbbb4b804e99174608479, type: 3}
     - target: {fileID: 1727722569267025065, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
       propertyPath: healthText
       value: 

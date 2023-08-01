@@ -9,6 +9,7 @@ public class PlayerControl : MonoBehaviour
    [SerializeField] private int damageOnWrongNote;
    [SerializeField] private int damageOnNoNoteHit;
    [SerializeField] private AudioClip hitSFX;
+   [SerializeField] private AudioClip missedSFX;
 
    private void Awake()
    {
@@ -50,6 +51,7 @@ public class PlayerControl : MonoBehaviour
    {
       //Might be too hard to take damage on missing notes
       //health.TakeDamage(damageOnNote);
+      ClipPlayer.Instance.PlayClip(missedSFX);
    }
 
    private void Health_OnDeath(object sender, Health.OnTakeDamageEventArgs e)

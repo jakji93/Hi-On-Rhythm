@@ -12,6 +12,7 @@ public class GameplayManager : MonoBehaviour
    public event EventHandler OnStateChange;
    public event EventHandler OnGamePause;
    public event EventHandler OnGameUnpause;
+   public event EventHandler OnFirstBeat;
 
    [SerializeField] private SongNames songName;
    [SerializeField] private Difficulties difficulty;
@@ -96,6 +97,7 @@ public class GameplayManager : MonoBehaviour
             spawnDelay -= Time.deltaTime;
             if(chartDelay < 0f) {
                ChartManager.Instance.StartPlaying();
+               OnFirstBeat?.Invoke(this, EventArgs.Empty);
             }
             if (!musicPlaying && musicDelay < 0f && !gamePasued) {
                MusicManager.Instance.StartMusic();

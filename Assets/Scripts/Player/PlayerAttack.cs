@@ -26,7 +26,7 @@ public class PlayerAttack : MonoBehaviour
       NoteManager.Instance.OnSpecialHit += NoteManager_OnSpecialHit;
       GameplayManager.Instance.OnFirstBeat += GameManager_OnFirstBeat;
       GameplayManager.Instance.OnStateChange += GameManager_OnStateChange;
-      attackSpeed = 60f / bpm;
+      attackSpeed = 60f / bpm * 2;
       timer = attackSpeed;
    }
 

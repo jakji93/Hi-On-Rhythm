@@ -8125,12 +8125,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1637173036481764521, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
       propertyPath: specialAttacks.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1637173036481764521, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
-      propertyPath: specialAttacks.Array.data[0]
+      propertyPath: specialAttacks.Array.data[2]
       value: 
-      objectReference: {fileID: 2821221403690219251, guid: 009d98d3f1e14b441851fc66a2e5dbdc, type: 3}
+      objectReference: {fileID: 1470271840151778206, guid: 6fbfad32b169a9441906631ad4808581, type: 3}
     - target: {fileID: 1727722569267025065, guid: f26971fd6383816458d215f7c14e46d7, type: 3}
       propertyPath: healthText
       value: 

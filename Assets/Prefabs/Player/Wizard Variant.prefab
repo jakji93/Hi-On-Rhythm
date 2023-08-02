@@ -959,7 +959,9 @@ MonoBehaviour:
   - {fileID: 460532732272499257, guid: 7a1826ebb8e47914387e9d67939bc7f8, type: 3}
   - {fileID: 1852868680434696365, guid: f28aae3cfa1fbbb4b804e99174608479, type: 3}
   normalAttack2: {fileID: 460532732272499257, guid: 7a1826ebb8e47914387e9d67939bc7f8, type: 3}
-  specialAttacks: []
+  specialAttacks:
+  - {fileID: 1470271840151778206, guid: 9da36fb5801896b40890c1ae9295c82b, type: 3}
+  - {fileID: 2821221403690219251, guid: 009d98d3f1e14b441851fc66a2e5dbdc, type: 3}
   autoAttack: {fileID: 8331143105052709381, guid: 768a441f141658f46be5dc84a05dc07e, type: 3}
   bpm: 128
   aimTransform: {fileID: 301403484445325794}

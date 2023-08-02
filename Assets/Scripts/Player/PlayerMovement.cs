@@ -40,7 +40,6 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
    {
       playerRB = GetComponent<Rigidbody2D>();
       originalScale = visualObject.localScale;
-      particleSystem.Stop();
    }
 
    private void Update()
@@ -143,7 +142,6 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
    private IEnumerator dashRoutine(Vector2 dashDir)
    {
       float curTime = 0;
-      particleSystem.Play();
       animator.SetBool("isDash", true);
       bodyCollider.enabled = false;
       while (curTime < dashTime) {

@@ -16,7 +16,6 @@ public class BoomerangProjectile : MonoBehaviour
    [SerializeField] private int damage;
    [SerializeField] private float flyoutSpeed;
    [SerializeField] private float returnSpeed;
-   [SerializeField] private int bounceNumber;
    [SerializeField] private float flyoutTime;
    [SerializeField] private float sustainTime;
    [SerializeField] private float returnLifeTime;
@@ -51,7 +50,8 @@ public class BoomerangProjectile : MonoBehaviour
             timer += Time.deltaTime;
             if(timer > sustainTime) {
                state = State.Return;
-               var direction = (baseTransform.position - transform.position).normalized;
+               var direction = transform.right * -1;
+               if (baseTransform != null) direction = (baseTransform.position - transform.position).normalized;
                var destination = transform.position + direction * returnSpeed * returnLifeTime;
                transform.DOMove(destination, returnLifeTime).SetEase(Ease.Linear).OnComplete(() =>
                {

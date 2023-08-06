@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Kamgam.SettingsGenerator;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -18,15 +19,23 @@ public class EnemySpawner : MonoBehaviour
       public WaveContent wave;
    }
 
-   [SerializeField] private WaveContent[] waveContent;
-   [SerializeField] private SpecificWaveContent[] specificWaveContent;
-   [SerializeField] private float waveDelay = 1f;
-   [SerializeField] private int totalWave = 0;
+   [System.Serializable]
+   public class AdvancedWaveContent
+   {
+      public WaveContent[] wavesContents;
+      public SpecificWaveContent[] specificWaveContents;
+      public float waveDelay = 1f;
+      public int totalWave = 0;
+      public float musicTime;
+   }
+
+   [SerializeField] private AdvancedWaveContent[] advancedWaveContents;
 
    [SerializeField] private bool canSpawn = false;
 
    private float waveTimer;
    private int waveCounter = 0;
+   private AdvancedWaveContent curSet;
 
    private int totalSpawned = 0;
 
@@ -37,16 +46,12 @@ public class EnemySpawner : MonoBehaviour
       Instance = this;
    }
 
-   private void Start()
-   {
-      waveTimer = waveDelay;
-   }
-
    private void Update()
    {
       if(canSpawn) {
+         UpdateCurSet();
          waveTimer += Time.deltaTime;
-         if(waveTimer > waveDelay ) {
+         if(waveTimer > curSet.waveDelay ) {
             waveTimer = 0f;
             SpawnWave();
          }
@@ -55,15 +60,18 @@ public class EnemySpawner : MonoBehaviour
 
    private void SpawnWave()
    {
-      if (waveContent.Length == 0) return;
-      if (totalWave == 0) {
+      if (curSet.totalWave == 0) {
          StopSpawn();
+         Debug.Log("Total Enemy Spawned: " + totalSpawned);
          return;
       }
-      var curWaveNum = waveCounter % waveContent.Length;
-      var curWave = waveContent[curWaveNum];
+      if (waveCounter >= curSet.totalWave) {
+         return;
+      }
+      var curWaveNum = waveCounter % curSet.wavesContents.Length;
+      var curWave = curSet.wavesContents[curWaveNum];
       
-      foreach( var wave in specificWaveContent ) {
+      foreach( var wave in curSet.specificWaveContents) {
          if(waveCounter+1 == wave.waveNumber ) {
             curWave = wave.wave;
          }
@@ -75,15 +83,34 @@ public class EnemySpawner : MonoBehaviour
          totalSpawned++;
       }
       waveCounter++;
-      if (waveCounter >= totalWave) {
-         StopSpawn();
-         Debug.Log("Total Enemy Spawned: " +  totalSpawned);
+   }
+
+   private void UpdateCurSet()
+   {
+      var playtime = MusicManager.Instance.GetGameMusicPlaytime();
+      if(playtime > curSet.musicTime) {
+         foreach(var set in advancedWaveContents ) {
+            if(playtime < set.musicTime) {
+               curSet = set;
+               waveCounter = 0;
+               waveTimer = curSet.waveDelay;
+               return;
+            }
+         }
+         curSet = advancedWaveContents[advancedWaveContents.Length - 1];
       }
    }
 
    public void StartSpawn()
    {
+      if(advancedWaveContents.IsNullOrEmpty()) {
+         canSpawn = false;
+         return;
+      }
       canSpawn = true;
+      curSet = advancedWaveContents[0];
+      waveCounter = 0;
+      waveTimer = curSet.waveDelay;
    }
 
    public void StopSpawn()

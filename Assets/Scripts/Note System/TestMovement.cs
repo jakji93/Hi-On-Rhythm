@@ -13,6 +13,8 @@ public class TestMovement : MonoBehaviour
    [SerializeField] private float basePostionX;
    [SerializeField] private bool isCharting;
 
+   [SerializeField] private RectTransform rectTransform;
+
    private float chartSpeed;
    private Vector3 baseLocation;
 
@@ -40,6 +42,6 @@ public class TestMovement : MonoBehaviour
    private void FixedUpdate()
    {
       timeSofar += Time.fixedDeltaTime;
-      transform.position -= new Vector3(chartSpeed * Time.fixedDeltaTime, 0, 0);
+      rectTransform.anchoredPosition3D -= new Vector3(chartSpeed * Time.fixedDeltaTime, 0, 0);
    }
 }

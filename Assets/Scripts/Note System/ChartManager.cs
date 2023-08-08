@@ -10,17 +10,15 @@ public class ChartManager : MonoBehaviour
    [SerializeField] private float BPM = 120;
 
    [SerializeField] private bool isPlaying = false;
-   private float chartSpeed;
 
-   private float resolutionScaler = 1f;
+   [SerializeField] private RectTransform rectTransform;
+
+   private float chartSpeed;
 
    private void Awake()
    {
       Instance = this;
       chartSpeed = BPM / 60 * BPM_MULTIPLIER;
-      if (Screen.fullScreen) {
-         resolutionScaler = Screen.currentResolution.width / 1920;
-      }
    }
 
    public void StartPlaying()
@@ -33,10 +31,10 @@ public class ChartManager : MonoBehaviour
       isPlaying = false; 
    }
 
-   private void Update()
+   private void FixedUpdate()
    {
       if (isPlaying) {
-         transform.position -= new Vector3(chartSpeed * Time.deltaTime * resolutionScaler, 0, 0);
+         rectTransform.anchoredPosition3D -= new Vector3(chartSpeed * Time.fixedDeltaTime, 0, 0);
       }
    }
 }

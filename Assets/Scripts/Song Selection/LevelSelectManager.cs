@@ -47,9 +47,9 @@ public class LevelSelectManager : MonoBehaviour
    {
       for(int i = 0; i < tracks.Length; i++) {
          if(i == curSelectTrack) {
-            tracks[i].gameObject.transform.localPosition = inPosition;
+            tracks[i].gameObject.GetComponent<RectTransform>().anchoredPosition3D = inPosition;
          } else {
-            tracks[i].gameObject.transform.localPosition = backPosition;
+            tracks[i].gameObject.GetComponent<RectTransform>().anchoredPosition3D = backPosition;
          }
       }
       gameInput.OnPrevTrackPressed += GameInput_OnPrevTrackPressed;
@@ -148,14 +148,14 @@ public class LevelSelectManager : MonoBehaviour
    public void NextTrack()
    {
       if (isMoving) return;
-      tracks[curSelectTrack].gameObject.transform.localPosition = backPosition;
+      tracks[curSelectTrack].gameObject.GetComponent<RectTransform>().anchoredPosition3D = backPosition;
       tracks[curSelectTrack].DeselectAsTrack();
       curSelectTrack++;
       curSelectTrack %= tracks.Length;
       tracks[curSelectTrack].SetAsCurrentTrack();
       trackSelector.SetCurrentTrack(curSelectTrack);
       isMoving = true;
-      tracks[curSelectTrack].gameObject.transform.DOLocalMove(inPosition, moveSpeed).SetEase(moveCurve).OnComplete(() =>
+      tracks[curSelectTrack].gameObject.GetComponent<RectTransform>().DOAnchorPos3D(inPosition, moveSpeed).SetEase(moveCurve).OnComplete(() =>
       {
          isMoving = false;
       });
@@ -164,14 +164,14 @@ public class LevelSelectManager : MonoBehaviour
    public void PrevTrack() 
    {
       if (isMoving) return;
-      tracks[curSelectTrack].gameObject.transform.localPosition = backPosition;
+      tracks[curSelectTrack].gameObject.GetComponent<RectTransform>().anchoredPosition3D = backPosition;
       tracks[curSelectTrack].DeselectAsTrack();
       curSelectTrack--;
       if( curSelectTrack < 0 ) curSelectTrack = tracks.Length - 1;
       tracks[curSelectTrack].SetAsCurrentTrack();
       trackSelector.SetCurrentTrack(curSelectTrack);
       isMoving = true;
-      tracks[curSelectTrack].gameObject.transform.DOLocalMove(inPosition, moveSpeed).SetEase(moveCurve).OnComplete(() =>
+      tracks[curSelectTrack].gameObject.GetComponent<RectTransform>().DOAnchorPos3D(inPosition, moveSpeed).SetEase(moveCurve).OnComplete(() =>
       {
          isMoving = false;
       });

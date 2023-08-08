@@ -143,7 +143,7 @@ public class SongSelector : MonoBehaviour
          //0 at top
          //float xPos = Mathf.Sin(Mathf.Deg2Rad * (i * angle)) * radius;
          //float yPos = Mathf.Cos(Mathf.Deg2Rad * (i * angle)) * radius;
-         songSelectors[i].transform.position = transform.position + new Vector3(xPos, yPos, 0f);
+         songSelectors[i].GetComponent<RectTransform>().anchoredPosition3D = new Vector3(xPos, yPos, 0f);
          songSelectors[i].transform.Rotate(new Vector3(0f, 0f, -i * angle));
       }
       isRotating = false;

@@ -42,6 +42,8 @@ public class TestMovement : MonoBehaviour
    private void FixedUpdate()
    {
       timeSofar += Time.fixedDeltaTime;
-      rectTransform.anchoredPosition3D -= new Vector3(chartSpeed * Time.fixedDeltaTime, 0, 0);
+      var postionAtPlaytime = audio.time * BPM / 60 * 480;
+      rectTransform.anchoredPosition3D = new Vector3(basePostionX - postionAtPlaytime, baseLocation.y, 0);
+      //rectTransform.anchoredPosition3D -= new Vector3(chartSpeed * Time.fixedDeltaTime, 0, 0);
    }
 }

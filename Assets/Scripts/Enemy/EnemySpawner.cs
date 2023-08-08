@@ -79,7 +79,7 @@ public class EnemySpawner : MonoBehaviour
 
       for( int i = 0; i < curWave.spawnPoints.Length; i++ ) {
          int j = i % curWave.enemies.Length;
-         Instantiate(curWave.enemies[j], curWave.spawnPoints[i]);
+         Instantiate(curWave.enemies[j], curWave.spawnPoints[i].position, Quaternion.identity);
          totalSpawned++;
       }
       waveCounter++;

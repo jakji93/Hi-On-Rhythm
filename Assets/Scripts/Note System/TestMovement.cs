@@ -20,7 +20,7 @@ public class TestMovement : MonoBehaviour
 
    private void Awake()
    {
-      baseLocation = transform.localPosition;
+      baseLocation = transform.position;
       audio.time = playtime;
       var postionAtPlaytime = playtime * BPM / 60 * 480;
       baseLocation.x = basePostionX - postionAtPlaytime;
@@ -43,7 +43,7 @@ public class TestMovement : MonoBehaviour
    {
       timeSofar += Time.fixedDeltaTime;
       var postionAtPlaytime = audio.time * BPM / 60 * 480;
-      rectTransform.anchoredPosition3D = new Vector3(basePostionX - postionAtPlaytime, baseLocation.y, 0);
+      transform.position = new Vector3(basePostionX - postionAtPlaytime, baseLocation.y, 0);
       //rectTransform.anchoredPosition3D -= new Vector3(chartSpeed * Time.fixedDeltaTime, 0, 0);
    }
 }

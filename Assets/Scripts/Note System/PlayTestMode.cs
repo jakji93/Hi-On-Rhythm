@@ -18,6 +18,7 @@ public class PlayTestMode : MonoBehaviour
 
    private void GameInput_OnNormal1Pressed(object sender, System.EventArgs e)
    {
+      Debug.Log("N1 pressd");
       if (!isTestMode) return;
       var noteObj = Physics2D.OverlapBox(transform.position, hitzoneSize, noteLayer);
       if (noteObj != null) {

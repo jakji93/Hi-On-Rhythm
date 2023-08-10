@@ -10,6 +10,7 @@ public class OsuMarker : MonoBehaviour
    [SerializeField] private float maxScale = 3f;
    [SerializeField] private float baseScale = 1f;
    [SerializeField] private AnimationCurve alphaCurve;
+   [SerializeField] private Transform targetTransform;
 
    private Transform noteHitZone;
    private Transform player;
@@ -18,8 +19,16 @@ public class OsuMarker : MonoBehaviour
 
    private void Start()
    {
-      player = PlayerControl.Instance.gameObject.transform;
-      noteHitZone = NoteManager.Instance.gameObject.transform;
+      if(PlayerControl.Instance != null) {
+         player = PlayerControl.Instance.gameObject.transform;
+      } else {
+         player = targetTransform;
+      }
+      if(NoteManager.Instance != null) {
+         noteHitZone = NoteManager.Instance.gameObject.transform;
+      } else {
+         noteHitZone = targetTransform;
+      }
    }
 
    private void Update()

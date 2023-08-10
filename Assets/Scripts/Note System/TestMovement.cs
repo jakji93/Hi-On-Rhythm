@@ -13,14 +13,12 @@ public class TestMovement : MonoBehaviour
    [SerializeField] private float basePostionX;
    [SerializeField] private bool isCharting;
 
-   [SerializeField] private RectTransform rectTransform;
-
    private float chartSpeed;
    private Vector3 baseLocation;
 
    private void Awake()
    {
-      baseLocation = transform.position;
+      baseLocation = transform.localPosition;
       audio.time = playtime;
       var postionAtPlaytime = playtime * BPM / 60 * 480;
       baseLocation.x = basePostionX - postionAtPlaytime;
@@ -43,7 +41,7 @@ public class TestMovement : MonoBehaviour
    {
       timeSofar += Time.fixedDeltaTime;
       var postionAtPlaytime = audio.time * BPM / 60 * 480;
-      transform.position = new Vector3(basePostionX - postionAtPlaytime, baseLocation.y, 0);
+      transform.localPosition = new Vector3(basePostionX - postionAtPlaytime, baseLocation.y, 0);
       //rectTransform.anchoredPosition3D -= new Vector3(chartSpeed * Time.fixedDeltaTime, 0, 0);
    }
 }

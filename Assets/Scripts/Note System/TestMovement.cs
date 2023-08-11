@@ -8,7 +8,7 @@ public class TestMovement : MonoBehaviour
    private float timeSofar = 0f;
    [SerializeField] private float BPM = 120;
    [SerializeField] private GameInput playerInputs;
-   [SerializeField] private AudioSource audio;
+   [SerializeField] private AudioSource audioSouce;
    [SerializeField] private float playtime;
    [SerializeField] private float basePostionX;
    [SerializeField] private bool isCharting;
@@ -19,8 +19,8 @@ public class TestMovement : MonoBehaviour
    private void Awake()
    {
       baseLocation = transform.localPosition;
-      audio.time = playtime;
-      var postionAtPlaytime = playtime * BPM / 60 * 480;
+      audioSouce.time = playtime;
+      var postionAtPlaytime = playtime * BPM / 60 * BPM_MULTIPLIER;
       baseLocation.x = basePostionX - postionAtPlaytime;
       transform.localPosition = baseLocation;
    }
@@ -40,7 +40,7 @@ public class TestMovement : MonoBehaviour
    private void FixedUpdate()
    {
       timeSofar += Time.fixedDeltaTime;
-      var postionAtPlaytime = audio.time * BPM / 60 * 480;
+      var postionAtPlaytime = audioSouce.time * BPM / 60 * BPM_MULTIPLIER;
       transform.localPosition = new Vector3(basePostionX - postionAtPlaytime, baseLocation.y, 0);
       //rectTransform.anchoredPosition3D -= new Vector3(chartSpeed * Time.fixedDeltaTime, 0, 0);
    }

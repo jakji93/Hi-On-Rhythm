@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpecialAttack1 : MonoBehaviour
 {
-   [SerializeField] private Collider2D collider;
+   [SerializeField] private Collider2D spawnArea;
    [SerializeField] private GameObject swordFall;
    [SerializeField] private int minSwordserFall;
    [SerializeField] private int maxSwordserFall;
@@ -28,7 +28,7 @@ public class SpecialAttack1 : MonoBehaviour
          timer = 0f;
          int numOfSpawn = Random.Range(minSwordserFall, maxSwordserFall);
          for(int i = 0; i < numOfSpawn; i++) {
-            var position = GetRandomPointInCollider(collider);
+            var position = GetRandomPointInCollider(spawnArea);
             Instantiate(swordFall, position, Quaternion.identity);
          }
       }

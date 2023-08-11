@@ -7,7 +7,7 @@ public class SpecialAttack2 : MonoBehaviour
    [SerializeField] private int damage;
    [SerializeField] private float interval;
    [SerializeField] private float lifetime;
-   [SerializeField] private Collider2D collider2D;
+   [SerializeField] private Collider2D attackCollider;
    [SerializeField] private ContactFilter2D contactFilter2D;
 
    private List<Collider2D> colliders = new List<Collider2D>();
@@ -23,7 +23,7 @@ public class SpecialAttack2 : MonoBehaviour
    {
       timer += Time.deltaTime;
       if (timer > interval) {
-         collider2D.OverlapCollider(contactFilter2D, colliders);
+         attackCollider.OverlapCollider(contactFilter2D, colliders);
          foreach (var collider in colliders) {
             if(collider.gameObject.TryGetComponent(out Health health)) {
                health.TakeDamage(damage * ComboManager.Instance.GetMultiplier());

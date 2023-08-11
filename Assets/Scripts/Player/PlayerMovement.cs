@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
    [SerializeField] private float dashCost = 30;
    [SerializeField] private float stamRecovery = 50;
    [SerializeField] private float dashTime = 2f;
-   [SerializeField] private ParticleSystem particleSystem;
+   [SerializeField] private ParticleSystem dashParticle;
    [SerializeField] private Collider2D bodyCollider;
 
    [SerializeField] private InputActionAsset playerAction;
@@ -150,7 +150,7 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
          yield return null;
       }
       canMove = true;
-      particleSystem.Stop();
+      dashParticle.Stop();
       animator.SetBool("isDash", false);
       bodyCollider.enabled = true;
       StopCoroutine("dashRoutine");

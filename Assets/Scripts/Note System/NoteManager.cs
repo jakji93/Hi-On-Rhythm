@@ -46,18 +46,15 @@ public class NoteManager : MonoBehaviour
          switch(note.getNoteType()) {
             case Note.NoteTypes.Normal1:
                OnNormal1Hit?.Invoke(this, EventArgs.Empty);
-               EmitNoteHitParticle();
                ClipPlayer.Instance.PlayClip(noteHitSound);
                Debug.Log("Normal 1 hit");
                break;
             case Note.NoteTypes.Normal2:
                OnWrongNote?.Invoke(this, EventArgs.Empty);
-               EmitNoteMissedParticle();
                Debug.Log("Hit wrong note");
                break;
             case Note.NoteTypes.Special:
                OnSpecialHit?.Invoke(this, EventArgs.Empty);
-               EmitNoteHitParticle();
                ClipPlayer.Instance.PlayClip(noteHitSound);
                Debug.Log("Special hit");
                break;
@@ -82,18 +79,15 @@ public class NoteManager : MonoBehaviour
          switch (note.getNoteType()) {
             case Note.NoteTypes.Normal1:
                OnWrongNote?.Invoke(this, EventArgs.Empty);
-               EmitNoteMissedParticle();
                Debug.Log("Hit wrong note");
                break;
             case Note.NoteTypes.Normal2:
                OnNormal2Hit?.Invoke(this, EventArgs.Empty);
-               EmitNoteHitParticle();
                ClipPlayer.Instance.PlayClip(noteHitSound);
                Debug.Log("Normal 2 hit");
                break;
             case Note.NoteTypes.Special:
                OnSpecialHit?.Invoke(this, EventArgs.Empty);
-               EmitNoteHitParticle();
                ClipPlayer.Instance.PlayClip(noteHitSound);
                Debug.Log("Special hit");
                break;
@@ -145,9 +139,4 @@ public class NoteManager : MonoBehaviour
       var newParticle = Instantiate(NoteMissedParticle, particleParent);
       Destroy(newParticle, 2);
    }
-
-    void OnN1()
-    {
-
-    }
 }

@@ -12,14 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Song Selection.unity
     guid: 5c59bd9bbf4839647b288f5b5aa3d311
   - enabled: 0
-    path: Assets/Scenes/Iyaiya_Hard.unity
-    guid: 4b8eaed2e988fde4a954dac89a548262
-  - enabled: 0
     path: Assets/Scenes/Settings.unity
     guid: dbd4c87a1c1ccf64f848ce016989bc1a
-  - enabled: 0
-    path: Assets/Scenes/Bully_Hard.unity
-    guid: 5eef5d660c1b6c2488f93a9d5ed54aa3
   - enabled: 1
     path: Assets/Scenes/Prototype Scene/Iyaiya_Hard_Proto.unity
     guid: b9ce6e03031f7a840b5bc31ce5711c5b

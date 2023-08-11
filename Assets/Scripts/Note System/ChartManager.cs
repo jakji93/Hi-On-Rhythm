@@ -11,16 +11,16 @@ public class ChartManager : MonoBehaviour
 
    [SerializeField] private bool isPlaying = false;
 
-   [SerializeField] private RectTransform rectTransform;
-
    private float chartSpeed;
    private Vector3 basePosition;
+   private Transform thisTransform;
 
    private void Awake()
    {
       Instance = this;
       chartSpeed = BPM / 60 * BPM_MULTIPLIER;
-      basePosition = rectTransform.anchoredPosition3D;
+      thisTransform = transform;
+      basePosition = thisTransform.localPosition;
    }
 
    public void StartPlaying()
@@ -36,8 +36,8 @@ public class ChartManager : MonoBehaviour
    private void FixedUpdate()
    {
       if (isPlaying) {
-         var postionAtPlaytime = MusicManager.Instance.GetGameMusicPlaytime() * BPM / 60 * 480;
-         rectTransform.anchoredPosition3D = new Vector3(basePosition.x - postionAtPlaytime, basePosition.y, 0);
+         var postionAtPlaytime = MusicManager.Instance.GetGameMusicPlaytime() * BPM / 60 * BPM_MULTIPLIER;
+         thisTransform.localPosition = new Vector3(basePosition.x - postionAtPlaytime, basePosition.y, 0);
          //rectTransform.anchoredPosition3D -= new Vector3(chartSpeed * Time.fixedDeltaTime, 0, 0);
       }
    }

@@ -11,10 +11,20 @@ public class MusicManager : MonoBehaviour
    [SerializeField] private AudioSource victoryMusic;
    [SerializeField] private AudioSource introMusic;
 
+   private float[] audioSamples = new float[512];
+
+   private float[] audioSyncSamples = new float[128];
+   private float audioSyncValue;
+
    private void Awake()
    {
       Instance = this;
       gameMusic.clip.LoadAudioData();
+   }
+
+   private void Update()
+   {
+      GetSpectrumAudioSource();
    }
 
    public void StartMusic()
@@ -63,5 +73,17 @@ public class MusicManager : MonoBehaviour
    public float GetGameMusicPlaytime()
    {
       return gameMusic.time;
+   }
+
+   private void GetSpectrumAudioSource()
+   {
+      if (gameMusic.volume <= 0) gameMusic.volume = 0.001f;
+      gameMusic.GetSpectrumData(audioSamples, 0, FFTWindow.Blackman);
+      gameMusic.GetSpectrumData(audioSyncSamples, 0, FFTWindow.Hamming);    
+      audioSyncValue = audioSyncSamples[0] * 100 / gameMusic.volume;
+   }
+   public float GetSynchroData()
+   {
+      return audioSyncValue;
    }
 }

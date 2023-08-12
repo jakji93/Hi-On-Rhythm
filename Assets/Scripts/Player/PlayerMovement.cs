@@ -150,7 +150,6 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
          yield return null;
       }
       canMove = true;
-      dashParticle.Stop();
       animator.SetBool("isDash", false);
       bodyCollider.enabled = true;
       StopCoroutine("dashRoutine");

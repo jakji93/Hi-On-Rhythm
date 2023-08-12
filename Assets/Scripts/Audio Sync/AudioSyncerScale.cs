@@ -5,14 +5,13 @@ using UnityEngine;
 
 public class AudioSyncerScale : AudioSyncer
 {
-   [SerializeField] private float restScale;
-   [SerializeField] private float beatScale;
+   [SerializeField] private Vector3 restScale;
+   [SerializeField] private Vector3 beatScale;
 
    public override void OnUpdate()
    {
       base.OnUpdate();
 
-      if (isBeat) return;
    }
 
    public override void OnBeat()
@@ -20,10 +19,10 @@ public class AudioSyncerScale : AudioSyncer
       base.OnBeat();
 
       transform.DOKill();
-      transform.DOScaleY(beatScale, timeToBeat).OnComplete(() =>
+      transform.DOScale(beatScale, timeToBeat).OnComplete(() =>
       {
          isBeat = false;
-         transform.DOScaleY(restScale, restSmoothTime).SetEase(Ease.OutQuad);
+         transform.DOScale(restScale, restSmoothTime).SetEase(Ease.OutQuad);
       });
    }
 }

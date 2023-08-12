@@ -8,6 +8,7 @@ public class AudioSyncer : MonoBehaviour
    [SerializeField] protected float timeStep;
    [SerializeField] protected float timeToBeat;
    [SerializeField] protected float restSmoothTime;
+   [SerializeField] protected int band;
 
    private float previousSyncValue;
    private float curSyncValue;
@@ -24,13 +25,12 @@ public class AudioSyncer : MonoBehaviour
    public virtual void OnUpdate()
    {
       previousSyncValue = curSyncValue;
-      curSyncValue = MusicManager.Instance.GetSynchroData();
+      curSyncValue = MusicManager.Instance.Get8BandData(band) * 100;
 
-      if(previousSyncValue > bias && curSyncValue <= bias) {
-         if(timer > timeStep) OnBeat();
-      }
       if(previousSyncValue <= bias && curSyncValue > bias) { 
-         if(timer > timeToBeat) OnBeat();
+         if(timer > timeStep) {
+            OnBeat();
+         }
       }
       timer += Time.deltaTime;
    }

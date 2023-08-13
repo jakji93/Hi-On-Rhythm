@@ -19,6 +19,10 @@ public class MusicManager : MonoBehaviour
    private float[] audio8BandsNormalized = new float[8];
    private float[] audio8BuffBandsNormalized = new float[8];
 
+   private float audioBandAmplitude;
+   private float audioBufferBandAmplitude;
+   private float amplitudeHighest;
+
    private void Awake()
    {
       Instance = this;
@@ -128,6 +132,23 @@ public class MusicManager : MonoBehaviour
             audio8BandsNormalized[i] = audio8Bands[i] / freqBandHighest[i];
             audio8BuffBandsNormalized[i] = audio8BuffBands[i] / freqBandHighest[i];
          }
+      }
+   }
+
+   private void CreateAudioAmplitube()
+   {
+      float curAmp = 0f;
+      float curBuffAmp = 0f;
+      for (int i = 0; i < 8; i++) {
+         curAmp += audio8Bands[i];
+         curBuffAmp += audio8BuffBands[i];
+      }
+      if (curAmp > amplitudeHighest) {
+         amplitudeHighest = curAmp;
+      }
+      if (amplitudeHighest != 0f) {
+         audioBandAmplitude = curAmp / amplitudeHighest;
+         audioBufferBandAmplitude = curBuffAmp / amplitudeHighest;
       }
    }
 

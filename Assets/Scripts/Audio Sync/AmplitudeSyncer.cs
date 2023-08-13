@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioSyncer : MonoBehaviour
+public class AmplitudeSyncer : MonoBehaviour
 {
    [SerializeField] protected float bias;
    [SerializeField] protected float timeStep;
    [SerializeField] protected float timeToBeat;
    [SerializeField] protected float restSmoothTime;
-   [SerializeField] protected int band;
 
    private float previousSyncValue;
    private float curSyncValue;
@@ -25,10 +24,10 @@ public class AudioSyncer : MonoBehaviour
    public virtual void OnUpdate()
    {
       previousSyncValue = curSyncValue;
-      curSyncValue = MusicManager.Instance.GetBandNormalizedData(band) * 100;
+      curSyncValue = MusicManager.Instance.GetAmplitude() * 100;
 
-      if(previousSyncValue <= bias && curSyncValue > bias) { 
-         if(timer > timeStep) {
+      if (previousSyncValue <= bias && curSyncValue > bias) {
+         if (timer > timeStep) {
             OnBeat();
          }
       }

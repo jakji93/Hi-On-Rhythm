@@ -35,6 +35,7 @@ public class MusicManager : MonoBehaviour
       MakeFrequencyBand();
       BandBuffer();
       CreateAudioBandsNormalized();
+      CreateAudioAmplitube();
    }
 
    public void StartMusic()
@@ -170,5 +171,15 @@ public class MusicManager : MonoBehaviour
    public float GetBufferBandNormalizedData(int band)
    {
       return audio8BuffBandsNormalized[band];
+   }
+
+   public float GetAmplitude()
+   {
+      return audioBandAmplitude;
+   }
+
+   public float GetBufferAmplitude()
+   {
+      return audioBufferBandAmplitude;
    }
 }

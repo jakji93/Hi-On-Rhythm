@@ -9,6 +9,8 @@ public class Note : MonoBehaviour
       Normal1,
       Normal2,
       Special,
+      Attack,
+      Spawn,
    }
 
    [SerializeField] private NoteTypes type;

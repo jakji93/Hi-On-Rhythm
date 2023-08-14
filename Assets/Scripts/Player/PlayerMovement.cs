@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
 
    private float playerStam = 100f;
    [Header("Dash")]
-   [SerializeField] private float playerDashSpeed = 10f;
+   [SerializeField] private float playerDashSpeed = 25f;
    [SerializeField] private float dashCost = 30;
    [SerializeField] private float stamRecovery = 50;
    [SerializeField] private float dashTime = 2f;
@@ -56,52 +56,41 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
 
    private void FixedUpdate()
    {
-      if (canMove) {
-         if (playerMoveDir != Vector2.zero) {
+      if (canMove) 
+        {
+         if (playerMoveDir != Vector2.zero) 
+         {
+                //MovePlayer(playerMoveDir, playerMoveSpeed);
+                if (dashPress)
+                {
+                    canMove = false;
+                    StartCoroutine(dashRoutine(playerMoveDir));
+                    dashPress = false;
 
-            int count = playerRB.Cast(playerMoveDir, movementFilter, castCollisions, playerMoveSpeed * Time.fixedDeltaTime + collisionOffset);
+                }
+                else
+                {
+                    MovePlayer(playerMoveDir, playerMoveSpeed);
+                    
+                }
 
-            if (count == 0 && !dashPress) {
-
-               MovePlayer(playerRB.position, playerMoveDir, playerMoveSpeed);
-            }
-
-            else if (count == 0 && dashPress) {
-               int count2 = playerRB.Cast(playerMoveDir, movementFilter, castCollisions, playerDashSpeed * Time.fixedDeltaTime + collisionOffset);
-
-               if (count2 == 0) {
-                  //MovePlayer(playerRB.position, playerMoveDir, playerDashSpeed); dash
-                  canMove = false;
-                  StartCoroutine(dashRoutine(playerMoveDir));
-
-                  dashPress = false;
-               }
-               else {
-
-                  RaycastHit2D hitRay = Physics2D.Raycast(playerRB.position, playerMoveDir);
-
-                  playerRB.MovePosition(playerRB.position + playerMoveDir * hitRay.fraction * .3f);
-
-
-                  print(hitRay.fraction);
-                  dashPress = false;
-
-               }
-            }
-            else if (count != 0 && dashPress) {
-               dashPress = false;
-            }
-         } else {
-            curVelopcity = Vector2.zero;
+            } 
+         else 
+         {
+                playerRB.velocity = Vector2.zero;
+                curVelopcity = Vector2.zero;
          }
       }
    }
 
-   void MovePlayer(Vector2 curPos, Vector2 moveDir, float moveSpeed)
+   void MovePlayer(Vector2 moveDir, float moveSpeed)
    {
-      Vector2 targetVelocity = moveDir * moveSpeed;
-      curVelopcity = Vector2.MoveTowards(curVelopcity, targetVelocity, playerAcceleration * Time.fixedDeltaTime);
-      playerRB.MovePosition(curPos + curVelopcity * Time.fixedDeltaTime);
+
+        //playerRB.velocity = new Vector2(moveDir.x * moveSpeed, moveDir.y * moveSpeed);
+        playerRB.velocity = moveDir * moveSpeed;
+        Vector2 targetVelocity = moveDir * moveSpeed;
+        curVelopcity = Vector2.MoveTowards(curVelopcity, targetVelocity, playerAcceleration * Time.fixedDeltaTime);
+      
    }
 
    void OnMove()
@@ -145,10 +134,11 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
       animator.SetBool("isDash", true);
       bodyCollider.enabled = false;
       while (curTime < dashTime) {
-         MovePlayer(playerRB.position, dashDir, playerDashSpeed);
+         MovePlayer( dashDir, playerDashSpeed);
          curTime = curTime + Time.deltaTime;
          yield return null;
       }
+      
       canMove = true;
       animator.SetBool("isDash", false);
       bodyCollider.enabled = true;

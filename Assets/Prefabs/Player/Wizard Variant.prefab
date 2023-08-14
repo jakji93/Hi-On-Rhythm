@@ -361,7 +361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4105362945620786471, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
       propertyPath: m_LocalScale.x
@@ -910,7 +910,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   visualObject: {fileID: 3894211188875395983}
   animator: {fileID: 7582741518931721297}
-  playerDashSpeed: 16
+  playerDashSpeed: 25
   dashCost: 30
   stamRecovery: 30
   dashTime: 0.2

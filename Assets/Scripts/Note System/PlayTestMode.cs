@@ -41,4 +41,21 @@ public class PlayTestMode : MonoBehaviour
       Gizmos.color = Color.red;
       Gizmos.DrawWireCube(transform.position, hitzoneSize);
    }
+
+   private void OnTriggerEnter2D(Collider2D collision)
+   {
+      if ((noteLayer.value & (1 << collision.transform.gameObject.layer)) > 0) {
+         if(collision.TryGetComponent(out Note note)) {
+            var noteType = note.getNoteType();
+            switch (noteType) {
+               case Note.NoteTypes.Attack:
+                  Debug.Log("Attack");
+                  break;
+               case Note.NoteTypes.Spawn:
+                  Debug.Log("Spawn");
+                  break;
+            }
+         }
+      }
+   }
 }

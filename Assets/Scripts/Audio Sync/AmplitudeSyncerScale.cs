@@ -11,7 +11,7 @@ public class AmplitudeSyncerScale : AmplitudeSyncer
    public override void OnUpdate()
    {
       base.OnUpdate();
-      transform.localScale = beatScale * MusicManager.Instance.GetAmplitude();
+      transform.localScale = beatScale * AudioAnalyzer.Instance.GetAmplitude() + restScale;
    }
 
    public override void OnBeat()

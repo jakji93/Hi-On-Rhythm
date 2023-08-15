@@ -9,6 +9,6 @@ public class VisualSyncer : MonoBehaviour
 
    private void Update()
    {
-      transform.localScale = new Vector3(transform.localScale.x, (MusicManager.Instance.GetBufferBandNormalizedData(band) * scaleMultiplier) + startScale, transform.localScale.z);
+      transform.localScale = new Vector3(transform.localScale.x, (AudioAnalyzer.Instance.GetBufferBandNormalizedData(band) * scaleMultiplier) + startScale, transform.localScale.z);
    }
 }

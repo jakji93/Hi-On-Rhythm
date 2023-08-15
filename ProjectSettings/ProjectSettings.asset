@@ -14,8 +14,8 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: Concept1
-  defaultCursor: {fileID: 0}
-  cursorHotspot: {x: 0, y: 0}
+  defaultCursor: {fileID: 2800000, guid: 1058197d78b0caf4ea63fa29a51ce93e, type: 3}
+  cursorHotspot: {x: 120, y: 120}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
@@ -599,7 +599,7 @@ PlayerSettings:
     Server: UNITY_VISUAL_SCRIPTING
     Stadia: UNITY_VISUAL_SCRIPTING;UNITY_POST_PROCESSING_STACK_V2
     Standalone: UNITY_VISUAL_SCRIPTING;UNITY_POST_PROCESSING_STACK_V2;MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED
-    WebGL: UNITY_VISUAL_SCRIPTING;UNITY_POST_PROCESSING_STACK_V2
+    WebGL: UNITY_VISUAL_SCRIPTING;UNITY_POST_PROCESSING_STACK_V2;MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED
     Windows Store Apps: UNITY_VISUAL_SCRIPTING;UNITY_POST_PROCESSING_STACK_V2
     XboxOne: UNITY_VISUAL_SCRIPTING;UNITY_POST_PROCESSING_STACK_V2
     iPhone: UNITY_VISUAL_SCRIPTING

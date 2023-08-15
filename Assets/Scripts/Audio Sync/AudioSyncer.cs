@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AudioSyncer : MonoBehaviour
 {
+   [Range(0, 100)]
    [SerializeField] protected float bias;
    [SerializeField] protected float timeStep;
    [SerializeField] protected float timeToBeat;
@@ -25,9 +26,9 @@ public class AudioSyncer : MonoBehaviour
    public virtual void OnUpdate()
    {
       previousSyncValue = curSyncValue;
-      curSyncValue = MusicManager.Instance.GetBandNormalizedData(band) * 100;
+      curSyncValue = AudioAnalyzer.Instance.GetBandNormalizedData(band) * 100;
 
-      if(previousSyncValue <= bias && curSyncValue > bias) { 
+      if (previousSyncValue <= bias && curSyncValue > bias) { 
          if(timer > timeStep) {
             OnBeat();
          }

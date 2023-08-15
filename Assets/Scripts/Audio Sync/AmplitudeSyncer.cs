@@ -24,7 +24,7 @@ public class AmplitudeSyncer : MonoBehaviour
    public virtual void OnUpdate()
    {
       previousSyncValue = curSyncValue;
-      curSyncValue = MusicManager.Instance.GetAmplitude() * 100;
+      curSyncValue = AudioAnalyzer.Instance.GetAmplitude() * 100;
 
       if (previousSyncValue <= bias && curSyncValue > bias) {
          if (timer > timeStep) {

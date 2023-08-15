@@ -23,18 +23,15 @@ public class EnemySpawner : MonoBehaviour
    public class AdvancedWaveContent
    {
       public WaveContent[] wavesContents;
-      public SpecificWaveContent[] specificWaveContents;
-      public float waveDelay = 1f;
-      public int totalWave = 0;
       public float musicTime;
    }
 
    [SerializeField] private AdvancedWaveContent[] advancedWaveContents;
-
+   [SerializeField] private SpecificWaveContent[] specificWaveContents;
    [SerializeField] private bool canSpawn = false;
 
-   private float waveTimer;
    private int waveCounter = 0;
+   private int globalWaveCounter = 0;
    private AdvancedWaveContent curSet;
 
    private int totalSpawned = 0;
@@ -46,33 +43,30 @@ public class EnemySpawner : MonoBehaviour
       Instance = this;
    }
 
+   private void Start()
+   {
+      NoteManager.Instance.OnSpawnBeat += NoteManager_OnSpawnBeat;
+   }
+
+   private void NoteManager_OnSpawnBeat(object sender, System.EventArgs e)
+   {
+      SpawnWave();
+   }
+
    private void Update()
    {
       if(canSpawn) {
          UpdateCurSet();
-         waveTimer += Time.deltaTime;
-         if(waveTimer > curSet.waveDelay ) {
-            waveTimer = 0f;
-            SpawnWave();
-         }
       }
    }
 
    private void SpawnWave()
    {
-      if (curSet.totalWave == 0) {
-         StopSpawn();
-         Debug.Log("Total Enemy Spawned: " + totalSpawned);
-         return;
-      }
-      if (waveCounter >= curSet.totalWave) {
-         return;
-      }
       var curWaveNum = waveCounter % curSet.wavesContents.Length;
       var curWave = curSet.wavesContents[curWaveNum];
       
-      foreach( var wave in curSet.specificWaveContents) {
-         if(waveCounter+1 == wave.waveNumber ) {
+      foreach( var wave in specificWaveContents) {
+         if(globalWaveCounter + 1 == wave.waveNumber ) {
             curWave = wave.wave;
          }
       }
@@ -83,6 +77,7 @@ public class EnemySpawner : MonoBehaviour
          totalSpawned++;
       }
       waveCounter++;
+      globalWaveCounter++;
    }
 
    private void UpdateCurSet()
@@ -93,7 +88,6 @@ public class EnemySpawner : MonoBehaviour
             if(playtime < set.musicTime) {
                curSet = set;
                waveCounter = 0;
-               waveTimer = curSet.waveDelay;
                return;
             }
          }
@@ -110,7 +104,7 @@ public class EnemySpawner : MonoBehaviour
       canSpawn = true;
       curSet = advancedWaveContents[0];
       waveCounter = 0;
-      waveTimer = curSet.waveDelay;
+      globalWaveCounter = 0;
    }
 
    public void StopSpawn()

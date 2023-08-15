@@ -16,16 +16,22 @@ public abstract class EnemyAttack : MonoBehaviour
    private void Start()
    {
       controller.OnStateChanged += EnemyController_OnStateChanged;
+      NoteManager.Instance.OnAttackBeat += NoteManager_OnAttackBeat;
       attackTimer = attackDelay;
+   }
+
+   private void NoteManager_OnAttackBeat(object sender, System.EventArgs e)
+   {
+      if (!GameplayManager.Instance.IsGamePlaying()) return;
+      if (canAttack && !isAttacking) {
+         StartAttacking();
+         Attack();
+      }
    }
 
    private void EnemyController_OnStateChanged(object sender, EnemyController.OnStateChangedEventArgs e)
    {
       canAttack = e.state == EnemyController.EnemyState.Attack;
-      if(e.state == EnemyController.EnemyState.Move) {
-         //Reset att timer or not? who knows
-         //attackTimer = attackDelay / 2;
-      }
    }
 
    protected virtual void Update()
@@ -52,6 +58,10 @@ public abstract class EnemyAttack : MonoBehaviour
    {
       isAttacking = false;
       controller.IsAttacking(false);
-      animator.ResetTrigger("IsAttacking");
+   }
+
+   private void OnDestroy()
+   {
+      NoteManager.Instance.OnAttackBeat -= NoteManager_OnAttackBeat;
    }
 }

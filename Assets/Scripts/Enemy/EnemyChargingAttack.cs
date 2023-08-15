@@ -15,7 +15,7 @@ public class EnemyChargingAttack : EnemyAttack
 
    public override void Attack()
    {
-      var player = GameObject.FindGameObjectWithTag("Player").transform;
+      var player = PlayerControl.Instance.transform;
       chargeDirection = (player.position - transform.position).normalized;
       isCharging = true;
    }

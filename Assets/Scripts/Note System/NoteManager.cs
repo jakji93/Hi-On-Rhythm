@@ -13,16 +13,14 @@ public class NoteManager : MonoBehaviour
    public event EventHandler OnNoteMissed;
    public event EventHandler OnWrongNote;
    public event EventHandler OnNoNoteHits;
+   public event EventHandler OnAttackBeat;
+   public event EventHandler OnSpawnBeat;
 
    [SerializeField] private Vector2 hitzoneSize;
    [SerializeField] private GameInput gameInput;
    [SerializeField] private LayerMask noteLayer;
    [SerializeField] private Vector2 missZoneSize;
    [SerializeField] private Transform missZoneTransform;
-   [Header("Particle Systems")]
-   [SerializeField] private GameObject NoteHitParticle;
-   [SerializeField] private GameObject NoteMissedParticle;
-   [SerializeField] private Transform particleParent;
    [Header("SFX")]
    [SerializeField] private AudioClip noteHitSound;
 
@@ -128,15 +126,21 @@ public class NoteManager : MonoBehaviour
       Gizmos.DrawWireCube(missZoneTransform.position, missZoneSize);
    }
 
-   private void EmitNoteHitParticle()
+   private void OnTriggerEnter2D(Collider2D collision)
    {
-      var newParticle = Instantiate(NoteHitParticle, particleParent);
-      Destroy(newParticle, 2);
-   }
-
-   private void EmitNoteMissedParticle()
-   {
-      var newParticle = Instantiate(NoteMissedParticle, particleParent);
-      Destroy(newParticle, 2);
+      if ((noteLayer.value & (1 << collision.transform.gameObject.layer)) > 0) {
+         if (collision.TryGetComponent(out Note note)) {
+            var noteType = note.getNoteType();
+            switch (noteType) {
+               case Note.NoteTypes.Attack:
+                  OnAttackBeat?.Invoke(this, EventArgs.Empty);
+                  break;
+               case Note.NoteTypes.Spawn:
+                  OnSpawnBeat?.Invoke(this, EventArgs.Empty);
+                  break;
+               default: break;
+            }
+         }
+      }
    }
 }

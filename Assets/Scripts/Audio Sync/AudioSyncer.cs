@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AudioSyncer : MonoBehaviour
 {
-   [Range(0, 100)]
    [SerializeField] protected float bias;
    [SerializeField] protected float timeStep;
    [SerializeField] protected float timeToBeat;

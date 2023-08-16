@@ -4,11 +4,13 @@ using UnityEngine;
 public class BarSpawner : EditorWindow
 {
    private GameObject prefabToSpawn;
-   private int numberOfObjects = 5; // Default number of objects to spawn
+   private int numberOfColumn = 5; // Default number of objects to spawn
+   private int numberOfRow = 5;
    private GameObject parentObject;
-   private int distance = 480;
+   private int distanceBetweenColumn = 480;
+   private int distanceBetweenRow = 480;
 
-   [MenuItem("Tools/Bar Spawner")]
+   [MenuItem("Tools/Grid Spawner")]
    public static void ShowWindow()
    {
       GetWindow(typeof(BarSpawner));
@@ -19,9 +21,11 @@ public class BarSpawner : EditorWindow
       GUILayout.Label("Bar Spawner", EditorStyles.boldLabel);
 
       prefabToSpawn = EditorGUILayout.ObjectField("Bar to Spawn:", prefabToSpawn, typeof(GameObject), false) as GameObject;
-      numberOfObjects = EditorGUILayout.IntField("Number of Objects:", numberOfObjects);
+      numberOfColumn = EditorGUILayout.IntField("Number of Columns:", numberOfColumn);
+      numberOfRow = EditorGUILayout.IntField("Number of Rows:", numberOfRow);
       parentObject = EditorGUILayout.ObjectField("Parent Object:", parentObject, typeof(GameObject), true) as GameObject;
-      distance = EditorGUILayout.IntField("Distance between", distance);
+      distanceBetweenColumn = EditorGUILayout.IntField("Distance between Column", distanceBetweenColumn);
+      distanceBetweenRow = EditorGUILayout.IntField("Distance between Row", distanceBetweenRow);
 
       if (GUILayout.Button("Spawn Objects")) {
          DeleteSpawnedObjects();
@@ -42,11 +46,13 @@ public class BarSpawner : EditorWindow
          Undo.RegisterCreatedObjectUndo(parent, "Created Parent Object");
       }
 
-      for (int i = 0; i < numberOfObjects; i++) {
-         GameObject newObject = PrefabUtility.InstantiatePrefab(prefabToSpawn) as GameObject;
-         newObject.transform.SetParent(parent.transform);
-         newObject.transform.localPosition = new Vector3(i * (float)distance, 0f, 0f);
-         Undo.RegisterCreatedObjectUndo(newObject, "Spawned Object");
+      for (int j = 0; j < numberOfRow; j++) {
+         for (int i = 0; i < numberOfColumn; i++) {
+            GameObject newObject = PrefabUtility.InstantiatePrefab(prefabToSpawn) as GameObject;
+            newObject.transform.SetParent(parent.transform);
+            newObject.transform.localPosition = new Vector3(i * (float)distanceBetweenColumn, j * (float)distanceBetweenRow, 0f);
+            Undo.RegisterCreatedObjectUndo(newObject, "Spawned Object");
+         }
       }
    }
 

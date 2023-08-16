@@ -53,7 +53,8 @@ public class LandingPageManager : MonoBehaviour
 
    public void OpenQuit()
    {
-      if(quitPanelVolume < mainAudioSource.volume) {
+      defaultAuidioVol = mainAudioSource.volume;
+      if (quitPanelVolume < mainAudioSource.volume) {
          mainAudioSource.DOFade(quitPanelVolume, 0.1f);
       }
       quitScreen.gameObject.SetActive(true);
@@ -78,6 +79,5 @@ public class LandingPageManager : MonoBehaviour
    {
       versionText.text = "v" + Application.version;
       defaultBDAlpha = backGround.color.a;
-      defaultAuidioVol = mainAudioSource.volume;
    }
 }

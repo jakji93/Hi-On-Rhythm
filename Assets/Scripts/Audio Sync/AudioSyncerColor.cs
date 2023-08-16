@@ -18,4 +18,9 @@ public class AudioSyncerColor : AudioSyncer
          spriteRenderer.DOColor(restColor, restSmoothTime).SetEase(Ease.OutQuad);
       });
    }
+
+   private void OnDestroy()
+   {
+      spriteRenderer.DOKill();
+   }
 }

@@ -5,16 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Loading.unity
-    guid: 419ec42bd941f2144a4ed528ab4b3809
-  - enabled: 0
-    path: Assets/Scenes/Song Selection.unity
-    guid: 5c59bd9bbf4839647b288f5b5aa3d311
-  - enabled: 0
-    path: Assets/Scenes/Settings.unity
-    guid: dbd4c87a1c1ccf64f848ce016989bc1a
   - enabled: 1
-    path: Assets/Scenes/Prototype Scene/Iyaiya_Hard_Proto.unity
-    guid: b9ce6e03031f7a840b5bc31ce5711c5b
+    path: Assets/Scenes/Demo Scene/Loading.unity
+    guid: e4faed0923a6bdd4ead648066363e11d
+  - enabled: 1
+    path: Assets/Scenes/Demo Scene/Landing.unity
+    guid: df72b05c21e8efe40a76639fd0be0947
   m_configObjects: {}

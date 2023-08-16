@@ -25,4 +25,9 @@ public class AudioSyncerScale : AudioSyncer
          transform.DOScale(restScale, restSmoothTime).SetEase(Ease.OutQuad);
       });
    }
+
+   private void OnDestroy()
+   {
+      transform.DOKill();
+   }
 }

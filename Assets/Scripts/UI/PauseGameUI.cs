@@ -20,7 +20,6 @@ public class PauseGameUI : MonoBehaviour
       GameplayManager.Instance.OnGamePause += GameplayManager_OnGamePause;
       GameplayManager.Instance.OnGameUnpause += GameplayManager_OnGameUnpause;
       defaultBDAlpha = pauseBG.color.a;
-      Debug.Log(defaultBDAlpha);
       Hide();
    }
 

@@ -780,6 +780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   left: {fileID: 905385983}
   right: {fileID: 1621273607}
+  sfx: {fileID: 8300000, guid: 626aeda33e0134a66a6257c865d0c5c0, type: 3}
 --- !u!1001 &1301892950
 PrefabInstance:
   m_ObjectHideFlags: 0

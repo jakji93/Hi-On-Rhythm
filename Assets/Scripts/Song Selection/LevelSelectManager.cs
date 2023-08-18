@@ -21,7 +21,7 @@ public class LevelSelectManager : MonoBehaviour
    [SerializeField] private Vector3 backPosition;
    [SerializeField] private Vector3 inPosition;
    [SerializeField] private GameInput gameInput;
-   [SerializeField] private AudioClip clickClip;
+   [SerializeField] private AudioClip buttonClip;
 
    [Header("Text")]
    [SerializeField] private TextMeshProUGUI score;
@@ -59,6 +59,12 @@ public class LevelSelectManager : MonoBehaviour
       gameInput.OnPrevDifficultyPressed += GameInput_OnPrevDifficultyPressed;
       gameInput.OnNextDifficultyPressed += GameInput_OnNextDifficultyPressed;
       gameInput.OnStartPressed += GameInput_OnStartPressed;
+      gameInput.OnBackPressed += GameInput_OnBackPressed;
+   }
+
+   private void GameInput_OnBackPressed(object sender, System.EventArgs e)
+   {
+      BackToLanding();
    }
 
    private void GameInput_OnStartPressed(object sender, System.EventArgs e)
@@ -128,14 +134,16 @@ public class LevelSelectManager : MonoBehaviour
 
    public void GoToSong()
    {
-      PrevSongStruct prevSong = new();
-      prevSong.trackIndex = curSelectTrack;
-      prevSong.songIndex = tracks[curSelectTrack].GetCurrentSongIndex();
-      SaveSystem.Instance.SavePrevSong(prevSong);
-      ClipPlayer.Instance.PlayClip(clickClip);
+      OnLeavingScene();
       var name = curSongName.ToString();
       var diff = curDifficuly.ToString();
       Loader.Load(name + "_" + diff);
+   }
+
+   public void BackToLanding()
+   {
+      OnLeavingScene();
+      SceneManager.LoadScene("Landing");
    }
 
    public void PlayThisSong(AudioClip clip)
@@ -159,6 +167,7 @@ public class LevelSelectManager : MonoBehaviour
       {
          isMoving = false;
       });
+      ClipPlayer.Instance.PlayClip(buttonClip);
    }
 
    public void PrevTrack() 
@@ -175,36 +184,37 @@ public class LevelSelectManager : MonoBehaviour
       {
          isMoving = false;
       });
+      ClipPlayer.Instance.PlayClip(buttonClip);
    }
 
    public void NextSong()
    {
       tracks[curSelectTrack].NextItem();
+      ClipPlayer.Instance.PlayClip(buttonClip);
    }
 
    public void PrevSong()
    {
       tracks[curSelectTrack].PrevItem();
+      ClipPlayer.Instance.PlayClip(buttonClip);
    }
 
    public void IncreaseDifficulty()
    {
       difficultySelector.Increase();
+      ClipPlayer.Instance.PlayClip(buttonClip);
    }
 
    public void DecreaseDifficulty()
    {
       difficultySelector.Decrease();
+      ClipPlayer.Instance.PlayClip(buttonClip);
    }
 
    public void GoToSettings()
    {
-      PrevSongStruct prevSong = new();
-      prevSong.trackIndex = curSelectTrack;
-      prevSong.songIndex = tracks[curSelectTrack].GetCurrentSongIndex();
-      SaveSystem.Instance.SavePrevSong(prevSong);
+      OnLeavingScene();
       SceneManager.LoadScene("Settings");
-      ClipPlayer.Instance.PlayClip(clickClip);
    }
 
    private void UpdateScore()
@@ -224,6 +234,16 @@ public class LevelSelectManager : MonoBehaviour
          bossHP.text = "-";
          playerHP.text = "-";
       }
+   }
+
+   private void OnLeavingScene()
+   {
+      PrevSongStruct prevSong = new()
+      {
+         trackIndex = curSelectTrack,
+         songIndex = tracks[curSelectTrack].GetCurrentSongIndex()
+      };
+      SaveSystem.Instance.SavePrevSong(prevSong);
    }
 
    private void LegacyMove()

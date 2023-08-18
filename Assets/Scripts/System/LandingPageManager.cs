@@ -5,13 +5,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using System.Threading.Tasks;
+using Unity.VisualScripting;
 
 public class LandingPageManager : MonoBehaviour
 {
    [SerializeField] private string songSelecionSceneName;
    [SerializeField] private TextMeshProUGUI versionText;
-   [SerializeField] private AudioClip buttonSFX;
    [SerializeField] private AudioSource mainAudioSource;
+   [SerializeField] private GameInput gameInput;
 
    [Header("Quit Panel")]
    [SerializeField] private Transform quitScreen;
@@ -29,7 +30,6 @@ public class LandingPageManager : MonoBehaviour
 
    public void GoToSongSelection()
    {
-      ClipPlayer.Instance.PlayClip(buttonSFX);
       Loader.Load(songSelecionSceneName);
    }
 
@@ -82,5 +82,26 @@ public class LandingPageManager : MonoBehaviour
       var color = backGround.color;
       color.a = 0f;
       backGround.color = color;
+      gameInput.OnBackPressed += GameInput_OnBackPressed;
+      gameInput.OnStartPressed += GameInput_OnStartPressed;
+   }
+
+   private void GameInput_OnStartPressed(object sender, System.EventArgs e)
+   {
+      if(quitScreen.gameObject.activeSelf) {
+         QuitGame();
+      } else {
+         GoToSongSelection();
+      }
+   }
+
+   private void GameInput_OnBackPressed(object sender, System.EventArgs e)
+   {
+      if (quitScreen.gameObject.activeSelf) {
+         CloseQuit();
+      }
+      else {
+         OpenQuit();
+      }
    }
 }

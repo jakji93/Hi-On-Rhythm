@@ -16,6 +16,7 @@ public class GameInput : MonoBehaviour
    public event EventHandler OnPrevDifficultyPressed;
    public event EventHandler OnNextDifficultyPressed;
    public event EventHandler OnStartPressed;
+   public event EventHandler OnBackPressed;
    private PlayerInputs playerInputs;
     [SerializeField] InputActionAsset playerAction;
 
@@ -38,6 +39,12 @@ public class GameInput : MonoBehaviour
       playerInputs.UI.PrevDiff.performed += PrevDiff_performed;
       playerInputs.UI.NextDiff.performed += NextDiff_performed;
       playerInputs.UI.Confirm.performed += Confirm_performed;
+      playerInputs.UI.Back.performed += Back_performed;
+   }
+
+   private void Back_performed(InputAction.CallbackContext obj)
+   {
+      OnBackPressed?.Invoke(this, EventArgs.Empty);
    }
 
    private void Confirm_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)

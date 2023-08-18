@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioSyncer : MonoBehaviour
 {
    [SerializeField] protected float bias;
+   [SerializeField] protected float upperBias = 100;
    [SerializeField] protected float timeStep;
    [SerializeField] protected float timeToBeat;
    [SerializeField] protected float restSmoothTime;
@@ -29,6 +30,11 @@ public class AudioSyncer : MonoBehaviour
 
       if (previousSyncValue <= bias && curSyncValue > bias) { 
          if(timer > timeStep) {
+            OnBeat();
+         }
+      }
+      else if (previousSyncValue <= upperBias && curSyncValue > upperBias) {
+         if (timer > timeStep) {
             OnBeat();
          }
       }

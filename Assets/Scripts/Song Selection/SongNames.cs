@@ -11,5 +11,6 @@ public enum SongNames
    PlayDice,
    Psycho,
    Astrogirl,
-   FeverNight
+   FeverNight,
+   LionessPride
 }

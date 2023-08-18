@@ -79,5 +79,8 @@ public class LandingPageManager : MonoBehaviour
    {
       versionText.text = "v" + Application.version;
       defaultBDAlpha = backGround.color.a;
+      var color = backGround.color;
+      color.a = 0f;
+      backGround.color = color;
    }
 }

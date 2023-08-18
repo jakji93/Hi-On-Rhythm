@@ -12,6 +12,7 @@ public class LevelSelectManager : MonoBehaviour
    public static LevelSelectManager Instance { get; private set; }
 
    [SerializeField] private AudioSource audioSource;
+   [Header("Song selection")]
    [SerializeField] private SongSelector[] tracks;
    [SerializeField] private TextMeshProUGUI songName;
    [SerializeField] private DifficultySelector difficultySelector;
@@ -20,10 +21,11 @@ public class LevelSelectManager : MonoBehaviour
    [SerializeField] private float moveSpeed = 10f;
    [SerializeField] private Vector3 backPosition;
    [SerializeField] private Vector3 inPosition;
+   [Header("Utility")]
    [SerializeField] private GameInput gameInput;
    [SerializeField] private AudioClip buttonClip;
 
-   [Header("Text")]
+   [Header("Best Score")]
    [SerializeField] private TextMeshProUGUI score;
    [SerializeField] private TextMeshProUGUI grade;
    [SerializeField] private TextMeshProUGUI combo;

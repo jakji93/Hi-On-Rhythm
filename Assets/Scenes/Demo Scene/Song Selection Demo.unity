@@ -1889,7 +1889,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.03137255, g: 0.96862745, b: 0.99607843, a: 1}
+  m_Color: {r: 0.03137255, g: 0.96862745, b: 0.99607843, a: 0.27450982}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3664,7 +3664,6 @@ MonoBehaviour:
   backPosition: {x: 1927, y: 0, z: 0}
   inPosition: {x: 1140, y: 0, z: 0}
   gameInput: {fileID: 1415130523}
-  clickClip: {fileID: 8300000, guid: 6c96f17621974ab469d71b6645c210ae, type: 3}
   buttonClip: {fileID: 8300000, guid: 6c96f17621974ab469d71b6645c210ae, type: 3}
   score: {fileID: 120426502}
   grade: {fileID: 244326195}
@@ -6316,6 +6315,38 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 992879782}
+    - target: {fileID: 613781422801992803, guid: 21e4edbf23b842a4386f951530800b7d, type: 3}
+      propertyPath: unselectedAlpha
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 613781422801992803, guid: 21e4edbf23b842a4386f951530800b7d, type: 3}
+      propertyPath: sprites.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 613781422801992803, guid: 21e4edbf23b842a4386f951530800b7d, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 339801551}
+    - target: {fileID: 613781422801992803, guid: 21e4edbf23b842a4386f951530800b7d, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 1725680729}
+    - target: {fileID: 613781422801992803, guid: 21e4edbf23b842a4386f951530800b7d, type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 502719151}
+    - target: {fileID: 613781422801992803, guid: 21e4edbf23b842a4386f951530800b7d, type: 3}
+      propertyPath: sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 502719151}
+    - target: {fileID: 613781422801992803, guid: 21e4edbf23b842a4386f951530800b7d, type: 3}
+      propertyPath: sprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 502719151}
+    - target: {fileID: 613781422801992803, guid: 21e4edbf23b842a4386f951530800b7d, type: 3}
+      propertyPath: sprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 502719151}
     - target: {fileID: 613781422801992803, guid: 21e4edbf23b842a4386f951530800b7d, type: 3}
       propertyPath: trackItems.Array.size
       value: 1

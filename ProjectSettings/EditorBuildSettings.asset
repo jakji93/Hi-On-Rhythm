@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Demo Scene/Song Selection Demo.unity
     guid: ac9eb63525d2d6b4f90ac8ba44f18c01
+  - enabled: 1
+    path: Assets/Scenes/Demo Scene/Settings.unity
+    guid: 7b43ed99ff58b5b46b9beb5c5a3f05cc
   m_configObjects: {}

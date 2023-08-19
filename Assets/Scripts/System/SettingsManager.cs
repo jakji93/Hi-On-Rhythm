@@ -6,9 +6,17 @@ using UnityEngine.SceneManagement;
 public class SettingsManager : MonoBehaviour
 {
    [SerializeField] private AudioClip clickClip;
+   [SerializeField] private AudioClip buttonClip;
+   [SerializeField] private string songSelectionName;
+
    public void GoToSongSelect()
    {
       ClipPlayer.Instance.PlayClip(clickClip);
-      SceneManager.LoadScene("Song Selection");
+      SceneManager.LoadScene(songSelectionName);
+   }
+
+   public void OnButtonClick()
+   {
+      ClipPlayer.Instance.PlayClip(buttonClip);
    }
 }

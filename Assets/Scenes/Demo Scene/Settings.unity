@@ -1617,6 +1617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 320458298}
   - component: {fileID: 320458299}
+  - component: {fileID: 320458300}
   m_Layer: 0
   m_Name: Bar (1)
   m_TagString: Untagged
@@ -1654,7 +1655,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 1
   startScale: 1
-  scaleMultiplier: 2
+  scaleMultiplier: 1.5
+--- !u!114 &320458300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320458297}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370768668b4559e449350e3a32662387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bias: 20
+  upperBias: 75
+  timeStep: 0.1
+  timeToBeat: 0.05
+  restSmoothTime: 1
+  band: 1
+  restColor: {r: 0, g: 1, b: 0.972549, a: 0.39215687}
+  beatColor: {r: 0, g: 1, b: 0.9720595, a: 1}
+  spriteRenderer: {fileID: 646450109}
 --- !u!1 &355455000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,6 +2474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 569946758}
   - component: {fileID: 569946759}
+  - component: {fileID: 569946760}
   m_Layer: 0
   m_Name: Bar (6)
   m_TagString: Untagged
@@ -2489,7 +2512,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 6
   startScale: 1
-  scaleMultiplier: 2
+  scaleMultiplier: 1.5
+--- !u!114 &569946760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569946757}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370768668b4559e449350e3a32662387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bias: 20
+  upperBias: 75
+  timeStep: 0.1
+  timeToBeat: 0.05
+  restSmoothTime: 1
+  band: 6
+  restColor: {r: 1, g: 0, b: 0.6784314, a: 0.39215687}
+  beatColor: {r: 1, g: 0, b: 0.6787672, a: 1}
+  spriteRenderer: {fileID: 930006464}
 --- !u!1001 &599129342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6632,6 +6676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1063228012}
   - component: {fileID: 1063228013}
+  - component: {fileID: 1063228014}
   m_Layer: 0
   m_Name: Bar (7)
   m_TagString: Untagged
@@ -6669,7 +6714,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 7
   startScale: 1
-  scaleMultiplier: 2
+  scaleMultiplier: 1.5
+--- !u!114 &1063228014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063228011}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370768668b4559e449350e3a32662387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bias: 20
+  upperBias: 75
+  timeStep: 0.1
+  timeToBeat: 0.05
+  restSmoothTime: 1
+  band: 7
+  restColor: {r: 1, g: 0.7019608, b: 0, a: 0.39215687}
+  beatColor: {r: 1, g: 0.7001361, b: 0, a: 1}
+  spriteRenderer: {fileID: 792005684}
 --- !u!1 &1085207764
 GameObject:
   m_ObjectHideFlags: 0
@@ -6680,6 +6746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1085207765}
   - component: {fileID: 1085207766}
+  - component: {fileID: 1085207767}
   m_Layer: 0
   m_Name: Bar (4)
   m_TagString: Untagged
@@ -6717,7 +6784,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 4
   startScale: 1
-  scaleMultiplier: 2
+  scaleMultiplier: 1.5
+--- !u!114 &1085207767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085207764}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370768668b4559e449350e3a32662387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bias: 20
+  upperBias: 75
+  timeStep: 0.1
+  timeToBeat: 0.05
+  restSmoothTime: 1
+  band: 4
+  restColor: {r: 0.4745098, g: 1, b: 0, a: 0.39215687}
+  beatColor: {r: 0.47613168, g: 1, b: 0, a: 1}
+  spriteRenderer: {fileID: 606471761}
 --- !u!1 &1110651433
 GameObject:
   m_ObjectHideFlags: 0
@@ -8479,6 +8567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1488384408}
   - component: {fileID: 1488384409}
+  - component: {fileID: 1488384410}
   m_Layer: 0
   m_Name: Bar (2)
   m_TagString: Untagged
@@ -8516,7 +8605,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 2
   startScale: 1
-  scaleMultiplier: 2
+  scaleMultiplier: 1.5
+--- !u!114 &1488384410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488384407}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370768668b4559e449350e3a32662387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bias: 20
+  upperBias: 75
+  timeStep: 0.1
+  timeToBeat: 0.05
+  restSmoothTime: 1
+  band: 2
+  restColor: {r: 1, g: 0, b: 0.70980394, a: 0.39215687}
+  beatColor: {r: 1, g: 0, b: 0.7094674, a: 1}
+  spriteRenderer: {fileID: 1862906104}
 --- !u!1 &1489619239
 GameObject:
   m_ObjectHideFlags: 0
@@ -8526,6 +8636,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1489619240}
+  - component: {fileID: 1489619241}
   m_Layer: 0
   m_Name: Bars
   m_TagString: Untagged
@@ -8541,9 +8652,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489619239}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: -7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: -9.93, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1591748437}
   - {fileID: 320458298}
@@ -8556,6 +8667,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1489619241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489619239}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01fc52e6b169ba44eb1f6a9aebf4b0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 3
+  speed: 20
 --- !u!1 &1572155408
 GameObject:
   m_ObjectHideFlags: 0
@@ -8573,7 +8698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1572155409
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8670,6 +8795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1591748437}
   - component: {fileID: 1591748438}
+  - component: {fileID: 1591748439}
   m_Layer: 0
   m_Name: Bar
   m_TagString: Untagged
@@ -8707,7 +8833,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 0
   startScale: 1
-  scaleMultiplier: 2
+  scaleMultiplier: 1.5
+--- !u!114 &1591748439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591748436}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370768668b4559e449350e3a32662387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bias: 20
+  upperBias: 75
+  timeStep: 0.1
+  timeToBeat: 0.05
+  restSmoothTime: 1
+  band: 0
+  restColor: {r: 0.5568628, g: 1, b: 0.03137255, a: 0.39215687}
+  beatColor: {r: 0.5560593, g: 1, b: 0.033018887, a: 1}
+  spriteRenderer: {fileID: 825574062}
 --- !u!1 &1617422320
 GameObject:
   m_ObjectHideFlags: 0
@@ -9421,6 +9568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1696889953}
   - component: {fileID: 1696889954}
+  - component: {fileID: 1696889955}
   m_Layer: 0
   m_Name: Bar (5)
   m_TagString: Untagged
@@ -9458,7 +9606,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 5
   startScale: 1
-  scaleMultiplier: 2
+  scaleMultiplier: 1.5
+--- !u!114 &1696889955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696889952}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370768668b4559e449350e3a32662387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bias: 20
+  upperBias: 75
+  timeStep: 0.1
+  timeToBeat: 0.05
+  restSmoothTime: 1
+  band: 5
+  restColor: {r: 0, g: 1, b: 0.972549, a: 0.39215687}
+  beatColor: {r: 0, g: 1, b: 0.9720595, a: 1}
+  spriteRenderer: {fileID: 648773142}
 --- !u!1 &1784809414
 GameObject:
   m_ObjectHideFlags: 0
@@ -11198,6 +11367,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2064237991}
   - component: {fileID: 2064237992}
+  - component: {fileID: 2064237993}
   m_Layer: 0
   m_Name: Bar (3)
   m_TagString: Untagged
@@ -11235,7 +11405,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 3
   startScale: 1
-  scaleMultiplier: 2
+  scaleMultiplier: 1.5
+--- !u!114 &2064237993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064237990}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370768668b4559e449350e3a32662387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bias: 20
+  upperBias: 75
+  timeStep: 0.1
+  timeToBeat: 0.05
+  restSmoothTime: 1
+  band: 3
+  restColor: {r: 1, g: 0.5882353, b: 0, a: 0.39215687}
+  beatColor: {r: 1, g: 0.5874088, b: 0, a: 1}
+  spriteRenderer: {fileID: 1032349965}
 --- !u!1 &2068135146
 GameObject:
   m_ObjectHideFlags: 0

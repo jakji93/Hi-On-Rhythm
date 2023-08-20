@@ -41,9 +41,10 @@ public class SongSelector : MonoBehaviour
       Gizmos.DrawWireSphere(transform.position, radius);
    }
 
-   public void NextItem()
+   public void NextItem(AudioClip sfx)
    {
       if (isRotating) return;
+      ClipPlayer.Instance.PlayClip(sfx);
       isRotating = true;
       songSelectors[curItem].StopPulse();
       curItem++;
@@ -63,9 +64,10 @@ public class SongSelector : MonoBehaviour
       SetAsCurrentTrack();
    }
 
-   public void PrevItem()
+   public void PrevItem(AudioClip sfx)
    {
       if (isRotating) return;
+      ClipPlayer.Instance.PlayClip(sfx);
       isRotating = true;
       songSelectors[curItem].StopPulse();
       curItem--;

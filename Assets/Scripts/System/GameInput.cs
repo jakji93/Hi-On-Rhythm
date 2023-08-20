@@ -40,6 +40,24 @@ public class GameInput : MonoBehaviour
       playerInputs.UI.NextDiff.performed += NextDiff_performed;
       playerInputs.UI.Confirm.performed += Confirm_performed;
       playerInputs.UI.Back.performed += Back_performed;
+      playerInputs.UI.PrevSongScroll.performed += PrevSongScroll_performed;
+      playerInputs.UI.NextSongScroll.performed += NextSongScroll_performed;
+   }
+
+   private void NextSongScroll_performed(InputAction.CallbackContext obj)
+   {
+      var num = obj.ReadValue<float>();
+      if(num > 0) {
+         OnNextSongPressed?.Invoke(this, EventArgs.Empty);
+      }
+   }
+
+   private void PrevSongScroll_performed(InputAction.CallbackContext obj)
+   {
+      var num = obj.ReadValue<float>();
+      if (num > 0) {
+         OnPrevSongPressed?.Invoke(this, EventArgs.Empty);
+      }
    }
 
    private void Back_performed(InputAction.CallbackContext obj)

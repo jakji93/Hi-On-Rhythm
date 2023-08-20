@@ -1206,8 +1206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a9ff00a5835ab47b470de8a9865f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickClip: {fileID: 8300000, guid: 632b1c41f6a368540970d173af4f782f, type: 3}
-  buttonClip: {fileID: 0}
+  clickClip: {fileID: 8300000, guid: 5acb2ed8ebe40cc4c849e5c8feafd3d0, type: 3}
+  buttonClip: {fileID: 8300000, guid: 6c96f17621974ab469d71b6645c210ae, type: 3}
   songSelectionName: Song Selection Demo
 --- !u!1 &169881563
 GameObject:
@@ -4034,7 +4034,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -856.4, y: 497.80005}
+  m_AnchoredPosition: {x: -850, y: 500}
   m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &797520957
@@ -7911,7 +7911,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -856.4, y: 497.80005}
+  m_AnchoredPosition: {x: -850, y: 500}
   m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1475369995

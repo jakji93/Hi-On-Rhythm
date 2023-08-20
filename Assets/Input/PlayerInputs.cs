@@ -407,6 +407,24 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""NextSongScroll"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""ae759a99-7cf1-4ae9-b092-55e1b1266412"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PrevSongScroll"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""056de014-6c94-41ce-836c-28a271721aa8"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -772,6 +790,28 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""Restart"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""90ad9a5a-f29f-4eb8-b52a-39cdb0ae20cc"",
+                    ""path"": ""<Mouse>/scroll/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextSongScroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7f112f16-27b1-4caa-a152-62a617a665a3"",
+                    ""path"": ""<Mouse>/scroll/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PrevSongScroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -799,6 +839,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_UI_PrevSong = m_UI.FindAction("PrevSong", throwIfNotFound: true);
         m_UI_NextSong = m_UI.FindAction("NextSong", throwIfNotFound: true);
         m_UI_Restart = m_UI.FindAction("Restart", throwIfNotFound: true);
+        m_UI_NextSongScroll = m_UI.FindAction("NextSongScroll", throwIfNotFound: true);
+        m_UI_PrevSongScroll = m_UI.FindAction("PrevSongScroll", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -964,6 +1006,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_PrevSong;
     private readonly InputAction m_UI_NextSong;
     private readonly InputAction m_UI_Restart;
+    private readonly InputAction m_UI_NextSongScroll;
+    private readonly InputAction m_UI_PrevSongScroll;
     public struct UIActions
     {
         private @PlayerInputs m_Wrapper;
@@ -978,6 +1022,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @PrevSong => m_Wrapper.m_UI_PrevSong;
         public InputAction @NextSong => m_Wrapper.m_UI_NextSong;
         public InputAction @Restart => m_Wrapper.m_UI_Restart;
+        public InputAction @NextSongScroll => m_Wrapper.m_UI_NextSongScroll;
+        public InputAction @PrevSongScroll => m_Wrapper.m_UI_PrevSongScroll;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1017,6 +1063,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Restart.started += instance.OnRestart;
             @Restart.performed += instance.OnRestart;
             @Restart.canceled += instance.OnRestart;
+            @NextSongScroll.started += instance.OnNextSongScroll;
+            @NextSongScroll.performed += instance.OnNextSongScroll;
+            @NextSongScroll.canceled += instance.OnNextSongScroll;
+            @PrevSongScroll.started += instance.OnPrevSongScroll;
+            @PrevSongScroll.performed += instance.OnPrevSongScroll;
+            @PrevSongScroll.canceled += instance.OnPrevSongScroll;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -1051,6 +1103,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Restart.started -= instance.OnRestart;
             @Restart.performed -= instance.OnRestart;
             @Restart.canceled -= instance.OnRestart;
+            @NextSongScroll.started -= instance.OnNextSongScroll;
+            @NextSongScroll.performed -= instance.OnNextSongScroll;
+            @NextSongScroll.canceled -= instance.OnNextSongScroll;
+            @PrevSongScroll.started -= instance.OnPrevSongScroll;
+            @PrevSongScroll.performed -= instance.OnPrevSongScroll;
+            @PrevSongScroll.canceled -= instance.OnPrevSongScroll;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -1090,5 +1148,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnPrevSong(InputAction.CallbackContext context);
         void OnNextSong(InputAction.CallbackContext context);
         void OnRestart(InputAction.CallbackContext context);
+        void OnNextSongScroll(InputAction.CallbackContext context);
+        void OnPrevSongScroll(InputAction.CallbackContext context);
     }
 }

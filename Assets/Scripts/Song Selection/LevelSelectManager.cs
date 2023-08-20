@@ -24,6 +24,7 @@ public class LevelSelectManager : MonoBehaviour
    [Header("Utility")]
    [SerializeField] private GameInput gameInput;
    [SerializeField] private AudioClip buttonClip;
+   [SerializeField] private AudioClip sceneClip;
 
    [Header("Best Score")]
    [SerializeField] private TextMeshProUGUI score;
@@ -139,6 +140,7 @@ public class LevelSelectManager : MonoBehaviour
       OnLeavingScene();
       var name = curSongName.ToString();
       var diff = curDifficuly.ToString();
+      ClipPlayer.Instance.PlayClip(sceneClip);
       Loader.Load(name + "_" + diff);
    }
 
@@ -191,14 +193,12 @@ public class LevelSelectManager : MonoBehaviour
 
    public void NextSong()
    {
-      tracks[curSelectTrack].NextItem();
-      ClipPlayer.Instance.PlayClip(buttonClip);
+      tracks[curSelectTrack].NextItem(buttonClip);
    }
 
    public void PrevSong()
    {
-      tracks[curSelectTrack].PrevItem();
-      ClipPlayer.Instance.PlayClip(buttonClip);
+      tracks[curSelectTrack].PrevItem(buttonClip);
    }
 
    public void IncreaseDifficulty()
@@ -216,6 +216,7 @@ public class LevelSelectManager : MonoBehaviour
    public void GoToSettings()
    {
       OnLeavingScene();
+      ClipPlayer.Instance.PlayClip(sceneClip);
       SceneManager.LoadScene("Settings");
    }
 

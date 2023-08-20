@@ -5,6 +5,7 @@ using UnityEngine;
 public class AmplitudeSyncer : MonoBehaviour
 {
    [SerializeField] protected float bias;
+   [SerializeField] protected float upperBias;
    [SerializeField] protected float timeStep;
    [SerializeField] protected float timeToBeat;
    [SerializeField] protected float restSmoothTime;
@@ -27,6 +28,11 @@ public class AmplitudeSyncer : MonoBehaviour
       curSyncValue = AudioAnalyzer.Instance.GetAmplitude() * 100;
 
       if (previousSyncValue <= bias && curSyncValue > bias) {
+         if (timer > timeStep) {
+            OnBeat();
+         }
+      }
+      else if (previousSyncValue <= upperBias && curSyncValue > upperBias) {
          if (timer > timeStep) {
             OnBeat();
          }

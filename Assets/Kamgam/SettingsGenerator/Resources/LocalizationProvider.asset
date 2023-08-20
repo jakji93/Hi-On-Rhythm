@@ -131,6 +131,10 @@ MonoBehaviour:
       _texts:
       - Display
       - Anzeige
+    - _term: Dodge
+      _texts:
+      - Dodge
+      - 
     - _term: DownArrow
       _texts:
       - Down Arrow
@@ -647,10 +651,10 @@ MonoBehaviour:
       _texts:
       - Window
       - Fenster
-    - _term: Dodge
+    - _term: Resolution
       _texts:
-      - Dodge
-      - 
+      - Resolution
+      - Resolution
     OnLanguageChangedEvent:
       m_PersistentCalls:
         m_Calls: []

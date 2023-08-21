@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: SettingsProvider (Template)
   m_EditorClassIdentifier: 
   playerPrefsKey: SGSettings_Template
-  Default: {fileID: 11400000, guid: 7f015aa4b66a3164584c26f4e453ac8c, type: 2}
+  SettingsAsset: {fileID: 11400000, guid: 7f015aa4b66a3164584c26f4e453ac8c, type: 2}
+  AutoSave: 1
+  AutoSaveWaitTimeInSec: 1

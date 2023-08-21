@@ -112,9 +112,9 @@ public class LevelSelectManager : MonoBehaviour
          trackSelector.SetPrevTrack(prevSong.trackIndex);
          tracks[prevSong.trackIndex].SetAsCurrentTrack(prevSong.songIndex);
       }
-      else {
-         tracks[curSelectTrack].SetAsCurrentTrack();
-         trackSelector.SetCurrentTrack(curSelectTrack);
+      else {;
+         trackSelector.SetPrevTrack(0);
+         tracks[0].SetAsCurrentTrack(0);
       }
    }
 

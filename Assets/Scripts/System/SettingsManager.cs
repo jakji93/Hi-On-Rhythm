@@ -27,9 +27,15 @@ public class SettingsManager : MonoBehaviour
 
    private void GameInput_OnBackPressed(object sender, System.EventArgs e)
    {
+      OnBackButton();
+   }
+
+   public void OnBackButton()
+   {
       if (!isPanelOpen) {
          GoToSongSelect();
-      } else {
+      }
+      else {
          pageController.ClosePage();
       }
    }

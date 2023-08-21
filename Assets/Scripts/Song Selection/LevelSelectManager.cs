@@ -15,6 +15,7 @@ public class LevelSelectManager : MonoBehaviour
    [Header("Song selection")]
    [SerializeField] private SongSelector[] tracks;
    [SerializeField] private TextMeshProUGUI songName;
+   [SerializeField] private TextMeshProUGUI artistName;
    [SerializeField] private DifficultySelector difficultySelector;
    [SerializeField] private TrackSelector trackSelector;
    [SerializeField] private AnimationCurve moveCurve;
@@ -118,11 +119,12 @@ public class LevelSelectManager : MonoBehaviour
       }
    }
 
-   public void SetSongName(SongNames name, string displayName)
+   public void SetSongName(SongNames name, string displayName, string artistName)
    {
       curSongName = name;
       if(displayName != null) {
          songName.text = displayName;
+         this.artistName.text = artistName;
       } else {
          songName.text = curSongName.ToString();
       }

@@ -8,10 +8,12 @@ public class SongItems : MonoBehaviour
    [SerializeField] private AudioClip audioClip;
    [SerializeField] private PulseEffect pulse;
    [SerializeField] private string displayTitle;
+   private string artistName;
 
    public AudioClip GetAudioClip() { return audioClip; }
    public SongNames GetSongNames() { return songName; }
    public string GetDisplayTitle() { return displayTitle; }
+   public string GetArtistName() { return artistName; }
 
    public void StartPulse()
    {
@@ -31,6 +33,7 @@ public class SongItems : MonoBehaviour
       songName = songItemSO.songName;
       audioClip = songItemSO.audioClip;
       displayTitle = songItemSO.displayTitle;
+      artistName = songItemSO.artistName;
       var secondsPerBeat = 60f / songItemSO.BPM;
       pulse.SetDelayBetweenPulse(secondsPerBeat);
    }

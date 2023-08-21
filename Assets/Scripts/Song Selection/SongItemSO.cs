@@ -9,4 +9,5 @@ public class SongItemSO : ScriptableObject
    public AudioClip audioClip;
    public string displayTitle;
    public int BPM;
+   public string artistName;
 }

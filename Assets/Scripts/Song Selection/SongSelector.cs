@@ -91,7 +91,7 @@ public class SongSelector : MonoBehaviour
 
    public void SetAsCurrentTrack()
    {
-      LevelSelectManager.Instance.SetSongName(songSelectors[curItem].GetSongNames(), songSelectors[curItem].GetDisplayTitle());
+      LevelSelectManager.Instance.SetSongName(songSelectors[curItem].GetSongNames(), songSelectors[curItem].GetDisplayTitle(), songSelectors[curItem].GetArtistName());
       LevelSelectManager.Instance.PlayThisSong(songSelectors[curItem].GetAudioClip());
       songSelectors[curItem].StartPulse();
    }

@@ -34,6 +34,10 @@ public class LevelSelectManager : MonoBehaviour
    [SerializeField] private TextMeshProUGUI enemyKilled;
    [SerializeField] private TextMeshProUGUI bossHP;
    [SerializeField] private TextMeshProUGUI playerHP;
+   [Header("Difficulty Panel")]
+   [SerializeField] private CanvasGroup difficultyPanel;
+   [SerializeField] private TextMeshProUGUI difficultSongName;
+   [SerializeField] private TextMeshProUGUI difficultArtistName;
 
    private bool isMoving = false;
 
@@ -41,6 +45,8 @@ public class LevelSelectManager : MonoBehaviour
    private Difficulties curDifficuly;
 
    private int curSelectTrack = 0;
+
+   private bool isDifficultyOpen = false;
 
    private void Awake()
    {
@@ -68,42 +74,43 @@ public class LevelSelectManager : MonoBehaviour
 
    private void GameInput_OnBackPressed(object sender, System.EventArgs e)
    {
-      BackToLanding();
+      OnBackButton();
    }
 
    private void GameInput_OnStartPressed(object sender, System.EventArgs e)
    {
-      GoToSong();
+      if (isDifficultyOpen) GoToSong();
+      else OnDifficultyOpen();
    }
 
    private void GameInput_OnNextDifficultyPressed(object sender, System.EventArgs e)
    {
-      IncreaseDifficulty();
+      if (isDifficultyOpen) IncreaseDifficulty();
    }
 
    private void GameInput_OnPrevDifficultyPressed(object sender, System.EventArgs e)
    {
-      DecreaseDifficulty();
+      if (isDifficultyOpen) DecreaseDifficulty();
    }
 
    private void GameInput_OnNextSongPressed(object sender, System.EventArgs e)
    {
-      NextSong();
+      if (!isDifficultyOpen) NextSong();
    }
 
    private void GameInput_OnPrevSongPressed(object sender, System.EventArgs e)
    {
-      PrevSong();
+      if (!isDifficultyOpen) PrevSong();
    }
 
    private void GameInput_OnNextTrackPressed(object sender, System.EventArgs e)
    {
-      NextTrack();
+      if (!isDifficultyOpen) NextTrack();
    }
 
    private void GameInput_OnPrevTrackPressed(object sender, System.EventArgs e)
    {
-      PrevTrack();
+      if(!isDifficultyOpen) PrevTrack();
    }
 
    private void OnEnable()
@@ -146,7 +153,7 @@ public class LevelSelectManager : MonoBehaviour
       Loader.Load(name + "_" + diff);
    }
 
-   public void BackToLanding()
+   private void BackToLanding()
    {
       OnLeavingScene();
       SceneManager.LoadScene("Landing");
@@ -249,6 +256,33 @@ public class LevelSelectManager : MonoBehaviour
          songIndex = tracks[curSelectTrack].GetCurrentSongIndex()
       };
       SaveSystem.Instance.SavePrevSong(prevSong);
+   }
+
+   public void OnBackButton()
+   {
+      if (isDifficultyOpen) {
+         ClipPlayer.Instance.PlayClip(buttonClip);
+         difficultyPanel.DOFade(0, 0.1f).SetEase(Ease.Linear).OnComplete(() =>
+         {
+            difficultyPanel.gameObject.SetActive(false);
+            isDifficultyOpen = false;
+         });
+      }
+      else {
+         BackToLanding();
+      }
+   }
+
+   public void OnDifficultyOpen()
+   {
+      isDifficultyOpen = true;
+      difficultyPanel.gameObject.SetActive(true);
+      difficultSongName.text = songName.text;
+      difficultArtistName.text = artistName.text;
+      ClipPlayer.Instance.PlayClip(buttonClip);
+      difficultyPanel.alpha = 0;
+      difficultyPanel.DOFade(1, 0.1f).SetEase(Ease.Linear);
+      difficultyPanel.transform.DOLocalMoveY(20, 0.1f).From();
    }
 
    private void LegacyMove()

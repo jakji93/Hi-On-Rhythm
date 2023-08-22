@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Demo Scene/Settings.unity
     guid: 7b43ed99ff58b5b46b9beb5c5a3f05cc
+  - enabled: 1
+    path: Assets/Scenes/Demo Scene/LionessPride_Normal.unity
+    guid: 0315fb0216b41104e822cb13c95b2a8b
   m_configObjects: {}

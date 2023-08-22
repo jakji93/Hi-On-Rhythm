@@ -6139,9 +6139,6 @@ MonoBehaviour:
       - {fileID: 1838863275}
       enemies:
       - {fileID: 8756611384550387591, guid: e4814d4f0f2c7f24dbd4097f21b68fec, type: 3}
-    specificWaveContents: []
-    waveDelay: 1
-    totalWave: 30
     musicTime: 20
   - wavesContents:
     - spawnPoints:
@@ -6176,19 +6173,6 @@ MonoBehaviour:
       - {fileID: 739271855}
       enemies:
       - {fileID: 8756611384550387591, guid: e4814d4f0f2c7f24dbd4097f21b68fec, type: 3}
-    specificWaveContents:
-    - waveNumber: 20
-      wave:
-        spawnPoints:
-        - {fileID: 231629169}
-        - {fileID: 231629169}
-        - {fileID: 231629169}
-        - {fileID: 231629169}
-        - {fileID: 231629169}
-        enemies:
-        - {fileID: 5458728073695096934, guid: d72cd0e4cc489304e9dc4480af6a1146, type: 3}
-    waveDelay: 0.5
-    totalWave: 100
     musicTime: 36
   - wavesContents:
     - spawnPoints:
@@ -6222,9 +6206,6 @@ MonoBehaviour:
       enemies:
       - {fileID: 8756611384550387591, guid: e4814d4f0f2c7f24dbd4097f21b68fec, type: 3}
       - {fileID: 2234887303421942617, guid: f11130268089dc24da60ee0bce31ce6e, type: 3}
-    specificWaveContents: []
-    waveDelay: 1
-    totalWave: 100
     musicTime: 70
   - wavesContents:
     - spawnPoints:
@@ -6259,19 +6240,6 @@ MonoBehaviour:
       - {fileID: 739271855}
       enemies:
       - {fileID: 8756611384550387591, guid: e4814d4f0f2c7f24dbd4097f21b68fec, type: 3}
-    specificWaveContents:
-    - waveNumber: 20
-      wave:
-        spawnPoints:
-        - {fileID: 231629169}
-        - {fileID: 231629169}
-        - {fileID: 231629169}
-        - {fileID: 231629169}
-        - {fileID: 231629169}
-        enemies:
-        - {fileID: 5458728073695096934, guid: d72cd0e4cc489304e9dc4480af6a1146, type: 3}
-    waveDelay: 0.5
-    totalWave: 100
     musicTime: 85
   - wavesContents:
     - spawnPoints:
@@ -6305,9 +6273,6 @@ MonoBehaviour:
       enemies:
       - {fileID: 8756611384550387591, guid: e4814d4f0f2c7f24dbd4097f21b68fec, type: 3}
       - {fileID: 2234887303421942617, guid: f11130268089dc24da60ee0bce31ce6e, type: 3}
-    specificWaveContents: []
-    waveDelay: 1
-    totalWave: 100
     musicTime: 100
   - wavesContents:
     - spawnPoints:
@@ -6342,19 +6307,6 @@ MonoBehaviour:
       - {fileID: 739271855}
       enemies:
       - {fileID: 8756611384550387591, guid: e4814d4f0f2c7f24dbd4097f21b68fec, type: 3}
-    specificWaveContents:
-    - waveNumber: 20
-      wave:
-        spawnPoints:
-        - {fileID: 231629169}
-        - {fileID: 231629169}
-        - {fileID: 231629169}
-        - {fileID: 231629169}
-        - {fileID: 231629169}
-        enemies:
-        - {fileID: 5458728073695096934, guid: d72cd0e4cc489304e9dc4480af6a1146, type: 3}
-    waveDelay: 0.5
-    totalWave: 100
     musicTime: 117
   - wavesContents:
     - spawnPoints:
@@ -6379,15 +6331,10 @@ MonoBehaviour:
       - {fileID: 1838863275}
       enemies:
       - {fileID: 8756611384550387591, guid: e4814d4f0f2c7f24dbd4097f21b68fec, type: 3}
-    specificWaveContents: []
-    waveDelay: 1
-    totalWave: 30
     musicTime: 123
   - wavesContents: []
-    specificWaveContents: []
-    waveDelay: 0
-    totalWave: 0
     musicTime: 30000
+  specificWaveContents: []
   canSpawn: 0
 --- !u!4 &1562337881
 Transform:
@@ -6608,9 +6555,6 @@ MonoBehaviour:
     m_Bits: 256
   missZoneSize: {x: 300, y: 5}
   missZoneTransform: {fileID: 315641237}
-  NoteHitParticle: {fileID: 2685374757482945601, guid: 8e0edaee0e3cbbf48944c4439c361e64, type: 3}
-  NoteMissedParticle: {fileID: 3226548553906744312, guid: 6f056369848612b428085663a2dbf8a0, type: 3}
-  particleParent: {fileID: 0}
   noteHitSound: {fileID: 8300000, guid: def7ac2b4d45d4c2c8609106f50c3913, type: 3}
 --- !u!1 &1593854356
 GameObject:
@@ -6971,7 +6915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7451878024050125712, guid: 35d5df30a0c22a0438df8aa51292ac66, type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

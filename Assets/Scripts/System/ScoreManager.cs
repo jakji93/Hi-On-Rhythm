@@ -11,8 +11,8 @@ public class ScoreManager : MonoBehaviour
    private const string MAX_COMBO = "MAX COMBO: ";
    private const string ENEMY_KILLED = "ENEMY KILLED: ";
    private const string BOSS_HP = "BOSS HP: ";
-   private const string NOTE_HITS = "NOTE HITS: ";
-   private const string NOTE_MISS = "NOTE MISSED: ";
+   private const string NOTE_HITS = "PERFECT: ";
+   private const string NOTE_MISS = "MISS: ";
    private const string PLAYER_HP = "PLAYER HP: ";
    public static ScoreManager Instance { get; private set; }
 
@@ -23,8 +23,8 @@ public class ScoreManager : MonoBehaviour
    [SerializeField] private float playerHealthMultiplier = 10f;
    [SerializeField] private float highestComboMultiplier = 10f;
    [SerializeField] private bool isBossStage = false;
-   [SerializeField] private GameObject scoreBoard;
-   [SerializeField] private GameObject failedBoard;
+   [SerializeField] private Score scoreBoard;
+   [SerializeField] private Failed failedBoard;
 
    [Header("Text Fields")]
    [SerializeField] private TextMeshProUGUI songNameText;
@@ -112,22 +112,24 @@ public class ScoreManager : MonoBehaviour
 
    private void HideScore()
    {
-      scoreBoard.SetActive(false);
+      scoreBoard.gameObject.SetActive(false);
    }
 
    private void HideFailed()
    {
-      failedBoard.SetActive(false);
+      failedBoard.gameObject.SetActive(false);
    }
 
    private void ActivateScore()
    {
-      scoreBoard.SetActive(true);
+      scoreBoard.gameObject.SetActive(true);
+      scoreBoard.StartAnimation();
    }
 
    private void ActivateFailed()
    {
-      failedBoard.SetActive(true);
+      failedBoard.gameObject.SetActive(true);
+      failedBoard.StartAnimation();
    }
 
    private float GetFinalScore()

@@ -22,7 +22,7 @@ public class PageController : MonoBehaviour
    public void ClosePage()
    {
       ClipPlayer.Instance.PlayClip(closeSFX);
-      canvasGroup.DOFade(0, 0.2f).SetEase(Ease.Linear).OnComplete(() =>
+      canvasGroup.DOFade(0.3f, 0.1f).SetEase(Ease.Linear).OnComplete(() =>
       {
          page.gameObject.SetActive(false);
          SettingsManager.Instance.SetPanelStatus(false, null);

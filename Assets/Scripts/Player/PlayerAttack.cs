@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
    [SerializeField] private GameObject[] normalAttack1;
-   [SerializeField] private GameObject normalAttack2;
    [SerializeField] private GameObject[] specialAttacks;
 
    [SerializeField] private GameObject autoAttack;
@@ -26,7 +25,7 @@ public class PlayerAttack : MonoBehaviour
       NoteManager.Instance.OnSpecialHit += NoteManager_OnSpecialHit;
       GameplayManager.Instance.OnFirstBeat += GameManager_OnFirstBeat;
       GameplayManager.Instance.OnStateChange += GameManager_OnStateChange;
-      attackSpeed = 60f / bpm * 2;
+      attackSpeed = 60f / bpm;
       timer = attackSpeed;
    }
 
@@ -52,7 +51,7 @@ public class PlayerAttack : MonoBehaviour
 
    private void NoteManager_OnNormal2Hit(object sender, System.EventArgs e)
    {
-      Attack(normalAttack2);
+
    }
 
    private void NoteManager_OnNormal1Hit(object sender, System.EventArgs e)
@@ -65,11 +64,6 @@ public class PlayerAttack : MonoBehaviour
 
    private void Attack(GameObject attack)
    {
-      //Quaternion rotato = aimTransform.rotation;
-      //Vector3 rot = rotato.eulerAngles;
-      //rotato = Quaternion.Euler(rot);
-
-      //Instantiate(attack, aimTransform.position, rotato, gameObject.transform);
       Instantiate(attack, aimTransform.position, aimTransform.rotation, aimTransform.transform);
    }
 

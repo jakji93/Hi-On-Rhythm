@@ -54,6 +54,14 @@ public class DifficultySelector : MonoBehaviour
       });
    }
 
+   public void ResetDifficulty()
+   {
+      curSelected = 0;
+      LevelSelectManager.Instance.SetDifficulty(difficulties[curSelected]);
+      targetPosition = new Vector3(-curSelected * spacing, 0, 0);
+      transform.localPosition = targetPosition;
+   }
+
    private void LegacyMove()
    {
       //if (isMoving) {

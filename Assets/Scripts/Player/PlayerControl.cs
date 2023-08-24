@@ -6,8 +6,6 @@ public class PlayerControl : MonoBehaviour
    public static PlayerControl Instance { get; private set; }  
    [SerializeField] private Health health;
    [SerializeField] private TextMeshProUGUI healthText;
-   [SerializeField] private int damageOnWrongNote;
-   [SerializeField] private int damageOnNoNoteHit;
    [SerializeField] private AudioClip hitSFX;
    [SerializeField] private AudioClip missedSFX;
 
@@ -29,7 +27,7 @@ public class PlayerControl : MonoBehaviour
    private void NoteManager_OnWrongNote(object sender, System.EventArgs e)
    {
       //Might take this away too if is too hard
-      health.TakeDamage(damageOnWrongNote);
+      //health.TakeDamage(damageOnWrongNote);
    }
 
    private void Health_OnTakeDamage(object sender, Health.OnTakeDamageEventArgs e)
@@ -43,15 +41,14 @@ public class PlayerControl : MonoBehaviour
 
    private void NoteManager_OnNoNoteHits(object sender, System.EventArgs e)
    {
-      //Might be too hard to take damage on hiting no notes
-      health.TakeDamage(damageOnNoNoteHit);
+      //health.TakeDamage(damageOnNoNoteHit);
    }
 
    private void NoteManager_OnNoteMissed(object sender, System.EventArgs e)
    {
-      //Might be too hard to take damage on missing notes
-      //health.TakeDamage(damageOnNote);
-      ClipPlayer.Instance.PlayClip(missedSFX);
+      Debug.Log("note miss");
+      if (missedSFX != null) ClipPlayer.Instance.PlayClip(missedSFX);
+      MissFlashManager.Instance.Flash();
    }
 
    private void Health_OnDeath(object sender, Health.OnTakeDamageEventArgs e)

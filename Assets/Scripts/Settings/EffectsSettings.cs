@@ -2,38 +2,43 @@ using Kamgam.SettingsGenerator;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class EffectsSettings : MonoBehaviour
 {
-    [SerializeField] private SettingsProvider SettingsProvider;
-    [SerializeField] private string ID;
+   [SerializeField] private SettingsProvider SettingsProvider;
+   [SerializeField] private string ID;
+   [SerializeField] private AudioMixer mixer;
 
-    private float customEffectsVolume;
+   private float customEffectsVolume;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        var connection = new GetSetConnection<float>(getter: getCustomEffectsVol, setter: setCustomEffectsVol);
-        var setting = SettingsProvider.Settings.GetFloat(ID);
-        customEffectsVolume = setting.GetValue();
-        customEffectsVolume = customEffectsVolume / 100;
-        this.GetComponent<AudioSource>().volume = customEffectsVolume;
+   // Start is called before the first frame update
+   void Start()
+   {
+      var connection = new GetSetConnection<float>(getter: getCustomEffectsVol, setter: setCustomEffectsVol);
+      var setting = SettingsProvider.Settings.GetFloat(ID);
+      customEffectsVolume = setting.GetValue();
+      customEffectsVolume = customEffectsVolume / 100;
+      mixer.SetFloat("SFXVolume", Mathf.Log10(customEffectsVolume) * 20);
 
-        print(customEffectsVolume);
+      print(customEffectsVolume);
 
-    }
+   }
 
-    private float getCustomEffectsVol()
-    {
-        return customEffectsVolume;
-    }
+   private float getCustomEffectsVol()
+   {
+      return customEffectsVolume;
+   }
 
-    void setCustomEffectsVol(float value)
-    {
-        customEffectsVolume = value;
-        this.GetComponent<AudioSource>().volume = customEffectsVolume;
-    }
+   void setCustomEffectsVol(float value)
+   {
+      customEffectsVolume = value;
+      this.GetComponent<AudioSource>().volume = customEffectsVolume;
+   }
 
-
-
+   public void OnSliderChange(float value)
+   {
+      var normalizedValue = value / 100;
+      mixer.SetFloat("SFXVolume", Mathf.Log10(normalizedValue) * 20);
+   }
 }

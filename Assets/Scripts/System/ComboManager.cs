@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,6 +12,7 @@ public class ComboManager : MonoBehaviour
    [SerializeField] private int maxComberPerBar = 20;
    [SerializeField] private int maxMultiplier = 4;
    [SerializeField] private TextMeshProUGUI comboCounterText;
+   [SerializeField] private CanvasGroup comboCounterCanvasGroup;
    [SerializeField] private TextMeshProUGUI multiplierText;
 
    private int curCombo = 0;
@@ -32,6 +34,7 @@ public class ComboManager : MonoBehaviour
       NoteManager.Instance.OnNoteMissed += NoteManager_OnNoteMissed;
       NoteManager.Instance.OnNoNoteHits += NoteManager_OnNoNoteHits;
       NoteManager.Instance.OnWrongNote += NoteManager_OnWrongNote;
+      comboCounterCanvasGroup.alpha = 0;
    }
 
    private void NoteManager_OnWrongNote(object sender, System.EventArgs e)
@@ -68,23 +71,23 @@ public class ComboManager : MonoBehaviour
    {
       curCombo++;
       if (curCombo > maxCombo) maxCombo = curCombo;
-      //int tempMulti = Mathf.FloorToInt(curCombo / maxComberPerBar) + 1;
-      //if (tempMulti > maxMultiplier) {
-      //   curMultiplier = maxMultiplier;
-      //} else if (tempMulti > curMultiplier) {
-      //   curMultiplier = tempMulti;
-      //}
-      //TODO might chage to a progress bar based UI
+      if(curCombo == 5) {
+         comboCounterCanvasGroup.DOFade(1, 0.2f).From(0.5f).SetEase(Ease.Linear);
+      }
+      if(curCombo > 5) {
+         comboCounterText.transform.DOKill();
+         comboCounterText.transform.DOPunchScale(new Vector3(0.1f, 0.1f, 0.1f), 0.2f, 0, 0);
+      }
       comboCounterText.text = curCombo.ToString();
-      //multiplierText.text = curMultiplier.ToString() + "x";
    }
 
    private void ResetCombo()
    {
       if (curMultiplier > 1) curMultiplier--;
       curCombo = 0;
+      comboCounterCanvasGroup.DOKill();
+      comboCounterCanvasGroup.alpha = 0;
       comboCounterText.text = curCombo.ToString();
-      multiplierText.text = curMultiplier.ToString() + "x";
    }
 
    public int GetMultiplier()

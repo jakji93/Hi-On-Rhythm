@@ -2,5 +2,6 @@ public enum Difficulties
 {
    Normal,
    Hard,
-   Unbeatable
+   Unbeatable,
+   Tutorial
 }

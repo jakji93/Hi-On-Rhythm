@@ -3536,6 +3536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SettingsProvider: {fileID: 11400000, guid: 8d45c32c6655e4a46966fb3f27eef389, type: 2}
   ID: customMusicVol
+  mixer: {fileID: 24100000, guid: aa7d87e79c15b894283c77076c5b85bd, type: 2}
 --- !u!82 &800435658
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3545,10 +3546,10 @@ AudioSource:
   m_GameObject: {fileID: 800435656}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -6998926593395060131, guid: aa7d87e79c15b894283c77076c5b85bd, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.591
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6133,7 +6134,7 @@ AudioSource:
   m_GameObject: {fileID: 2052702472}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 4438499451157270946, guid: aa7d87e79c15b894283c77076c5b85bd, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -6234,6 +6235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SettingsProvider: {fileID: 11400000, guid: 8d45c32c6655e4a46966fb3f27eef389, type: 2}
   ID: customEffectsVol
+  mixer: {fileID: 24100000, guid: aa7d87e79c15b894283c77076c5b85bd, type: 2}
 --- !u!1001 &2054824301
 PrefabInstance:
   m_ObjectHideFlags: 0

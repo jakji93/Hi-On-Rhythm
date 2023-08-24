@@ -37,7 +37,7 @@ public class AudioAnalyzer : MonoBehaviour
 
    private void GetSpectrumAudioSource()
    {
-      if (targetAudioSource.volume <= 0) targetAudioSource.volume = 0.001f;
+      //if (targetAudioSource.volume <= 0) targetAudioSource.volume = 0.001f;
       targetAudioSource.GetSpectrumData(audioSamples, 0, FFTWindow);
    }
 
@@ -53,7 +53,7 @@ public class AudioAnalyzer : MonoBehaviour
             count++;
          }
          average /= count;
-         audio8Bands[i] = average / targetAudioSource.volume;
+         audio8Bands[i] = average;
       }
    }
 

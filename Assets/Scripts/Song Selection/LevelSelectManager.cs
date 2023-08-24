@@ -277,6 +277,7 @@ public class LevelSelectManager : MonoBehaviour
    {
       isDifficultyOpen = true;
       difficultyPanel.gameObject.SetActive(true);
+      difficultySelector.ResetDifficulty();
       difficultSongName.text = songName.text;
       difficultArtistName.text = artistName.text;
       ClipPlayer.Instance.PlayClip(buttonClip);

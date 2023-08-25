@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class SettingsManager : MonoBehaviour
@@ -11,6 +12,7 @@ public class SettingsManager : MonoBehaviour
    [SerializeField] private AudioClip buttonClip;
    [SerializeField] private string songSelectionName;
    [SerializeField] private GameInput gameInput;
+   [SerializeField] private AudioMixer mixer;
 
    private bool isPanelOpen = false;
    private PageController pageController;
@@ -60,5 +62,11 @@ public class SettingsManager : MonoBehaviour
    {
       isPanelOpen = panelStatus;
       pageController = controller;
+   }
+
+   public void OnSliderChange(float value)
+   {
+      var normalizedValue = value / 100;
+      mixer.SetFloat("SFXVolume", Mathf.Log10(normalizedValue) * 20);
    }
 }

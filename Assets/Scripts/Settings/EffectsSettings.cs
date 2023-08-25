@@ -35,10 +35,4 @@ public class EffectsSettings : MonoBehaviour
       customEffectsVolume = value;
       this.GetComponent<AudioSource>().volume = customEffectsVolume;
    }
-
-   public void OnSliderChange(float value)
-   {
-      var normalizedValue = value / 100;
-      mixer.SetFloat("SFXVolume", Mathf.Log10(normalizedValue) * 20);
-   }
 }

@@ -153,6 +153,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   targetTransform: {fileID: 0}
+  normalColor: {r: 0.20392157, g: 1, b: 0.9529412, a: 1}
+  feverColor: {r: 1, g: 0.9372549, b: 0.41960785, a: 1}
 --- !u!1 &5464823577906418575
 GameObject:
   m_ObjectHideFlags: 0

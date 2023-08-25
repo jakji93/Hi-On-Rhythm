@@ -922,6 +922,7 @@ MonoBehaviour:
   buttonClip: {fileID: 8300000, guid: 6c96f17621974ab469d71b6645c210ae, type: 3}
   songSelectionName: Song Selection Demo
   gameInput: {fileID: 2018123405}
+  mixer: {fileID: 24100000, guid: aa7d87e79c15b894283c77076c5b85bd, type: 2}
 --- !u!1 &258018544
 GameObject:
   m_ObjectHideFlags: 0
@@ -5841,7 +5842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7246677752838419730, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7246677752838419730, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -5850,7 +5851,7 @@ PrefabInstance:
     - target: {fileID: 7246677752838419730, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1867666425}
+      objectReference: {fileID: 161676021}
     - target: {fileID: 7246677752838419730, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -5861,7 +5862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7246677752838419730, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: EffectsSettings, Assembly-CSharp
+      value: SettingsManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7246677752838419730, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -7481,17 +7482,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1867666425 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 812136965251159734, guid: d68ceb7a182e35d4ba5b8b854b8deecb, type: 3}
-  m_PrefabInstance: {fileID: 1195134626}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46cb0e13770adae459718c20bd533ddd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1879871073 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6098973143287289675, guid: d48e8728d9c9f3a4fa03d21fe675f0f4, type: 3}

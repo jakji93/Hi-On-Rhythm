@@ -11,11 +11,14 @@ public class OsuMarker : MonoBehaviour
    [SerializeField] private float baseScale = 1f;
    [SerializeField] private AnimationCurve alphaCurve;
    [SerializeField] private Transform targetTransform;
+   [SerializeField] private Color normalColor;
+   [SerializeField] private Color feverColor;
 
    private Transform noteHitZone;
    private Transform player;
    private Transform thisCircle;
    private SpriteRenderer circleSprite;
+   private bool isFever = false;
 
    private void Start()
    {
@@ -29,6 +32,12 @@ public class OsuMarker : MonoBehaviour
       } else {
          noteHitZone = targetTransform;
       }
+      FeverManager.Instance.OnFeverModeChanged += FeverManager_OnFeverModeChanged;
+   }
+
+   private void FeverManager_OnFeverModeChanged(object sender, FeverManager.OnFeverModeEventArgs e)
+   {
+      isFever = e.isFeverMode;
    }
 
    private void Update()
@@ -48,7 +57,7 @@ public class OsuMarker : MonoBehaviour
          var normalizeDistance = (1 - distance / (480 * warningInBeats));
          var alphaScale = alphaCurve.Evaluate(normalizeDistance);
          alphaScale = Mathf.Clamp(alphaScale, 0f, 1f);
-         var color = circleSprite.color;
+         var color = isFever? feverColor : normalColor;
          color.a = alphaScale;
          circleSprite.color = color;
       }

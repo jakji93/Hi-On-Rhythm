@@ -111,4 +111,9 @@ public class EnemySpawner : MonoBehaviour
    {
       canSpawn = false;
    }
+
+   public int GetTotalSpawned()
+   {
+      return totalSpawned;
+   }
 }

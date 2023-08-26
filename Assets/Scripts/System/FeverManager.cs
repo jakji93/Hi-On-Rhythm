@@ -13,7 +13,9 @@ public class FeverManager : MonoBehaviour, IHasProgress
 
    public static FeverManager Instance { get; private set; }
 
-   [SerializeField] private float feverPerNoteHit;
+   [SerializeField] private float feverPerPerfectHit;
+   [SerializeField] private float feverPerGreatHit;
+   [SerializeField] private float feverPerGoodHit;
    [SerializeField] private float feverPerNoteMiss;
    [SerializeField] private float feverPerNoHits;
    [SerializeField] private float feverPerEnemyKilled;
@@ -32,9 +34,32 @@ public class FeverManager : MonoBehaviour, IHasProgress
 
    private void Start()
    {
-      NoteManager.Instance.OnNormal1Hit += NoteManager_OnNormal1Hit;
       NoteManager.Instance.OnNoteMissed += NoteManager_OnNoteMissed;
       NoteManager.Instance.OnNoNoteHits += NoteManager_OnNoNoteHits;
+      NoteManager.Instance.OnNotePerfect += NoteManager_OnNotePerfect;
+      NoteManager.Instance.OnNoteGreat += NoteManager_OnNoteGreat;
+      NoteManager.Instance.OnNoteGood += Instance_OnNoteGood;
+   }
+
+   private void Instance_OnNoteGood(object sender, EventArgs e)
+   {
+      if (!isFeverMode) {
+         UpdateFever(feverPerGoodHit);
+      }
+   }
+
+   private void NoteManager_OnNoteGreat(object sender, EventArgs e)
+   {
+      if (!isFeverMode) {
+         UpdateFever(feverPerGreatHit);
+      }
+   }
+
+   private void NoteManager_OnNotePerfect(object sender, EventArgs e)
+   {
+      if (!isFeverMode) {
+         UpdateFever(feverPerPerfectHit);
+      }
    }
 
    private void NoteManager_OnNoNoteHits(object sender, EventArgs e)
@@ -48,13 +73,6 @@ public class FeverManager : MonoBehaviour, IHasProgress
    {
       if (!isFeverMode) {
          UpdateFever(feverPerNoteMiss);
-      }
-   }
-
-   private void NoteManager_OnNormal1Hit(object sender, EventArgs e)
-   {
-      if(!isFeverMode) {
-         UpdateFever(feverPerNoteHit);
       }
    }
 

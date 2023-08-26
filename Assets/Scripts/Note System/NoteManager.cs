@@ -10,6 +10,9 @@ public class NoteManager : MonoBehaviour
    public event EventHandler OnNormal1Hit;
    public event EventHandler OnNormal2Hit;
    public event EventHandler OnSpecialHit;
+   public event EventHandler OnNotePerfect;
+   public event EventHandler OnNoteGreat;
+   public event EventHandler OnNoteGood;
    public event EventHandler OnNoteMissed;
    public event EventHandler OnWrongNote;
    public event EventHandler OnNoNoteHits;
@@ -21,6 +24,11 @@ public class NoteManager : MonoBehaviour
    [SerializeField] private LayerMask noteLayer;
    [Header("SFX")]
    [SerializeField] private AudioClip noteHitSound;
+   [Header("Note Accuracy")]
+   [Tooltip("Accuracy zone in px")]
+   [SerializeField] private int perfectZone;
+   [SerializeField] private int greatZone;
+   [SerializeField] private int goodZone;
 
    private void Awake()
    {
@@ -66,6 +74,7 @@ public class NoteManager : MonoBehaviour
                Debug.Log("Special hit");
                break;
          }
+         CalculateAccuracy(noteObj.transform);
          if (noteObj.gameObject.TryGetComponent(out OsuMarker marker)) {
             marker.DestroyCircle();
          }
@@ -108,6 +117,21 @@ public class NoteManager : MonoBehaviour
                default: break;
             }
          }
+      }
+   }
+
+   private void CalculateAccuracy(Transform note)
+   {
+      var distance = Vector3.Distance(transform.position, note.position);
+      if(distance <= perfectZone) {
+         Debug.Log("Perfect hit");
+         OnNotePerfect?.Invoke(this, EventArgs.Empty);
+      } else if(distance <= greatZone) {
+         Debug.Log("Great hit");
+         OnNoteGreat?.Invoke(this, EventArgs.Empty);
+      } else if (distance <= goodZone) {
+         Debug.Log("Good hit");
+         OnNoteGood?.Invoke(this, EventArgs.Empty);
       }
    }
 }

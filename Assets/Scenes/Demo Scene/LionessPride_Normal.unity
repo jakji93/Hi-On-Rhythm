@@ -8617,12 +8617,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72fc34d79481c594ca943b8e26e2f0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteHitMultiplier: 10
+  perfectHitMultiplier: 20
+  greatHitMultiplier: 10
+  goodHitMultiplier: 5
   noteMissedMultiplier: 15
-  enemyKilledMultiplier: 20
+  enemyKilledMultiplier: 5
   bossHealthMultiplier: 20
   playerHealthMultiplier: 10
-  highestComboMultiplier: 10
+  highestComboMultiplier: 20
   isBossStage: 0
   scoreBoard: {fileID: 1881126574}
   failedBoard: {fileID: 2134941275}
@@ -8630,7 +8632,9 @@ MonoBehaviour:
   difficultyText: {fileID: 517584910}
   maxComboText: {fileID: 65327083}
   EnemyBossText: {fileID: 1951851384}
-  noteHitText: {fileID: 813105457}
+  perfectText: {fileID: 813105457}
+  greatText: {fileID: 1821959178}
+  goodText: {fileID: 187557088}
   noteMissText: {fileID: 1813915600}
   playerHealthText: {fileID: 75392868}
   finalScoreText: {fileID: 426484168}
@@ -8640,7 +8644,6 @@ MonoBehaviour:
   cGrade: 0.69
   bGrade: 0.79
   aGrade: 0.89
-  maxScore: 9340
 --- !u!1 &617743790
 GameObject:
   m_ObjectHideFlags: 0
@@ -10444,7 +10447,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659db74517d4923499a71bbd6bb50782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  feverPerNoteHit: 4
+  feverPerPerfectHit: 4
+  feverPerGreatHit: 3
+  feverPerGoodHit: 1
   feverPerNoteMiss: 4
   feverPerNoHits: -1
   feverPerEnemyKilled: 1
@@ -14593,6 +14598,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   noteHitSound: {fileID: 8300000, guid: 51543edb87de83144847899b8983a1c8, type: 3}
+  perfectZone: 24
+  greatZone: 48
+  goodZone: 72
 --- !u!4 &1844858330
 Transform:
   m_ObjectHideFlags: 0
@@ -15202,8 +15210,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: fever
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a7cf2bc8733f6c0468062c8e95e84690, type: 2}
-  m_sharedMaterial: {fileID: -7371932871882357731, guid: a7cf2bc8733f6c0468062c8e95e84690, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4eccd51250cfa3948a3ac1e21d15fe34, type: 2}
+  m_sharedMaterial: {fileID: 7304186015023537574, guid: 4eccd51250cfa3948a3ac1e21d15fe34, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

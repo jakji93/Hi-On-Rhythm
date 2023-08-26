@@ -15,7 +15,7 @@ public class FeverModeUI : MonoBehaviour
    {
       if(e.isFeverMode) {
          transform.DOScale(1.1f, 0.1f);
-         feverText.DOFade(0f, 1f).From(0.5f).SetEase(Ease.OutCubic);
+         feverText.DOFade(0f, 1f).From(0.2f).SetEase(Ease.OutCubic);
          feverText.transform.DOScale(20f, 0.5f).From(1f).SetEase(Ease.OutCubic);
       } else {
          transform.DOScale(1f, 0.1f);

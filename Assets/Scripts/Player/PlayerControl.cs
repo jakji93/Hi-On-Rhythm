@@ -46,7 +46,6 @@ public class PlayerControl : MonoBehaviour
 
    private void NoteManager_OnNoteMissed(object sender, System.EventArgs e)
    {
-      Debug.Log("note miss");
       if (missedSFX != null) ClipPlayer.Instance.PlayClip(missedSFX);
       MissFlashManager.Instance.Flash();
    }

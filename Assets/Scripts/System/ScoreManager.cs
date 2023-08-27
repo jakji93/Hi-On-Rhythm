@@ -50,6 +50,9 @@ public class ScoreManager : MonoBehaviour
    [SerializeField] private float bGrade = 0.79f;
    [SerializeField] private float aGrade = 0.89f;
 
+   [Header("Save Game")]
+   [SerializeField] private bool saveScore = false;
+
    private int noteHitCounter = 0;
    private int noteMissedCounter = 0;
    private int enemyKilledCounter = 0;
@@ -128,7 +131,7 @@ public class ScoreManager : MonoBehaviour
       string letterGrade = GetLetterGrade(finalScore);
       SetTextFields(finalScore, letterGrade);
       ActivateScore();
-      SaveScore(finalScore, letterGrade);
+      if (saveScore) SaveScore(finalScore, letterGrade);
    }
 
    public void ShowFailed()

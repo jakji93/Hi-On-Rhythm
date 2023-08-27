@@ -150,7 +150,7 @@ public class LevelSelectManager : MonoBehaviour
       var name = curSongName.ToString();
       var diff = curDifficuly.ToString();
       ClipPlayer.Instance.PlayClip(sceneClip);
-      Loader.Load(name + "_" + diff);
+      Loader.Load2(name + "_" + diff);
    }
 
    private void BackToLanding()

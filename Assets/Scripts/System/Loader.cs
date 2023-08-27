@@ -13,6 +13,12 @@ public static class Loader
       SceneManager.LoadScene("Loading");
    }
 
+   public static void Load2(string sceneName)
+   {
+      targetScene = sceneName;
+      SceneManager.LoadScene("Loading 2");
+   }
+
    public static void LoadCallback()
    {
       SceneManager.LoadScene(targetScene);

@@ -56,6 +56,7 @@ public class NoteManager : MonoBehaviour
       if (!GameplayManager.Instance.IsGamePlaying()) return;
       var noteObj = Physics2D.OverlapBox(transform.position, hitzoneSize, noteLayer);
       if (noteObj != null) {
+         var notePosition = noteObj.transform.position;
          noteObj.gameObject.TryGetComponent(out Note note);
          switch (note.getNoteType()) {
             case Note.NoteTypes.Normal1:
@@ -74,7 +75,7 @@ public class NoteManager : MonoBehaviour
                Debug.Log("Special hit");
                break;
          }
-         CalculateAccuracy(noteObj.transform);
+         CalculateAccuracy(notePosition);
          if (noteObj.gameObject.TryGetComponent(out OsuMarker marker)) {
             marker.DestroyCircle();
          }
@@ -120,18 +121,21 @@ public class NoteManager : MonoBehaviour
       }
    }
 
-   private void CalculateAccuracy(Transform note)
+   private void CalculateAccuracy(Vector3 notePosition)
    {
-      var distance = Vector3.Distance(transform.position, note.position);
+      var distance = Vector2.Distance(transform.position, notePosition);
       if(distance <= perfectZone) {
-         Debug.Log("Perfect hit");
          OnNotePerfect?.Invoke(this, EventArgs.Empty);
       } else if(distance <= greatZone) {
-         Debug.Log("Great hit");
          OnNoteGreat?.Invoke(this, EventArgs.Empty);
       } else if (distance <= goodZone) {
-         Debug.Log("Good hit");
          OnNoteGood?.Invoke(this, EventArgs.Empty);
       }
+   }
+
+   private void OnDestroy()
+   {
+      gameInput.OnNormal1Pressed -= GameInput_OnNormal1Pressed;
+      gameInput.OnNormal2Pressed -= GameInput_OnNormal2Pressed;
    }
 }

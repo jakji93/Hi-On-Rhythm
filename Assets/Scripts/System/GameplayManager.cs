@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using Febucci.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -27,7 +28,8 @@ public class GameplayManager : MonoBehaviour
    [SerializeField] private float spawnDelay = 0f;
    [SerializeField] private float playerDeadDelay = 1f;
    [SerializeField] TextAnimatorPlayer textAnimator;
-   [SerializeField] private AudioClip clickClip;
+   [SerializeField] private AudioClip pauseSFX;
+   [SerializeField] private string selectionSceneName;
 
    private bool musicPlaying = false;
    private bool gamePasued = false;
@@ -183,14 +185,14 @@ public class GameplayManager : MonoBehaviour
    {
       StartCoroutine(ResumeCountdown());
       OnGameUnpause?.Invoke(this, EventArgs.Empty);
-      ClipPlayer.Instance.PlayClip(clickClip);
+      ClipPlayer.Instance.PlayClip(pauseSFX);
    }
 
    private void PauseGame()
    {
       gamePasued = true;
       canPause = false;
-      ClipPlayer.Instance.PlayClip(clickClip);
+      ClipPlayer.Instance.PlayClip(pauseSFX);
       Time.timeScale = 0f;
       musicPlaying = false;
       MusicManager.Instance.PauseMusic();
@@ -201,14 +203,14 @@ public class GameplayManager : MonoBehaviour
    public void ExitGame()
    {
       Time.timeScale = 1f;
-      Loader.Load("Song Selection");
+      Loader.Load2(selectionSceneName);
    }
 
    public void Restart()
    {
       Time.timeScale = 1f;
       var sceneName = songName.ToString() + '_' + difficulty.ToString();
-      Loader.Load(sceneName);
+      Loader.Load2(sceneName);
    }
 
    public SongNames GetSongName()
@@ -224,5 +226,10 @@ public class GameplayManager : MonoBehaviour
    public bool IsGameOver()
    {
       return state == GameState.Score;
+   }
+
+   private void OnDestroy()
+   {
+      DOTween.KillAll();
    }
 }

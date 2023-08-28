@@ -50,7 +50,9 @@ public class EnemySpawner : MonoBehaviour
 
    private void NoteManager_OnSpawnBeat(object sender, System.EventArgs e)
    {
-      SpawnWave();
+      if(canSpawn) {
+         SpawnWave();
+      }
    }
 
    private void Update()

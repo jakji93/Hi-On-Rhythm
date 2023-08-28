@@ -18,7 +18,7 @@ public class Score : MonoBehaviour
       buttons.DOLocalMoveY(0, 1f).From().SetEase(Ease.Linear);
       songName.DOLocalMoveY(0, 1f).From().SetEase(Ease.Linear);
       difficulty.DOLocalMoveY(0, 1f).From().SetEase(Ease.Linear);
-      letterGrade.DOLocalMoveY(0, 1f).From().SetEase(Ease.Linear);
-      stats.DOLocalMoveY(0, 1f).From().SetEase(Ease.Linear);
+      letterGrade.DOLocalMoveX(0, 1f).From().SetEase(Ease.Linear);
+      stats.DOLocalMoveX(0, 1f).From().SetEase(Ease.Linear);
    }
 }

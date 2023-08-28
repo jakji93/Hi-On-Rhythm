@@ -35,6 +35,7 @@ public class ScoreManager : MonoBehaviour
    [SerializeField] private TextMeshProUGUI difficultyText;
    [SerializeField] private TextMeshProUGUI maxComboText;
    [SerializeField] private TextMeshProUGUI EnemyBossText;
+   [SerializeField] private TextMeshProUGUI EnemyKilledText;
    [SerializeField] private TextMeshProUGUI perfectText;
    [SerializeField] private TextMeshProUGUI greatText;
    [SerializeField] private TextMeshProUGUI goodText;
@@ -221,8 +222,9 @@ public class ScoreManager : MonoBehaviour
          var curHealth = BossController.Instance.GetBossHealth();
          EnemyBossText.text = BOSS_HP + Mathf.FloorToInt((float)curHealth / maxHealth * 100) + "%";
       } else {
-         EnemyBossText.text = ENEMY_KILLED + enemyKilledCounter;
+         EnemyBossText.gameObject.SetActive(false);
       }
+      EnemyKilledText.text = ENEMY_KILLED + enemyKilledCounter;
       perfectText.text = NOTE_PERFECT + perfectHitCounter;
       greatText.text = NOTE_GREAT + greatHitCounter;
       goodText.text = NOTE_GOOD + goodHitCounter;

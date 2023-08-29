@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 
 public class FeverManager : MonoBehaviour, IHasProgress
@@ -19,6 +20,7 @@ public class FeverManager : MonoBehaviour, IHasProgress
    [SerializeField] private float feverPerNoteMiss;
    [SerializeField] private float feverPerNoHits;
    [SerializeField] private float feverPerEnemyKilled;
+   [SerializeField] private MMF_Player feverPlayer;
 
    private float curFever = 0;
    private float maxFever = 100;
@@ -39,6 +41,14 @@ public class FeverManager : MonoBehaviour, IHasProgress
       NoteManager.Instance.OnNotePerfect += NoteManager_OnNotePerfect;
       NoteManager.Instance.OnNoteGreat += NoteManager_OnNoteGreat;
       NoteManager.Instance.OnNoteGood += Instance_OnNoteGood;
+      NoteManager.Instance.OnNormal1Hit += NoteManager_OnNormal1Hit;
+   }
+
+   private void NoteManager_OnNormal1Hit(object sender, EventArgs e)
+   {
+      if(isFeverMode) {
+         feverPlayer.PlayFeedbacks();
+      }
    }
 
    private void Instance_OnNoteGood(object sender, EventArgs e)

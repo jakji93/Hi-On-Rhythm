@@ -32,7 +32,6 @@ public class ComboManager : MonoBehaviour
       NoteManager.Instance.OnNormal2Hit += NoteManager_OnNormal2Hit;
       NoteManager.Instance.OnSpecialHit += NoteManager_OnSpecialHit;
       NoteManager.Instance.OnNoteMissed += NoteManager_OnNoteMissed;
-      NoteManager.Instance.OnNoNoteHits += NoteManager_OnNoNoteHits;
       NoteManager.Instance.OnWrongNote += NoteManager_OnWrongNote;
       comboCounterCanvasGroup.alpha = 0;
    }
@@ -83,7 +82,7 @@ public class ComboManager : MonoBehaviour
 
    private void ResetCombo()
    {
-      if (curMultiplier > 1) curMultiplier--;
+      curMultiplier = 1;
       curCombo = 0;
       comboCounterCanvasGroup.DOKill();
       comboCounterCanvasGroup.alpha = 0;
@@ -113,7 +112,7 @@ public class ComboManager : MonoBehaviour
 
    public void GotHit()
    {
-      curMultiplier = 1;
+      if (curMultiplier > 1) curMultiplier--;
       multiplierText.text = curMultiplier.ToString() + "x";
    }
 }

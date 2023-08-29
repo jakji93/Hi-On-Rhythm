@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circlePrefab: {fileID: 6430697538973347061, guid: 119b4ddb30a53934da4e71bcc902a9be, type: 3}
   warningInBeats: 4
-  minScale: 0.5
+  minScale: 0
   maxScale: 3
   baseScale: 0.5
   alphaCurve:

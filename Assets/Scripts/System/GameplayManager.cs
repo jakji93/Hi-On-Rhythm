@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using Febucci.UI;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -30,6 +31,9 @@ public class GameplayManager : MonoBehaviour
    [SerializeField] TextAnimatorPlayer textAnimator;
    [SerializeField] private AudioClip pauseSFX;
    [SerializeField] private string selectionSceneName;
+   [SerializeField] private MMF_Player openingPlayer;
+   [SerializeField] private RectTransform healthUI;
+   [SerializeField] private RectTransform feverUI;
 
    private bool musicPlaying = false;
    private bool gamePasued = false;
@@ -82,6 +86,9 @@ public class GameplayManager : MonoBehaviour
                textAnimator.ShowText("ready");
                OnStateChange?.Invoke(this, EventArgs.Empty);
                Debug.Log("Ready to Go");
+               openingPlayer.PlayFeedbacks();
+               healthUI.DOLocalMoveY(509f, 3f);
+               feverUI.DOLocalMoveY(-501f, 3f);
             }
             break;
          case GameState.ReadyGo:

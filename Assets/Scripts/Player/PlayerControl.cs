@@ -1,3 +1,4 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -8,6 +9,9 @@ public class PlayerControl : MonoBehaviour
    [SerializeField] private TextMeshProUGUI healthText;
    [SerializeField] private AudioClip hitSFX;
    [SerializeField] private AudioClip missedSFX;
+   [SerializeField] private SpriteRenderer bodySprite;
+   [SerializeField] private Color missColor;
+   [SerializeField] private Color defaultColor;
 
    private void Awake()
    {
@@ -48,6 +52,10 @@ public class PlayerControl : MonoBehaviour
    {
       if (missedSFX != null) ClipPlayer.Instance.PlayClip(missedSFX);
       MissFlashManager.Instance.Flash();
+      bodySprite.DOColor(missColor, 0.1f).SetEase(Ease.Linear).OnComplete(() =>
+      {
+         bodySprite.DOColor(defaultColor, 0.1f).SetEase(Ease.Linear);
+      });
    }
 
    private void Health_OnDeath(object sender, Health.OnTakeDamageEventArgs e)

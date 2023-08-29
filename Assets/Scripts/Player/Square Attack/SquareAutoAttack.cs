@@ -24,13 +24,13 @@ public class SquareAutoAttack : MonoBehaviour
 
    private void Start()
    {
+      Fade();
       hitCollider.OverlapCollider(contactFilter, colliders);
       foreach (var collider in colliders) {
          if (collider.gameObject.TryGetComponent(out Health health)) {
             health.TakeDamage(damage);
          }
       }
-      Fade();
    }
 
    private async void Fade()

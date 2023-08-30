@@ -116,6 +116,7 @@ public class EnemySpawner : MonoBehaviour
 
    public int GetTotalSpawned()
    {
+      Debug.Log(totalSpawned);
       return totalSpawned;
    }
 }

@@ -73,6 +73,9 @@ public class EnemyMovement : MonoBehaviour
    {
       //transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
       var newDirection = (player.position - transform.position).normalized;
+      if(preDirection == Vector2.zero) {
+         preDirection = newDirection;
+      }
       var slowDirction = Vector3.RotateTowards(preDirection, newDirection, Time.deltaTime * turnSpeed, 0);
       preDirection = slowDirction;
       transform.Translate(moveSpeed * Time.deltaTime * slowDirction);

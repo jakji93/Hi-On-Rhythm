@@ -8,7 +8,7 @@ public class NoteSpawner : EditorWindow
    private GameObject parentObject;
    private int distanceBetweenNote = 120;
    private float initialDistance = 0f;
-   private int[] dataList = new int[400];
+   private int[] dataList = new int[1600];
    private Vector2 scrollPosition = Vector2.zero;
 
    [MenuItem("Tools/Note Spawner")]
@@ -24,7 +24,8 @@ public class NoteSpawner : EditorWindow
       distanceBetweenNote = EditorGUILayout.IntField("Distance between Note", distanceBetweenNote);
       initialDistance = EditorGUILayout.FloatField("Initial delay", initialDistance);
       scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
-
+      var noteCount = 0;
+      var buttonID = "";
       for (int i = 0; i < dataList.Length; i++) {
          if (i == 0) {
             EditorGUILayout.LabelField("0");
@@ -45,12 +46,15 @@ public class NoteSpawner : EditorWindow
          }
          Color originalBackgroundColor = GUI.backgroundColor;
          if (dataList[i] == 1) {
+            noteCount++;
             GUI.backgroundColor = Color.green;
+            buttonID = noteCount.ToSafeString();
          }
-         if (GUILayout.Button("", GUILayout.Height(30))) {
+         if (GUILayout.Button(buttonID, GUILayout.Height(30))) {
             dataList[i] = dataList[i] == 0 ? 1 : 0;
          }
          GUI.backgroundColor = originalBackgroundColor;
+         buttonID = "";
       }
 
       EditorGUILayout.EndScrollView();
@@ -65,6 +69,9 @@ public class NoteSpawner : EditorWindow
          for (int i = 0; i < dataList.Length; i++) {
             dataList[i] = 0;
          }
+      }
+      if (GUILayout.Button("Scan Notes", GUILayout.Height(30))) {
+         ScanNotes();
       }
       GUILayout.EndHorizontal();
    }
@@ -87,6 +94,18 @@ public class NoteSpawner : EditorWindow
          for (int i = parentObject.transform.childCount - 1; i >= 0; i--) {
             Undo.DestroyObjectImmediate(parentObject.transform.GetChild(i).gameObject);
          }
+      }
+   }
+
+   private void ScanNotes()
+   {
+      for (int i = 0; i < dataList.Length; i++) {
+         dataList[i] = 0;
+      }
+      for (int i = 0; i < parentObject.transform.childCount; ++i) {
+         var position = parentObject.transform.GetChild(i).position;
+         var index = Mathf.FloorToInt((position.x - initialDistance) / distanceBetweenNote);
+         dataList[index] = 1;
       }
    }
 }

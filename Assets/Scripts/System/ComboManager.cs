@@ -82,7 +82,7 @@ public class ComboManager : MonoBehaviour
 
    private void ResetCombo()
    {
-      curMultiplier = 1;
+      if (curMultiplier > 1) curMultiplier--;
       curCombo = 0;
       comboCounterCanvasGroup.DOKill();
       comboCounterCanvasGroup.alpha = 0;

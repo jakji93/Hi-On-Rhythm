@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3104de8d1722a0344b1c2f65786f315f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  interval: 1
+  damage: 1
+  interval: 0.1
   lifetime: 6
   attackCollider: {fileID: 4520587955420710571}
   contactFilter2D:

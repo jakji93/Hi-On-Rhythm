@@ -7,6 +7,9 @@ public class PlayerAttack : MonoBehaviour
 {
    [SerializeField] private GameObject[] normalAttack1;
    [SerializeField] private GameObject[] specialAttacks;
+   [SerializeField] private GameObject perfectAttack;
+   [SerializeField] private GameObject greatAttack;
+   [SerializeField] private GameObject goodAttack;
 
    [SerializeField] private GameObject autoAttack;
    [SerializeField] private int bpm;
@@ -22,14 +25,53 @@ public class PlayerAttack : MonoBehaviour
 
    private void Start()
    {
-      NoteManager.Instance.OnNormal1Hit += NoteManager_OnNormal1Hit;
-      NoteManager.Instance.OnNormal2Hit += NoteManager_OnNormal2Hit;
-      NoteManager.Instance.OnSpecialHit += NoteManager_OnSpecialHit;
+      //NoteManager.Instance.OnNormal1Hit += NoteManager_OnNormal1Hit;
       GameplayManager.Instance.OnFirstBeat += GameManager_OnFirstBeat;
       GameplayManager.Instance.OnStateChange += GameManager_OnStateChange;
       FeverManager.Instance.OnFeverModeChanged += FaverMode_OnFeverModeChanged;
+      NoteManager.Instance.OnNotePerfect += NoteMnager_OnNotePerfect;
+      NoteManager.Instance.OnNoteGreat += NoteManager_OnNoteGreat;
+      NoteManager.Instance.OnNoteGood += NoteManager_OnNoteGood;
       attackSpeed = 60f / bpm;
       timer = attackSpeed;
+   }
+
+   private void NoteManager_OnNoteGood(object sender, System.EventArgs e)
+   {
+      if (isFeverMode) {
+         var thisAttack = specialAttacks[curSpecial];
+         Attack(thisAttack);
+         curSpecial++;
+         curSpecial %= specialAttacks.Length;
+      } else {
+         Attack(goodAttack);
+      }
+   }
+
+   private void NoteManager_OnNoteGreat(object sender, System.EventArgs e)
+   {
+      if (isFeverMode) {
+         var thisAttack = specialAttacks[curSpecial];
+         Attack(thisAttack);
+         curSpecial++;
+         curSpecial %= specialAttacks.Length;
+      }
+      else {
+         Attack(greatAttack);
+      }
+   }
+
+   private void NoteMnager_OnNotePerfect(object sender, System.EventArgs e)
+   {
+      if (isFeverMode) {
+         var thisAttack = specialAttacks[curSpecial];
+         Attack(thisAttack);
+         curSpecial++;
+         curSpecial %= specialAttacks.Length;
+      }
+      else {
+         Attack(perfectAttack);
+      }
    }
 
    private void FaverMode_OnFeverModeChanged(object sender, FeverManager.OnFeverModeEventArgs e)
@@ -48,19 +90,6 @@ public class PlayerAttack : MonoBehaviour
    private void GameManager_OnFirstBeat(object sender, System.EventArgs e)
    {
       //canAuto = true;
-   }
-
-   private void NoteManager_OnSpecialHit(object sender, System.EventArgs e)
-   {
-      var thisAttack = specialAttacks[curSpecial];
-      Attack(thisAttack);
-      curSpecial++;
-      curSpecial %= specialAttacks.Length;
-   }
-
-   private void NoteManager_OnNormal2Hit(object sender, System.EventArgs e)
-   {
-
    }
 
    private void NoteManager_OnNormal1Hit(object sender, System.EventArgs e)

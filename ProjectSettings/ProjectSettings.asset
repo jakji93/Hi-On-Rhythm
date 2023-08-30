@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: Hi-Fi Studio
   productName: Hi on Rhythm
-  defaultCursor: {fileID: 2800000, guid: c2f4f21d859f81941a8bca9c7c9bdb8c, type: 3}
+  defaultCursor: {fileID: 2800000, guid: a9128dda415ca914f86d4c2094fee2a0, type: 3}
   cursorHotspot: {x: 64, y: 64}
   m_SplashScreenBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_ShowUnitySplashScreen: 1
@@ -276,7 +276,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 8b5cfdfaadd8a244c854bac174bd9120, type: 3}
+      m_Icon: {fileID: 2800000, guid: c7d1f6712c9e4df4a80a24aceddbd830, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

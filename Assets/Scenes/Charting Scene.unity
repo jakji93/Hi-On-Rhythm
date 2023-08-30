@@ -60608,10 +60608,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: lioness_normal
       objectReference: {fileID: 0}
-    - target: {fileID: 5985521882142893375, guid: 902bbe4746477b24ab0666be2ea60c1d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6045965991189210709, guid: 902bbe4746477b24ab0666be2ea60c1d, type: 3}
       propertyPath: targetTransform
       value: 

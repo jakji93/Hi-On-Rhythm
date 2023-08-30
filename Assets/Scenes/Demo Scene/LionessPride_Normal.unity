@@ -5443,7 +5443,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1906713905}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 18686213}
+        m_TargetAssemblyTypeName: GameplayManager, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &249021170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29774,7 +29786,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2074564058}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 18686213}
+        m_TargetAssemblyTypeName: GameplayManager, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1115356830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37130,7 +37154,7 @@ MonoBehaviour:
   greatHitMultiplier: 20
   goodHitMultiplier: 10
   noteMissedMultiplier: 20
-  enemyKilledMultiplier: 5
+  enemyKilledMultiplier: 10
   bossHealthMultiplier: 20
   playerHealthMultiplier: 10
   highestComboMultiplier: 10
@@ -41670,8 +41694,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   noteHitSound: {fileID: 8300000, guid: 087224dd7ec352f42a3b950a07009a88, type: 3}
-  perfectZone: 34
-  greatZone: 67
+  perfectZone: 45
+  greatZone: 75
   goodZone: 300
 --- !u!4 &1844858330
 Transform:

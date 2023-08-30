@@ -43,9 +43,8 @@ public class PlayerAttack : MonoBehaviour
          Attack(thisAttack);
          curSpecial++;
          curSpecial %= specialAttacks.Length;
-      } else {
-         Attack(goodAttack);
       }
+      Attack(goodAttack);
    }
 
    private void NoteManager_OnNoteGreat(object sender, System.EventArgs e)
@@ -56,9 +55,7 @@ public class PlayerAttack : MonoBehaviour
          curSpecial++;
          curSpecial %= specialAttacks.Length;
       }
-      else {
-         Attack(greatAttack);
-      }
+      Attack(greatAttack);
    }
 
    private void NoteMnager_OnNotePerfect(object sender, System.EventArgs e)
@@ -69,9 +66,7 @@ public class PlayerAttack : MonoBehaviour
          curSpecial++;
          curSpecial %= specialAttacks.Length;
       }
-      else {
-         Attack(perfectAttack);
-      }
+      Attack(perfectAttack);
    }
 
    private void FaverMode_OnFeverModeChanged(object sender, FeverManager.OnFeverModeEventArgs e)

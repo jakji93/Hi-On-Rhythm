@@ -149,7 +149,7 @@ SpriteRenderer:
   m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.25490198}
+  m_Color: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.15686275}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -177,8 +177,8 @@ MonoBehaviour:
   timeToBeat: 0.05
   restSmoothTime: 1
   band: 3
-  restColor: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.25490198}
-  beatColor: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.78431374}
+  restColor: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.15686275}
+  beatColor: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.5882353}
   spriteRenderer: {fileID: 2893764734748552612}
 --- !u!1 &3351821057641662509
 GameObject:
@@ -255,7 +255,7 @@ SpriteRenderer:
   m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.25490198}
+  m_Color: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.15686275}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -283,8 +283,8 @@ MonoBehaviour:
   timeToBeat: 0.05
   restSmoothTime: 1
   band: 3
-  restColor: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.25490198}
-  beatColor: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.78431374}
+  restColor: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.15686275}
+  beatColor: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.5882353}
   spriteRenderer: {fileID: 5188597557811312256}
 --- !u!1 &5212699899866371845
 GameObject:
@@ -438,7 +438,7 @@ SpriteRenderer:
   m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.25490198}
+  m_Color: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.15686275}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -466,8 +466,8 @@ MonoBehaviour:
   timeToBeat: 0.05
   restSmoothTime: 1
   band: 3
-  restColor: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.25490198}
-  beatColor: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.78431374}
+  restColor: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.15686275}
+  beatColor: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.5882353}
   spriteRenderer: {fileID: 2160993298775344457}
 --- !u!1 &5731261662961755622
 GameObject:
@@ -544,7 +544,7 @@ SpriteRenderer:
   m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.25490198}
+  m_Color: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.15686275}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -572,8 +572,8 @@ MonoBehaviour:
   timeToBeat: 0.05
   restSmoothTime: 1
   band: 3
-  restColor: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.25490198}
-  beatColor: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.78431374}
+  restColor: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.15686275}
+  beatColor: {r: 1, g: 0.9490196, b: 0.46666667, a: 0.5882353}
   spriteRenderer: {fileID: 3129932914580787694}
 --- !u!1 &7959977681655177894
 GameObject:

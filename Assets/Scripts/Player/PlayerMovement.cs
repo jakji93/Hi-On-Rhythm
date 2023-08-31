@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
 
    [Header("Body")]
    [SerializeField] private Transform body;
+   [SerializeField] private Health health;
    [Header("Dash")]
    [SerializeField] private float playerDashSpeed = 25f;
    [SerializeField] private float dashTime = 2f;
@@ -26,12 +27,24 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
    private bool canMove = true;
    private bool canDodge = true;
    private bool isMoving = false;
+   private bool isDead = false;
 
    public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
 
    private void Start()
    {
       playerRB = GetComponent<Rigidbody2D>();
+      health.OnDeath += Health_OnDeath;
+   }
+
+   private void Health_OnDeath(object sender, Health.OnTakeDamageEventArgs e)
+   {
+      canMove = false;
+      canDodge = false;
+      isDead = true;
+      playerRB.velocity = Vector2.zero;
+      playerMoveDir = Vector2.zero;
+      body.localScale = Vector2.one;
    }
 
    private void FixedUpdate()
@@ -65,6 +78,7 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
 
    void OnMove()
    {
+      if (isDead) return;
       playerMoveDir = playerAction.FindAction("Move").ReadValue<Vector2>();
       if(playerMoveDir != Vector2.zero && !isMoving) {
          isMoving = true;

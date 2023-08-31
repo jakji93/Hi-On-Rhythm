@@ -28,6 +28,7 @@ public class EnemySpawner : MonoBehaviour
 
    [SerializeField] private AdvancedWaveContent[] advancedWaveContents;
    [SerializeField] private SpecificWaveContent[] specificWaveContents;
+   [SerializeField] private GameObject summonAnimation;
    [SerializeField] private bool canSpawn = false;
 
    private int waveCounter = 0;
@@ -76,6 +77,7 @@ public class EnemySpawner : MonoBehaviour
       for( int i = 0; i < curWave.spawnPoints.Length; i++ ) {
          int j = i % curWave.enemies.Length;
          Instantiate(curWave.enemies[j], curWave.spawnPoints[i].position, Quaternion.identity);
+         Instantiate(summonAnimation, curWave.spawnPoints[i].position, Quaternion.identity);
          totalSpawned++;
       }
       waveCounter++;

@@ -12,7 +12,7 @@ public class DeathParticle : MonoBehaviour
 
    private void Start()
    {
-      Fade();
+      Destroy(gameObject, 0.5f);
    }
 
    private async void Fade()

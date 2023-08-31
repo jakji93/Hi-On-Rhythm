@@ -15,9 +15,10 @@ public class PenetrationProjectile : Projectile
 
    private void OnTriggerEnter2D(Collider2D collision)
    {
-      if (collision.gameObject.CompareTag("Player")) return;
-      if (collision.gameObject.TryGetComponent(out Health health)) {
-         health.TakeDamage(damage * ComboManager.Instance.GetMultiplier());
+      if (((1 << collision.gameObject.layer) & targetMask) != 0) {
+         if (collision.TryGetComponent<Health>(out Health health)) {
+            health.TakeDamage(damage);
+         }
       }
    }
 }

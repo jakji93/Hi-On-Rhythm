@@ -10,4 +10,5 @@ public class SongItemSO : ScriptableObject
    public string displayTitle;
    public int BPM;
    public string artistName;
+   public float initialDelay;
 }

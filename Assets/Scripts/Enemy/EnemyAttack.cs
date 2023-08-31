@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public abstract class EnemyAttack : MonoBehaviour
@@ -7,7 +8,6 @@ public abstract class EnemyAttack : MonoBehaviour
    [SerializeField] protected float attackDelay = 0.1f;
    [SerializeField] protected EnemyController controller;
    [SerializeField] protected Transform attackPoint;
-   [SerializeField] protected Animator animator;
 
    protected bool isAttacking = false;
    private bool canAttack = false;
@@ -41,7 +41,6 @@ public abstract class EnemyAttack : MonoBehaviour
          attackTimer += Time.deltaTime;
          if (attackTimer > attackDelay) {
             attackTimer = 0f;
-            animator.SetTrigger("IsAttacking");
          }
       }
    }

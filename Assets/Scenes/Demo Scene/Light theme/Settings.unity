@@ -1278,15 +1278,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4232590584961377548, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4232590584961377548, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4232590584961377548, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4232590584974212673, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_Name
@@ -6208,15 +6208,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4232590584961377548, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4232590584961377548, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4232590584961377548, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4232590584974212673, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_Name
@@ -7809,7 +7809,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -100, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1674939512
@@ -8685,19 +8685,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4232590584961377548, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4232590584961377548, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4232590584961377548, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4232590584974212673, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_Name
       value: SliderUGUI (Master Vol)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232590584974212673, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4232590584974212674, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_Pivot.x
@@ -8790,6 +8794,22 @@ PrefabInstance:
     - target: {fileID: 4232590585679645658, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246677752838419730, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
+      propertyPath: m_Colors.m_NormalColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246677752838419730, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0.7647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246677752838419730, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0.7647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246677752838419730, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0.7647059
       objectReference: {fileID: 0}
     - target: {fileID: 7506099738076774473, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: _value

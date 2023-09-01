@@ -63,7 +63,7 @@ namespace Kamgam.UGUIComponentsForSettings
             {
                 if (value == DisplayName)
                     return;
-
+                if (value.Equals("PRESS")) value = "LEFTBUTTON";
                 DisplayNameTf.text = value;
             }
         }

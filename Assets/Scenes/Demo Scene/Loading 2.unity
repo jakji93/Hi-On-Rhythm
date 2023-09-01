@@ -852,7 +852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d8d641aa6da8ea40ba09e55f258f3a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useEasyTransition: 1
+  useEasyTransition: 0
   transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
 --- !u!4 &1658740572
 Transform:

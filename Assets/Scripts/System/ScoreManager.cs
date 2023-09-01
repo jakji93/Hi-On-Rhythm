@@ -210,6 +210,7 @@ public class ScoreManager : MonoBehaviour
       if(isBossStage) {
          max += BossController.Instance.GetBossMaxHealth() * bossHealthMultiplier;
       }
+      Debug.Log("Max Score: " + max);
       return max;
    }
 

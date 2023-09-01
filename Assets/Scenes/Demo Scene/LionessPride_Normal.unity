@@ -4725,7 +4725,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4X
+  m_text: 4x
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a7cf2bc8733f6c0468062c8e95e84690, type: 2}
   m_sharedMaterial: {fileID: -7371932871882357731, guid: a7cf2bc8733f6c0468062c8e95e84690, type: 2}
@@ -7207,7 +7207,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: lioness pride
+  m_text: lioness pride remix
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a7cf2bc8733f6c0468062c8e95e84690, type: 2}
   m_sharedMaterial: {fileID: -7371932871882357731, guid: a7cf2bc8733f6c0468062c8e95e84690, type: 2}
@@ -7402,7 +7402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.99607843, g: 0.3254902, b: 0.73333335, a: 0.09411765}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -9860,7 +9860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.03137255, g: 0.96862745, b: 0.99607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -16563,7 +16563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.99607843, g: 0.3254902, b: 0.73333335, a: 0.09411765}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -25034,7 +25034,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lioness pride
+  m_text: Lioness pride remix
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a7cf2bc8733f6c0468062c8e95e84690, type: 2}
   m_sharedMaterial: {fileID: -7371932871882357731, guid: a7cf2bc8733f6c0468062c8e95e84690, type: 2}
@@ -25596,10 +25596,10 @@ RectTransform:
   m_Father: {fileID: 2125120649}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 808.4, y: -370}
-  m_SizeDelta: {x: -1820, y: -980}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 770, y: 478}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &896601193
 CanvasGroup:
@@ -25610,8 +25610,8 @@ CanvasGroup:
   m_GameObject: {fileID: 896601191}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1001 &899921469
 PrefabInstance:
@@ -25891,7 +25891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.754717, g: 0.3025988, b: 0.5775711, a: 0.007843138}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -32887,7 +32887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.36734605, g: 0.5780845, b: 0.6132076, a: 0.011764706}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -34213,7 +34213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BPM: 152
-  isPlaying: 1
+  isPlaying: 0
 --- !u!4 &1363870423
 Transform:
   m_ObjectHideFlags: 0
@@ -37396,11 +37396,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72fc34d79481c594ca943b8e26e2f0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perfectHitMultiplier: 40
-  greatHitMultiplier: 20
-  goodHitMultiplier: 10
-  noteMissedMultiplier: 20
-  enemyKilledMultiplier: 5
+  perfectHitMultiplier: 50
+  greatHitMultiplier: 40
+  goodHitMultiplier: 15
+  noteMissedMultiplier: 0
+  enemyKilledMultiplier: 10
   bossHealthMultiplier: 20
   playerHealthMultiplier: 10
   highestComboMultiplier: 10
@@ -37424,7 +37424,7 @@ MonoBehaviour:
   cGrade: 0.69
   bGrade: 0.79
   aGrade: 0.89
-  saveScore: 0
+  saveScore: 1
 --- !u!4 &1526623004
 Transform:
   m_ObjectHideFlags: 0
@@ -38312,7 +38312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.99607843, g: 1, b: 0.47058824, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -42167,7 +42167,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   noteHitSound: {fileID: 8300000, guid: 087224dd7ec352f42a3b950a07009a88, type: 3}
-  perfectZone: 45
+  perfectZone: 50
   greatZone: 75
   goodZone: 300
 --- !u!4 &1844858330
@@ -44303,13 +44303,195 @@ MonoBehaviour:
   - wavesContents:
     - spawnPoints:
       - {fileID: 1911666880}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 1025305903}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
       - {fileID: 883066044}
-      - {fileID: 245403936}
-      - {fileID: 159626429}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 87312176}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 963443204}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 490031562}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 1011348877}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 183229334}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 737789525}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 1454882138}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 1869642367}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 763473411}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 1074140306}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 979201318}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 1180327792}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 2131020111}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    musicTime: 26
+  - wavesContents:
+    - spawnPoints:
+      - {fileID: 1911666880}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 883066044}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 490031562}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 183229334}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 737789525}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 1869642367}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 979201318}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 2131020111}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    musicTime: 55
+  - wavesContents:
+    - spawnPoints:
+      - {fileID: 429760403}
+      - {fileID: 1747246143}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 1910366713}
+      - {fileID: 1701706273}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 1588931541}
+      - {fileID: 1538769095}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 1911666880}
+      - {fileID: 87312176}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 1025305903}
+      - {fileID: 883066044}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 1048901779}
+      - {fileID: 991662470}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 654077075}
+      - {fileID: 1284266151}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 2097300707}
+      - {fileID: 1440495105}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     musicTime: 300
-  specificWaveContents: []
+  specificWaveContents:
+  - waveNumber: 46
+    wave:
+      spawnPoints:
+      - {fileID: 619493475}
+      - {fileID: 1258069594}
+      - {fileID: 387840068}
+      - {fileID: 1857891651}
+      enemies:
+      - {fileID: 1127962848118623424, guid: 6cd4e530d296a584ea86c80c26a6daef, type: 3}
+  - waveNumber: 59
+    wave:
+      spawnPoints:
+      - {fileID: 1417345933}
+      - {fileID: 1966103039}
+      - {fileID: 1455874697}
+      - {fileID: 755635443}
+      enemies:
+      - {fileID: 1127962848118623424, guid: 6cd4e530d296a584ea86c80c26a6daef, type: 3}
+  - waveNumber: 78
+    wave:
+      spawnPoints:
+      - {fileID: 619493475}
+      - {fileID: 1258069594}
+      - {fileID: 387840068}
+      - {fileID: 1857891651}
+      enemies:
+      - {fileID: 1127962848118623424, guid: 6cd4e530d296a584ea86c80c26a6daef, type: 3}
+  - waveNumber: 93
+    wave:
+      spawnPoints:
+      - {fileID: 1417345933}
+      - {fileID: 1966103039}
+      - {fileID: 1455874697}
+      - {fileID: 755635443}
+      enemies:
+      - {fileID: 1127962848118623424, guid: 6cd4e530d296a584ea86c80c26a6daef, type: 3}
+  - waveNumber: 120
+    wave:
+      spawnPoints:
+      - {fileID: 1417345933}
+      - {fileID: 1966103039}
+      - {fileID: 1455874697}
+      - {fileID: 755635443}
+      - {fileID: 619493475}
+      - {fileID: 1258069594}
+      - {fileID: 387840068}
+      - {fileID: 1857891651}
+      enemies:
+      - {fileID: 1127962848118623424, guid: 6cd4e530d296a584ea86c80c26a6daef, type: 3}
   summonAnimation: {fileID: 2105886023464223082, guid: 55af16bccef73f3499479de0f1add507, type: 3}
   canSpawn: 0
 --- !u!1 &1951851382

@@ -36,9 +36,18 @@ public class ChartManager : MonoBehaviour
    private void FixedUpdate()
    {
       if (isPlaying) {
+         //var postionAtPlaytime = MusicManager.Instance.GetGameMusicPlaytime() * BPM / 60 * BPM_MULTIPLIER;
+         //thisTransform.localPosition = new Vector3(basePosition.x - postionAtPlaytime, basePosition.y, 0);
+         //thisTransform.position -= new Vector3(chartSpeed * Time.fixedDeltaTime, 0, 0);
+      }
+   }
+
+   private void Update()
+   {
+      if (isPlaying) {
          var postionAtPlaytime = MusicManager.Instance.GetGameMusicPlaytime() * BPM / 60 * BPM_MULTIPLIER;
          thisTransform.localPosition = new Vector3(basePosition.x - postionAtPlaytime, basePosition.y, 0);
-         //rectTransform.anchoredPosition3D -= new Vector3(chartSpeed * Time.fixedDeltaTime, 0, 0);
+         //thisTransform.position -= new Vector3(chartSpeed * Time.deltaTime, 0, 0);
       }
    }
 }

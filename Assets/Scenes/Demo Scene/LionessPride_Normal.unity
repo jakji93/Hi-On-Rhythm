@@ -47427,10 +47427,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1077058373}
-  - {fileID: 745204105}
   - {fileID: 904612921}
   - {fileID: 1282480437}
   - {fileID: 896601192}
+  - {fileID: 745204105}
   - {fileID: 1079554974}
   m_Father: {fileID: 0}
   m_RootOrder: 19

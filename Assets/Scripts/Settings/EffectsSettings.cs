@@ -20,9 +20,6 @@ public class EffectsSettings : MonoBehaviour
       customEffectsVolume = setting.GetValue();
       customEffectsVolume = customEffectsVolume / 100;
       mixer.SetFloat("SFXVolume", Mathf.Log10(customEffectsVolume) * 20);
-
-      print(customEffectsVolume);
-
    }
 
    private float getCustomEffectsVol()

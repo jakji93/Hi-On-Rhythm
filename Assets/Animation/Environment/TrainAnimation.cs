@@ -7,6 +7,6 @@ public class TrainAnimation : MonoBehaviour
 {
    private void Start()
    {
-      transform.DOMoveX(40f, 20f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Restart);
+      transform.DOMoveX(40f, 20f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
    }
 }

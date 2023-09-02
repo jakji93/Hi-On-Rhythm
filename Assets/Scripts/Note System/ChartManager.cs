@@ -14,6 +14,7 @@ public class ChartManager : MonoBehaviour
    private float chartSpeed;
    private Vector3 basePosition;
    private Transform thisTransform;
+   private float offset = 0f;
 
    private void Awake()
    {
@@ -21,6 +22,16 @@ public class ChartManager : MonoBehaviour
       chartSpeed = BPM / 60 * BPM_MULTIPLIER;
       thisTransform = transform;
       basePosition = thisTransform.localPosition;
+   }
+
+   private void Start()
+   {
+      if (PlayerPrefs.HasKey("ChartOffset")) {
+         offset = PlayerPrefs.GetFloat("ChartOffset");
+      } else {
+         offset = 0f;
+      }
+      Debug.Log("Offset: " + offset);
    }
 
    public void StartPlaying()
@@ -45,7 +56,7 @@ public class ChartManager : MonoBehaviour
    private void Update()
    {
       if (isPlaying) {
-         var postionAtPlaytime = MusicManager.Instance.GetGameMusicPlaytime() * BPM / 60 * BPM_MULTIPLIER;
+         var postionAtPlaytime = (MusicManager.Instance.GetGameMusicPlaytime() + offset) * BPM / 60 * BPM_MULTIPLIER;
          thisTransform.localPosition = new Vector3(basePosition.x - postionAtPlaytime, basePosition.y, 0);
          //thisTransform.position -= new Vector3(chartSpeed * Time.deltaTime, 0, 0);
       }

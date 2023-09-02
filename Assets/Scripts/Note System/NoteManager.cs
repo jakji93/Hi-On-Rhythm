@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class NoteManager : MonoBehaviour
@@ -29,6 +30,15 @@ public class NoteManager : MonoBehaviour
    [SerializeField] private int perfectZone;
    [SerializeField] private int greatZone;
    [SerializeField] private int goodZone;
+   [SerializeField] private int maxHitdistance;
+   [SerializeField] private TextMeshProUGUI accuracyNum;
+   [SerializeField] private TextMeshProUGUI lateJudgeText;
+
+   private float totalDistance = 0f;
+   private float currentDistance = 0f;
+   private float accuracy = 0f;
+   private int early = 0;
+   private int late = 0;
 
    private void Awake()
    {
@@ -39,6 +49,8 @@ public class NoteManager : MonoBehaviour
    {
       gameInput.OnNormal1Pressed += GameInput_OnNormal1Pressed;
       gameInput.OnNormal2Pressed += GameInput_OnNormal2Pressed;
+      accuracyNum.text = "0.00%";
+      lateJudgeText.text = "-";
    }
 
    private void GameInput_OnNormal1Pressed(object sender, System.EventArgs e)
@@ -110,6 +122,9 @@ public class NoteManager : MonoBehaviour
                case Note.NoteTypes.Normal1:
                   OnNoteMissed?.Invoke(this, EventArgs.Empty);
                   Debug.Log("Note missed");
+                  totalDistance += maxHitdistance;
+                  accuracy = Mathf.Round(currentDistance / totalDistance * 100 * 100) / 100;
+                  accuracyNum.text = accuracy.ToString() + "%";
                   if (note.gameObject.TryGetComponent(out OsuMarker marker)) {
                      marker.DestroyCircle();
                   }
@@ -130,6 +145,21 @@ public class NoteManager : MonoBehaviour
          OnNoteGreat?.Invoke(this, EventArgs.Empty);
       } else if (distance <= goodZone) {
          OnNoteGood?.Invoke(this, EventArgs.Empty);
+      }
+      totalDistance += maxHitdistance;
+      currentDistance += Mathf.Max(maxHitdistance - distance, 0);
+      accuracy = Mathf.Round(currentDistance / totalDistance * 100 * 100) / 100;
+      var latejudge = notePosition.x - transform.position.x;
+      if (latejudge < 0) {
+         late++;
+      } else if (latejudge > 0) {
+         early++;
+      }
+      accuracyNum.text = accuracy.ToString() + "%";
+      if(early > late) {
+         lateJudgeText.text = "Mostly early";
+      } else {
+         lateJudgeText.text = "Mostly late";
       }
    }
 

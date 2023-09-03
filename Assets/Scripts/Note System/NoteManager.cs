@@ -146,6 +146,7 @@ public class NoteManager : MonoBehaviour
       } else if (distance <= goodZone) {
          OnNoteGood?.Invoke(this, EventArgs.Empty);
       }
+      Debug.Log("Distance: " + distance);
       totalDistance += maxHitdistance;
       currentDistance += Mathf.Max(maxHitdistance - distance, 0);
       accuracy = Mathf.Round(currentDistance / totalDistance * 100 * 100) / 100;

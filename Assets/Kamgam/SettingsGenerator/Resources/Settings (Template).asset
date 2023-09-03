@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bools:
   - ID: fullscreen
-    ApplyImmediately: 0
+    ApplyImmediately: 1
     _groups: []
     _defaultValue: 1
     ConnectionObject: {fileID: 11400000, guid: 57cfa21e332facf40a95e6c6d47dca57, type: 2}
   - ID: vSync
-    ApplyImmediately: 0
+    ApplyImmediately: 1
     _groups: []
     _defaultValue: 1
     ConnectionObject: {fileID: 11400000, guid: 119c44645c341c04d81d42bbc93be27a, type: 2}
@@ -60,28 +60,28 @@ MonoBehaviour:
     ConnectionObject: {fileID: 11400000, guid: b2c5d0026c6e32645be431611f9cd6e6, type: 2}
   _options:
   - ID: resolution
-    ApplyImmediately: 0
+    ApplyImmediately: 1
     _groups: []
     _defaultValue: 0
     _optionLabels: []
     _overrideConnectionLabels: 0
     ConnectionObject: {fileID: 11400000, guid: 0b5bbdc1a88667444aeea97d7b325030, type: 2}
   - ID: windowMode
-    ApplyImmediately: 0
+    ApplyImmediately: 1
     _groups: []
     _defaultValue: 0
     _optionLabels: []
     _overrideConnectionLabels: 0
     ConnectionObject: {fileID: 11400000, guid: f29ce30bcf6a96c4381de61a0ef407a1, type: 2}
   - ID: refreshRate
-    ApplyImmediately: 0
+    ApplyImmediately: 1
     _groups: []
     _defaultValue: 0
     _optionLabels: []
     _overrideConnectionLabels: 0
     ConnectionObject: {fileID: 11400000, guid: 12aae2cfe94bba543975059d47f4e6d8, type: 2}
   - ID: frameRate
-    ApplyImmediately: 0
+    ApplyImmediately: 1
     _groups: []
     _defaultValue: 0
     _optionLabels: []

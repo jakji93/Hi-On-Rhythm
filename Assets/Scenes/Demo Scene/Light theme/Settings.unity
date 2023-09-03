@@ -5141,7 +5141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2347494789481133069, guid: efebc7c92ed444f47b5d68668c5490bb, type: 3}
       propertyPath: ID
-      value: effect
+      value: specialEffectEnabled
       objectReference: {fileID: 0}
     - target: {fileID: 3691439225521479997, guid: efebc7c92ed444f47b5d68668c5490bb, type: 3}
       propertyPath: Term
@@ -7110,7 +7110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5305990111827820222, guid: d48e8728d9c9f3a4fa03d21fe675f0f4, type: 3}
       propertyPath: m_text
-      value: Refresh Rate
+      value: Framerate
       objectReference: {fileID: 0}
     - target: {fileID: 5305990111827820222, guid: d48e8728d9c9f3a4fa03d21fe675f0f4, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -7118,7 +7118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6098973143287289674, guid: d48e8728d9c9f3a4fa03d21fe675f0f4, type: 3}
       propertyPath: m_Name
-      value: DropdownUGUIWithLabel (Refresh Rate)
+      value: DropdownUGUIWithLabel (FrameRate)
       objectReference: {fileID: 0}
     - target: {fileID: 6098973143287289674, guid: d48e8728d9c9f3a4fa03d21fe675f0f4, type: 3}
       propertyPath: m_IsActive
@@ -7238,11 +7238,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8055133679186924193, guid: d48e8728d9c9f3a4fa03d21fe675f0f4, type: 3}
       propertyPath: ID
-      value: refreshRate
+      value: frameRate
       objectReference: {fileID: 0}
     - target: {fileID: 8371884099482835433, guid: d48e8728d9c9f3a4fa03d21fe675f0f4, type: 3}
       propertyPath: Term
-      value: Refresh Rate
+      value: Framerate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

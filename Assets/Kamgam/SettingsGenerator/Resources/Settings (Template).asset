@@ -58,6 +58,11 @@ MonoBehaviour:
     _groups: []
     _defaultValue: 1
     ConnectionObject: {fileID: 11400000, guid: b2c5d0026c6e32645be431611f9cd6e6, type: 2}
+  - ID: specialEffectEnabled
+    ApplyImmediately: 1
+    _groups: []
+    _defaultValue: 1
+    ConnectionObject: {fileID: 11400000, guid: a7227de35e627c84881a6ae3a468f468, type: 2}
   _options:
   - ID: resolution
     ApplyImmediately: 1

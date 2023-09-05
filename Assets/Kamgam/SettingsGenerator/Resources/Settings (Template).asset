@@ -71,13 +71,6 @@ MonoBehaviour:
     _optionLabels: []
     _overrideConnectionLabels: 0
     ConnectionObject: {fileID: 11400000, guid: 0b5bbdc1a88667444aeea97d7b325030, type: 2}
-  - ID: windowMode
-    ApplyImmediately: 1
-    _groups: []
-    _defaultValue: 0
-    _optionLabels: []
-    _overrideConnectionLabels: 0
-    ConnectionObject: {fileID: 11400000, guid: f29ce30bcf6a96c4381de61a0ef407a1, type: 2}
   - ID: refreshRate
     ApplyImmediately: 1
     _groups: []

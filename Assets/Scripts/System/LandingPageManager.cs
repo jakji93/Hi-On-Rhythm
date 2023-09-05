@@ -35,14 +35,12 @@ public class LandingPageManager : MonoBehaviour
 
    public void GoToTwitter()
    {
-      //TODO: Open X
-      //Application.OpenURL("");
+      Application.OpenURL("https://twitter.com/FeverNightDev");
    }
 
    public void GoToYoutube()
    {
-      //TODO: Open Youtube
-      //Application.OpenURL("");
+      Application.OpenURL("https://www.youtube.com/channel/UCxcwEa1euwIV-jmcLQO40mQ");
    }
 
    public void GoToSteam()

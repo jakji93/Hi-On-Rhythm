@@ -47,6 +47,8 @@ public class SongSelector : MonoBehaviour
       ClipPlayer.Instance.PlayClip(sfx);
       isRotating = true;
       songSelectors[curItem].StopPulse();
+      songSelectors[curItem].StopClickTrigger();
+      songSelectors[curItem].StopImage();
       curItem++;
       curItem %= numOfChild;
       var newSongIndex = curSong + distance;
@@ -70,6 +72,8 @@ public class SongSelector : MonoBehaviour
       ClipPlayer.Instance.PlayClip(sfx);
       isRotating = true;
       songSelectors[curItem].StopPulse();
+      songSelectors[curItem].StopClickTrigger();
+      songSelectors[curItem].StopImage();
       curItem--;
       if (curItem < 0) curItem = numOfChild - 1;
       var newSongIndex = curSong - (numOfChild - distance);
@@ -94,6 +98,8 @@ public class SongSelector : MonoBehaviour
       LevelSelectManager.Instance.SetSongName(songSelectors[curItem].GetSongNames(), songSelectors[curItem].GetDisplayTitle(), songSelectors[curItem].GetArtistName());
       LevelSelectManager.Instance.PlayThisSong(songSelectors[curItem].GetAudioClip());
       songSelectors[curItem].StartPulse();
+      songSelectors[curItem].SetClickTrigger();
+      songSelectors[curItem].SetImage();
    }
 
    public void SetAsCurrentTrack(int songIndex)
@@ -113,6 +119,8 @@ public class SongSelector : MonoBehaviour
    public void DeselectAsTrack()
    {
       songSelectors[curItem].StopPulse();
+      songSelectors[curItem].StopClickTrigger();
+      songSelectors[curItem].StopImage();
    }
 
    private void LoadSongWheel()
@@ -136,11 +144,11 @@ public class SongSelector : MonoBehaviour
    {
       for (int i = 0; i < songSelectors.Length; i++) {
          //0 at left
-         float yPos = Mathf.Sin(Mathf.Deg2Rad * (i * angle)) * radius;
-         float xPos = -Mathf.Cos(Mathf.Deg2Rad * (i * angle)) * radius;
+         //float yPos = Mathf.Sin(Mathf.Deg2Rad * (i * angle)) * radius;
+         //float xPos = -Mathf.Cos(Mathf.Deg2Rad * (i * angle)) * radius;
          //0 at top
-         //float xPos = Mathf.Sin(Mathf.Deg2Rad * (i * angle)) * radius;
-         //float yPos = Mathf.Cos(Mathf.Deg2Rad * (i * angle)) * radius;
+         float xPos = Mathf.Sin(Mathf.Deg2Rad * (i * angle)) * radius;
+         float yPos = Mathf.Cos(Mathf.Deg2Rad * (i * angle)) * radius;
          songSelectors[i].GetComponent<RectTransform>().anchoredPosition3D = new Vector3(xPos, yPos, 0f);
          songSelectors[i].transform.Rotate(new Vector3(0f, 0f, -i * angle));
       }

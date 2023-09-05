@@ -16,3 +16,6 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 0350b6f21d74336458364c6c7e71dcaa, type: 3}
   displayTitle: Astrogirl
   BPM: 183
+  artistName: Sana
+  initialDelay: 0
+  coverImage: {fileID: 21300000, guid: e0ab4e7d962c5eb4382aa8b266b53b3e, type: 3}

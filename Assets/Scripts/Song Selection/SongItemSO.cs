@@ -11,4 +11,5 @@ public class SongItemSO : ScriptableObject
    public int BPM;
    public string artistName;
    public float initialDelay;
+   public Sprite coverImage;
 }

@@ -97,6 +97,11 @@ public class SongSelector : MonoBehaviour
    {
       LevelSelectManager.Instance.SetSongName(songSelectors[curItem].GetSongNames(), songSelectors[curItem].GetDisplayTitle(), songSelectors[curItem].GetArtistName());
       LevelSelectManager.Instance.PlayThisSong(songSelectors[curItem].GetAudioClip());
+      foreach (var songItem in songSelectors) {
+         songItem.StopClickTrigger();
+         songItem.StopImage();
+         songItem.StopPulse();
+      }
       songSelectors[curItem].StartPulse();
       songSelectors[curItem].SetClickTrigger();
       songSelectors[curItem].SetImage();

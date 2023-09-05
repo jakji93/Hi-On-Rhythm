@@ -14,12 +14,6 @@ public class SongItems : MonoBehaviour
    [SerializeField] Image coverImage;
    private string artistName;
 
-   private void Awake()
-   {
-      StopClickTrigger();
-      StopImage();
-   }
-
    public AudioClip GetAudioClip() { return audioClip; }
    public SongNames GetSongNames() { return songName; }
    public string GetDisplayTitle() { return displayTitle; }
@@ -28,6 +22,7 @@ public class SongItems : MonoBehaviour
    public void StartPulse()
    {
       if (pulse == null) return;
+      pulse.StopAllCoroutines();
       pulse.keepConstantPulse = true;
       pulse.StartConstantPulse();
    }

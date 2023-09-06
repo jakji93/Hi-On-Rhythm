@@ -37561,7 +37561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818ccbc536f7628489b0b80f684aaffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMoveSpeed: 20
+  playerMoveSpeed: 25
   body: {fileID: 1403218174}
   health: {fileID: 1403218176}
   playerDashSpeed: 50

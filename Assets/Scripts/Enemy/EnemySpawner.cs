@@ -34,6 +34,7 @@ public class EnemySpawner : MonoBehaviour
    private int waveCounter = 0;
    private int globalWaveCounter = 0;
    private AdvancedWaveContent curSet;
+   private bool useEffect = true;
 
    private int totalSpawned = 0;
 
@@ -47,6 +48,13 @@ public class EnemySpawner : MonoBehaviour
    private void Start()
    {
       NoteManager.Instance.OnSpawnBeat += NoteManager_OnSpawnBeat;
+      if (PlayerPrefs.HasKey("SpecialEffects")) {
+         Debug.Log("Special Effect Setting: " + PlayerPrefs.GetInt("SpecialEffects"));
+         useEffect = PlayerPrefs.GetInt("SpecialEffects") == 1;
+      }
+      else {
+         useEffect = true;
+      }
    }
 
    private void NoteManager_OnSpawnBeat(object sender, System.EventArgs e)
@@ -77,7 +85,7 @@ public class EnemySpawner : MonoBehaviour
       for( int i = 0; i < curWave.spawnPoints.Length; i++ ) {
          int j = i % curWave.enemies.Length;
          Instantiate(curWave.enemies[j], curWave.spawnPoints[i].position, Quaternion.identity);
-         Instantiate(summonAnimation, curWave.spawnPoints[i].position, Quaternion.identity);
+         if (useEffect) Instantiate(summonAnimation, curWave.spawnPoints[i].position, Quaternion.identity);
          totalSpawned++;
       }
       waveCounter++;

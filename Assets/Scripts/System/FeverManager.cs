@@ -25,6 +25,7 @@ public class FeverManager : MonoBehaviour, IHasProgress
    private float curFever = 0;
    private float maxFever = 100;
    private bool isFeverMode = false;
+   private bool useEffect = true;
 
    public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
    public event EventHandler<OnFeverModeEventArgs> OnFeverModeChanged;
@@ -42,11 +43,17 @@ public class FeverManager : MonoBehaviour, IHasProgress
       NoteManager.Instance.OnNoteGreat += NoteManager_OnNoteGreat;
       NoteManager.Instance.OnNoteGood += Instance_OnNoteGood;
       NoteManager.Instance.OnNormal1Hit += NoteManager_OnNormal1Hit;
+      if (PlayerPrefs.HasKey("SpecialEffects")) {
+         useEffect = PlayerPrefs.GetInt("SpecialEffects") == 1;
+      }
+      else {
+         useEffect = true;
+      }
    }
 
    private void NoteManager_OnNormal1Hit(object sender, EventArgs e)
    {
-      if(isFeverMode) {
+      if(isFeverMode && useEffect) {
          feverPlayer.PlayFeedbacks();
       }
    }

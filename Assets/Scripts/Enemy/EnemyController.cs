@@ -26,11 +26,18 @@ public class EnemyController : MonoBehaviour
    [SerializeField] private GameObject deathParticle;
    private bool isAttacking = false;
    private EnemyState state;
+   private bool useEffect = true;
 
    private void Start()
    {
       health.OnDeath += Health_OnDeath;
       state = EnemyState.Move;
+      if (PlayerPrefs.HasKey("SpecialEffects")) {
+         useEffect = PlayerPrefs.GetInt("SpecialEffects") == 1;
+      }
+      else {
+         useEffect = true;
+      }
    }
 
    private void Health_OnDeath(object sender, EventArgs e)
@@ -45,7 +52,7 @@ public class EnemyController : MonoBehaviour
       ScoreManager.Instance?.EnemyKilled();
       ComboManager.Instance?.EnemyKilled();
       //TODO death animation, set GO off for now
-      var newDeathParticle = Instantiate(deathParticle, transform.position, Quaternion.identity);
+      if (useEffect) Instantiate(deathParticle, transform.position, Quaternion.identity);
       Destroy(gameObject);
    }
 

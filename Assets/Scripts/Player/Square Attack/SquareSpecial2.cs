@@ -30,13 +30,11 @@ public class SquareSpecial2 : MonoBehaviour
    {
       timer = interval;
       var destination = transform.position + transform.right * flyoutSpeed * flyoutTime;
-      if (PlayerPrefs.HasKey("SpecialEffects")) {
-         if(PlayerPrefs.GetInt("SpecialEffects") == 0) {
-            top.gameObject.SetActive(false);
-            bottom.gameObject.SetActive(false);
-            left.gameObject.SetActive(false);
-            right.gameObject.SetActive(false);
-         }
+      if (!GameplayManager.Instance.UseEffect()) {
+         top.gameObject.SetActive(false);
+         bottom.gameObject.SetActive(false);
+         left.gameObject.SetActive(false);
+         right.gameObject.SetActive(false);
       }
       transform.DOMove(destination, flyoutTime).SetEase(Ease.InOutQuad).OnComplete(() =>
       {

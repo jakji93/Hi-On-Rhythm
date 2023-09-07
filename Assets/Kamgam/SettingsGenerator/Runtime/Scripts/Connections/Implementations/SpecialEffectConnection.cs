@@ -12,8 +12,8 @@ namespace Kamgam.SettingsGenerator
          if (PlayerPrefs.HasKey("SpecialEffects")) {
             return PlayerPrefs.GetInt("SpecialEffects") == 1;
          } else {
-            PlayerPrefs.SetInt("SpecialEffects", 0);
-            return false;
+            PlayerPrefs.SetInt("SpecialEffects", 1);
+            return true;
          }
       }
 

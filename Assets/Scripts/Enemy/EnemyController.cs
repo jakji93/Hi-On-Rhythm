@@ -32,12 +32,7 @@ public class EnemyController : MonoBehaviour
    {
       health.OnDeath += Health_OnDeath;
       state = EnemyState.Move;
-      if (PlayerPrefs.HasKey("SpecialEffects")) {
-         useEffect = PlayerPrefs.GetInt("SpecialEffects") == 1;
-      }
-      else {
-         useEffect = true;
-      }
+      useEffect = GameplayManager.Instance.UseEffect();
    }
 
    private void Health_OnDeath(object sender, EventArgs e)

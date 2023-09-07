@@ -48,13 +48,7 @@ public class EnemySpawner : MonoBehaviour
    private void Start()
    {
       NoteManager.Instance.OnSpawnBeat += NoteManager_OnSpawnBeat;
-      if (PlayerPrefs.HasKey("SpecialEffects")) {
-         Debug.Log("Special Effect Setting: " + PlayerPrefs.GetInt("SpecialEffects"));
-         useEffect = PlayerPrefs.GetInt("SpecialEffects") == 1;
-      }
-      else {
-         useEffect = true;
-      }
+      useEffect = GameplayManager.Instance.UseEffect();
    }
 
    private void NoteManager_OnSpawnBeat(object sender, System.EventArgs e)

@@ -39,6 +39,7 @@ public class GameplayManager : MonoBehaviour
    private bool gamePasued = false;
    private bool enemySpawned = false;
    private bool canPause = true;
+   private bool useEffect = true;
 
    private GameState state;
 
@@ -55,6 +56,12 @@ public class GameplayManager : MonoBehaviour
    private void Awake()
    {
       Instance = this;
+      if (PlayerPrefs.HasKey("SpecialEffects")) {
+         useEffect = PlayerPrefs.GetInt("SpecialEffects") == 1;
+      }
+      else {
+         useEffect = true;
+      }
    }
 
    private void Start()
@@ -238,5 +245,10 @@ public class GameplayManager : MonoBehaviour
    private void OnDestroy()
    {
       DOTween.KillAll();
+   }
+
+   public bool UseEffect()
+   {
+      return useEffect;
    }
 }

@@ -43,12 +43,7 @@ public class FeverManager : MonoBehaviour, IHasProgress
       NoteManager.Instance.OnNoteGreat += NoteManager_OnNoteGreat;
       NoteManager.Instance.OnNoteGood += Instance_OnNoteGood;
       NoteManager.Instance.OnNormal1Hit += NoteManager_OnNormal1Hit;
-      if (PlayerPrefs.HasKey("SpecialEffects")) {
-         useEffect = PlayerPrefs.GetInt("SpecialEffects") == 1;
-      }
-      else {
-         useEffect = true;
-      }
+      useEffect = GameplayManager.Instance.UseEffect();
    }
 
    private void NoteManager_OnNormal1Hit(object sender, EventArgs e)

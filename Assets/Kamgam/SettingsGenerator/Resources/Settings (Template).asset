@@ -140,12 +140,12 @@ MonoBehaviour:
   - ID: customMusicVol
     ApplyImmediately: 1
     _groups: []
-    _defaultValue: 20
+    _defaultValue: 70
     ConnectionObject: {fileID: 0}
   - ID: customEffectsVol
     ApplyImmediately: 1
     _groups: []
-    _defaultValue: 50
+    _defaultValue: 70
     ConnectionObject: {fileID: 0}
   _strings:
   - ID: keyboard.left

@@ -29,7 +29,6 @@ public class MusicSettings : MonoBehaviour
    protected void setCustomMusicVol(float value)
    {
       customMusicVol = value;
-      this.GetComponent<AudioSource>().volume = customMusicVol;
    }
 
    public void OnSliderChange(float value)

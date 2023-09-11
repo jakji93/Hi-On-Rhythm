@@ -12,5 +12,6 @@ public enum SongNames
    Psycho,
    Astrogirl,
    FeverNight,
-   LionessPride
+   LionessPride,
+   Mumei
 }

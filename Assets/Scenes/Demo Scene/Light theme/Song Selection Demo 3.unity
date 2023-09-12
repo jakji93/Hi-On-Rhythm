@@ -6045,6 +6045,8 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: b08aea76271157a4f89a417930f2059d, type: 3}
   pulse: {fileID: 1230939531}
   displayTitle: Reflect
+  trigger: {fileID: 0}
+  coverImage: {fileID: 0}
 --- !u!114 &1230939533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9154,7 +9156,7 @@ PrefabInstance:
     - target: {fileID: 3521022920509409542, guid: 35cdc54c79599b74f8ba93b46242a7e7, type: 3}
       propertyPath: songItems.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 2dbe0d49ebfa8f34aab3c9ac326acb36, type: 2}
+      objectReference: {fileID: 11400000, guid: 77034069a21c7ee438da3e75ed5ef809, type: 2}
     - target: {fileID: 3521022920509409542, guid: 35cdc54c79599b74f8ba93b46242a7e7, type: 3}
       propertyPath: songItems.Array.data[2]
       value: 

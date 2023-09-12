@@ -3,16 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
-public class SaveSystem : MonoBehaviour
+public static class SaveSystem
 {
-   public static SaveSystem Instance { get; private set; }
-
-   private void Awake()
-   {
-      Instance = this;
-   }
-
-   public bool TrySaveHighScore(ScoreStruct score, SongNames songName, Difficulties difficulty)
+   public static bool TrySaveHighScore(ScoreStruct score, SongNames songName, Difficulties difficulty)
    {
       var fileName = songName.ToString() + '_' + difficulty.ToString();
       if(ES3.KeyExists(fileName)) {
@@ -28,7 +21,7 @@ public class SaveSystem : MonoBehaviour
       }
    }
 
-   public bool TryLoadHighScore(SongNames songName, Difficulties difficulty, out ScoreStruct score)
+   public static bool TryLoadHighScore(SongNames songName, Difficulties difficulty, out ScoreStruct score)
    {
       var fileName = songName.ToString() + '_' + difficulty.ToString();
       if (ES3.KeyExists(fileName)) {
@@ -39,12 +32,12 @@ public class SaveSystem : MonoBehaviour
       return false;
    }
 
-   public void SavePrevSong(PrevSongStruct prevSong)
+   public static void SavePrevSong(PrevSongStruct prevSong)
    {
       ES3.Save("Prev_Song", prevSong);
    }
 
-   public bool TryLoadPrevSong(out PrevSongStruct prevSong)
+   public static bool TryLoadPrevSong(out PrevSongStruct prevSong)
    {
       if (ES3.KeyExists("Prev_Song")) {
          prevSong = ES3.Load<PrevSongStruct>("Prev_Song");

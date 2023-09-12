@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Demo Scene/LionessPride_Normal.unity
     guid: 0315fb0216b41104e822cb13c95b2a8b
   - enabled: 1
+    path: Assets/Scenes/Demo Scene/Mumei_Normal.unity
+    guid: 6ff4173c093dbfa4a8eabede7d42f44c
+  - enabled: 1
     path: Assets/Scenes/Demo Scene/Light theme/Settings.unity
     guid: bef327ffff4cad344ab86690ddb4ed3e
   m_configObjects: {}

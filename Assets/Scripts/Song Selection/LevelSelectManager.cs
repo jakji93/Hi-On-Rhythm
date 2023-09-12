@@ -115,7 +115,7 @@ public class LevelSelectManager : MonoBehaviour
 
    private void OnEnable()
    {
-      if (SaveSystem.Instance.TryLoadPrevSong(out PrevSongStruct prevSong)) {
+      if (SaveSystem.TryLoadPrevSong(out PrevSongStruct prevSong)) {
          curSelectTrack = prevSong.trackIndex;
          trackSelector.SetPrevTrack(prevSong.trackIndex);
          tracks[prevSong.trackIndex].SetAsCurrentTrack(prevSong.songIndex);
@@ -231,7 +231,7 @@ public class LevelSelectManager : MonoBehaviour
 
    private void UpdateScore()
    {
-      if(SaveSystem.Instance.TryLoadHighScore(curSongName, curDifficuly, out ScoreStruct score)) {
+      if(SaveSystem.TryLoadHighScore(curSongName, curDifficuly, out ScoreStruct score)) {
          this.score.text = score.score.ToString();
          grade.text = score.letterGrade;
          combo.text = score.maxCombo;
@@ -255,7 +255,7 @@ public class LevelSelectManager : MonoBehaviour
          trackIndex = curSelectTrack,
          songIndex = tracks[curSelectTrack].GetCurrentSongIndex()
       };
-      SaveSystem.Instance.SavePrevSong(prevSong);
+      SaveSystem.SavePrevSong(prevSong);
    }
 
    public void OnBackButton()

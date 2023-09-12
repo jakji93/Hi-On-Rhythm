@@ -252,7 +252,7 @@ public class ScoreManager : MonoBehaviour
       score.enemyKilled = enemyKilledCounter.ToString();
       var songName = GameplayManager.Instance.GetSongName();
       var difficulty = GameplayManager.Instance.GetDifficulty();
-      if(SaveSystem.Instance.TrySaveHighScore(score, songName, difficulty)) {
+      if(SaveSystem.TrySaveHighScore(score, songName, difficulty)) {
          newBestText.gameObject.SetActive(true);
       } else {
          newBestText.gameObject.SetActive(false);

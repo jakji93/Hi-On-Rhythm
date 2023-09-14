@@ -14,7 +14,7 @@ public class PageController : MonoBehaviour
    public void OpenPage()
    {
       page.gameObject.SetActive(true);
-      canvasGroup.DOFade(1, 0.2f).SetEase(Ease.Linear);
+      canvasGroup.DOFade(1, 0.1f).SetEase(Ease.Linear);
       ClipPlayer.Instance.PlayClip(openSFX);
       SettingsManager.Instance.SetPanelStatus(true, this);
    }

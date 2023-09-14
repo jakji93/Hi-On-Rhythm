@@ -6573,7 +6573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4232590584916757963, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_text
-      value: 'SFX Volume:'
+      value: 'Effect Volume:'
       objectReference: {fileID: 0}
     - target: {fileID: 4232590584916757963, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -6733,7 +6733,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7320299812988830729, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: Term
-      value: SFX Volume
+      value: Effect Volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320299812988830729, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8629907043263964866, guid: 53fb1336e8ce24343802778ac1a1539d, type: 3}
       propertyPath: m_IsActive

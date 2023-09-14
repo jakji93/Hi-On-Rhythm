@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -13,12 +14,14 @@ public class DamagePopupController : MonoBehaviour
    private float time = 0;
    private Vector3 preLocalScale;
    private Vector3 origin;
+   private Color preColor;
 
    private void Start()
    {
       preLocalScale = transform.localScale;
       preLocalScale.x = Mathf.Abs(preLocalScale.x);
       origin = transform.localPosition;
+      preColor = text.color;
    }
 
    public void SetDamageTaken(int damageTaken)
@@ -28,7 +31,7 @@ public class DamagePopupController : MonoBehaviour
 
    private void Update()
    {
-      text.color = new Color(text.color.r, text.color.b, text.color.g, opacityCurve.Evaluate(time));
+      text.color = new Color(preColor.r, preColor.g, preColor.b, opacityCurve.Evaluate(time));
       transform.localScale = preLocalScale * scaleCurve.Evaluate(time);
       transform.localPosition = origin + new Vector3(0, heightCurve.Evaluate(time), 0);
       time += Time.deltaTime;

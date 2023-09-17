@@ -7,17 +7,25 @@ using UnityEngine.UI;
 public class SongItems : MonoBehaviour
 {
    [SerializeField] private SongNames songName;
+   [SerializeField] private PlayerName playerName;
    [SerializeField] private AudioClip audioClip;
    [SerializeField] private PulseEffect pulse;
    [SerializeField] private string displayTitle;
    [SerializeField] private EventTrigger trigger;
    [SerializeField] Image coverImage;
    private string artistName;
+   private SongItemSO.SongSets[] songSets;
+   private int BPM;
+   private AudioClip gameMusic;
 
    public AudioClip GetAudioClip() { return audioClip; }
    public SongNames GetSongNames() { return songName; }
    public string GetDisplayTitle() { return displayTitle; }
    public string GetArtistName() { return artistName; }
+   public SongItemSO.SongSets[] GetSongSets() { return songSets; }
+   public int GetBPM() {  return BPM; }
+   public AudioClip GetGameMusic() { return gameMusic; }
+   public PlayerName GetPlayerName() {  return playerName; }
 
    public void StartPulse()
    {
@@ -63,8 +71,12 @@ public class SongItems : MonoBehaviour
       audioClip = songItemSO.audioClip;
       displayTitle = songItemSO.displayTitle;
       artistName = songItemSO.artistName;
+      BPM = songItemSO.BPM;
       var secondsPerBeat = 60f / songItemSO.BPM;
       pulse.SetDelayBetweenPulse(secondsPerBeat);
       coverImage.sprite = songItemSO.coverImage;
+      songSets = songItemSO.songSets;
+      gameMusic = songItemSO.gameMusic;
+      playerName = songItemSO.playerName;
    }
 }

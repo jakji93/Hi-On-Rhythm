@@ -18,6 +18,7 @@ public class GameplayManager : MonoBehaviour
 
    [SerializeField] private SongNames songName;
    [SerializeField] private Difficulties difficulty;
+   [SerializeField] private PlayerName playerName;
 
    [SerializeField] private GameInput gameInput;
 
@@ -70,6 +71,8 @@ public class GameplayManager : MonoBehaviour
       Debug.Log("Waiting to start");
       gameInput.OnPausePressed += GameInput_OnPausePressed;
       MusicManager.Instance.StartIntroTheme();
+      Instantiate(SongLoader.Instance.GetSpawner(), Vector3.zero, Quaternion.identity);
+      songName = SongLoader.Instance.GetSongName();
    }
 
    private void GameInput_OnPausePressed(object sender, EventArgs e)
@@ -223,7 +226,7 @@ public class GameplayManager : MonoBehaviour
    public void Restart()
    {
       Time.timeScale = 1f;
-      var sceneName = songName.ToString() + '_' + difficulty.ToString();
+      var sceneName = playerName.ToString() + '_' + difficulty.ToString();
       Loader.Load2(sceneName);
    }
 

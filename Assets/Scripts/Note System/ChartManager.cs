@@ -32,6 +32,8 @@ public class ChartManager : MonoBehaviour
          offset = 0f;
       }
       Debug.Log("Offset: " + offset);
+      BPM = SongLoader.Instance.GetBPM();
+      Instantiate(SongLoader.Instance.GetChart(), transform);
    }
 
    public void StartPlaying()

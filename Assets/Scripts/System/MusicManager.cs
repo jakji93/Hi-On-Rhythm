@@ -14,6 +14,11 @@ public class MusicManager : MonoBehaviour
    private void Awake()
    {
       Instance = this;
+   }
+
+   private void Start()
+   {
+      gameMusic.clip = SongLoader.Instance.GetGameMusic();
       gameMusic.clip.LoadAudioData();
    }
 

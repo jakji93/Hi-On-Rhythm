@@ -95,8 +95,11 @@ public class SongSelector : MonoBehaviour
 
    public void SetAsCurrentTrack()
    {
-      LevelSelectManager.Instance.SetSongName(songSelectors[curItem].GetSongNames(), songSelectors[curItem].GetDisplayTitle(), songSelectors[curItem].GetArtistName());
+      LevelSelectManager.Instance.SetSongName(songSelectors[curItem].GetSongNames(), songSelectors[curItem].GetDisplayTitle(), songSelectors[curItem].GetArtistName(), songSelectors[curItem].GetBPM());
       LevelSelectManager.Instance.PlayThisSong(songSelectors[curItem].GetAudioClip());
+      LevelSelectManager.Instance.SetSongSets(songSelectors[curItem].GetSongSets());
+      LevelSelectManager.Instance.SetGameMusic(songSelectors[curItem].GetGameMusic());
+      LevelSelectManager.Instance.SetPlayerName(songSelectors[curItem].GetPlayerName());
       foreach (var songItem in songSelectors) {
          songItem.StopClickTrigger();
          songItem.StopImage();

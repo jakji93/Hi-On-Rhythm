@@ -43,6 +43,10 @@ public class LevelSelectManager : MonoBehaviour
 
    private SongNames curSongName;
    private Difficulties curDifficuly;
+   private SongItemSO.SongSets[] curSongSets;
+   private int BPM;
+   private AudioClip gameMusic;
+   private PlayerName playerName;
 
    private int curSelectTrack = 0;
 
@@ -126,7 +130,7 @@ public class LevelSelectManager : MonoBehaviour
       }
    }
 
-   public void SetSongName(SongNames name, string displayName, string artistName)
+   public void SetSongName(SongNames name, string displayName, string artistName, int BPM)
    {
       curSongName = name;
       if(displayName != null) {
@@ -135,6 +139,7 @@ public class LevelSelectManager : MonoBehaviour
       } else {
          songName.text = curSongName.ToString();
       }
+      this.BPM = BPM;
       UpdateScore();
    }
 
@@ -144,13 +149,43 @@ public class LevelSelectManager : MonoBehaviour
       UpdateScore();
    }
 
+   public void SetSongSets(SongItemSO.SongSets[] songSets)
+   {
+      curSongSets = songSets;
+   }
+
+   public void SetGameMusic(AudioClip gameMusic)
+   {
+      this.gameMusic = gameMusic;
+   }
+
+   public void SetPlayerName(PlayerName playerName)
+   {
+      this.playerName = playerName;
+   }
+
    public void GoToSong()
    {
       OnLeavingScene();
-      var name = curSongName.ToString();
+      var name = playerName.ToString();
       var diff = curDifficuly.ToString();
+      SetSongLoader();
       ClipPlayer.Instance.PlayClip(sceneClip);
       Loader.Load2(name + "_" + diff);
+   }
+
+   private void SetSongLoader()
+   {
+      SongLoader.Instance.SetSongName(curSongName);
+      foreach (var songSet in curSongSets) {
+         if(songSet.difficulty == curDifficuly) {
+            SongLoader.Instance.SetChart(songSet.chart);
+            SongLoader.Instance.SetSpawner(songSet.enemySpawn);
+         }
+      }
+      SongLoader.Instance.SetDisplayName(songName.text);
+      SongLoader.Instance.SetBPM(BPM);
+      SongLoader.Instance.SetGameMusic(gameMusic);
    }
 
    private void BackToLanding()

@@ -44,6 +44,7 @@ public class ScoreManager : MonoBehaviour
    [SerializeField] private TextMeshProUGUI finalScoreText;
    [SerializeField] private TextMeshProUGUI letterGradeText;
    [SerializeField] private TextMeshProUGUI newBestText;
+   [SerializeField] private TextMeshProUGUI failedText;
 
    [Header("Letter Grade Threshold")]
    [SerializeField] private float dGrade = 0.59f;
@@ -60,6 +61,7 @@ public class ScoreManager : MonoBehaviour
    private int perfectHitCounter = 0;
    private int greatHitCounter = 0;
    private int goodHitCounter = 0;
+   private string songName;
 
    //TODO: Add Restart and Return key bindings
    private void Awake()
@@ -77,6 +79,9 @@ public class ScoreManager : MonoBehaviour
       NoteManager.Instance.OnNotePerfect += NoteManager_OnNotePerfect;
       NoteManager.Instance.OnNoteGreat += NoteManager_OnNoteGreat;
       NoteManager.Instance.OnNoteGood += NoteManager_OnNoteGood;
+      songName = SongLoader.Instance.GetDisplaySongName();
+      songNameText.text = songName;
+      failedText.text = songName;
       HideScore();
       HideFailed();
    }

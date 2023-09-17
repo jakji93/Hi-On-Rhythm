@@ -19,3 +19,8 @@ MonoBehaviour:
   artistName: Yamakusa
   initialDelay: 160
   coverImage: {fileID: 21300000, guid: 6c8a9b485bd490c4d8f67a2b1c80629e, type: 3}
+  songSets:
+  - difficulty: 0
+    enemySpawn: {fileID: 4181001734235083271, guid: c207df6698e1c45409baf8c7216db57c, type: 3}
+    chart: {fileID: 5985521882142893375, guid: 902bbe4746477b24ab0666be2ea60c1d, type: 3}
+  gameMusic: {fileID: 8300000, guid: 32736881326e29c459c620eec5d0dd52, type: 3}

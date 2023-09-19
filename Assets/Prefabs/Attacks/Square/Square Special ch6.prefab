@@ -64,7 +64,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  flyoutSpeed: 10
+  flyoutSpeed: 0
   flyoutTime: 1
   top: {fileID: 2893764734748552612}
   bottom: {fileID: 2160993298775344457}

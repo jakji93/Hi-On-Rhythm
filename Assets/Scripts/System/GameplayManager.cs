@@ -41,6 +41,7 @@ public class GameplayManager : MonoBehaviour
    private bool enemySpawned = false;
    private bool canPause = true;
    private bool useEffect = true;
+   private bool isScoreShowing = false;
 
    private GameState state;
 
@@ -70,9 +71,25 @@ public class GameplayManager : MonoBehaviour
       state = GameState.WaitingToStart;
       Debug.Log("Waiting to start");
       gameInput.OnPausePressed += GameInput_OnPausePressed;
+      gameInput.OnBackPressed += GameInput_OnBackPressed;
+      gameInput.OnStartPressed += GameInput_OnStartPressed;
       MusicManager.Instance.StartIntroTheme();
       Instantiate(SongLoader.Instance.GetSpawner(), Vector3.zero, Quaternion.identity);
       songName = SongLoader.Instance.GetSongName();
+   }
+
+   private void GameInput_OnStartPressed(object sender, EventArgs e)
+   {
+      if (isScoreShowing) {
+         Restart();
+      }
+   }
+
+   private void GameInput_OnBackPressed(object sender, EventArgs e)
+   {
+      if (isScoreShowing) {
+         ExitGame();
+      }
    }
 
    private void GameInput_OnPausePressed(object sender, EventArgs e)
@@ -139,6 +156,7 @@ public class GameplayManager : MonoBehaviour
                MusicManager.Instance.StopMusic();
                ScoreManager.Instance.ShowFailed();
                MusicManager.Instance.StartFailedTheme();
+               isScoreShowing = true;
                OnStateChange?.Invoke(this, EventArgs.Empty);
                Debug.Log("Score");
             }
@@ -150,6 +168,7 @@ public class GameplayManager : MonoBehaviour
                state = GameState.Score;
                ScoreManager.Instance.ShowScore();
                MusicManager.Instance.StartVictoryTheme();
+               isScoreShowing = true;
                OnStateChange?.Invoke(this, EventArgs.Empty);
                Debug.Log("Score");
             }

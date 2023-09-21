@@ -440,25 +440,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8450c95566763214c8433345c7411fef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalAttack1:
-  - {fileID: 3642693443182775483, guid: 41205936f74b2c24b8ae6bd021e596d7, type: 3}
-  - {fileID: 3642693443182775483, guid: 9a85479e86770e84cb29e2f54e5cce63, type: 3}
-  - {fileID: 3642693443182775483, guid: afff4a8f46d5f00409ebdaecc659149b, type: 3}
-  - {fileID: 3642693443182775483, guid: 4c94176c3fe2e46448122be81e98e3d0, type: 3}
   specialAttacks:
   - {fileID: 7387536254396499983, guid: 64bd51bd8f5ac6949a2db28e73680a65, type: 3}
-  - {fileID: 8474301879621085808, guid: 147160754d50db04581363b6ce25a08a, type: 3}
-  - {fileID: 8474301879621085808, guid: 129d42e63e7130f4e988a7db071b876c, type: 3}
-  - {fileID: 8474301879621085808, guid: 4123918ea7a7e05458d9e35acafe2a44, type: 3}
-  - {fileID: 8474301879621085808, guid: b94214c8c527a2a4e954848fb5d43be3, type: 3}
-  - {fileID: 8474301879621085808, guid: a8653df046871eb4d8de587234000d58, type: 3}
-  - {fileID: 8474301879621085808, guid: b05fd36844b83e941aa9e7da018c5976, type: 3}
-  - {fileID: 8474301879621085808, guid: c0ebddc97ab0fe149887d9b56ff379ab, type: 3}
+  - {fileID: 5303007919122363595, guid: 3c5f848f74a6da746ab53217718ce8a8, type: 3}
+  - {fileID: 5303007919122363595, guid: 3c5f848f74a6da746ab53217718ce8a8, type: 3}
+  - {fileID: 5303007919122363595, guid: 3c5f848f74a6da746ab53217718ce8a8, type: 3}
+  - {fileID: 5303007919122363595, guid: 3c5f848f74a6da746ab53217718ce8a8, type: 3}
+  - {fileID: 5303007919122363595, guid: 3c5f848f74a6da746ab53217718ce8a8, type: 3}
+  - {fileID: 5303007919122363595, guid: 3c5f848f74a6da746ab53217718ce8a8, type: 3}
+  - {fileID: 5303007919122363595, guid: 3c5f848f74a6da746ab53217718ce8a8, type: 3}
   perfectAttack: {fileID: 3642693443182775483, guid: 4c94176c3fe2e46448122be81e98e3d0, type: 3}
   greatAttack: {fileID: 3642693443182775483, guid: afff4a8f46d5f00409ebdaecc659149b, type: 3}
   goodAttack: {fileID: 3642693443182775483, guid: 9a85479e86770e84cb29e2f54e5cce63, type: 3}
-  autoAttack: {fileID: 3642693443182775483, guid: 41205936f74b2c24b8ae6bd021e596d7, type: 3}
-  bpm: 152
   aimTransform: {fileID: 5315060230535482627}
 --- !u!61 &7655378262196688005
 BoxCollider2D:

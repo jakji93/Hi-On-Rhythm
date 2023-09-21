@@ -35,6 +35,7 @@ public class GameplayManager : MonoBehaviour
    [SerializeField] private MMF_Player openingPlayer;
    [SerializeField] private RectTransform healthUI;
    [SerializeField] private RectTransform feverUI;
+   [SerializeField] private GameObject postProcessingObject;
 
    private bool musicPlaying = false;
    private bool gamePasued = false;
@@ -63,6 +64,9 @@ public class GameplayManager : MonoBehaviour
       }
       else {
          useEffect = true;
+      }
+      if(!useEffect) {
+         postProcessingObject.SetActive(false);
       }
    }
 

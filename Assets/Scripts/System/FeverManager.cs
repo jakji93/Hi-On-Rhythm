@@ -23,7 +23,7 @@ public class FeverManager : MonoBehaviour, IHasProgress
    [SerializeField] private MMF_Player feverPlayer;
 
    private float curFever = 0;
-   private float maxFever = 100;
+   [SerializeField] private float maxFever = 100;
    private bool isFeverMode = false;
    private bool useEffect = true;
 

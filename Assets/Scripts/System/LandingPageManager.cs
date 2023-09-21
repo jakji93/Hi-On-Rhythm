@@ -45,8 +45,7 @@ public class LandingPageManager : MonoBehaviour
 
    public void GoToSteam()
    {
-      //TODO: Open SteamWishlist
-      //Application.OpenURL("");
+      Application.OpenURL("https://store.steampowered.com/app/2608510/Hi_On_Rhythm/?beta=0");
    }
 
    public void OpenQuit()

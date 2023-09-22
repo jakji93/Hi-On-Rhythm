@@ -36,6 +36,8 @@ public class NoteManager : MonoBehaviour
 
    private float totalDistance = 0f;
    private float currentDistance = 0f;
+   private float totalAccuracy = 0f;
+   private float currentAccuracy = 0f;
    private float accuracy = 0f;
    private int early = 0;
    private int late = 0;
@@ -122,8 +124,10 @@ public class NoteManager : MonoBehaviour
                case Note.NoteTypes.Normal1:
                   OnNoteMissed?.Invoke(this, EventArgs.Empty);
                   Debug.Log("Note missed");
-                  totalDistance += maxHitdistance;
-                  accuracy = Mathf.Round(currentDistance / totalDistance * 100 * 100) / 100;
+                  //totalDistance += maxHitdistance;
+                  //accuracy = Mathf.Round(currentDistance / totalDistance * 100 * 100) / 100;
+                  totalAccuracy += 300;
+                  accuracy = Mathf.Round(currentAccuracy / totalAccuracy * 100 * 100) / 100;
                   accuracyNum.text = accuracy.ToString() + "%";
                   if (note.gameObject.TryGetComponent(out OsuMarker marker)) {
                      marker.DestroyCircle();
@@ -141,15 +145,20 @@ public class NoteManager : MonoBehaviour
       var distance = Vector2.Distance(transform.position, notePosition);
       if(distance <= perfectZone) {
          OnNotePerfect?.Invoke(this, EventArgs.Empty);
+         currentAccuracy += 300;
       } else if(distance <= greatZone) {
          OnNoteGreat?.Invoke(this, EventArgs.Empty);
+         currentAccuracy += 100;
       } else if (distance <= goodZone) {
          OnNoteGood?.Invoke(this, EventArgs.Empty);
+         currentAccuracy += 50;
       }
-      Debug.Log("Distance: " + distance);
-      totalDistance += maxHitdistance;
-      currentDistance += Mathf.Max(maxHitdistance - distance, 0);
-      accuracy = Mathf.Round(currentDistance / totalDistance * 100 * 100) / 100;
+      //Debug.Log("Distance: " + distance);
+      //totalDistance += maxHitdistance;
+      //currentDistance += Mathf.Max(maxHitdistance - distance, 0);
+      //accuracy = Mathf.Round(currentDistance / totalDistance * 100 * 100) / 100;
+      totalAccuracy += 300;
+      accuracy = Mathf.Round(currentAccuracy / totalAccuracy * 100 * 100) / 100;
       var latejudge = notePosition.x - transform.position.x;
       if (latejudge < 0) {
          late++;
@@ -162,6 +171,11 @@ public class NoteManager : MonoBehaviour
       } else {
          lateJudgeText.text = "Mostly late";
       }
+   }
+
+   public float GetAccuracyRating()
+   {
+      return currentAccuracy / totalAccuracy;
    }
 
    private void OnDestroy()

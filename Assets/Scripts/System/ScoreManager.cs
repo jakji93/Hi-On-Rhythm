@@ -188,9 +188,11 @@ public class ScoreManager : MonoBehaviour
    private string GetLetterGrade(float finalScore)
    {
       string letterGrade = "D";
-      float scoreToUse = finalScore;
-      var max = GetMaxScore();
-      if(scoreToUse / max > dGrade) {
+      //float scoreToUse = finalScore;
+      float scoreToUse = NoteManager.Instance.GetAccuracyRating();
+      //var max = GetMaxScore();
+      var max = 1f;
+      if (scoreToUse / max > dGrade) {
          letterGrade = "C";
          if(scoreToUse / max > cGrade) {
             letterGrade = "B";

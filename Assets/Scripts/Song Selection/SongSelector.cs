@@ -100,6 +100,9 @@ public class SongSelector : MonoBehaviour
       LevelSelectManager.Instance.SetSongSets(songSelectors[curItem].GetSongSets());
       LevelSelectManager.Instance.SetGameMusic(songSelectors[curItem].GetGameMusic());
       LevelSelectManager.Instance.SetPlayerName(songSelectors[curItem].GetPlayerName());
+      var totalSong = songItems.Length;
+      var curSongIndex = curSong + 1;
+      LevelSelectManager.Instance.SetSongIndexNumber(curSongIndex + "/" + totalSong);
       foreach (var songItem in songSelectors) {
          songItem.StopClickTrigger();
          songItem.StopImage();
@@ -113,6 +116,7 @@ public class SongSelector : MonoBehaviour
    public void SetAsCurrentTrack(int songIndex)
    {
       curSong = songIndex;
+      curSong %= songItems.Length;
       numOfChild = songSelectors.Length;
       midIndex = Mathf.FloorToInt(numOfChild / 2f);
       LoadSongWheel();

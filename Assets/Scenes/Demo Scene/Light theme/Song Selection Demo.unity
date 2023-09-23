@@ -359,6 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: 5
+  playerName: 0
   audioClip: {fileID: 8300000, guid: b08aea76271157a4f89a417930f2059d, type: 3}
   pulse: {fileID: 10805843}
   displayTitle: Reflect
@@ -680,6 +681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: 5
+  playerName: 0
   audioClip: {fileID: 8300000, guid: b08aea76271157a4f89a417930f2059d, type: 3}
   pulse: {fileID: 75452844}
   displayTitle: Reflect
@@ -1188,6 +1190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: 5
+  playerName: 0
   audioClip: {fileID: 8300000, guid: b08aea76271157a4f89a417930f2059d, type: 3}
   pulse: {fileID: 101389052}
   displayTitle: Reflect
@@ -1331,6 +1334,7 @@ RectTransform:
   - {fileID: 13455628}
   - {fileID: 2117508133}
   - {fileID: 703831606}
+  - {fileID: 668528440}
   - {fileID: 348389073}
   - {fileID: 1612179556}
   m_Father: {fileID: 0}
@@ -2437,6 +2441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: 5
+  playerName: 0
   audioClip: {fileID: 8300000, guid: b08aea76271157a4f89a417930f2059d, type: 3}
   pulse: {fileID: 358394040}
   displayTitle: Reflect
@@ -2670,6 +2675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: 5
+  playerName: 0
   audioClip: {fileID: 8300000, guid: b08aea76271157a4f89a417930f2059d, type: 3}
   pulse: {fileID: 402799382}
   displayTitle: Reflect
@@ -13397,6 +13403,141 @@ MonoBehaviour:
   restSmoothTime: 1
   restScale: {x: 1, y: 1, z: 1}
   beatScale: {x: 1, y: 1, z: 1}
+--- !u!1 &668528439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 668528440}
+  - component: {fileID: 668528442}
+  - component: {fileID: 668528441}
+  m_Layer: 5
+  m_Name: Song Index
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &668528440
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668528439}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 107137449}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -230}
+  m_SizeDelta: {x: 260.9, y: 51.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &668528441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668528439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 0/0
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: a7cf2bc8733f6c0468062c8e95e84690, type: 2}
+  m_sharedMaterial: {fileID: -7371932871882357731, guid: a7cf2bc8733f6c0468062c8e95e84690, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4286874756
+  m_fontColor: {r: 0.5176471, g: 0.5176471, b: 0.5176471, a: 1}
+  m_enableVertexGradient: 1
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 0ac5e9c99671007488efafafca977679, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30
+  m_fontSizeBase: 30
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 80
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &668528442
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668528439}
+  m_CullTransparentMesh: 1
 --- !u!1 &703831605
 GameObject:
   m_ObjectHideFlags: 0
@@ -13537,6 +13678,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &711576210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711576199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &732533710
 GameObject:
   m_ObjectHideFlags: 0
@@ -19522,6 +19676,7 @@ MonoBehaviour:
   moveSpeed: 0.3
   backPosition: {x: 0, y: -2500, z: 0}
   inPosition: {x: 0, y: -1600, z: 0}
+  songIndexNumber: {fileID: 668528441}
   gameInput: {fileID: 1415130523}
   buttonClip: {fileID: 8300000, guid: 6c96f17621974ab469d71b6645c210ae, type: 3}
   sceneClip: {fileID: 8300000, guid: 3fbec5a8ff835b34098436a9a752f675, type: 3}
@@ -20006,6 +20161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: 5
+  playerName: 0
   audioClip: {fileID: 8300000, guid: b08aea76271157a4f89a417930f2059d, type: 3}
   pulse: {fileID: 1187020339}
   displayTitle: Reflect
@@ -20121,6 +20277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: 5
+  playerName: 0
   audioClip: {fileID: 8300000, guid: b08aea76271157a4f89a417930f2059d, type: 3}
   pulse: {fileID: 1230939531}
   displayTitle: Reflect
@@ -20446,6 +20603,7 @@ MonoBehaviour:
   spawner: {fileID: 0}
   BPM: 0
   displaySongName: 
+  gameMusic: {fileID: 0}
 --- !u!4 &1347891917
 Transform:
   m_ObjectHideFlags: 0
@@ -21814,6 +21972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: 5
+  playerName: 0
   audioClip: {fileID: 8300000, guid: b08aea76271157a4f89a417930f2059d, type: 3}
   pulse: {fileID: 1956005521}
   displayTitle: Reflect
@@ -22273,6 +22432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: 5
+  playerName: 0
   audioClip: {fileID: 8300000, guid: b08aea76271157a4f89a417930f2059d, type: 3}
   pulse: {fileID: 2075978673}
   displayTitle: Reflect
@@ -22639,6 +22799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: 5
+  playerName: 0
   audioClip: {fileID: 8300000, guid: b08aea76271157a4f89a417930f2059d, type: 3}
   pulse: {fileID: 2116557303}
   displayTitle: Reflect
@@ -23052,12 +23213,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3521022920509409542, guid: 35cdc54c79599b74f8ba93b46242a7e7, type: 3}
       propertyPath: songItems.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3521022920509409542, guid: 35cdc54c79599b74f8ba93b46242a7e7, type: 3}
       propertyPath: songItems.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 18686bddb1b29e34fa97ab23c7120fdd, type: 2}
+      objectReference: {fileID: 11400000, guid: 77034069a21c7ee438da3e75ed5ef809, type: 2}
     - target: {fileID: 3521022920509409542, guid: 35cdc54c79599b74f8ba93b46242a7e7, type: 3}
       propertyPath: songItems.Array.data[1]
       value: 
@@ -23411,6 +23572,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 64796325019717353, guid: 35cdc54c79599b74f8ba93b46242a7e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 711576205}
+    - targetCorrespondingSourceObject: {fileID: 64796325019717353, guid: 35cdc54c79599b74f8ba93b46242a7e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 711576210}
     - targetCorrespondingSourceObject: {fileID: 2748419031484979488, guid: 35cdc54c79599b74f8ba93b46242a7e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1559895046}

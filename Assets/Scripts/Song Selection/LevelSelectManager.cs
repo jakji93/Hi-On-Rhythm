@@ -22,6 +22,7 @@ public class LevelSelectManager : MonoBehaviour
    [SerializeField] private float moveSpeed = 10f;
    [SerializeField] private Vector3 backPosition;
    [SerializeField] private Vector3 inPosition;
+   [SerializeField] private TextMeshProUGUI songIndexNumber;
    [Header("Utility")]
    [SerializeField] private GameInput gameInput;
    [SerializeField] private AudioClip buttonClip;
@@ -319,6 +320,11 @@ public class LevelSelectManager : MonoBehaviour
       difficultyPanel.alpha = 0;
       difficultyPanel.DOFade(1, 0.1f).SetEase(Ease.Linear);
       difficultyPanel.transform.DOLocalMoveY(20, 0.1f).From();
+   }
+
+   public void SetSongIndexNumber(string index)
+   {
+      songIndexNumber.text = index;
    }
 
    private void LegacyMove()

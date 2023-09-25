@@ -5,19 +5,16 @@ using UnityEngine;
 
 public abstract class EnemyAttack : MonoBehaviour
 {
-   [SerializeField] protected float attackDelay = 0.1f;
    [SerializeField] protected EnemyController controller;
    [SerializeField] protected Transform attackPoint;
 
    protected bool isAttacking = false;
    private bool canAttack = false;
-   private float attackTimer;
 
    private void Start()
    {
       controller.OnStateChanged += EnemyController_OnStateChanged;
       NoteManager.Instance.OnAttackBeat += NoteManager_OnAttackBeat;
-      attackTimer = attackDelay;
    }
 
    private void NoteManager_OnAttackBeat(object sender, System.EventArgs e)
@@ -36,13 +33,6 @@ public abstract class EnemyAttack : MonoBehaviour
 
    protected virtual void Update()
    {
-      if (!GameplayManager.Instance.IsGamePlaying()) return;
-      if (canAttack && !isAttacking) {
-         attackTimer += Time.deltaTime;
-         if (attackTimer > attackDelay) {
-            attackTimer = 0f;
-         }
-      }
    }
 
    public abstract void Attack();

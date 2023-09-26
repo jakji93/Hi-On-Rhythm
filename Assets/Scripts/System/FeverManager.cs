@@ -21,6 +21,7 @@ public class FeverManager : MonoBehaviour, IHasProgress
    [SerializeField] private float feverPerNoHits;
    [SerializeField] private float feverPerEnemyKilled;
    [SerializeField] private MMF_Player feverPlayer;
+   [SerializeField] private float duration;
 
    private float curFever = 0;
    [SerializeField] private float maxFever = 100;
@@ -111,7 +112,7 @@ public class FeverManager : MonoBehaviour, IHasProgress
          {
             isFeverMode = true
          });
-         DOVirtual.Float(maxFever, 0f, 6f, x =>
+         DOVirtual.Float(maxFever, 0f, duration, x =>
          {
             OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
             {

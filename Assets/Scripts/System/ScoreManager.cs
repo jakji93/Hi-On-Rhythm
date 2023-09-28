@@ -257,6 +257,9 @@ public class ScoreManager : MonoBehaviour
          score.bossHP = "n/a";
       }
       score.enemyKilled = enemyKilledCounter.ToString();
+      float scoreToUse = NoteManager.Instance.GetAccuracyRating();
+      var accuracy = Mathf.Round(scoreToUse * 100 * 100) / 100 + "%";
+      score.accuracy = accuracy;
       var songName = GameplayManager.Instance.GetSongName();
       var difficulty = GameplayManager.Instance.GetDifficulty();
       if(SaveSystem.TrySaveHighScore(score, songName, difficulty)) {

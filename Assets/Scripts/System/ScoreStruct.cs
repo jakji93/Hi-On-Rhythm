@@ -6,4 +6,5 @@ public struct ScoreStruct
    public string enemyKilled;
    public string bossHP;
    public string playerHP;
+   public string accuracy;
 }

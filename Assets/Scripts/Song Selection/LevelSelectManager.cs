@@ -35,6 +35,7 @@ public class LevelSelectManager : MonoBehaviour
    [SerializeField] private TextMeshProUGUI enemyKilled;
    [SerializeField] private TextMeshProUGUI bossHP;
    [SerializeField] private TextMeshProUGUI playerHP;
+   [SerializeField] private TextMeshProUGUI accuracy;
    [Header("Difficulty Panel")]
    [SerializeField] private CanvasGroup difficultyPanel;
    [SerializeField] private TextMeshProUGUI difficultSongName;
@@ -274,6 +275,7 @@ public class LevelSelectManager : MonoBehaviour
          enemyKilled.text = score.enemyKilled;
          bossHP.text = score.bossHP;
          playerHP.text = score.playerHP;
+         accuracy.text = score.accuracy;
       } else {
          this.score.text = "-";
          grade.text = "-";
@@ -281,6 +283,7 @@ public class LevelSelectManager : MonoBehaviour
          enemyKilled.text = "-";
          bossHP.text = "-";
          playerHP.text = "-";
+         accuracy.text = "-";
       }
    }
 

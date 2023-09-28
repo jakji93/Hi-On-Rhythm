@@ -27,4 +27,7 @@ MonoBehaviour:
   - difficulty: 1
     enemySpawn: {fileID: 6377186063156372369, guid: d41641f6c4ed0744daec61fa5ae86a8c, type: 3}
     chart: {fileID: 4303629129938593344, guid: 63707e107d9442c4198785763b5d69f7, type: 3}
+  - difficulty: 2
+    enemySpawn: {fileID: 6377186063156372369, guid: d41641f6c4ed0744daec61fa5ae86a8c, type: 3}
+    chart: {fileID: 787747257131919312, guid: 6fcef581fb8bad6418a2d94b35d15135, type: 3}
   gameMusic: {fileID: 8300000, guid: 3c64d26db986fa347ad067f2e0b2d2f7, type: 3}

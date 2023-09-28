@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: 13
-  difficulty: 0
+  difficulty: 1
   playerName: 0
   gameInput: {fileID: 527138448}
   waitingToStart: 2
@@ -3771,7 +3771,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: normal
+  m_text: hard
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a7cf2bc8733f6c0468062c8e95e84690, type: 2}
   m_sharedMaterial: {fileID: -7371932871882357731, guid: a7cf2bc8733f6c0468062c8e95e84690, type: 2}
@@ -12538,6 +12538,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2047300010851521491, guid: b2b03afe6e536e94594059cf1b5b3d6a, type: 3}
+      propertyPath: damageCooldown
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2656993673959694954, guid: b2b03afe6e536e94594059cf1b5b3d6a, type: 3}
       propertyPath: m_RootOrder
       value: 21

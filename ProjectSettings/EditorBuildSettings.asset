@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Demo Scene/Square_Normal.unity
     guid: 6ff4173c093dbfa4a8eabede7d42f44c
   - enabled: 1
+    path: Assets/Scenes/Demo Scene/Square_Hard.unity
+    guid: 923391c34c11f63468889699bd834f20
+  - enabled: 1
+    path: Assets/Scenes/Demo Scene/Square_Unbeatable.unity
+    guid: f8d1db5fbe77902449838a2d62adb2de
+  - enabled: 1
     path: Assets/Scenes/Demo Scene/Light theme/Settings.unity
     guid: bef327ffff4cad344ab86690ddb4ed3e
   m_configObjects: {}

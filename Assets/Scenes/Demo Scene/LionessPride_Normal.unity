@@ -183,6 +183,9 @@ MonoBehaviour:
   onChange:
     m_PersistentCalls:
       m_Calls: []
+  fullColor: {r: 0.99607843, g: 1, b: 0.47058824, a: 1}
+  emptyColor: {r: 0, g: 0, b: 0, a: 0}
+  colorThreshold: 0
 --- !u!114 &13121821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3669,7 +3672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.03137255, g: 0.96862745, b: 0.99607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8944,6 +8947,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  fullColor: {r: 0.03137255, g: 0.96862745, b: 0.99607843, a: 1}
+  emptyColor: {r: 1, g: 0.1254902, b: 0.44313726, a: 1}
+  colorThreshold: 0.2
 --- !u!1 &636233967
 GameObject:
   m_ObjectHideFlags: 0
@@ -19479,7 +19485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.99607843, g: 1, b: 0.47058824, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -19686,7 +19692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: 13
-  chart: {fileID: 4303629129938593344, guid: 63707e107d9442c4198785763b5d69f7, type: 3}
+  chart: {fileID: 787747257131919312, guid: 6fcef581fb8bad6418a2d94b35d15135, type: 3}
   spawner: {fileID: 0}
   BPM: 100
   displaySongName: Mumei
@@ -32292,15 +32298,11 @@ MonoBehaviour:
     - spawnPoints:
       - {fileID: 2517678828426886462}
       - {fileID: 8657017758192113376}
-      - {fileID: 572001862206098136}
-      - {fileID: 1281029373714258466}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 7628463257423264465}
       - {fileID: 5746200055990028936}
-      - {fileID: 236575558950266004}
-      - {fileID: 3405554778183595162}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
@@ -32410,8 +32412,6 @@ MonoBehaviour:
       - {fileID: 5746200055990028936}
       - {fileID: 236575558950266004}
       - {fileID: 3405554778183595162}
-      - {fileID: 3218593926835608691}
-      - {fileID: 157061748361894398}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
@@ -32419,8 +32419,6 @@ MonoBehaviour:
       - {fileID: 5746200055990028936}
       - {fileID: 236575558950266004}
       - {fileID: 3405554778183595162}
-      - {fileID: 3218593926835608691}
-      - {fileID: 157061748361894398}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
@@ -32430,8 +32428,6 @@ MonoBehaviour:
       - {fileID: 3038420032860641581}
       - {fileID: 5457527748547275403}
       - {fileID: 157061748361894398}
-      - {fileID: 5140125782059904773}
-      - {fileID: 3218593926835608691}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
       - {fileID: 1707633959054450384, guid: 61f3197b0a2196a4ea2512dee9540793, type: 3}
@@ -34126,7 +34122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1001 &4195526451594057608
 PrefabInstance:
   m_ObjectHideFlags: 0

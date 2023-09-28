@@ -11,6 +11,9 @@ public class ProgressBarUI : MonoBehaviour
    [SerializeField] private bool isDepleting = false;
    [SerializeField] private bool hideAtStart = false;
    [SerializeField] private UnityEvent onChange;
+   [SerializeField] private Color fullColor;
+   [SerializeField] private Color emptyColor;
+   [SerializeField] private float colorThreshold;
 
    private IHasProgress hasProgress;
 
@@ -23,6 +26,11 @@ public class ProgressBarUI : MonoBehaviour
 
       hasProgress.OnProgressChanged += HasProgress_OnProgressChanged;
       barImage.fillAmount = isDepleting ? 1f : 0f;
+      if (barImage.fillAmount >= colorThreshold) {
+         barImage.color = fullColor;
+      } else {
+         barImage.color = emptyColor;
+      }
       if(hideAtStart) {
          Hide();
       }
@@ -35,6 +43,12 @@ public class ProgressBarUI : MonoBehaviour
          Hide();
       } else {
          Active();
+      }
+      if (barImage.fillAmount >= colorThreshold) {
+         barImage.color = fullColor;
+      }
+      else {
+         barImage.color = emptyColor;
       }
       onChange?.Invoke();
    }

@@ -306,6 +306,7 @@ public class LevelSelectManager : MonoBehaviour
             difficultyPanel.gameObject.SetActive(false);
             isDifficultyOpen = false;
          });
+         tracks[curSelectTrack].gameObject.GetComponent<RectTransform>().DOAnchorPos3D(inPosition, moveSpeed).From(backPosition).SetEase(moveCurve);
       }
       else {
          BackToLanding();
@@ -323,6 +324,7 @@ public class LevelSelectManager : MonoBehaviour
       difficultyPanel.alpha = 0;
       difficultyPanel.DOFade(1, 0.1f).SetEase(Ease.Linear);
       difficultyPanel.transform.DOLocalMoveY(20, 0.1f).From();
+      tracks[curSelectTrack].gameObject.GetComponent<RectTransform>().DOAnchorPos3D(backPosition, moveSpeed).From(inPosition).SetEase(moveCurve);
    }
 
    public void SetSongIndexNumber(string index)

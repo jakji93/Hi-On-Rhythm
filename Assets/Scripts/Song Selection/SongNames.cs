@@ -13,5 +13,6 @@ public enum SongNames
    Astrogirl,
    FeverNight,
    LionessPride,
-   Mumei
+   Mumei,
+   EveryDay
 }

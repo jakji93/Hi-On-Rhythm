@@ -306,7 +306,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  damage: 5
+  damage: 10
   top: {fileID: 4565290902027274383}
   left: {fileID: 6818141203655998604}
   bottom: {fileID: 5191150244848194228}

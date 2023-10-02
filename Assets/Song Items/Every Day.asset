@@ -14,11 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songName: 14
   playerName: 0
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 7d53e43d2fcfdbc45b4cddc210c82597, type: 3}
   displayTitle: Every Day
   BPM: 85
   artistName: Ryuzaki Hajime
   initialDelay: 0
   coverImage: {fileID: 21300000, guid: 6e7ed31f908c963458069b24319af662, type: 3}
-  songSets: []
-  gameMusic: {fileID: 0}
+  songSets:
+  - difficulty: 0
+    enemySpawn: {fileID: 0}
+    chart: {fileID: 2175028502634348199, guid: 5f883dd5d36685149b29d33a2f773edd, type: 3}
+  - difficulty: 1
+    enemySpawn: {fileID: 0}
+    chart: {fileID: 1271385737530338970, guid: 1a2bf62aad6c75d40a1d7bbc019ff8e9, type: 3}
+  - difficulty: 2
+    enemySpawn: {fileID: 0}
+    chart: {fileID: 8390580271153093314, guid: 920987e00fa69ca4d9beedd32253b5fd, type: 3}
+  gameMusic: {fileID: 8300000, guid: ba22879c15117ec43a1d9ca0672a4c94, type: 3}

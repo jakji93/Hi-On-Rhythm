@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec1c1dc8e35b0054aa3ba130cf70a0df, type: 3}
   m_Name: Every Day
   m_EditorClassIdentifier: 
-  songName: 14
+  songName: EveryDay
   playerName: 0
   audioClip: {fileID: 8300000, guid: 7d53e43d2fcfdbc45b4cddc210c82597, type: 3}
   displayTitle: Every Day

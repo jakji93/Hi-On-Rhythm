@@ -16,7 +16,7 @@ public class GameplayManager : MonoBehaviour
    public event EventHandler OnGameUnpause;
    public event EventHandler OnFirstBeat;
 
-   [SerializeField] private SongNames songName;
+   [SerializeField] private string songName;
    [SerializeField] private Difficulties difficulty;
    [SerializeField] private PlayerName playerName;
 
@@ -253,7 +253,7 @@ public class GameplayManager : MonoBehaviour
       Loader.Load2(sceneName);
    }
 
-   public SongNames GetSongName()
+   public string GetSongName()
    {
       return songName;
    }

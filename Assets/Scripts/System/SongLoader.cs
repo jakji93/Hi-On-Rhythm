@@ -6,7 +6,7 @@ public class SongLoader : MonoBehaviour
 {
    public static SongLoader Instance { get; private set; }
 
-   [SerializeField] private SongNames songName;
+   [SerializeField] private string songName;
    [SerializeField] private GameObject chart;
    [SerializeField] private GameObject spawner;
    [SerializeField] private int BPM;
@@ -44,7 +44,7 @@ public class SongLoader : MonoBehaviour
       return displaySongName;
    }
 
-   public SongNames GetSongName()
+   public string GetSongName()
    {
       return songName;
    }
@@ -54,7 +54,7 @@ public class SongLoader : MonoBehaviour
       return gameMusic;
    }
 
-   public void SetSongName(SongNames name)
+   public void SetSongName(string name)
    {
       songName = name;
    }

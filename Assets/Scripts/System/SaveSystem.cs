@@ -5,7 +5,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public static class SaveSystem
 {
-   public static bool TrySaveHighScore(ScoreStruct score, SongNames songName, Difficulties difficulty)
+   public static bool TrySaveHighScore(ScoreStruct score, string songName, Difficulties difficulty)
    {
       var fileName = songName.ToString() + '_' + difficulty.ToString();
       if(ES3.KeyExists(fileName)) {
@@ -21,9 +21,9 @@ public static class SaveSystem
       }
    }
 
-   public static bool TryLoadHighScore(SongNames songName, Difficulties difficulty, out ScoreStruct score)
+   public static bool TryLoadHighScore(string songName, Difficulties difficulty, out ScoreStruct score)
    {
-      var fileName = songName.ToString() + '_' + difficulty.ToString();
+      var fileName = songName + '_' + difficulty.ToString();
       if (ES3.KeyExists(fileName)) {
          score = ES3.Load<ScoreStruct>(fileName);
          return true;

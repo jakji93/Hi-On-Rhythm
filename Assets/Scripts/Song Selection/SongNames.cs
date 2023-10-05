@@ -14,5 +14,6 @@ public enum SongNames
    FeverNight,
    LionessPride,
    Mumei,
-   EveryDay
+   EveryDay,
+   TellTheTruth
 }

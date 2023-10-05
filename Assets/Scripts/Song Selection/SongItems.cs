@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class SongItems : MonoBehaviour
 {
-   [SerializeField] private SongNames songName;
+   [SerializeField] private string songName;
    [SerializeField] private PlayerName playerName;
    [SerializeField] private AudioClip audioClip;
    [SerializeField] private PulseEffect pulse;
@@ -19,7 +19,7 @@ public class SongItems : MonoBehaviour
    private AudioClip gameMusic;
 
    public AudioClip GetAudioClip() { return audioClip; }
-   public SongNames GetSongNames() { return songName; }
+   public string GetSongNames() { return songName; }
    public string GetDisplayTitle() { return displayTitle; }
    public string GetArtistName() { return artistName; }
    public SongItemSO.SongSets[] GetSongSets() { return songSets; }

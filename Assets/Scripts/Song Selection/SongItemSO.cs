@@ -13,7 +13,7 @@ public class SongItemSO : ScriptableObject
       public GameObject enemySpawn;
       public GameObject chart;
    }
-   public SongNames songName;
+   public string songName;
    public PlayerName playerName;
    public AudioClip audioClip;
    public string displayTitle;

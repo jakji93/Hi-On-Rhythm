@@ -43,7 +43,7 @@ public class LevelSelectManager : MonoBehaviour
 
    private bool isMoving = false;
 
-   private SongNames curSongName;
+   private string curSongName;
    private Difficulties curDifficuly;
    private SongItemSO.SongSets[] curSongSets;
    private int BPM;
@@ -132,14 +132,14 @@ public class LevelSelectManager : MonoBehaviour
       }
    }
 
-   public void SetSongName(SongNames name, string displayName, string artistName, int BPM)
+   public void SetSongName(string name, string displayName, string artistName, int BPM)
    {
       curSongName = name;
       if(displayName != null) {
          songName.text = displayName;
          this.artistName.text = artistName;
       } else {
-         songName.text = curSongName.ToString();
+         songName.text = curSongName;
       }
       this.BPM = BPM;
       UpdateScore();

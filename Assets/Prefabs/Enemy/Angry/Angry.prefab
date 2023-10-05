@@ -330,7 +330,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   canMove: 1
-  moveSpeed: 7.5
+  moveSpeed: 5
   spaceBetween: 2
   turnSpeed: 20
 --- !u!114 &7836519322665795201

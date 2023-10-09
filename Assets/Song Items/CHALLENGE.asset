@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1c1dc8e35b0054aa3ba130cf70a0df, type: 3}
+  m_Name: CHALLENGE
+  m_EditorClassIdentifier: 
+  songName: CHALLENGE
+  playerName: 0
+  audioClip: {fileID: 8300000, guid: 58587963837f7134da91735f0f199c6c, type: 3}
+  displayTitle: CHALLENGE
+  BPM: 94
+  artistName: Caro kissa
+  initialDelay: 158
+  coverImage: {fileID: 21300000, guid: 4a9682f0340647d4cb25c435bec54488, type: 3}
+  songSets:
+  - difficulty: 0
+    enemySpawn: {fileID: 5895275394974923077, guid: 087de0976508c2544a681af13ceba229, type: 3}
+    chart: {fileID: 1411956730414986271, guid: d747c9f36e1f1cc43aeac725fe703030, type: 3}
+  - difficulty: 1
+    enemySpawn: {fileID: 5895275394974923077, guid: 087de0976508c2544a681af13ceba229, type: 3}
+    chart: {fileID: 5255972305793456767, guid: fc91910e12d13c6479768537ff7d29b2, type: 3}
+  - difficulty: 2
+    enemySpawn: {fileID: 4092703594388906989, guid: bb16d3a8d7c88614ebac4c7f930bc5b5, type: 3}
+    chart: {fileID: 3771172759980095688, guid: bb4cb492546dd7242a0a75cc692637c6, type: 3}
+  gameMusic: {fileID: 8300000, guid: f3359caca942a00418b04e6729afdf83, type: 3}

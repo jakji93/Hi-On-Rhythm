@@ -35,7 +35,7 @@ public class SettingsManager : MonoBehaviour
          offset = 0f;
          PlayerPrefs.SetFloat("ChartOffset", 0f);
       }
-      offsetText.text = offset.ToString("F2");
+      offsetText.text = offset.ToString("F3");
    }
 
    private void GameInput_OnBackPressed(object sender, System.EventArgs e)
@@ -83,17 +83,17 @@ public class SettingsManager : MonoBehaviour
 
    public void IncreaseOffset()
    {
-      offset += 0.01f;
-      offset = Mathf.Round(offset * 100f) / 100f;
-      offsetText.text = offset.ToString("F2");
+      offset += 0.001f;
+      offset = Mathf.Round(offset * 1000f) / 1000f;
+      offsetText.text = offset.ToString("F3");
       PlayerPrefs.SetFloat("ChartOffset", offset);
    }
 
    public void DecreaseOffset()
    {
-      offset -= 0.01f;
-      offset = Mathf.Round(offset * 100f) / 100f;
-      offsetText.text = offset.ToString("F2");
+      offset -= 0.001f;
+      offset = Mathf.Round(offset * 1000f) / 1000f;
+      offsetText.text = offset.ToString("F3");
       PlayerPrefs.SetFloat("ChartOffset", offset);
    }
 }

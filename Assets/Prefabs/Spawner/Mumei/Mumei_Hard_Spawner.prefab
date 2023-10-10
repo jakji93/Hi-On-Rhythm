@@ -524,64 +524,50 @@ MonoBehaviour:
     - spawnPoints:
       - {fileID: 7923087779027573414}
       - {fileID: 3486489472349446751}
-      - {fileID: 2494406839420882347}
-      - {fileID: 3181250170814644768}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 854579660017045363}
       - {fileID: 8630666523218482883}
-      - {fileID: 9198196914035852828}
-      - {fileID: 5970429444715543853}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 2785487238873486533}
       - {fileID: 26761453304233674}
-      - {fileID: 914029444453690238}
-      - {fileID: 410243858579998223}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 8987588169985075880}
+      - {fileID: 535238940921452150}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints:
+      - {fileID: 3246118092063755043}
+      - {fileID: 1396810053749103848}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 8987588169985075880}
       - {fileID: 535238940921452150}
       - {fileID: 5867398098911605328}
-      - {fileID: 7170157147811803803}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 3246118092063755043}
       - {fileID: 1396810053749103848}
       - {fileID: 525717941655304324}
-      - {fileID: 5337276810887728835}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 8987588169985075880}
       - {fileID: 535238940921452150}
       - {fileID: 5867398098911605328}
-      - {fileID: 7170157147811803803}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 3246118092063755043}
       - {fileID: 1396810053749103848}
       - {fileID: 525717941655304324}
-      - {fileID: 5337276810887728835}
-      enemies:
-      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 8987588169985075880}
-      - {fileID: 535238940921452150}
-      - {fileID: 5867398098911605328}
-      - {fileID: 7170157147811803803}
-      enemies:
-      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 3246118092063755043}
-      - {fileID: 1396810053749103848}
-      - {fileID: 525717941655304324}
-      - {fileID: 5337276810887728835}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     musicTime: 55
@@ -590,42 +576,36 @@ MonoBehaviour:
       - {fileID: 8987588169985075880}
       - {fileID: 535238940921452150}
       - {fileID: 5867398098911605328}
-      - {fileID: 7170157147811803803}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 8987588169985075880}
       - {fileID: 535238940921452150}
       - {fileID: 5867398098911605328}
-      - {fileID: 7170157147811803803}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 8987588169985075880}
       - {fileID: 535238940921452150}
       - {fileID: 5867398098911605328}
-      - {fileID: 7170157147811803803}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 8987588169985075880}
       - {fileID: 535238940921452150}
       - {fileID: 5867398098911605328}
-      - {fileID: 7170157147811803803}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 8987588169985075880}
       - {fileID: 535238940921452150}
       - {fileID: 5867398098911605328}
-      - {fileID: 7170157147811803803}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 8987588169985075880}
       - {fileID: 535238940921452150}
       - {fileID: 5867398098911605328}
-      - {fileID: 7170157147811803803}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
@@ -633,8 +613,6 @@ MonoBehaviour:
       - {fileID: 3486489472349446751}
       - {fileID: 2494406839420882347}
       - {fileID: 3181250170814644768}
-      - {fileID: 525717941655304324}
-      - {fileID: 1396810053749103848}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
       - {fileID: 1707633959054450384, guid: 61f3197b0a2196a4ea2512dee9540793, type: 3}
@@ -663,7 +641,6 @@ MonoBehaviour:
     - spawnPoints:
       - {fileID: 3246118092063755043}
       - {fileID: 1396810053749103848}
-      - {fileID: 525717941655304324}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
@@ -700,9 +677,6 @@ MonoBehaviour:
       - {fileID: 8009048613182735849}
       - {fileID: 930684758311873060}
       - {fileID: 3422834942789463884}
-      - {fileID: 7209174993382863980}
-      - {fileID: 2385915865346443460}
-      - {fileID: 1505927245233022551}
       enemies:
       - {fileID: 1127962848118623424, guid: 6cd4e530d296a584ea86c80c26a6daef, type: 3}
   - waveNumber: 47
@@ -713,9 +687,6 @@ MonoBehaviour:
       - {fileID: 8009048613182735849}
       - {fileID: 930684758311873060}
       - {fileID: 3422834942789463884}
-      - {fileID: 7209174993382863980}
-      - {fileID: 2385915865346443460}
-      - {fileID: 1505927245233022551}
       enemies:
       - {fileID: 1707633959054450384, guid: 61f3197b0a2196a4ea2512dee9540793, type: 3}
   - waveNumber: 59
@@ -726,9 +697,6 @@ MonoBehaviour:
       - {fileID: 4453095888886260002}
       - {fileID: 4065643192396131170}
       - {fileID: 5806942526962451284}
-      - {fileID: 196350622034176755}
-      - {fileID: 3255761541840014346}
-      - {fileID: 4154816116977322323}
       enemies:
       - {fileID: 1127962848118623424, guid: 6cd4e530d296a584ea86c80c26a6daef, type: 3}
   - waveNumber: 60
@@ -739,9 +707,6 @@ MonoBehaviour:
       - {fileID: 5680184104571258626}
       - {fileID: 3557525716673602320}
       - {fileID: 917846340760434182}
-      - {fileID: 1960645775768247267}
-      - {fileID: 6951919063855160840}
-      - {fileID: 930684758311873060}
       enemies:
       - {fileID: 1707633959054450384, guid: 61f3197b0a2196a4ea2512dee9540793, type: 3}
   - waveNumber: 78
@@ -752,9 +717,6 @@ MonoBehaviour:
       - {fileID: 2476686128824950628}
       - {fileID: 2585782413082428219}
       - {fileID: 7242440131762268091}
-      - {fileID: 4134895880257442185}
-      - {fileID: 2212094027771854268}
-      - {fileID: 8009048613182735849}
       enemies:
       - {fileID: 1127962848118623424, guid: 6cd4e530d296a584ea86c80c26a6daef, type: 3}
   - waveNumber: 79
@@ -765,9 +727,6 @@ MonoBehaviour:
       - {fileID: 6750555807169065414}
       - {fileID: 7871007429654076056}
       - {fileID: 2939684725683121262}
-      - {fileID: 6863316165790698652}
-      - {fileID: 6927353829877901010}
-      - {fileID: 8009048613182735849}
       enemies:
       - {fileID: 1707633959054450384, guid: 61f3197b0a2196a4ea2512dee9540793, type: 3}
   - waveNumber: 93
@@ -778,9 +737,6 @@ MonoBehaviour:
       - {fileID: 4154816116977322323}
       - {fileID: 1505927245233022551}
       - {fileID: 8009048613182735849}
-      - {fileID: 3422834942789463884}
-      - {fileID: 930684758311873060}
-      - {fileID: 7209174993382863980}
       enemies:
       - {fileID: 1127962848118623424, guid: 6cd4e530d296a584ea86c80c26a6daef, type: 3}
   - waveNumber: 94
@@ -791,9 +747,6 @@ MonoBehaviour:
       - {fileID: 4154816116977322323}
       - {fileID: 1505927245233022551}
       - {fileID: 8009048613182735849}
-      - {fileID: 3422834942789463884}
-      - {fileID: 930684758311873060}
-      - {fileID: 7209174993382863980}
       enemies:
       - {fileID: 6800914929581646642, guid: cb0465a382914e44e87c7dbdb85e9c05, type: 3}
   - waveNumber: 120

@@ -51,6 +51,7 @@ public class AccuracyManager : MonoBehaviour
       textCanvas.transform.DOKill();
       textCanvas.alpha = 1;
       textCanvas.transform.localPosition = Vector3.zero;
+      textCanvas.transform.localScale = Vector3.one;
       textCanvas.transform.DOPunchScale(new Vector3(0.2f, 0.2f, 0.2f), 0.2f, 0, 0).OnComplete(() =>
       {
          textCanvas.transform.DOLocalMoveY(-20f, 1f);

@@ -75,6 +75,7 @@ public class ComboManager : MonoBehaviour
       }
       if(curCombo > 5) {
          comboCounterText.transform.DOKill();
+         comboCounterText.transform.localScale = Vector3.one;
          comboCounterText.transform.DOPunchScale(new Vector3(0.1f, 0.1f, 0.1f), 0.2f, 0, 0);
       }
       comboCounterText.text = curCombo.ToString();

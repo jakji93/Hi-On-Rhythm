@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1c1dc8e35b0054aa3ba130cf70a0df, type: 3}
+  m_Name: Life Is A Party
+  m_EditorClassIdentifier: 
+  songName: LifeIfAParty
+  playerName: 0
+  audioClip: {fileID: 8300000, guid: 850559d542a91624b80038e9053a06dd, type: 3}
+  displayTitle: Life Is A Party
+  BPM: 132
+  artistName: t.tam
+  initialDelay: 325
+  coverImage: {fileID: 21300000, guid: 8f36a24d70686504e86c2d5f7f41cc4f, type: 3}
+  songSets:
+  - difficulty: 0
+    enemySpawn: {fileID: 8793604355566055888, guid: 482320a68de10b642bbb471afa76767e, type: 3}
+    chart: {fileID: 2122895179490224274, guid: 4c328502cb627a84d97a1ea732b939dc, type: 3}
+  - difficulty: 1
+    enemySpawn: {fileID: 8793604355566055888, guid: 482320a68de10b642bbb471afa76767e, type: 3}
+    chart: {fileID: 3960258960568473383, guid: 688d1d22d9e33894f8b80a94eb7e418c, type: 3}
+  - difficulty: 2
+    enemySpawn: {fileID: 441276594976041655, guid: 9ec0f7ce080718648bcd314c7e5bbb3c, type: 3}
+    chart: {fileID: 4148616124406408453, guid: 7fa9d6f4bb387bd42bd060a48aaaad04, type: 3}
+  gameMusic: {fileID: 8300000, guid: 091fa0ff7927dcc4d81a1ea107a1193a, type: 3}

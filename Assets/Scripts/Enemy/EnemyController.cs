@@ -45,8 +45,7 @@ public class EnemyController : MonoBehaviour
          state = state,
       });
       ScoreManager.Instance?.EnemyKilled();
-      ComboManager.Instance?.EnemyKilled();
-      //TODO death animation, set GO off for now
+      //ComboManager.Instance?.EnemyKilled();
       if (useEffect) Instantiate(deathParticle, transform.position, Quaternion.identity);
       Destroy(gameObject);
    }

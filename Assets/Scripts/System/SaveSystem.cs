@@ -46,4 +46,18 @@ public static class SaveSystem
       prevSong = new();
       return false;
    }
+
+   public static bool TryFirstTimePlaying()
+   {
+      if (ES3.KeyExists("First_Time")) {
+         var firstTime = ES3.Load<bool>("First_Time");
+         return firstTime;
+      }
+      return true;
+   }
+
+   public static void SaveFirstTime()
+   {
+      ES3.Save("First_Time", false);
+   }
 }

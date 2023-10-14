@@ -40,6 +40,8 @@ public class LevelSelectManager : MonoBehaviour
    [SerializeField] private CanvasGroup difficultyPanel;
    [SerializeField] private TextMeshProUGUI difficultSongName;
    [SerializeField] private TextMeshProUGUI difficultArtistName;
+   [Header("Tutorial Tip")]
+   [SerializeField] private CanvasGroup tipPanel;
 
    private bool isMoving = false;
 
@@ -53,6 +55,7 @@ public class LevelSelectManager : MonoBehaviour
    private int curSelectTrack = 0;
 
    private bool isDifficultyOpen = false;
+   private bool isTipOpen = false;
 
    private void Awake()
    {
@@ -76,6 +79,10 @@ public class LevelSelectManager : MonoBehaviour
       gameInput.OnNextDifficultyPressed += GameInput_OnNextDifficultyPressed;
       gameInput.OnStartPressed += GameInput_OnStartPressed;
       gameInput.OnBackPressed += GameInput_OnBackPressed;
+      if (SaveSystem.TryFirstTimePlaying()) {
+         tipPanel.gameObject.SetActive(true);
+         isTipOpen = true;
+      }
    }
 
    private void GameInput_OnBackPressed(object sender, System.EventArgs e)
@@ -307,6 +314,8 @@ public class LevelSelectManager : MonoBehaviour
             isDifficultyOpen = false;
          });
          tracks[curSelectTrack].gameObject.GetComponent<RectTransform>().DOAnchorPos3D(inPosition, moveSpeed).From(backPosition).SetEase(moveCurve);
+      } else if (isTipOpen) {
+         CloseTip();
       }
       else {
          BackToLanding();
@@ -330,6 +339,17 @@ public class LevelSelectManager : MonoBehaviour
    public void SetSongIndexNumber(string index)
    {
       songIndexNumber.text = index;
+   }
+
+   public void CloseTip()
+   {
+      ClipPlayer.Instance.PlayClip(buttonClip);
+      SaveSystem.SaveFirstTime();
+      tipPanel.DOFade(0, 0.1f).SetEase(Ease.Linear).OnComplete(() =>
+      {
+         tipPanel.gameObject.SetActive(false);
+         isTipOpen = false;
+      });
    }
 
    private void LegacyMove()

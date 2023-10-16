@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Demo Scene/Square_Unbeatable.unity
     guid: f8d1db5fbe77902449838a2d62adb2de
   - enabled: 1
+    path: Assets/Scenes/Demo Scene/Square_Tutorial.unity
+    guid: e6d8d9327b63b1a4db1cd94dad1eeaea
+  - enabled: 1
     path: Assets/Scenes/Demo Scene/Light theme/Settings.unity
     guid: bef327ffff4cad344ab86690ddb4ed3e
   m_configObjects: {}

@@ -441,14 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   specialAttacks:
-  - {fileID: 7387536254396499983, guid: 64bd51bd8f5ac6949a2db28e73680a65, type: 3}
-  - {fileID: 5303007919122363595, guid: 3c5f848f74a6da746ab53217718ce8a8, type: 3}
-  - {fileID: 5303007919122363595, guid: 3c5f848f74a6da746ab53217718ce8a8, type: 3}
-  - {fileID: 5303007919122363595, guid: 3c5f848f74a6da746ab53217718ce8a8, type: 3}
-  - {fileID: 5303007919122363595, guid: 3c5f848f74a6da746ab53217718ce8a8, type: 3}
-  - {fileID: 5303007919122363595, guid: 3c5f848f74a6da746ab53217718ce8a8, type: 3}
-  - {fileID: 5303007919122363595, guid: 3c5f848f74a6da746ab53217718ce8a8, type: 3}
-  - {fileID: 5303007919122363595, guid: 3c5f848f74a6da746ab53217718ce8a8, type: 3}
+  - {fileID: 6149738359040949578, guid: 5806b4371fb14134eb055ca944620281, type: 3}
   perfectAttack: {fileID: 3642693443182775483, guid: 4c94176c3fe2e46448122be81e98e3d0, type: 3}
   greatAttack: {fileID: 3642693443182775483, guid: afff4a8f46d5f00409ebdaecc659149b, type: 3}
   goodAttack: {fileID: 3642693443182775483, guid: 9a85479e86770e84cb29e2f54e5cce63, type: 3}

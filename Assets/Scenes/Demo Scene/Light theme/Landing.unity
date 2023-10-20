@@ -11478,6 +11478,7 @@ MonoBehaviour:
   backGround: {fileID: 1367813846}
   quitPanel: {fileID: 843849695}
   quitPanelVolume: 0.3
+  landingUI: {fileID: 162081420}
 --- !u!4 &996102716
 Transform:
   m_ObjectHideFlags: 0

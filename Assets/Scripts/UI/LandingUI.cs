@@ -53,4 +53,9 @@ public class LandingUI : MonoBehaviour
          wishlist.DOFade(1, 0.5f).From(0).SetEase(Ease.Linear);
       }
    }
+
+   public bool IsOpen()
+   {
+      return isOpened;
+   }
 }

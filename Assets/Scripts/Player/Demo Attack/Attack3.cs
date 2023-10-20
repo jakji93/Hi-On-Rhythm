@@ -9,10 +9,14 @@ public class Attack3 : MonoBehaviour
    // Start is called before the first frame update
    void Start()
    {
-      var newBullet = Instantiate(bullet, transform.position, transform.rotation);
-      var newBullet1 = Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 90f));
-      var newBullet2 = Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 180f));
-      var newBullet3 = Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 270f));
+      Instantiate(bullet, transform.position, transform.rotation);
+      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 90f));
+      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 180f));
+      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 270f));
+      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 45f));
+      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 135f));
+      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 225f));
+      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 315f));
       Destroy(this.gameObject);
    }
 }

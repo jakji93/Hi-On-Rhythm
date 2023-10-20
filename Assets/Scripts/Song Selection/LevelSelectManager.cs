@@ -92,7 +92,8 @@ public class LevelSelectManager : MonoBehaviour
 
    private void GameInput_OnStartPressed(object sender, System.EventArgs e)
    {
-      if (isDifficultyOpen) GoToSong();
+      if (isTipOpen) CloseTip();
+      else if (isDifficultyOpen) GoToSong();
       else OnDifficultyOpen();
    }
 

@@ -33,9 +33,8 @@ public class NoteManager : MonoBehaviour
    [SerializeField] private int maxHitdistance;
    [SerializeField] private TextMeshProUGUI accuracyNum;
    [SerializeField] private TextMeshProUGUI lateJudgeText;
+   [SerializeField] private bool autoplay = false;
 
-   private float totalDistance = 0f;
-   private float currentDistance = 0f;
    private float totalAccuracy = 0f;
    private float currentAccuracy = 0f;
    private float accuracy = 0f;
@@ -67,6 +66,7 @@ public class NoteManager : MonoBehaviour
 
    private void DetectNoteHit()
    {
+      if (autoplay) return;
       if (!GameplayManager.Instance.IsGamePlaying()) return;
       var noteObj = Physics2D.OverlapBox(transform.position, hitzoneSize, noteLayer);
       if (noteObj != null) {
@@ -122,10 +122,9 @@ public class NoteManager : MonoBehaviour
                   Debug.Log("Enemy Spawn");
                   break;
                case Note.NoteTypes.Normal1:
-                  OnNoteMissed?.Invoke(this, EventArgs.Empty);
+                  if (autoplay) OnNotePerfect?.Invoke(this, EventArgs.Empty);
+                  else OnNoteMissed?.Invoke(this, EventArgs.Empty);
                   Debug.Log("Note missed");
-                  //totalDistance += maxHitdistance;
-                  //accuracy = Mathf.Round(currentDistance / totalDistance * 100 * 100) / 100;
                   totalAccuracy += 300;
                   accuracy = Mathf.Round(currentAccuracy / totalAccuracy * 100 * 100) / 100;
                   accuracyNum.text = accuracy.ToString() + "%";
@@ -153,10 +152,6 @@ public class NoteManager : MonoBehaviour
          OnNoteGood?.Invoke(this, EventArgs.Empty);
          currentAccuracy += 50;
       }
-      //Debug.Log("Distance: " + distance);
-      //totalDistance += maxHitdistance;
-      //currentDistance += Mathf.Max(maxHitdistance - distance, 0);
-      //accuracy = Mathf.Round(currentDistance / totalDistance * 100 * 100) / 100;
       totalAccuracy += 300;
       accuracy = Mathf.Round(currentAccuracy / totalAccuracy * 100 * 100) / 100;
       var latejudge = notePosition.x - transform.position.x;

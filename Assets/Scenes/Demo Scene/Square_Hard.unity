@@ -10516,6 +10516,7 @@ MonoBehaviour:
   maxHitdistance: 100
   accuracyNum: {fileID: 44655941}
   lateJudgeText: {fileID: 1266932128}
+  autoplay: 0
 --- !u!4 &1844858330
 Transform:
   m_ObjectHideFlags: 0
@@ -12606,14 +12607,6 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1778101414}
-    - target: {fileID: 8665897819163904160, guid: b2b03afe6e536e94594059cf1b5b3d6a, type: 3}
-      propertyPath: specialAttacks.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8665897819163904160, guid: b2b03afe6e536e94594059cf1b5b3d6a, type: 3}
-      propertyPath: specialAttacks.Array.data[0]
-      value: 
-      objectReference: {fileID: 5303007919122363595, guid: 3c5f848f74a6da746ab53217718ce8a8, type: 3}
     - target: {fileID: 8665897819163904160, guid: b2b03afe6e536e94594059cf1b5b3d6a, type: 3}
       propertyPath: specialAttacks.Array.data[4]
       value: 

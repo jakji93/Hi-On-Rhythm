@@ -20,6 +20,9 @@ public class LandingPageManager : MonoBehaviour
    [SerializeField] private CanvasGroup quitPanel;
    [SerializeField] private float quitPanelVolume;
 
+   [Header("Landing UI")]
+   [SerializeField] private LandingUI landingUI;
+
    private float defaultBDAlpha;
    private float defaultAuidioVol;
 
@@ -87,8 +90,10 @@ public class LandingPageManager : MonoBehaviour
    {
       if(quitScreen.gameObject.activeSelf) {
          QuitGame();
-      } else {
+      } else if (landingUI.IsOpen()) {
          GoToSongSelection();
+      } else {
+         landingUI.OnButtonPressed();
       }
    }
 

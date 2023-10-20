@@ -16,12 +16,12 @@ PlayerSettings:
   productName: Hi On Rhythm
   defaultCursor: {fileID: 2800000, guid: 661cec877a5620c449314b0d1a1fc333, type: 3}
   cursorHotspot: {x: 45, y: 45}
-  m_SplashScreenBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 0
-  m_SplashScreenLogoStyle: 0
+  m_SplashScreenLogoStyle: 1
   m_SplashScreenDrawMode: 1
   m_SplashScreenBackgroundAnimationZoom: 1
   m_SplashScreenLogoAnimationZoom: 1
@@ -40,10 +40,10 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 21300000, guid: 3f49761c11a0f6347a3595d79758de64, type: 3}
-    duration: 2
   - logo: {fileID: 10404, guid: 0000000000000000f000000000000000, type: 0}
     duration: 2
+  - logo: {fileID: 21300000, guid: e8e10da485002a841a3385da6863f20e, type: 3}
+    duration: 3
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
@@ -137,7 +137,7 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: 0.6
+  bundleVersion: 0.7
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0

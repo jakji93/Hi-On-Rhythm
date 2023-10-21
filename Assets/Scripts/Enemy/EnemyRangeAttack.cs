@@ -10,6 +10,8 @@ public class EnemyRangeAttack : EnemyAttack
 
    public override void Attack()
    {
+      body.DOKill();
+      body.localScale = Vector3.one;
       body.DOPunchScale(new Vector3(1.3f, 1.3f, 1.3f), 0.2f, 0, 0);
       Transform project = Instantiate(projectile, attackPoint.position, Quaternion.identity);
       Vector2 direction = PlayerControl.Instance.GetPlayerBodyTransform().position - attackPoint.position;

@@ -842,8 +842,6 @@ MonoBehaviour:
       - {fileID: 3397809108217174737}
       - {fileID: 2788510231334810018}
       - {fileID: 4903765610588316778}
-      - {fileID: 5192374925470406626}
-      - {fileID: 3399504726113064193}
       enemies:
       - {fileID: 1127962848118623424, guid: 6cd4e530d296a584ea86c80c26a6daef, type: 3}
   - waveNumber: 119
@@ -864,8 +862,6 @@ MonoBehaviour:
       - {fileID: 3397809108217174737}
       - {fileID: 2788510231334810018}
       - {fileID: 4903765610588316778}
-      - {fileID: 5192374925470406626}
-      - {fileID: 3399504726113064193}
       enemies:
       - {fileID: 1127962848118623424, guid: 6cd4e530d296a584ea86c80c26a6daef, type: 3}
   summonAnimation: {fileID: 2105886023464223082, guid: 55af16bccef73f3499479de0f1add507, type: 3}

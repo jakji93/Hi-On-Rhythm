@@ -10,13 +10,13 @@ public class Attack3 : MonoBehaviour
    void Start()
    {
       Instantiate(bullet, transform.position, transform.rotation);
-      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 90f));
-      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 180f));
-      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 270f));
-      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 45f));
-      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 135f));
-      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 225f));
-      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 315f));
+      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 5f));
+      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 15f));
+      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 355f));
+      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 345f));
+      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 10f));
+      Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 350f));
+      //Instantiate(bullet, transform.position, transform.rotation * Quaternion.Euler(0f, 0f, 315f));
       Destroy(this.gameObject);
    }
 }

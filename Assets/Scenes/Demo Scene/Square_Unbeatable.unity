@@ -12541,7 +12541,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2047300010851521491, guid: b2b03afe6e536e94594059cf1b5b3d6a, type: 3}
       propertyPath: maxHealth
-      value: 250
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 2047300010851521491, guid: b2b03afe6e536e94594059cf1b5b3d6a, type: 3}
       propertyPath: damageCooldown

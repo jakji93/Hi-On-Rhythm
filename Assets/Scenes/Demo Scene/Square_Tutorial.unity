@@ -12538,6 +12538,7 @@ MonoBehaviour:
   maxHitdistance: 100
   accuracyNum: {fileID: 44655941}
   lateJudgeText: {fileID: 1266932128}
+  autoplay: 0
 --- !u!4 &1844858330
 Transform:
   m_ObjectHideFlags: 0
@@ -15241,7 +15242,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2047300010851521491, guid: b2b03afe6e536e94594059cf1b5b3d6a, type: 3}
       propertyPath: maxHealth
-      value: 250
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 2656993673959694954, guid: b2b03afe6e536e94594059cf1b5b3d6a, type: 3}
       propertyPath: m_RootOrder

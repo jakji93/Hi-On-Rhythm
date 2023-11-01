@@ -11470,7 +11470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc4a598be0279f4185cf262946de1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songSelecionSceneName: Song Selection Demo
+  songSelecionSceneName: Song Selection
   versionText: {fileID: 47558309}
   mainAudioSource: {fileID: 1500162684}
   gameInput: {fileID: 471768967}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1c1dc8e35b0054aa3ba130cf70a0df, type: 3}
+  m_Name: Negai Wo Komete
+  m_EditorClassIdentifier: 
+  songName: NegaiWoKomete
+  playerName: 0
+  audioClip: {fileID: 8300000, guid: c687dba3092495541b8f9a05750bba81, type: 3}
+  displayTitle: Negai Wo Komete
+  BPM: 138
+  artistName: Melodicles
+  initialDelay: 0
+  coverImage: {fileID: 21300000, guid: ef1467cf8742d934d8a0aef2bcdd1eba, type: 3}
+  songSets: []
+  gameMusic: {fileID: 8300000, guid: cc11880ca5da15f40a553666fbb12458, type: 3}

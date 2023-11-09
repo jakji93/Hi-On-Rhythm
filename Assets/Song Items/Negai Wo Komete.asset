@@ -18,7 +18,7 @@ MonoBehaviour:
   displayTitle: Negai Wo Komete
   BPM: 138
   artistName: Melodicles
-  initialDelay: 0
+  initialDelay: 150
   coverImage: {fileID: 21300000, guid: ef1467cf8742d934d8a0aef2bcdd1eba, type: 3}
   songSets: []
   gameMusic: {fileID: 8300000, guid: cc11880ca5da15f40a553666fbb12458, type: 3}

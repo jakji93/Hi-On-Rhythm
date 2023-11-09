@@ -659,64 +659,56 @@ MonoBehaviour:
       - {fileID: 3182220916048221048}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 4766994607583559610}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 7854105732579907749}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 5035136743079081652}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 3946958760220192450}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 5288435608890215035}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 658263473382148662}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 4970525541424260664}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 5066113797091254702}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 4174439190417976267}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 5414371133958585521}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 6681174408749506793}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 3434131211965922396}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 7960222651700354769}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 618576078679069900}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 6023534068482400738}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     musicTime: 42
@@ -725,32 +717,28 @@ MonoBehaviour:
       - {fileID: 3182220916048221048}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 7854105732579907749}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 5288435608890215035}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 4970525541424260664}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 5066113797091254702}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 5414371133958585521}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 7960222651700354769}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 6023534068482400738}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     musicTime: 80
@@ -760,9 +748,7 @@ MonoBehaviour:
       - {fileID: 6135246952230615178}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 7892546500688289071}
-      - {fileID: 8578850134615554159}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
@@ -770,9 +756,7 @@ MonoBehaviour:
       - {fileID: 5507833152857387714}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 3182220916048221048}
-      - {fileID: 5035136743079081652}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
@@ -780,9 +764,7 @@ MonoBehaviour:
       - {fileID: 7854105732579907749}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 5023804984391583579}
-      - {fileID: 528581596666915596}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
@@ -790,9 +772,7 @@ MonoBehaviour:
       - {fileID: 5567077173158501170}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
-    - spawnPoints:
-      - {fileID: 8074387046471074086}
-      - {fileID: 2074470672322792181}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     musicTime: 300

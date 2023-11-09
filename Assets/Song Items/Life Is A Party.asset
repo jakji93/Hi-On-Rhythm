@@ -25,7 +25,7 @@ MonoBehaviour:
     enemySpawn: {fileID: 8793604355566055888, guid: 482320a68de10b642bbb471afa76767e, type: 3}
     chart: {fileID: 2122895179490224274, guid: 4c328502cb627a84d97a1ea732b939dc, type: 3}
   - difficulty: 1
-    enemySpawn: {fileID: 8793604355566055888, guid: 482320a68de10b642bbb471afa76767e, type: 3}
+    enemySpawn: {fileID: 8793604355566055888, guid: 1a690aaca85bbe84a8aaa5ca9bfc8638, type: 3}
     chart: {fileID: 3960258960568473383, guid: 688d1d22d9e33894f8b80a94eb7e418c, type: 3}
   - difficulty: 2
     enemySpawn: {fileID: 441276594976041655, guid: 9ec0f7ce080718648bcd314c7e5bbb3c, type: 3}

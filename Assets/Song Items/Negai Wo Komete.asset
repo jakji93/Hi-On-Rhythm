@@ -20,5 +20,14 @@ MonoBehaviour:
   artistName: Melodicles
   initialDelay: 150
   coverImage: {fileID: 21300000, guid: ef1467cf8742d934d8a0aef2bcdd1eba, type: 3}
-  songSets: []
+  songSets:
+  - difficulty: 0
+    enemySpawn: {fileID: 3519053706391060088, guid: 70bb6ee7a01bb85438c323d47b4e9355, type: 3}
+    chart: {fileID: 2328246673712148974, guid: 3969ff8eb28d1944ab0351a1ef3d8081, type: 3}
+  - difficulty: 1
+    enemySpawn: {fileID: 6685946410719893558, guid: 0ced4a27f3438574b9339c1c897e3215, type: 3}
+    chart: {fileID: 3943135256013113214, guid: 77da5226e7e4b0744b8a8037d1e6359b, type: 3}
+  - difficulty: 2
+    enemySpawn: {fileID: 5223172599115792654, guid: d7219db6aa2cbd346a6dd5fd6224417e, type: 3}
+    chart: {fileID: 7999832234949756942, guid: f6a37a34b0c8f9848becdae1c990d72e, type: 3}
   gameMusic: {fileID: 8300000, guid: cc11880ca5da15f40a553666fbb12458, type: 3}

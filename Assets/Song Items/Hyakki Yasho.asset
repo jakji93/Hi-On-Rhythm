@@ -20,5 +20,14 @@ MonoBehaviour:
   artistName: Notzan ACT
   initialDelay: 300
   coverImage: {fileID: 21300000, guid: d02c5af344fead34cb3e1737e832b2f5, type: 3}
-  songSets: []
+  songSets:
+  - difficulty: 0
+    enemySpawn: {fileID: 8856007116870703611, guid: 8e3ff96e09b3f2c458a82f7fd339eb73, type: 3}
+    chart: {fileID: 2937180867149825864, guid: 9e7bb7900f731114e8ccdd96a1a6f610, type: 3}
+  - difficulty: 1
+    enemySpawn: {fileID: 1022079152315864079, guid: e951caeab3221f54abe522cb9524e522, type: 3}
+    chart: {fileID: 3608542696998868620, guid: f553b42e56d4fdd438f6d3eff1e24e21, type: 3}
+  - difficulty: 2
+    enemySpawn: {fileID: 2480504359774887569, guid: 4e87624abafe9f44987d85935d5f3016, type: 3}
+    chart: {fileID: 5842951250894020133, guid: 121a12d118eed3e4887cf571a093a267, type: 3}
   gameMusic: {fileID: 8300000, guid: 07def4798b1cc9f4295c2803e0176e57, type: 3}

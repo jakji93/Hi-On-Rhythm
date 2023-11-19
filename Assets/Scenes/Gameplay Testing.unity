@@ -22936,6 +22936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Negai_normal_spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 8856007116870703611, guid: 8e3ff96e09b3f2c458a82f7fd339eb73, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -26,6 +26,7 @@ public class PlayerControl : MonoBehaviour
       NoteManager.Instance.OnNoNoteHits += NoteManager_OnNoNoteHits;
       NoteManager.Instance.OnWrongNote += NoteManager_OnWrongNote;
       healthText.text = health.GetMaxHealth().ToString();
+      bodySprite.color = defaultColor;
    }
 
    private void NoteManager_OnWrongNote(object sender, System.EventArgs e)

@@ -32,7 +32,7 @@ public abstract class Projectile : MonoBehaviour
       var hitInfos = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, targetMask);
       foreach(var hitInfo in hitInfos) {
          if (hitInfo.TryGetComponent(out Health health)) {
-            health.TakeDamage(damage * ComboManager.Instance.GetMultiplier());
+            health.TakeDamage(damage);
          }
          DestroyProjectile();
       }
@@ -44,6 +44,6 @@ public abstract class Projectile : MonoBehaviour
       if (destroyObject != null) {
          Instantiate(destroyObject, transform.position, Quaternion.identity);
       }
-      Destroy(gameObject);
+      Destroy(gameObject, 2f);
    }
 }

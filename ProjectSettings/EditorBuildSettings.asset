@@ -32,4 +32,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Release/Settings.unity
     guid: bef327ffff4cad344ab86690ddb4ed3e
+  - enabled: 1
+    path: Assets/Scenes/Release/Triangle/Triangle_Normal.unity
+    guid: 950f21ae3213e534ab5a2a20db85d048
+  - enabled: 1
+    path: Assets/Scenes/Release/Triangle/Triangle_Hard.unity
+    guid: 070462dcd6f903d4bb9edb68a0b16eca
+  - enabled: 1
+    path: Assets/Scenes/Release/Triangle/Triangle_Unbeatable.unity
+    guid: 87bd7509ae6aaf8469187388f4f47ca6
   m_configObjects: {}

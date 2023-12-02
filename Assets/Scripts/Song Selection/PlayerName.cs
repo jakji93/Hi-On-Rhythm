@@ -1,4 +1,5 @@
 public enum PlayerName
 {
-   Square
+   Square,
+   Triangle
 }

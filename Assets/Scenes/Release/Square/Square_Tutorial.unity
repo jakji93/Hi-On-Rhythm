@@ -256,7 +256,7 @@ MonoBehaviour:
   playerDeadDelay: 4
   textAnimator: {fileID: 1077058374}
   pauseSFX: {fileID: 8300000, guid: 4e002e449fed29440b6a89814af2e231, type: 3}
-  selectionSceneName: Song Selection Demo
+  selectionSceneName: Song Selection
   openingPlayer: {fileID: 464418440}
   healthUI: {fileID: 617743791}
   feverUI: {fileID: 13121819}

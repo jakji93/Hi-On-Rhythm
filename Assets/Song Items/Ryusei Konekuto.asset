@@ -22,12 +22,12 @@ MonoBehaviour:
   coverImage: {fileID: 21300000, guid: d6b0f2e391c15c54da3afbf6d7c4b9f4, type: 3}
   songSets:
   - difficulty: 0
-    enemySpawn: {fileID: 0}
+    enemySpawn: {fileID: 7312837046893481907, guid: 42fae4f1a871a8a4b8ad5cb75400c96e, type: 3}
     chart: {fileID: 4888220834241908264, guid: d74a69b4b00bc6d4bb42c8560f263efd, type: 3}
   - difficulty: 1
-    enemySpawn: {fileID: 0}
+    enemySpawn: {fileID: 4327896191434604499, guid: 0897d0a093e9a1d40ad7857b0e8d9c73, type: 3}
     chart: {fileID: 1192228577922449411, guid: ffb1f9431917fbc47b4bef86f407d5cd, type: 3}
   - difficulty: 2
-    enemySpawn: {fileID: 0}
+    enemySpawn: {fileID: 2405888739571911025, guid: d0ade49266457dd46a5505591fc05cda, type: 3}
     chart: {fileID: 7974494709722271687, guid: f2177d1afdf61b34a8218f2c8261b4d2, type: 3}
   gameMusic: {fileID: 8300000, guid: ce474ff0e562d634f9a6fb0553081bae, type: 3}

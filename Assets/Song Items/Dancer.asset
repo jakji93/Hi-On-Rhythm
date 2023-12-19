@@ -20,5 +20,14 @@ MonoBehaviour:
   artistName: yuhei komatsu
   initialDelay: 55
   coverImage: {fileID: 21300000, guid: 2881fcd653c277642b857df189acac25, type: 3}
-  songSets: []
+  songSets:
+  - difficulty: 0
+    enemySpawn: {fileID: 9189368961245972833, guid: 2a5041c8517c0d346b291d38fc9be46f, type: 3}
+    chart: {fileID: 241186478397309441, guid: 8484bef68e271cb43a8146fb342f92c4, type: 3}
+  - difficulty: 1
+    enemySpawn: {fileID: 2333500776933500615, guid: 68986764379dc6745a10b07f09de56d6, type: 3}
+    chart: {fileID: 3996190122684727752, guid: d8c357dfaf859404cab5904fc6745937, type: 3}
+  - difficulty: 2
+    enemySpawn: {fileID: 4025750383346353879, guid: dd6abdff79539154daecc5de41142228, type: 3}
+    chart: {fileID: 6204427615390244558, guid: 965e01b3ff246b0479c1e746d5c50324, type: 3}
   gameMusic: {fileID: 8300000, guid: 05bf92b9b299f3543b4b023a39a613bb, type: 3}

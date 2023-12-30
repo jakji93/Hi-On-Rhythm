@@ -4966,4 +4966,5 @@ MonoBehaviour:
     m_Bits: 2048
   attackPoint: {fileID: 6977508473428660633}
   attackRadius: 1.2
-  destroyObject: {fileID: 3642693443182775483, guid: afff4a8f46d5f00409ebdaecc659149b, type: 3}
+  destroyObject: {fileID: 3642693443182775483, guid: 449e14b430c300048a08b6aa4e4bd2f5, type: 3}
+  leftoverParticleTime: 5

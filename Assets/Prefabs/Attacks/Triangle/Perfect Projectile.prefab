@@ -4967,7 +4967,7 @@ MonoBehaviour:
     m_Bits: 2048
   attackPoint: {fileID: 6977508473428660633}
   attackRadius: 0
-  destroyObject: {fileID: 0}
+  destroyObject: {fileID: 4751622584051766894, guid: 14338f958324de043b373f0aba730e0b, type: 3}
 --- !u!61 &7887754507614278568
 BoxCollider2D:
   m_ObjectHideFlags: 0

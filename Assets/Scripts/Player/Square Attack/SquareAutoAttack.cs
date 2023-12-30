@@ -10,12 +10,13 @@ public class SquareAutoAttack : MonoBehaviour
    [SerializeField] private ContactFilter2D contactFilter;
    [SerializeField] private int damage;
    [SerializeField] private SpriteRenderer ring;
+   [SerializeField] private bool attachToPlayer = true;
 
    private List<Collider2D> colliders = new List<Collider2D>();
 
    private void Awake()
    {
-      transform.parent = PlayerControl.Instance.transform;
+      if(attachToPlayer) transform.parent = PlayerControl.Instance.transform;
       transform.rotation = Quaternion.identity;
    }
 

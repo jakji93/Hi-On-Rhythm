@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1c1dc8e35b0054aa3ba130cf70a0df, type: 3}
+  m_Name: Junky Food Ghost
+  m_EditorClassIdentifier: 
+  songName: JunkyFoodGhost
+  playerName: 1
+  audioClip: {fileID: 8300000, guid: 785d452bdad7b2e4dbb71b21ec550e16, type: 3}
+  displayTitle: Junky Food Ghost
+  BPM: 120
+  artistName: Addpico
+  initialDelay: 30
+  coverImage: {fileID: 21300000, guid: a2e62787b239f294c9a1f035e13a1957, type: 3}
+  songSets:
+  - difficulty: 0
+    enemySpawn: {fileID: 714891921591094941, guid: 37504cb74e94529429eaa1480bbba7b5, type: 3}
+    chart: {fileID: 5463962196155532442, guid: 06f87050a032bda45b36503d3ec4872e, type: 3}
+  - difficulty: 1
+    enemySpawn: {fileID: 7904933119639516640, guid: 1f92b521cfe5ec54c92ec7db32b74eea, type: 3}
+    chart: {fileID: 2871072086070355061, guid: 972bfb4c84713274f94922c0d2b9d9b7, type: 3}
+  - difficulty: 2
+    enemySpawn: {fileID: 41141860605834440, guid: a2511cf416b417546bb82fceefaad293, type: 3}
+    chart: {fileID: 3558644018322295811, guid: 44d62225000af5f4bb71c3dc6d2216e1, type: 3}
+  gameMusic: {fileID: 8300000, guid: af0fbf1fc7bff0b4db913b782b2f242e, type: 3}

@@ -11,6 +11,7 @@ public abstract class Projectile : MonoBehaviour
    [SerializeField] protected Transform attackPoint;
    [SerializeField] protected float attackRadius;
    [SerializeField] protected GameObject destroyObject;
+   [SerializeField] protected float leftoverParticleTime = 2f;
 
    protected void OnDrawGizmosSelected()
    {
@@ -41,9 +42,11 @@ public abstract class Projectile : MonoBehaviour
 
    protected void DestroyProjectile()
    {
+      CancelInvoke();
       if (destroyObject != null) {
-         Instantiate(destroyObject, transform.position, Quaternion.identity);
+         var someObject = Instantiate(destroyObject, transform.position, Quaternion.identity);
+         Destroy(someObject, leftoverParticleTime);
       }
-      Destroy(gameObject, 2f);
+      Destroy(gameObject);
    }
 }

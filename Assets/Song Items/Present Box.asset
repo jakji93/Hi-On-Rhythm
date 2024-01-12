@@ -18,7 +18,16 @@ MonoBehaviour:
   displayTitle: Present Box
   BPM: 205
   artistName: Addpico ft. Otokagekana
-  initialDelay: 0
+  initialDelay: 40
   coverImage: {fileID: 21300000, guid: 48be92239f489574aa724d0337d2b0c5, type: 3}
-  songSets: []
+  songSets:
+  - difficulty: 0
+    enemySpawn: {fileID: 5580346481573145616, guid: 2c29d2619dba2524ba46e4aff7a7fafe, type: 3}
+    chart: {fileID: 7344608229310795235, guid: 49fd62603f8ca5c45806348d15cfaf71, type: 3}
+  - difficulty: 1
+    enemySpawn: {fileID: 8746111352307227580, guid: a04d6aa4284f8ea46b07e5e5de5662f8, type: 3}
+    chart: {fileID: 4648878793773660334, guid: 5a6b08c4f6f89e74eaad5d3ceef25847, type: 3}
+  - difficulty: 2
+    enemySpawn: {fileID: 949476470673770498, guid: 57b8f7e1d8f63394784d228ea1bb41e1, type: 3}
+    chart: {fileID: 4527260359313742937, guid: cc8e780890b5d5d4bb04e0875091faeb, type: 3}
   gameMusic: {fileID: 8300000, guid: f903f0da27d92584da869d3a3be45f45, type: 3}

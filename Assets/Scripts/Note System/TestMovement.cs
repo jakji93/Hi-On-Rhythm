@@ -44,4 +44,9 @@ public class TestMovement : MonoBehaviour
       transform.localPosition = new Vector3(basePostionX - postionAtPlaytime, baseLocation.y, 0);
       //rectTransform.anchoredPosition3D -= new Vector3(chartSpeed * Time.fixedDeltaTime, 0, 0);
    }
+
+   public void ResetPlaytime()
+   {
+      audioSouce.time = playtime;
+   }
 }

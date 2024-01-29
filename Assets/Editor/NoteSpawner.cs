@@ -8,7 +8,7 @@ public class NoteSpawner : EditorWindow
    private GameObject parentObject;
    private int distanceBetweenNote = 120;
    private float initialDistance = 0f;
-   private int[] dataList = new int[1600];
+   private int[] dataList = new int[2400];
    private Vector2 scrollPosition = Vector2.zero;
 
    [MenuItem("Tools/Note Spawner")]

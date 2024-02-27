@@ -54,15 +54,13 @@ public class EnemySpawner : MonoBehaviour
    private void NoteManager_OnSpawnBeat(object sender, System.EventArgs e)
    {
       if(canSpawn) {
+         UpdateCurSet();
          SpawnWave();
       }
    }
 
    private void Update()
    {
-      if(canSpawn) {
-         UpdateCurSet();
-      }
    }
 
    private void SpawnWave()

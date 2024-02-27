@@ -34,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1127962848118623424, guid: 6cd4e530d296a584ea86c80c26a6daef, type: 3}
       propertyPath: m_Name
-      value: Sad Strong
+      value: Sad Strong Normal
       objectReference: {fileID: 0}
     - target: {fileID: 1186784685267248038, guid: 6cd4e530d296a584ea86c80c26a6daef, type: 3}
       propertyPath: m_RootOrder
@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2250461572533344952, guid: 6cd4e530d296a584ea86c80c26a6daef, type: 3}
       propertyPath: maxHealth
-      value: 250
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3728747214864584046, guid: 6cd4e530d296a584ea86c80c26a6daef, type: 3}
       propertyPath: m_Color.b

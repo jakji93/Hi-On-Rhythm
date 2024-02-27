@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2250461572533344952, guid: 6cd4e530d296a584ea86c80c26a6daef, type: 3}
       propertyPath: maxHealth
-      value: 350
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3728747214864584046, guid: 6cd4e530d296a584ea86c80c26a6daef, type: 3}
       propertyPath: m_Color.b

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1c1dc8e35b0054aa3ba130cf70a0df, type: 3}
+  m_Name: 5 minutes to KISS
+  m_EditorClassIdentifier: 
+  songName: 5minToKISS
+  playerName: 1
+  audioClip: {fileID: 8300000, guid: de7921a0c93d73b4cbf2cffb1bbf336e, type: 3}
+  displayTitle: 5 Miniutes to KISS
+  BPM: 128
+  artistName: Megumi Ebina ft. Flehmann
+  initialDelay: 75
+  coverImage: {fileID: 21300000, guid: ef3c2a5577aa73a499d442a47bfa94b6, type: 3}
+  songSets:
+  - difficulty: 0
+    enemySpawn: {fileID: 4905079624084830685, guid: ce2479092a8dbe1438825a72b20b5e41, type: 3}
+    chart: {fileID: 7594389494665371403, guid: 4803e448250107e40b4c1559843ecae8, type: 3}
+  - difficulty: 1
+    enemySpawn: {fileID: 8997878504395329918, guid: 8ee4db5b7a5a1f94391a29a4c87255b9, type: 3}
+    chart: {fileID: 48171575670519231, guid: 6eac865f4572857478cc2ded08c6b6fd, type: 3}
+  - difficulty: 2
+    enemySpawn: {fileID: 5339221234040538597, guid: d1c53ea0757cb2343b08311eee72e34e, type: 3}
+    chart: {fileID: 8730581158005177464, guid: 607418be508e4b144b2a0cc6f2795c5c, type: 3}
+  gameMusic: {fileID: 8300000, guid: ddd30e9b28f75014fa0fa27b836ae638, type: 3}

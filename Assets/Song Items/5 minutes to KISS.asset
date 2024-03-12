@@ -15,9 +15,9 @@ MonoBehaviour:
   songName: 5minToKISS
   playerName: 1
   audioClip: {fileID: 8300000, guid: de7921a0c93d73b4cbf2cffb1bbf336e, type: 3}
-  displayTitle: 5 Miniutes to KISS
+  displayTitle: "KISS\u307E\u3067\u3042\u30685\u5206"
   BPM: 128
-  artistName: Megumi Ebina ft. Flehmann
+  artistName: "\u86EF\u540D\u3081\u3050\u307F feat. Flehmann"
   initialDelay: 75
   coverImage: {fileID: 21300000, guid: ef3c2a5577aa73a499d442a47bfa94b6, type: 3}
   songSets:

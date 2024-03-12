@@ -15,9 +15,9 @@ MonoBehaviour:
   songName: PresentBox
   playerName: 1
   audioClip: {fileID: 8300000, guid: 927f424994de62347b3d76059ed0490a, type: 3}
-  displayTitle: Present Box
+  displayTitle: "\u30D7\u30EC\u30BC\u30F3\u30C8\u30DC\u30C3\u30AF\u30B9"
   BPM: 205
-  artistName: Addpico ft. Otokagekana
+  artistName: "Addpico ft. \u97F3\u5F71\u30AB\u30CA"
   initialDelay: 40
   coverImage: {fileID: 21300000, guid: 48be92239f489574aa724d0337d2b0c5, type: 3}
   songSets:

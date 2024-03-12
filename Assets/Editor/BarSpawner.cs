@@ -10,7 +10,7 @@ public class BarSpawner : EditorWindow
    private int distanceBetweenColumn = 480;
    private int distanceBetweenRow = 480;
 
-   [MenuItem("Tools/Grid Spawner")]
+   [MenuItem("Tools/Bar Spawner")]
    public static void ShowWindow()
    {
       GetWindow(typeof(BarSpawner));

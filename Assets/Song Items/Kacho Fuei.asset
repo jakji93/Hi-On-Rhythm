@@ -15,9 +15,9 @@ MonoBehaviour:
   songName: KachoFuei
   playerName: 1
   audioClip: {fileID: 8300000, guid: 52aef7e7e79340546bdac4764ec35899, type: 3}
-  displayTitle: Kacho Fuei
+  displayTitle: "\u82B1\u9CE5\u8AF7\u8A60"
   BPM: 158
-  artistName: Ryuzaki Hajime
+  artistName: "\u9F8D\u5D0E \u4E00"
   initialDelay: 35
   coverImage: {fileID: 21300000, guid: 2941aa9ad05d09a42bf3e1d1e3a10d74, type: 3}
   songSets:

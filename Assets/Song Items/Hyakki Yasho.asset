@@ -15,7 +15,7 @@ MonoBehaviour:
   songName: HyakkiYasho
   playerName: 0
   audioClip: {fileID: 8300000, guid: de1a01cabfb586241ac855e456f6523e, type: 3}
-  displayTitle: Hyakki Yasho
+  displayTitle: "\u767E\u9B3C\u591C\u6284"
   BPM: 97
   artistName: Notzan ACT
   initialDelay: 300

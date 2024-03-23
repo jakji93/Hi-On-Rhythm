@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1c1dc8e35b0054aa3ba130cf70a0df, type: 3}
+  m_Name: Pussycat
+  m_EditorClassIdentifier: 
+  songName: PussyCat
+  playerName: 2
+  audioClip: {fileID: 8300000, guid: 91ca59cea452bce48b0f9fb67fa54563, type: 3}
+  displayTitle: pussycat
+  BPM: 162
+  artistName: "\u3048\u3060\u307E\u308188"
+  initialDelay: 50
+  coverImage: {fileID: 21300000, guid: f7c16b0b39c2be44a883009671b4a430, type: 3}
+  songSets:
+  - difficulty: 0
+    enemySpawn: {fileID: 956584291672035297, guid: b9c4079ff1d69364aa33dec279e1b40c, type: 3}
+    chart: {fileID: 4640627190134804177, guid: bc3183244d54f0f47a22d1d6a3a7c203, type: 3}
+  - difficulty: 1
+    enemySpawn: {fileID: 3828452191616427567, guid: 80eb208214aece447a1bb86c567e5e51, type: 3}
+    chart: {fileID: 6491202403452628643, guid: aa2a4371837aade4cb5911d612a425b6, type: 3}
+  - difficulty: 2
+    enemySpawn: {fileID: 2535783161158211597, guid: cf3a31225fa1b714b82fa077bebfdb12, type: 3}
+    chart: {fileID: 8081675049308462157, guid: 0a25f8e626e5f654f8a8e4db1e06af54, type: 3}
+  gameMusic: {fileID: 8300000, guid: 6437cd471abc47b4497ee268e8de162f, type: 3}

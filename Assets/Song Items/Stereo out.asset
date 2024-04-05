@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1c1dc8e35b0054aa3ba130cf70a0df, type: 3}
+  m_Name: Stereo out
+  m_EditorClassIdentifier: 
+  songName: StereoOut
+  playerName: 2
+  audioClip: {fileID: 8300000, guid: e0ca6ea60be75244d8b5023d57c219cf, type: 3}
+  displayTitle: Stereo Out
+  BPM: 174
+  artistName: "\u9F8D\u5D0E\u4E00 ft. \u30C4\u30AD\u30CE\u30D2\u30AB\u30EA"
+  initialDelay: 50
+  coverImage: {fileID: 21300000, guid: fdf0734a69fb72640a5fc5c1dd299535, type: 3}
+  songSets:
+  - difficulty: 0
+    enemySpawn: {fileID: 4409276488835655091, guid: b77d32193a1d8094baf0a431dd4b001c, type: 3}
+    chart: {fileID: 7125234146103392096, guid: 690c321442f473142b8bcfd7ad48de66, type: 3}
+  - difficulty: 1
+    enemySpawn: {fileID: 8045735949432653721, guid: fac9cfa7452d99a40b5a6134f2bc4efb, type: 3}
+    chart: {fileID: 7045029431537738737, guid: 44d2024a75bfad74290392495ffd0e67, type: 3}
+  - difficulty: 2
+    enemySpawn: {fileID: 917591233683702420, guid: 8490ed851b326cc43b12b55f7dd06c47, type: 3}
+    chart: {fileID: 6091125010250000526, guid: 7f52f8572a9225b4f8dc1a22a807182a, type: 3}
+  gameMusic: {fileID: 8300000, guid: fe64564a3797a9c48b4684a90d07a0ce, type: 3}

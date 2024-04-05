@@ -15,7 +15,7 @@ MonoBehaviour:
   songName: JunkyFoodGhost
   playerName: 1
   audioClip: {fileID: 8300000, guid: 785d452bdad7b2e4dbb71b21ec550e16, type: 3}
-  displayTitle: Junky Food Ghost
+  displayTitle: "\u30B8\u30E3\u30F3\u30AD\u30FC\u30D5\u30FC\u30C9\u30B4\u30FC\u30B9\u30C8"
   BPM: 120
   artistName: Addpico
   initialDelay: 30

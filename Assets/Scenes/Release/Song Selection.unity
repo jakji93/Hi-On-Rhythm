@@ -25977,7 +25977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3521022920509409542, guid: 35cdc54c79599b74f8ba93b46242a7e7, type: 3}
       propertyPath: songItems.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3521022920509409542, guid: 35cdc54c79599b74f8ba93b46242a7e7, type: 3}
       propertyPath: songItems.Array.data[0]
@@ -25990,7 +25990,7 @@ PrefabInstance:
     - target: {fileID: 3521022920509409542, guid: 35cdc54c79599b74f8ba93b46242a7e7, type: 3}
       propertyPath: songItems.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 1597d38b43fe18a48bc80e07dd96225e, type: 2}
+      objectReference: {fileID: 11400000, guid: ec58d37820e0acf46a64e46db27358de, type: 2}
     - target: {fileID: 3521022920509409542, guid: 35cdc54c79599b74f8ba93b46242a7e7, type: 3}
       propertyPath: songItems.Array.data[3]
       value: 

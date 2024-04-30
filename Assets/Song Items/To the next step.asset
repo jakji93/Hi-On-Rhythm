@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1c1dc8e35b0054aa3ba130cf70a0df, type: 3}
+  m_Name: To the next step
+  m_EditorClassIdentifier: 
+  songName: ToTheNextStep
+  playerName: 2
+  audioClip: {fileID: 8300000, guid: 207bb9c94410c0b46a304accefcbb244, type: 3}
+  displayTitle: To The Next Step
+  BPM: 123
+  artistName: t.tam
+  initialDelay: 50
+  coverImage: {fileID: 21300000, guid: e1f4b226ce5d20149abe14b77f6296e4, type: 3}
+  songSets:
+  - difficulty: 0
+    enemySpawn: {fileID: 8039945527377708534, guid: b9feab3f2d97a664ba13578d1a85bd09, type: 3}
+    chart: {fileID: 8594061236487586259, guid: fb249142368390641aee952845232bd8, type: 3}
+  - difficulty: 1
+    enemySpawn: {fileID: 2093664140521524784, guid: ffb086b768bdbfb46a06079bd0a97a97, type: 3}
+    chart: {fileID: 7213496357035545002, guid: 18ef4e76f2e8ab949b0cdb9fa5af7322, type: 3}
+  - difficulty: 2
+    enemySpawn: {fileID: 7731822178242450165, guid: a30f315d07d767d4aa554de3ee80b7c3, type: 3}
+    chart: {fileID: 7915437032593828726, guid: 8b4f4c1ef74cb604c97053db9ea66ed4, type: 3}
+  gameMusic: {fileID: 8300000, guid: db7ca84e13136cc4e8443efa0836994d, type: 3}

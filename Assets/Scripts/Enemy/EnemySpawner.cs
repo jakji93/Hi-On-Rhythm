@@ -77,7 +77,7 @@ public class EnemySpawner : MonoBehaviour
       for( int i = 0; i < curWave.spawnPoints.Length; i++ ) {
          if (curWave.enemies.Length == 0) break;
          int j = i % curWave.enemies.Length;
-         Instantiate(curWave.enemies[j], curWave.spawnPoints[i].position, Quaternion.identity);
+         Instantiate(curWave.enemies[j], curWave.spawnPoints[i].position, curWave.enemies[j].transform.rotation);
          if (useEffect) Instantiate(summonAnimation, curWave.spawnPoints[i].position, Quaternion.identity);
          totalSpawned++;
       }

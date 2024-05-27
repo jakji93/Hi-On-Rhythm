@@ -440,10 +440,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8450c95566763214c8433345c7411fef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  specialAttacks: []
-  perfectAttack: {fileID: 0}
-  greatAttack: {fileID: 0}
-  goodAttack: {fileID: 0}
+  specialAttacks:
+  - {fileID: 527592145602423760, guid: 50f0a00e1fcd86e4899c633d161692bc, type: 3}
+  perfectAttack: {fileID: 7771217414451799296, guid: a3fed16d31d1485448b9af9aed12ff03, type: 3}
+  greatAttack: {fileID: 5785696538582824402, guid: da49456359a9d0448b1e2ef3c1241994, type: 3}
+  goodAttack: {fileID: 825578915571492591, guid: eaa2adb6b492cdd4aadad2ccb921f1ab, type: 3}
   aimTransform: {fileID: 5315060230535482627}
 --- !u!61 &7655378262196688005
 BoxCollider2D:

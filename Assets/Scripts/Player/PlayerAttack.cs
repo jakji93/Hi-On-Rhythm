@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Kamgam.SettingsGenerator;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
@@ -27,6 +28,7 @@ public class PlayerAttack : MonoBehaviour
    private void NoteManager_OnNoteGood(object sender, System.EventArgs e)
    {
       if (isFeverMode) {
+         if (specialAttacks.IsNullOrEmpty()) return;
          var thisAttack = specialAttacks[curSpecial];
          Attack(thisAttack);
          curSpecial++;
@@ -38,6 +40,7 @@ public class PlayerAttack : MonoBehaviour
    private void NoteManager_OnNoteGreat(object sender, System.EventArgs e)
    {
       if (isFeverMode) {
+         if (specialAttacks.IsNullOrEmpty()) return;
          var thisAttack = specialAttacks[curSpecial];
          Attack(thisAttack);
          curSpecial++;
@@ -49,6 +52,7 @@ public class PlayerAttack : MonoBehaviour
    private void NoteMnager_OnNotePerfect(object sender, System.EventArgs e)
    {
       if (isFeverMode) {
+         if (specialAttacks.IsNullOrEmpty()) return;
          var thisAttack = specialAttacks[curSpecial];
          Attack(thisAttack);
          curSpecial++;
@@ -65,6 +69,7 @@ public class PlayerAttack : MonoBehaviour
 
    private void Attack(GameObject attack)
    {
+      if (attack == null) return;
       Instantiate(attack, aimTransform.position, aimTransform.rotation, aimTransform.transform);
    }
 }

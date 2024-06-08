@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696239042280183595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.15, y: 0, z: 0}
+  m_LocalPosition: {x: -1.95, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4854,7 +4854,7 @@ Transform:
   m_GameObject: {fileID: 7002530874072299228}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.37, y: 1.37, z: 1.37}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6977508473428660633}
@@ -4968,6 +4968,7 @@ MonoBehaviour:
   attackPoint: {fileID: 6977508473428660633}
   attackRadius: 0
   destroyObject: {fileID: 4751622584051766894, guid: 14338f958324de043b373f0aba730e0b, type: 3}
+  leftoverParticleTime: 2
 --- !u!61 &7887754507614278568
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5011,5 +5012,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5, y: 2.5}
+  m_Size: {x: 3.21, y: 3.75}
   m_EdgeRadius: 0

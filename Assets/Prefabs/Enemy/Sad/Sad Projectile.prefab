@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1040486944121431972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.66, y: 0, z: 0}
+  m_LocalPosition: {x: -0.374, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1559,7 +1559,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300014, guid: 358b5d9f23bc9413e87c9948acc67ee1, type: 3}
+    - sprite: {fileID: 21300000, guid: c81b6ffc2c691bb44b3a9c5f9b975545, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -4838,7 +4838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5877898693962003525}
   - component: {fileID: -5368953336118891393}
-  - component: {fileID: 70992456086564176}
+  - component: {fileID: 4771899590990382515}
   m_Layer: 0
   m_Name: Sad Projectile
   m_TagString: Untagged
@@ -4884,8 +4884,9 @@ MonoBehaviour:
   attackPoint: {fileID: 5877898693962003525}
   attackRadius: 0
   destroyObject: {fileID: 0}
---- !u!60 &70992456086564176
-PolygonCollider2D:
+  leftoverParticleTime: 2
+--- !u!58 &4771899590990382515
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4917,21 +4918,8 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.0197315, y: 0.048590764}
-      - {x: -1.0665588, y: 1.175625}
-      - {x: -1.069612, y: -1.1659778}
-  m_UseDelaunayMesh: 0
+  serializedVersion: 2
+  m_Radius: 0.31
 --- !u!1 &8130253867795931595
 GameObject:
   m_ObjectHideFlags: 0
@@ -4958,7 +4946,7 @@ Transform:
   m_GameObject: {fileID: 8130253867795931595}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5877898693962003525}
@@ -5005,7 +4993,7 @@ SpriteRenderer:
   m_SortingLayerID: -750849115
   m_SortingLayer: -1
   m_SortingOrder: 2
-  m_Sprite: {fileID: -6205461316961850552, guid: fe42c8b526e77e54ab91d0590272d9e8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0b9510d2790829140953392aae2b6679, type: 3}
   m_Color: {r: 1, g: 0, b: 0.45882353, a: 1}
   m_FlipX: 0
   m_FlipY: 0

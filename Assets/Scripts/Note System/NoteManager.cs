@@ -115,7 +115,6 @@ public class NoteManager : MonoBehaviour
             switch (noteType) {
                case Note.NoteTypes.Attack:
                   OnAttackBeat?.Invoke(this, EventArgs.Empty);
-                  Debug.Log("Enemy Attack");
                   break;
                case Note.NoteTypes.Spawn:
                   OnSpawnBeat?.Invoke(this, EventArgs.Empty);
@@ -124,7 +123,6 @@ public class NoteManager : MonoBehaviour
                case Note.NoteTypes.Normal1:
                   if (autoplay) OnNotePerfect?.Invoke(this, EventArgs.Empty);
                   else OnNoteMissed?.Invoke(this, EventArgs.Empty);
-                  Debug.Log("Note missed");
                   totalAccuracy += 300;
                   accuracy = Mathf.Round(currentAccuracy / totalAccuracy * 100 * 100) / 100;
                   accuracyNum.text = accuracy.ToString() + "%";

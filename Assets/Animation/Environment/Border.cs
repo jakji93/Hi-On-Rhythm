@@ -6,9 +6,15 @@ using UnityEngine;
 public class Border : MonoBehaviour
 {
    [SerializeField] private float duration;
+   private Collider2D collider;
    private void Start()
    {
-      transform.DOMove(Vector3.zero, duration).From();
+      collider = GetComponent<Collider2D>();
+      collider.enabled = false;
+      transform.DOMove(Vector3.zero, duration).From().OnComplete(() =>
+      {
+         collider.enabled = true;
+      });
       transform.DOScale(0f, duration).From();
    }
 }

@@ -16,6 +16,7 @@ public class LevelSelectManager : MonoBehaviour
    [SerializeField] private SongSelector[] tracks;
    [SerializeField] private TextMeshProUGUI songName;
    [SerializeField] private TextMeshProUGUI artistName;
+   [SerializeField] private TextMeshProUGUI bpmNum;
    [SerializeField] private DifficultySelector difficultySelector;
    [SerializeField] private TrackSelector trackSelector;
    [SerializeField] private AnimationCurve moveCurve;
@@ -146,6 +147,7 @@ public class LevelSelectManager : MonoBehaviour
       if(displayName != null) {
          songName.text = displayName;
          this.artistName.text = artistName;
+         bpmNum.text = "BPM: " + BPM;
       } else {
          songName.text = curSongName;
       }

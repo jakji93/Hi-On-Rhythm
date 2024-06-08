@@ -17,9 +17,9 @@ public class HexAutoAttack : MonoBehaviour
    {
       innerHex.DOScale(0f, 0.5f).From().OnComplete(() =>
       {
+         Attack();
          var expParticle = Instantiate(explodeParticle, transform.position, Quaternion.identity);
          Destroy(expParticle, 1f);
-         Attack();
          Destroy(gameObject);
       });
    }

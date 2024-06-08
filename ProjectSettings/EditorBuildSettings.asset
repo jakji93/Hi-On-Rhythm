@@ -50,4 +50,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Release/Hexagon/Hexagon_Unbeatable.unity
     guid: 9c31176b2f13ff74ab4412315cd0feed
+  - enabled: 1
+    path: Assets/Scenes/Release/Boss1/Boss1_Normal.unity
+    guid: fb310b372dbd4424198b029d71ae5154
+  - enabled: 1
+    path: Assets/Scenes/Release/Boss1/Boss1_Hard.unity
+    guid: b971a52a28cb99547bf7cf0815c31a7b
+  - enabled: 1
+    path: Assets/Scenes/Release/Boss1/Boss1_Unbeatable.unity
+    guid: 5fa22db165edec7438748bba77fcebd4
   m_configObjects: {}

@@ -2,5 +2,6 @@ public enum PlayerName
 {
    Square,
    Triangle,
-   Hexagon
+   Hexagon,
+   Boss1
 }

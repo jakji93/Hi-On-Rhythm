@@ -35,6 +35,7 @@ public class GameplayManager : MonoBehaviour
    [SerializeField] private MMF_Player openingPlayer;
    [SerializeField] private RectTransform healthUI;
    [SerializeField] private RectTransform feverUI;
+   [SerializeField] private RectTransform bossUI;
    [SerializeField] private GameObject postProcessingObject;
 
    private bool musicPlaying = false;
@@ -120,6 +121,7 @@ public class GameplayManager : MonoBehaviour
                openingPlayer.PlayFeedbacks();
                healthUI.DOLocalMoveY(509f, 3f);
                feverUI.DOLocalMoveY(-501f, 3f);
+               if(bossUI != null ) bossUI.DOLocalMoveY(509f, 3f);
             }
             break;
          case GameState.ReadyGo:

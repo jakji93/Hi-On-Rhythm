@@ -2654,7 +2654,7 @@ PrefabInstance:
     - target: {fileID: 4747438198100589486, guid: 35d5df30a0c22a0438df8aa51292ac66, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1161963327}
     - target: {fileID: 4747438198100589486, guid: 35d5df30a0c22a0438df8aa51292ac66, type: 3}
       propertyPath: m_Lens.OrthographicSize
       value: 15
@@ -6981,6 +6981,11 @@ ParticleSystem:
 --- !u!1 &1161963326 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4103223746522106842, guid: 73a60efb8f501a843b318e00f8224842, type: 3}
+  m_PrefabInstance: {fileID: 1161963324}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1161963327 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2656993673959694954, guid: 73a60efb8f501a843b318e00f8224842, type: 3}
   m_PrefabInstance: {fileID: 1161963324}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1168270241

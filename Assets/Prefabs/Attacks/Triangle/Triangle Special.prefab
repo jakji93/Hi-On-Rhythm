@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 4
-  speed: 3
+  speed: 6
   lifeTime: 6
   projectile: {fileID: 1257461273764354339}
 --- !u!1 &4153514267844592141
@@ -189,6 +189,7 @@ MonoBehaviour:
   attackPoint: {fileID: 1257461273764354339}
   attackRadius: 0
   destroyObject: {fileID: 0}
+  leftoverParticleTime: 2
 --- !u!61 &5914790129665644583
 BoxCollider2D:
   m_ObjectHideFlags: 0

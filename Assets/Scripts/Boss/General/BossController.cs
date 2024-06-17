@@ -18,7 +18,13 @@ public class BossController : MonoBehaviour
    private void Start()
    {
       health.OnTakeDamage += Health_OnTakeDamage;
+      health.OnDeath += Health_OnDeath;
       healthText.text = "100%";
+   }
+
+   private void Health_OnDeath(object sender, Health.OnTakeDamageEventArgs e)
+   {
+      healthText.text = "STAY ALIVE";
    }
 
    private void Health_OnTakeDamage(object sender, Health.OnTakeDamageEventArgs e)

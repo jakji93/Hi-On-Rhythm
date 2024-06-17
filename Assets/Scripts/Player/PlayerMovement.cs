@@ -35,6 +35,17 @@ public class PlayerMovement : MonoBehaviour, IHasProgress
    {
       playerRB = GetComponent<Rigidbody2D>();
       health.OnDeath += Health_OnDeath;
+      GameplayManager.Instance.OnStateChange += Instance_OnStateChange;
+   }
+
+   private void Instance_OnStateChange(object sender, EventArgs e)
+   {
+      if(GameplayManager.Instance.IsGameOver()) {
+         canMove = false;
+         canDodge = false;
+         playerRB.velocity = Vector2.zero;
+         playerMoveDir = Vector2.zero;
+      }
    }
 
    private void Health_OnDeath(object sender, Health.OnTakeDamageEventArgs e)

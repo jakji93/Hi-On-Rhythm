@@ -62,8 +62,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingPosition: {fileID: 0}
-  mMovePattern: []
-  sMovePattern: []
+  movePattern: []
+  specificMovePattern: []
 --- !u!114 &3054065643926675001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 4123398026697542930}
   - component: {fileID: 4184481007741870550}
   - component: {fileID: 7616815184159712205}
+  - component: {fileID: 8824431141603800883}
   m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
@@ -241,3 +242,26 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8824431141603800883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5742350538080702254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6cea69733fa9c4cbf4a5a144a54a36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  playerRB: {fileID: 0}
+  playerLoseControlTime: 0.5
+  playermove: {fileID: 0}
+  forceApply: 60
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 64
+  playerHealth: {fileID: 0}
+  explosion: {fileID: 839127024311914771, guid: 7ffe94afcae7e1a489aa996d76363bbd, type: 3}
+  hitAudio: {fileID: 8300000, guid: 4f5ccc3c016754e428c2612050980433, type: 3}

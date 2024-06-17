@@ -4959,7 +4959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  speed: 15
+  speed: 30
   lifeTime: 5
   targetMask:
     serializedVersion: 2
@@ -4967,3 +4967,4 @@ MonoBehaviour:
   attackPoint: {fileID: 6977508473428660633}
   attackRadius: 0.75
   destroyObject: {fileID: 4751622584051766894, guid: 14338f958324de043b373f0aba730e0b, type: 3}
+  leftoverParticleTime: 2

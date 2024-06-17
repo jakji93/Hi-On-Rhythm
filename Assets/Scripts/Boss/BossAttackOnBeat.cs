@@ -16,7 +16,7 @@ public class BossAttackOnBeat : MonoBehaviour
       public bool attachToHost = true;
       public bool spawnAtPlayer = false;
       public bool spawnAtPosition = false;
-      public Transform position;
+      public Transform[] position;
    }
 
    [Serializable]
@@ -35,6 +35,7 @@ public class BossAttackOnBeat : MonoBehaviour
 
    [SerializeField] private BossAttackPattern[] attackPatterns;
    [SerializeField] private SpecificAttackPattern[] specificAttackPatterns;
+   [SerializeField] private Transform body;
 
    private int waveCounter = 0;
    private int globalWaveCounter = 0;
@@ -43,6 +44,7 @@ public class BossAttackOnBeat : MonoBehaviour
    private void Start()
    {
       NoteManager.Instance.OnAttackBeat += Instance_OnAttackBeat;
+      curPattern = attackPatterns[0];
    }
 
    private void Instance_OnAttackBeat(object sender, System.EventArgs e)
@@ -54,6 +56,9 @@ public class BossAttackOnBeat : MonoBehaviour
    private void Attack()
    {
       if (curPattern == null) return;
+      body.DOKill();
+      body.localScale = Vector3.one * 3;
+      body.DOPunchScale(new Vector3(0.8f, 0.8f, 0.8f), 0.2f, 0, 0);
       var curWaveNum = waveCounter % curPattern.attacks.Length;
       var curAttack = curPattern.attacks[curWaveNum];
 
@@ -67,7 +72,11 @@ public class BossAttackOnBeat : MonoBehaviour
       } else if(curAttack.spawnAtPlayer) {
          Instantiate(curAttack.attackObject, PlayerControl.Instance.transform.position, Quaternion.identity);
       } else if(curAttack.spawnAtPosition) {
-         Instantiate(curAttack.attackObject, curAttack.position.position, Quaternion.identity);
+         for(int i = 0; i < curAttack.position.Length; i++) {
+            Instantiate(curAttack.attackObject, curAttack.position[i].position, Quaternion.identity);
+         }
+      } else {
+         Instantiate(curAttack.attackObject, transform.position, Quaternion.identity);
       }
       waveCounter++;
       globalWaveCounter++;

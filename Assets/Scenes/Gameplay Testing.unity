@@ -260,6 +260,7 @@ MonoBehaviour:
   openingPlayer: {fileID: 464418440}
   healthUI: {fileID: 617743791}
   feverUI: {fileID: 13121819}
+  bossUI: {fileID: 0}
   postProcessingObject: {fileID: 2560169720482873985}
 --- !u!1 &22699666
 GameObject:

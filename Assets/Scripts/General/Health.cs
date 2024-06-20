@@ -16,6 +16,7 @@ public class Health : MonoBehaviour, IHasProgress
 
    [SerializeField] private int maxHealth;
    [SerializeField] private float damageCooldown = 0f;
+   [SerializeField] private AudioClip hitAudio;
 
    private bool canTakeDamage = true;
    private float damageTimer = 0f;
@@ -52,6 +53,7 @@ public class Health : MonoBehaviour, IHasProgress
    {
       if (damage <= 0 || curHealth <= 0 || !canTakeDamage) return;
       curHealth = Mathf.Max(curHealth - damage, 0);
+      if(hitAudio != null) ClipPlayer.Instance.PlayClip(hitAudio);
       if(curHealth <= 0 ) {
          OnDeath?.Invoke(this, new OnTakeDamageEventArgs
          {

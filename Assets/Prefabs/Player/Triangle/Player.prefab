@@ -5105,6 +5105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 200
   damageCooldown: 0.2
+  hitAudio: {fileID: 8300000, guid: 4f5ccc3c016754e428c2612050980433, type: 3}
 --- !u!1 &5729438675022610392
 GameObject:
   m_ObjectHideFlags: 0

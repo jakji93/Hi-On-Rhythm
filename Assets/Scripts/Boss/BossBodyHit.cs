@@ -60,9 +60,6 @@ public class BossBodyHit : MonoBehaviour
             var exp = Instantiate(explosion, PlayerControl.Instance.transform.position, Quaternion.identity);
             Destroy(exp, 2f);
          }
-         if(hitAudio != null) {
-            ClipPlayer.Instance.PlayClip(hitAudio);
-         }
          playerRB.AddForce(playerDir * forceApply, ForceMode2D.Impulse);
          alreadyHit = true;
       }

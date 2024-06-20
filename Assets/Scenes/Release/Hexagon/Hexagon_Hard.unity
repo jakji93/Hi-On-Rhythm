@@ -6373,7 +6373,7 @@ MonoBehaviour:
   feverPerGoodHit: 1
   feverPerNoteMiss: -2
   feverPerNoHits: -4
-  feverPerEnemyKilled: 1
+  feverPerEnemyKilled: 2
   feverPlayer: {fileID: 2114272512}
   duration: 5
   maxFever: 200

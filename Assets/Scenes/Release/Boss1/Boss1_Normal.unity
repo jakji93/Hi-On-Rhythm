@@ -34554,6 +34554,10 @@ PrefabInstance:
       propertyPath: specificAttackPatterns.Array.data[58].attack.position.Array.data[0]
       value: 
       objectReference: {fileID: 188163687}
+    - target: {fileID: 4184481007741870550, guid: c8552b8480d462841984cff09dd030d4, type: 3}
+      propertyPath: maxHealth
+      value: 4240
+      objectReference: {fileID: 0}
     - target: {fileID: 4399716540700720311, guid: c8552b8480d462841984cff09dd030d4, type: 3}
       propertyPath: m_Name
       value: Boss 1

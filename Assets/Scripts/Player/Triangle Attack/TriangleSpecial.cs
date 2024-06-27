@@ -20,7 +20,7 @@ public class TriangleSpecial : MonoBehaviour
    {
       if (projectile == null) return;
       projectile.localPosition = new Vector3(radius, 0, 0);
-      transform.DORotate(new Vector3(0, 0, 360), speed, RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.Linear).SetLoops(-1, LoopType.Restart);
+      transform.DORotate(new Vector3(0, 0, 360), speed, RotateMode.FastBeyond360).SetSpeedBased(true).SetRelative(true).SetEase(Ease.Linear).SetLoops(-1, LoopType.Restart);
       if(lifeTime > 0) Destroy(gameObject, lifeTime);
    }
 

@@ -54,3 +54,6 @@ TagManager:
   - name: Ring
     uniqueID: 666371713
     locked: 0
+  - name: Projectile
+    uniqueID: 596444317
+    locked: 0

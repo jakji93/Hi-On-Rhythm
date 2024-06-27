@@ -734,6 +734,9 @@ MonoBehaviour:
       - {fileID: 4304153737566848624}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints: []
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 3328677438526240323}
       enemies:
@@ -742,12 +745,18 @@ MonoBehaviour:
       - {fileID: 4350206426047236763}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints: []
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 7088338882812104220}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 4350206426047236763}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
@@ -758,8 +767,14 @@ MonoBehaviour:
       - {fileID: 7088338882812104220}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints: []
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 6879992370410884979}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     musicTime: 11
@@ -793,14 +808,23 @@ MonoBehaviour:
       - {fileID: 8007766727791007638}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints: []
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 5867508601601792193}
       - {fileID: 7083520776446632825}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints: []
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 5148932077475989804}
       - {fileID: 7088338882812104220}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     musicTime: 45
@@ -823,6 +847,9 @@ MonoBehaviour:
     - spawnPoints:
       - {fileID: 7088338882812104220}
       - {fileID: 6879992370410884979}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     musicTime: 67
@@ -856,14 +883,23 @@ MonoBehaviour:
       - {fileID: 8007766727791007638}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints: []
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 5867508601601792193}
       - {fileID: 7083520776446632825}
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints: []
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     - spawnPoints:
       - {fileID: 5148932077475989804}
       - {fileID: 7088338882812104220}
+      enemies:
+      - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
+    - spawnPoints: []
       enemies:
       - {fileID: 2837814672146520677, guid: e24cb063fc1d8b74cbbad92c77312be1, type: 3}
     musicTime: 300

@@ -5104,7 +5104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 200
-  damageCooldown: 0.2
+  damageCooldown: 0.5
   hitAudio: {fileID: 8300000, guid: 4f5ccc3c016754e428c2612050980433, type: 3}
 --- !u!1 &5729438675022610392
 GameObject:
@@ -5342,10 +5342,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   specialAttacks:
   - {fileID: 2879499172719083427, guid: 1450eb2a9bb7f504992560dc8b86c323, type: 3}
-  - {fileID: 2879499172719083427, guid: ede1bf18e61245147aeb23594a0a022f, type: 3}
-  - {fileID: 2879499172719083427, guid: f10ffb7045d4a9a429e66bb07dd88490, type: 3}
-  - {fileID: 2879499172719083427, guid: fb4fee83b69cf5c4fab05c1f7b8e4bc1, type: 3}
-  - {fileID: 2879499172719083427, guid: ce5f06acd8094ab429a9282b4ecdc0c2, type: 3}
   perfectAttack: {fileID: 1026933196433356800, guid: 7934d4ce21271e14a8fcbb038d23e6af, type: 3}
   greatAttack: {fileID: 1026933196433356800, guid: 45cf8fba1e6c5724da70157863c4f3bc, type: 3}
   goodAttack: {fileID: 1026933196433356800, guid: b661654bb114d2b4ebda5b41132f8818, type: 3}

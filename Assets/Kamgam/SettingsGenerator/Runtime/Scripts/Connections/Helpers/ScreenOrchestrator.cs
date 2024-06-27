@@ -123,7 +123,7 @@ namespace Kamgam.SettingsGenerator
                 if (!tRequestedFullScreen.Value)
                 {
                     Screen.fullScreen = false;
-                }
+            }
                 else
                 {
                     Screen.fullScreen = true;

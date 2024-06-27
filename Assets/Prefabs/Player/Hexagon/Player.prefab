@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 150
-  damageCooldown: 0.2
+  damageCooldown: 0.5
   hitAudio: {fileID: 8300000, guid: 4f5ccc3c016754e428c2612050980433, type: 3}
 --- !u!114 &6966378211043801280
 MonoBehaviour:
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   specialAttacks:
-  - {fileID: 527592145602423760, guid: 50f0a00e1fcd86e4899c633d161692bc, type: 3}
+  - {fileID: 7771217414451799296, guid: 0d2bc1a2667b18844b22175b42dfa07d, type: 3}
   perfectAttack: {fileID: 7771217414451799296, guid: a3fed16d31d1485448b9af9aed12ff03, type: 3}
   greatAttack: {fileID: 5785696538582824402, guid: da49456359a9d0448b1e2ef3c1241994, type: 3}
   goodAttack: {fileID: 825578915571492591, guid: eaa2adb6b492cdd4aadad2ccb921f1ab, type: 3}

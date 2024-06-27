@@ -27,7 +27,6 @@ public class Boss1Attack4 : MonoBehaviour
       var angleInBtw = arcAngle / numOfProjectiles;
       var playerDir = (PlayerControl.Instance.transform.position - transform.position).normalized;
       var playAngle = Mathf.Atan2(playerDir.y, playerDir.x) * Mathf.Rad2Deg;
-      Debug.Log("player Dir: " + playerDir + "  playerAngle: " + playAngle + "  " + gameObject.name);
       var initialAngle = playAngle + arcAngle / 2;
       for (int i = 0; i < numOfProjectiles; i++) {
          var quartAngle = Quaternion.Euler(0, 0, initialAngle - i * angleInBtw);

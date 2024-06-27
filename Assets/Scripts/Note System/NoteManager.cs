@@ -76,17 +76,14 @@ public class NoteManager : MonoBehaviour
             case Note.NoteTypes.Normal1:
                OnNormal1Hit?.Invoke(this, EventArgs.Empty);
                ClipPlayer.Instance.PlayClip(noteHitSound);
-               Debug.Log("Attack hit");
                break;
             case Note.NoteTypes.Normal2:
                OnNormal1Hit?.Invoke(this, EventArgs.Empty);
                ClipPlayer.Instance.PlayClip(noteHitSound);
-               Debug.Log("Attack hit");
                break;
             case Note.NoteTypes.Special:
                OnSpecialHit?.Invoke(this, EventArgs.Empty);
                ClipPlayer.Instance.PlayClip(noteHitSound);
-               Debug.Log("Special hit");
                break;
          }
          CalculateAccuracy(notePosition);
@@ -96,7 +93,6 @@ public class NoteManager : MonoBehaviour
          note.gameObject.SetActive(false);
       }
       else {
-         Debug.Log("No hit");
          OnNoNoteHits?.Invoke(this, EventArgs.Empty);
       }
    }
@@ -118,7 +114,6 @@ public class NoteManager : MonoBehaviour
                   break;
                case Note.NoteTypes.Spawn:
                   OnSpawnBeat?.Invoke(this, EventArgs.Empty);
-                  Debug.Log("Enemy Spawn");
                   break;
                case Note.NoteTypes.Normal1:
                   if (autoplay) OnNotePerfect?.Invoke(this, EventArgs.Empty);

@@ -29293,7 +29293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3054065643926675001, guid: c8552b8480d462841984cff09dd030d4, type: 3}
       propertyPath: specificAttackPatterns.Array.data[61].waveNumber
-      value: 221
+      value: 224
       objectReference: {fileID: 0}
     - target: {fileID: 3054065643926675001, guid: c8552b8480d462841984cff09dd030d4, type: 3}
       propertyPath: specificAttackPatterns.Array.data[62].waveNumber
@@ -34028,9 +34028,9 @@ MonoBehaviour:
   goodHitMultiplier: 15
   noteMissedMultiplier: 0
   enemyKilledMultiplier: 10
-  bossHealthMultiplier: 20
+  bossHealthMultiplier: 5
   playerHealthMultiplier: 10
-  highestComboMultiplier: 10
+  highestComboMultiplier: 20
   isBossStage: 1
   scoreBoard: {fileID: 1881126574}
   failedBoard: {fileID: 2134941275}
@@ -40152,14 +40152,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9097e89d4f8620448420287bbd8fca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitzoneSize: {x: 80, y: 80}
+  hitzoneSize: {x: 90, y: 80}
   gameInput: {fileID: 527138448}
   noteLayer:
     serializedVersion: 2
     m_Bits: 256
   noteHitSound: {fileID: 8300000, guid: 087224dd7ec352f42a3b950a07009a88, type: 3}
-  perfectZone: 50
-  greatZone: 75
+  perfectZone: 60
+  greatZone: 80
   goodZone: 300
   maxHitdistance: 100
   accuracyNum: {fileID: 44655941}

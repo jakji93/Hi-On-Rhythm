@@ -8843,7 +8843,7 @@ MonoBehaviour:
   enemyKilledMultiplier: 10
   bossHealthMultiplier: 20
   playerHealthMultiplier: 10
-  highestComboMultiplier: 10
+  highestComboMultiplier: 20
   isBossStage: 0
   scoreBoard: {fileID: 1881126574}
   failedBoard: {fileID: 2134941275}
@@ -10495,7 +10495,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   noteHitSound: {fileID: 8300000, guid: 087224dd7ec352f42a3b950a07009a88, type: 3}
-  perfectZone: 45
+  perfectZone: 50
   greatZone: 75
   goodZone: 300
   maxHitdistance: 100

@@ -10343,7 +10343,7 @@ MonoBehaviour:
   enemyKilledMultiplier: 10
   bossHealthMultiplier: 20
   playerHealthMultiplier: 10
-  highestComboMultiplier: 10
+  highestComboMultiplier: 20
   isBossStage: 0
   scoreBoard: {fileID: 1881126574}
   failedBoard: {fileID: 2134941275}
